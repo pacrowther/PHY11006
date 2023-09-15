@@ -1,0 +1,717 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 1: Temperature and Thermal Equilibrium &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PHY11006/topic1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic2.html">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic4.html">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPHY11006/topic1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/PHY11006/topic1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 1: Temperature and Thermal Equilibrium</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 1: Temperature and Thermal Equilibrium</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zeroth-law-of-thermodynamics">Zeroth law of thermodynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-temperature">Measuring temperature</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-expansion">Thermal expansion</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-1-temperature-and-thermal-equilibrium">
+<span id="topic1"></span><h1>Topic 1: Temperature and Thermal Equilibrium<a class="headerlink" href="#topic-1-temperature-and-thermal-equilibrium" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<span id="topic1-intro"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>You know from everyday experience that when a hot object (at high temperature) is brought in contact
+with a cold one (at low temperature), the hot object will get cooler and the cold object warmer until
+eventually there is no flow of heat from one to the other. When there is no flow of heat, the objects
+have reached <strong>thermal equilibrium</strong>.</p>
+<p>But what is temperature? On a microscopic level, temperature is related to the kinetic energy of the
+atoms/molecules. The atoms have thermal energy and move around randomly. The higher the average
+kinetic energy of the atoms, the higher the temperature.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="zeroth-law-of-thermodynamics">
+<h1>Zeroth law of thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>It’s called the zeroth law because it is more fundamental than the first law, but was defined later. Early
+thermak physicists took this property for granted, as being obviously true (thermometers do, empirically, work), but it is
+necessary to state it formally so as to have a clear definition of the concept of temperature.</p>
+</aside>
+<p>The zeroth (0th) law of thermodynamics states that</p>
+<div class="alert alert-block alert-info">
+If a body A is in thermal equilibrium with body C, and body B is in thermal
+equilibrium with body C, then body A is in thermal equilibrium with body B.
+</div>
+<p>i.e. if two systems are each in thermal equilibrium with a third then they are in thermal equilibrium
+with each other. This allows us to introduce the concept of temperature: bodies that are in thermal
+equilibrium with each other have the same temperature. Taken together with observations of heat
+flow, it also lets us define a relative temperature scale: if heat flows from A to B when they are placed
+in contact, then A is at a higher temperature than B.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="measuring-temperature">
+<h1>Measuring temperature<a class="headerlink" href="#measuring-temperature" title="Permalink to this heading">#</a></h1>
+<p>From the zeroth law of thermodynamics we know that if two systems each have the same temperature
+as a third then they have the same temperature as each other. We can then use that third system as
+a reference to measure temperature against, i.e. we can use it as a thermometer. To measure temperature,
+we need an instrument (thermometer), a scale and a standard.
+Anything that changes its physical behaviour with temperature can be used as a thermometer: for
+example, thermal expansion of a liquid, bending of a bimetallic strip, electrical resistance of a metal,
+frequency of the peak intensity of emitted electromagnetic radiation. We can set up a temperature
+scale by defining the temperature at two fixed reference points - for example, the Celsius or Centigrade
+scale is defined by stating that the freezing point of pure water at one atmosphere pressure is
+0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, and the boiling point is 100<span class="math notranslate nohighlight">\(^{\circ}\)</span> C. If we have an instrument with a property <span class="math notranslate nohighlight">\(X(T)\)</span> that depends on
+temperature, we can then define the temperature of any object in degrees Celsius by</p>
+<div class="math notranslate nohighlight" id="equation-eqn1-1">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn1-1" title="Permalink to this equation">#</a></span>\[\begin{align}
+X(T) = 100 \frac{X - X_{0} }{ X_{100} - X_{0} }
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(X_{100}\)</span> is the value of <span class="math notranslate nohighlight">\(X\)</span> at 100<span class="math notranslate nohighlight">\(^{\circ}\)</span> C and <span class="math notranslate nohighlight">\(X_{0}\)</span> is the value at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C.</p>
+<figure class="align-center" id="fig1-1">
+<img alt="../_images/1_thermocouple.png" src="../_images/1_thermocouple.png" />
+<figcaption>
+<p><span class="caption-text">Calibration curve of a thermocouple, using data from the <a class="reference external" href="https://www.itl.nist.gov/div898/handbook/pnd/section1/pmd133.htm">NIST engineering statistics
+handbook</a></span><a class="headerlink" href="#fig1-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The problem with this system is that although we have guaranteed that all thermometers will agree
+with each other at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C and at 100<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, we have not guaranteed that they will agree at any other temperature. This is
+because Equation <a class="reference internal" href="../topic1.html#equation-eqn1-1">(1)</a>
+defines a scale that is linear in <span class="math notranslate nohighlight">\(X\)</span> (e.g. a temperature of 50<span class="math notranslate nohighlight">\(^{\circ}\)</span> C
+corresponds to a value of X exactly halfway between <span class="math notranslate nohighlight">\(X_{0}\)</span> and <span class="math notranslate nohighlight">\(X_{100}\)</span>), but many properties that vary with
+temperature do not do so linearly. For example, <a class="reference internal" href="../topic1.html#fig1-1"><span class="std std-numref">Fig. 1</span></a> shows the calibration curve of a thermocouple,
+which is a device that measures temperature by measuring the voltage
+generated across a junction of two dissimilar metals. It is clear that the
+voltage corresponding to 200<span class="math notranslate nohighlight">\(^{\circ}\)</span> C is not simply twice the voltage corresponding to 100<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, as it should be according to
+Equation <a class="reference internal" href="../topic1.html#equation-eqn1-1">(1)</a>.</p>
+<p>To solve this problem, we need to define some sort of reference scale, and then calibrate our thermometers with respect to that scale.
+We will see later in the course that the ideal gas law <span class="math notranslate nohighlight">\(PV = nRT\)</span> can provide such a reference scale: we can either maintain the gas at
+constant volume and measure how the pressure changes when we change the temperature, or maintain it at constant pressure and measure the
+volume change.</p>
+<p>The ideal gas law predicts that the gas pressure at constant volume (or volume at constant pressure)
+should reach zero at T = 273.15<span class="math notranslate nohighlight">\(^{\circ}\)</span> C. This is defined as absolute zero. The Kelvin temperature scale
+takes absolute zero as one of its reference points and the triple point of water, i.e. the temperature
+at which ice, liquid water and water vapour all coexist in equilibrium, as the other. The triple point of
+water occurs at a pressure of 611.657 Pa and is defined to have a temperature of 273.16 K (see <a class="reference internal" href="../topic1.html#fig1-2"><span class="std std-numref">Fig. 2</span></a>). Note that the advantage of
+the triple point over freezing and boiling points is that you do not
+have to specify (and measure) a pressure, since the triple point is a point (not a line) on the plot of
+pressure against temperature. Therefore, using a gas thermometer, we can define the Kelvin
+temperature of any object as</p>
+<div class="math notranslate nohighlight" id="equation-eqn1-2">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn1-2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+T  = T_{\rm triple} \frac{P(T)}{P_{\rm triple}} ({\rm const}. V) \\
+T = T_{\rm triple} \frac{V(T)}{V_{\rm triple}} ({\rm const}. P)
+\end{align}\end{split}\]</div>
+<p>Any other thermometer can be calibrated against a gas thermometer, or against any thermometer
+whose temperature dependence is based on well-defined and well-understood physics. Such thermometers
+are known as primary thermometers: besides constant-volume and constant-pressure gas
+thermometers, they include acoustic thermometers, which measure the speed of sound in a gas
+(which has a known relation to the average speed of gas molecules, and therefore to the temperature)
+and Johnson noise thermometers, which measure the electronic noise power across a resistor (this is
+generated by the random thermal motion of the charge carriers, and therefore is directly proportional
+to absolute temperature).</p>
+<figure class="align-default" id="fig1-2">
+<img alt="../_images/1_phasediagram.png" src="../_images/1_phasediagram.png" />
+<figcaption>
+<p><span class="caption-text">align: center
+Phase diagram of water illustrating the triple point of water (ice, liquid water and water vapour coexist). Source:
+<span class="xref myst">Wikipedia</span></span><a class="headerlink" href="#fig1-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="thermal-expansion">
+<h1>Thermal expansion<a class="headerlink" href="#thermal-expansion" title="Permalink to this heading">#</a></h1>
+<p>Generally materials expand (increase in volume) on heating and contract (decrease in volume) on cooling.
+For small changes in temperature, the relationship is linear: the change in volume is proportional to the change
+in temperature. If we only measure the length of an object, the change in length corresponding to a change
+in temperature  is given by</p>
+<div class="math notranslate nohighlight" id="equation-eqn1-3">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn1-3" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta L = \alpha L_{0} \Delta T,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_0\)</span> is the original length of the object and <span class="math notranslate nohighlight">\(\alpha\)</span> is the <strong>coefficient of linear expansion</strong>, which is
+a property of the material. The dimensions of alpha are inverse temperature, but its numerical values are often quoted in units
+such as <span class="math notranslate nohighlight">\(\mu\)</span>m/m/K for convenience.</p>
+<p>If the material expands in three dimensions, the change in volume is given by a similar expression</p>
+<div class="math notranslate nohighlight" id="equation-eqn1-4">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn1-4" title="Permalink to this equation">#</a></span>\[\begin{align}
+\Delta V = \beta V_{0} \Delta T,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_{0}\)</span> is the original volume and <span class="math notranslate nohighlight">\(\beta\)</span> is the coefficient of volume expansion.</p>
+<p>If the material is <strong>isotropic</strong>, i.e. its properties are the same in all directions, we can derive a simple relationship between
+<span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span>. Consider a cube of the material, with volume <span class="math notranslate nohighlight">\(V_0 = L_0^{3}\)</span>. Then the rate
+of change of volume with respect to temperature is given by</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dV}{dT} = 3 L^{2} \frac{dL}{dT} 
+\]</div>
+<p>by the chain rule. But from Equation <a class="reference internal" href="../topic1.html#equation-eqn1-3">(3)</a>, <span class="math notranslate nohighlight">\(dL/dT = \alpha L_0\)</span> and from Equation <a class="reference internal" href="../topic1.html#equation-eqn1-4">(4)</a> <span class="math notranslate nohighlight">\(dV/dT = \beta V_0\)</span>. If we
+substitute these in, we get</p>
+<div class="math notranslate nohighlight">
+\[
+\beta V_{0} = \beta L_{0}^{3} = 3 L_{0}^{2} \alpha L_{0} = 3 \alpha L_{0}^{3}, 
+\]</div>
+<p>from which we immediately read off</p>
+<div class="math notranslate nohighlight" id="equation-eqn1-5">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn1-5" title="Permalink to this equation">#</a></span>\[\begin{align}
+\beta = 3 \alpha.
+\end{align}\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Table entries from Table 17.2 of University Physics with Modern Physics (Pearson)</p>
+</aside>
+<table class="table" id="volume-expansion">
+<caption><span class="caption-text">Coefficients of volume expansion</span><a class="headerlink" href="#volume-expansion" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Material</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\beta\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aluminium</p></td>
+<td><p><span class="math notranslate nohighlight">\(7.2 \times 10^{-5}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Copper</p></td>
+<td><p><span class="math notranslate nohighlight">\(5.1 \times 10^{-5}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Steel</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.6 \times 10^{-5}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.8 \times 10^{-4}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Because thermal expansion is easy to measure and fairly linear with temperature, it is often used in thermometry. The most obvious example
+is the standard mercury-in-glass or alcohol-in-glass thermometer. Bimetallic strips, made of two strips of metal with different coefficients
+of thermal expansion bonded together along their long edges, bend when heated and can be used either as a thermometer (the bending moves a
+pointer on a scale) or as a heat-operated switch (the bending makes or breaks an electrical contact).</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 1.1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>A mercury thermometer has a cylondrical bulb 2 cm in length and 0.8 cm in diameter, attached to a cylindrical tube 0.30 mm in diameter and
+15 cm in length. The coefficient of linear thermal expansion of mercury is 61 <span class="math notranslate nohighlight">\(\mu\)</span>m/m/K. By how much does the mercury
+rise up the tube for a change in temperature of 1<span class="math notranslate nohighlight">\(^{\circ}\)</span> C?</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p>The volume of the mercury in the bulb is <span class="math notranslate nohighlight">\(\pi r^2 L = 1.00\)</span> cm<span class="math notranslate nohighlight">\(^{3}\)</span> and we can neglect the volume in the tube (the largest it could
+possible  be is 0.01 cm<span class="math notranslate nohighlight">\(^{3}\)</span>. The coefficient of linear expansion is <span class="math notranslate nohighlight">\(61 \times 10^{-6}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span>, but we need the coefficient of volume
+expansion, so we use Equation <a class="reference internal" href="../topic1.html#equation-eqn1-5">(5)</a> to get <span class="math notranslate nohighlight">\(183 \times 10^{-6}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span>.  Therefore the volume of the
+mercury increases by <span class="math notranslate nohighlight">\(1.83 \times 10^{-4}\)</span> cm<span class="math notranslate nohighlight">\(^{3}\)</span> for a temperature rise of 1 K. This must go up the tube, which has a cross-sectional
+area of <span class="math notranslate nohighlight">\(\pi r^{2} = 7.07 \times 10^{-4}\)</span> cm<span class="math notranslate nohighlight">\(^{2}\)</span>. The mercury rises by <span class="math notranslate nohighlight">\(1.83 \times 10^{-4} / 7.07 \times 10^{-4}\)</span> = 0.26 cm.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./PHY11006"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 1: Temperature and Thermal Equilibrium</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#zeroth-law-of-thermodynamics">Zeroth law of thermodynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-temperature">Measuring temperature</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-expansion">Thermal expansion</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

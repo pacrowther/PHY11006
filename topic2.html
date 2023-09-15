@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 2: Heat and Heat Transfer &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topic2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Topic 3: The Ideal Gas" href="topic3.html" />
+    <link rel="prev" title="Topic 1: Temperature and Thermal Equilibrium" href="topic1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic4.html">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftopic2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/topic2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 2: Heat and Heat Transfer</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 2: Heat and Heat Transfer</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-mechanisms">Heat transfer mechanisms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">Convection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">Conduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">Radiation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity">Heat capacity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-heat">Latent Heat</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-2-heat-and-heat-transfer">
+<h1>Topic 2: Heat and Heat Transfer<a class="headerlink" href="#topic-2-heat-and-heat-transfer" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>We said earlier that heat flows from a hotter body to a cooler body, but what is heat?
+Heat is a form of energy. We have said that the temperature of a body is a measure of the average
+kinetic energy of its component atoms, so to increase the temperature of a body we must add to this
+kinetic energy. This is what we do when we supply heat, so heat must be another form of energy.
+The science of thermodynamics, which we will study in this course, is largely the science of how heat,
+work and the internal energy of a material are converted into each other so as to drive engines, initiate
+chemical reactions, etc.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="heat-transfer-mechanisms">
+<h1>Heat transfer mechanisms<a class="headerlink" href="#heat-transfer-mechanisms" title="Permalink to this heading">#</a></h1>
+<p>How is heat transferred? There are three possible mechanisms: <strong>convection</strong>, <strong>conduction</strong> and <strong>radiation</strong>.</p>
+<section id="convection">
+<h2>Convection<a class="headerlink" href="#convection" title="Permalink to this heading">#</a></h2>
+<p>Convection is the transfer of heat by the net bulk motion of fluid (liquid or gas). Examples of heat
+transfer by convection include boiling water in a kettle, weather systems and cooling fans. We can
+divide convection systems into two categories: <em>natural</em> convection and <em>forced</em> convection.</p>
+<p>Natural convection occurs when a heated fluid expands (thermal expansion). The expanded fluid is
+less dense than the surrounding, cooler, fluid. The less dense fluid rises and the cooler, denser fluid
+sinks. This results in a <strong>cyclical convection</strong> current. An everyday example of this is in central heating
+systems. The warm air rises above the radiator and the cold air (e.g. near a window) sinks, setting up
+a convection current cycle.</p>
+<p>Fluid <strong>viscosity</strong>, i.e. the resistance of the fluid to deformation, slows the fluid flow near solid surfaces,
+resulting in a surface layer of more static fluid (e.g. air) that has an insulating effect. This is one reason
+why wind gives <em>wind chill</em> - it removes part or all of this static layer.
+Forced convection occurs when the motion of hot or cold fluid is produced by external means, e.g. a
+pump or fan. Forced convection can be a very efficient method of transferring heat, and has many
+practical applications, e.g. fan oven, cooling fans in laptops, car engines, etc.</p>
+</section>
+<section id="conduction">
+<h2>Conduction<a class="headerlink" href="#conduction" title="Permalink to this heading">#</a></h2>
+<p>Conduction is the transfer of energy between atoms in a substance. Unlike convection, there is no
+bulk motion; instead, collisions at the atomic scale cause the transfer of heat. The atoms of the higher-
+temperature material have higher average kinetic energy, so collisions between them and the atoms
+of the lower-temperature material tend to transfer energy from hotter to cooler, increasing the
+velocity and kinetic energy of the cooler atoms and therefore their temperature.
+Conductive heat flow is driven by temperature gradient: the greater the difference in average kinetic
+energy, the more energy will be transferred in each collision. This is described by the <strong>heat flow equation</strong>,</p>
+<div class="math notranslate nohighlight" id="equation-eqn2-1">
+<span class="eqno">(6)<a class="headerlink" href="#equation-eqn2-1" title="Permalink to this equation">#</a></span>\[H = \frac{dQ}{dt} = -k A \frac{dT}{dx},\]</div>
+<p>where <span class="math notranslate nohighlight">\(H\)</span> is the heat current, i.e. the derivative of heat <span class="math notranslate nohighlight">\(Q\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>, <span class="math notranslate nohighlight">\(A\)</span> is the cross-sectional
+area through which the heat flows and <span class="math notranslate nohighlight">\(k\)</span> is the <strong>thermal conductivity</strong> of the material. The negative
+sign indicates that the direction of heat flow is from hot to cold. Since heat is a form of energy, <span class="math notranslate nohighlight">\(H\)</span>
+(energy per unit time) is measured in watts; <span class="math notranslate nohighlight">\(k\)</span> is measured in W/m/K.</p>
+<p>Thermal conductivity is a property of the material, and depends on the efficiency with which its atoms
+can transfer kinetic energy to their neighbours. Metals generally have high thermal conductivity,
+because the free electrons that carry electrical current can also transfer kinetic energy. In non-metallic
+crystals, kinetic energy is transferred by vibrations in the crystal lattice, and this can also be very efficient
+(diamond, for example, has an extremely high thermal conductivity). In contrast, gases have low
+thermal conductivity, because collisions between gas atoms are uncommon - see <a class="reference internal" href="#thermal-conductivities"><span class="std std-numref">Table 2</span></a>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Table entries from Table 17.5 of University Physics with Modern Physics (Pearson), aside from glass and air</p>
+</aside>
+<table class="table" id="thermal-conductivities">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Thermal conductivities</span><a class="headerlink" href="#thermal-conductivities" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(k\)</span> (W m<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aluminium</p></td>
+<td><p>205.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copper</p></td>
+<td><p>385.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Steel</p></td>
+<td><p>50.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glass</p></td>
+<td><p>0.96</p></td>
+</tr>
+<tr class="row-even"><td><p>Ice</p></td>
+<td><p>1.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Air</p></td>
+<td><p>0.026</p></td>
+</tr>
+</tbody>
+</table>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 2.1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>Window glass has a thermal conductivity of 0.96 W/m/K. If the inside temperature is 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C and the
+outside temperature is 10<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, what is the rate of heat loss through a 1.00 m<span class="math notranslate nohighlight">\(^2\)</span> window made of 2.5 mm
+thick glass? How is this modified if the window is made of a double-glazed unit consisting of two panes
+of 2.5 mm thick glass separated by a 5 mm air gap (the thermal conductivity of air is 0.026 W/m/K?</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p>The first part is straightforward. We assume that the temperature decreases linearly through the
+glass, so <span class="math notranslate nohighlight">\(dT/dx = \Delta T/ dx = -15/0.0025 = -6000\)</span> K/m. Therefore <span class="math notranslate nohighlight">\(H = 1.00 \times 0.96 \times 60\)</span> = 5800 W
+(rounding to two significant figures to match the precision of the input variables).</p>
+<p>For the second part, we have three distinct regions of heat flow: the inner pane, the outer pane and the air gap.
+We know the temperature of the inner face of the inner pane and the outer face of the outer pane, but we do not know the other two
+temperatures. If we call the four temperature <span class="math notranslate nohighlight">\(T_1\)</span>, <span class="math notranslate nohighlight">\(T_2\)</span>, <span class="math notranslate nohighlight">\(T_3\)</span> and <span class="math notranslate nohighlight">\(T_4\)</span> (working from the inside out, so that <span class="math notranslate nohighlight">\(T_1 = 25^{\circ}\)</span> C and
+<span class="math notranslate nohighlight">\(T_4 = 10^{\circ}\)</span> C) we have <span class="math notranslate nohighlight">\(H_{12} = - k_{g} A \frac{T_{2} - T_{1}}{x_g}; H_{23} = - k_{a} A \frac{T_{3} - T_{2}}{x_a}; H_{34} = - k_{g} 
+A \frac{T_{4} - T_{3}}{x_{g}}\)</span> where <span class="math notranslate nohighlight">\(k_g, x_g\)</span> are the conductivity and thickness of the glass, and <span class="math notranslate nohighlight">\(k_a, x_a\)</span> of the air.</p>
+<p>If the system has reached a steady state, we must have <span class="math notranslate nohighlight">\(H_{12} = H_{23} = H_{34}\)</span>, otherwise the air in the gap is either heating up or
+cooling down. Therefore <span class="math notranslate nohighlight">\(k_{g} \frac{(T_{2} - T_{1})}{x_{g}} = k_{a} \frac{(T_{3} - T_{2})}{x_{a}} = k_{g} \frac{(T_{4} - T_{3})}{x_{g}}\)</span>.
+From the first and last terms of this, it is obvious that <span class="math notranslate nohighlight">\(T_{2} - T_{1} = T_{4} - T_{3}\)</span>. From the first two terms,
+<span class="math notranslate nohighlight">\(T_{3} - T_{2} = \frac{k_{g} x_{a}}{k_{a} x_{g}} (T_{2} - T_{1}) = 73.8 (T_{2} - T_{1}).\)</span> Therefore
+<span class="math notranslate nohighlight">\(T_{4} - T_{1} = (T_{4} - T_{3}) + (T_{3} - T_{2}) + (T_{2} - T_{1}) = 75.8 (T_{2} - T_{1})\)</span>. It follows that
+<span class="math notranslate nohighlight">\(T_{2} - T_{1} = -15/75.8 = -0.198\)</span> K. We put this in our equation for heat flow to get
+<span class="math notranslate nohighlight">\(H = -0.96 \times 1.00 \times \frac{-0.198}{0.0025}\)</span> = 76 W.</p>
+<p>Double glazing is a very effective means of reducing heat loss!</p>
+</div>
+</div>
+</div>
+</section>
+<section id="radiation">
+<h2>Radiation<a class="headerlink" href="#radiation" title="Permalink to this heading">#</a></h2>
+<p>Any object at a temperature above absolute zero will emit electromagnetic radiation. This can come
+from many sources: charged particles emit electromagnetic radiation when they are accelerated (and
+if two atoms collide and change their velocities, they have undergone acceleration), electrons move
+to lower energy states, molecules move to lower rotational or vibrational states, etc. If the material
+is dense enough, the photons produced by these various processes will randomise their energies by
+collisions until they reach a state where the photon energy distribution is independent of the material
+composition and is determined purely by the temperature of the body. In the ideal case, this is known
+as <strong>blackbody</strong> radiation or <strong>thermal</strong> radiation and the power emitted is</p>
+<div class="math notranslate nohighlight" id="equation-eqn2-2">
+<span class="eqno">(7)<a class="headerlink" href="#equation-eqn2-2" title="Permalink to this equation">#</a></span>\[H_{\rm BB} = \frac{dQ}{dt} = A \sigma T^{4}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the surface area of the emitting body and <span class="math notranslate nohighlight">\(\sigma\)</span> is a constant known as Stefan’s constant (or
+the Stefan-Boltzmann constant); in SI units <span class="math notranslate nohighlight">\(\sigma = 5.670 \times 10^{-8}\)</span> W/m<span class="math notranslate nohighlight">\(^2\)</span>/K<span class="math notranslate nohighlight">\(^4\)</span>.</p>
+<p>Real bodies are less efficient emitters of electromagnetic radiation than the ideal blackbody (which is
+defined as an object that is 100% efficient at emitting or absorbing radiation). This is described by the
+emissivity <span class="math notranslate nohighlight">\(\epsilon\)</span>, which is a number between 0 and 1: a body with emissivity <span class="math notranslate nohighlight">\(\epsilon\)</span> will radiate power</p>
+<div class="math notranslate nohighlight" id="equation-eqn2-3">
+<span class="eqno">(8)<a class="headerlink" href="#equation-eqn2-3" title="Permalink to this equation">#</a></span>\[H = A \epsilon \sigma T^{4}\]</div>
+<p>The emissivity is a property of the material and of the nature of the surface: for example, highly
+polished stainless steel has an emissivity of 0.075, but rough, weathered stainless steel has an
+emissivity of 0.85. Generally, shiny, polished surfaces have very low emissivity and rough, dark
+surfaces have high emissivity.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Values cited from the <a class="reference external" href="https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html">Engineering Toolbox</a></p>
+</aside>
+<p>Since electromagnetic radiation can propagate in a vacuum, radiative heat transfer differs from convective
+and conductive heat transfer in not requiring the two bodies to be in physical contact - for
+example, the Sun can heat the Earth by radiative heat transfer.</p>
+<p>Thermal radiation has a continuous spectrum extending over the whole wavelength range, but the
+wavelength of peak emission depends on the temperature according to <strong>Wien’s law</strong>,</p>
+<div class="math notranslate nohighlight" id="equation-eqn2-4">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eqn2-4" title="Permalink to this equation">#</a></span>\[\lambda_{\rm max} T = 2.989 \times 10^{-3} {\rm m K}.\]</div>
+<p>At temperatures near room temperature, ~300 K, emission peaks around 10 <span class="math notranslate nohighlight">\(\mu\)</span>m, in the infrared part
+of the spectrum. This is why cameras operating at infrared wavelengths are known as thermal cameras
+and can be used to measure temperature. It is worth noting that thermal cameras translate to
+temperature using Equation <a class="reference internal" href="#equation-eqn2-2">(7)</a>, and therefore will not give accurate readings when pointed at shiny
+surfaces with low emissivities.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="heat-capacity">
+<h1>Heat capacity<a class="headerlink" href="#heat-capacity" title="Permalink to this heading">#</a></h1>
+<p>Supplying heat to an object will, in general, raise its temperature. But what is the relationship between
+the amount of heat supplied and the change in temperature? This is quantified by the heat capacity
+of the object, <span class="math notranslate nohighlight">\(C\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eqn2-5">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eqn2-5" title="Permalink to this equation">#</a></span>\[Q = C \Delta T = mc \Delta T\]</div>
+<p>where <span class="math notranslate nohighlight">\(Q\)</span> is the heat supplied, <span class="math notranslate nohighlight">\(\Delta T\)</span> is the resulting temperature change, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the object and
+<span class="math notranslate nohighlight">\(c\)</span> is the specific heat capacity. The SI units of <span class="math notranslate nohighlight">\(C\)</span> are J/K, and of <span class="math notranslate nohighlight">\(c\)</span>, J/kg/K.
+When dealing with gases, it is often useful to define the molar heat capacity, measured in J/mol/K
+confusingly, this is also usually denoted <span class="math notranslate nohighlight">\(c\)</span>, so if you have a problem involving the heat capacity of a gas, make sure that you
+know whether you are dealing with specific heat capacity or molar heat capacity.
+The heat capacity at constant pressure, <span class="math notranslate nohighlight">\(C_P\)</span>, differs from the heat capacity at constant volume, <span class="math notranslate nohighlight">\(C_V\)</span>. This
+difference is not generally important for solids and liquids, but is very significant for gases. The specific
+heat capacity of a given material is also usually dependent on temperature; we will explore this later
+in the course.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Table entries from Section 19.2 of AQA Physics A level textbook (Oxford) plus ice.</p>
+</aside>
+<table class="table" id="heat-capacities">
+<caption><span class="caption-number">Table 3 </span><span class="caption-text">Specific heat capacities</span><a class="headerlink" href="#heat-capacities" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c\)</span> (J kg<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Aluminium</p></td>
+<td><p>900</p></td>
+</tr>
+<tr class="row-odd"><td><p>Copper</p></td>
+<td><p>390</p></td>
+</tr>
+<tr class="row-even"><td><p>Ice</p></td>
+<td><p>2100</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>4190</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="latent-heat">
+<h1>Latent Heat<a class="headerlink" href="#latent-heat" title="Permalink to this heading">#</a></h1>
+<p>Supplying heat to an object does not always raise its temperature. Sometimes the energy will cause
+the material to undergo a phase transition, such as melting, vaporisation, or ionisation. For example,
+supplying heat to a mixture of ice and water at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C will not, initially, increase the temperature: instead,
+it will cause the ice to melt. Only when all the ice has melted will the temperature of the water start
+to increase (this is why we add ice to drinks to keep them cool). The heat required to cause a phase
+transition is called the latent heat, is measured in J/kg, and is given by</p>
+<div class="math notranslate nohighlight" id="equation-eqn2-6">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eqn2-6" title="Permalink to this equation">#</a></span>\[Q = mL\]</div>
+<p>where <span class="math notranslate nohighlight">\(L\)</span> is the (specific) latent heat and <span class="math notranslate nohighlight">\(m\)</span> is the mass of material. The latent heat required to melt a
+solid is called the latent heat of fusion (<span class="math notranslate nohighlight">\(L_{\rm f}\)</span>); that required to vaporise a liquid is the latent heat of vaporisation (<span class="math notranslate nohighlight">\(L_{\rm v}\)</span>.
+When a vapour condenses into a liquid, or a liquid freezes into a solid, the latent heat is released
+back into the environment. This feature is commonly used in refrigeration systems, where the refrigerant
+enters the area to be cooled as a liquid, absorbs heat by evaporating into a vapour, and is subsequently
+condensed back into a liquid to release the waste heat.</p>
+<p>Like specific heat capacity, latent heat is temperature-dependent. In particular, latent heat of vaporisation
+decreases with increasing temperature and will reach zero at the critical point of the material,
+at which point the difference between the liquid and gas phases essentially disappears.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Table entries from Table 17.4 of University Physics with Modern Physics (Pearson)</p>
+</aside>
+<table class="table" id="id1">
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Latent heats of Fusion (<span class="math notranslate nohighlight">\(L_{f}\)</span>) and Vaporization (<span class="math notranslate nohighlight">\(L_{v}\)</span>) at 1 atmospheric pressure</span><a class="headerlink" href="#id1" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p>Melting point (K)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(L_{f}\)</span> (J kg<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></th>
+<th class="head"><p>Boiling point (K)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(L_{v}\)</span> (J kg<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>234</p></td>
+<td><p><span class="math notranslate nohighlight">\(11.8 \times 10^{3}\)</span></p></td>
+<td><p>630</p></td>
+<td><p><span class="math notranslate nohighlight">\(272 \times 10^{3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Water</p></td>
+<td><p>273.15</p></td>
+<td><p><span class="math notranslate nohighlight">\(334 \times 10^{3}\)</span></p></td>
+<td><p>373.15</p></td>
+<td><p><span class="math notranslate nohighlight">\(2256 \times 10^{3}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Silver</p></td>
+<td><p>1233.95</p></td>
+<td><p><span class="math notranslate nohighlight">\(88.3 \times 10^{3}\)</span></p></td>
+<td><p>2466</p></td>
+<td><p><span class="math notranslate nohighlight">\(2336 \times 10^{3}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 2.2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Question</label><div class="sd-tab-content docutils">
+<p>The half-litre bottle of water you carelessly left standing in the sunshine has reached a temperature of 35<span class="math notranslate nohighlight">\(^{\circ}\)</span> C. You
+decide to cool it to a more refreshing 10<span class="math notranslate nohighlight">\(^{\circ}\)</span> C by adding ice cubes from your freezer. If each ice cube has a mass of 20 g and your
+freezer
+has a temperature of -18<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, how many ice cubes do you need to add?</p>
+<p>(the specific heat capacity of liquid water is 4.2 kJ/K/kg, the specific heat capacity of ice is 2.1 kJ/K/kg and
+the latent heat of fusion of ice is 334 kJ/kg. The density of water is 1000 kg/m<span class="math notranslate nohighlight">\(^3\)</span>.)</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>The heat loss by the water is <span class="math notranslate nohighlight">\(m c \Delta T = 0.50 \times 4.2 \times 25\)</span> = 52.5 kJ. This is
+supplied to a mass <span class="math notranslate nohighlight">\(M\)</span> of ice. The ice has to
+warm from -18<span class="math notranslate nohighlight">\(^{\circ}\)</span> C to 0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C then melt, then warm as liquid water to 10<span class="math notranslate nohighlight">\(^{\circ}\)</span> C. The total heat required is therefore <span class="math notranslate nohighlight">\(M 
+\times (18 \times 2.1 + 334 + 4.2 \times 10) = 413.8 M\)</span> kJ. If we equate this to the heat supplied by the water, we  find <span class="math notranslate nohighlight">\(M = 52.5/413.8 = 
+0.127\)</span> kg.</p>
+<p>Six ice cubes won’t quite do it, so you need to add seven.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Topic 1: Temperature and Thermal Equilibrium</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="topic3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Topic 3: The Ideal Gas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 2: Heat and Heat Transfer</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-transfer-mechanisms">Heat transfer mechanisms</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convection">Convection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conduction">Conduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation">Radiation</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity">Heat capacity</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#latent-heat">Latent Heat</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

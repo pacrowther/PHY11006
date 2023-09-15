@@ -1,0 +1,999 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 3: The Ideal Gas &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PHY11006/topic3';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic2.html">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic4.html">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPHY11006/topic3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/PHY11006/topic3.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 3: The Ideal Gas</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 3: The Ideal Gas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-an-ideal-gas">The definition of an ideal gas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kinetic-theory-of-the-ideal-gas">The kinetic theory of the ideal gas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy">Heat capacity of ideal gases and equipartition of energy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-a-diatomic-gas">Heat capacity of a diatomic gas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-maxwell-boltzmann-distribution">The Maxwell-Boltzmann distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-maxwell-boltzmann-distribution">Properties of the Maxwell-Boltzmann distribution</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-free-path">Mean free path</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-3-the-ideal-gas">
+<h1>Topic 3: The Ideal Gas<a class="headerlink" href="#topic-3-the-ideal-gas" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>Many applications of thermodynamics involve gases. The working fluids of most engines are gases
+(steam, petrol or diesel vapour, etc.); most astrophysical objects are gaseous; atmospheric physics
+obviously relates mainly to gases. It is therefore important to have an effective model of a gas. As is
+often the case in physics, our usual working model is a simplified system known as an ideal gas; fortunately,
+many real gases are very good approximations to the ideal gas.</p>
+<p>Our picture of an ideal gas relies on kinetic theory, which was developed in the 19th century by pioneers
+of thermal physics such as Rudolf Clausius, James Clerk Maxwell and Ludwig Boltzmann. This
+was an early application of the atomic theory of matter, since kinetic theory relies on the assumption
+that a gas consists of very large numbers of small particles in random motion.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-definition-of-an-ideal-gas">
+<h1>The definition of an ideal gas<a class="headerlink" href="#the-definition-of-an-ideal-gas" title="Permalink to this heading">#</a></h1>
+<p>The description of a gas in kinetic theory relies on the following assumptions:</p>
+<ul class="simple">
+<li><p>the gas particles are small enough that they can be treated as points - i.e., the volume taken
+up by the particles themselves is negligible compared to the volume occupied by the gas;</p></li>
+<li><p>the particles are in constant random motion and obey Newton’s laws;</p></li>
+<li><p>all collisions between particles, or between a particle and a wall of the container, are perfectly
+elastic;</p></li>
+<li><p>forces between particles are negligible except during collisions.</p></li>
+</ul>
+<p>In addition, it is assumed that there are so many particles that it is justified to work in terms of statistical
+averages. Many of the properties of a gas, particularly pressure and temperature, are averages:
+it would be impossible to define the pressure or temperature of a gas consisting of only one particle.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 3.1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>The core of the Sun consists mostly of completely ionized hydrogen and helium; the fraction of helium by mass is approximately 2/3. The
+temperature and density in this region are <span class="math notranslate nohighlight">\(1.56 \times 10^7\)</span> K and <span class="math notranslate nohighlight">\(1.48 \times 10^5\)</span>  kg/m<span class="math notranslate nohighlight">\(^3\)</span>. The radius ofthe proton is about
+1 fm, and the radius of a helium nucleus is about 1.7 fm; the classical electron raius is about 2.8 fm. Is it reasonable to treat the
+core of the Sun as an ideal gas?</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p>If the helium fraction is 2/3 by mass, then, given that helium has a mass four times that of hydrogen, there most be 2 hydrogen atoms for
+every helium. If they are all fully ionized, that means that the particles in the Solar core are in the ratio 4 electons: 2 protons: 1
+helium nucleus. The total mass of one set of particles is 6 u, so the average mass per particle is 6/7 <span class="math notranslate nohighlight">\(u = 1.4 x 10^{-2}7\)</span> kg. This
+means that there are <span class="math notranslate nohighlight">\(1.0 x 10^{32}\)</span> particles per cubmic metere, so each particle occupies a volume of <span class="math notranslate nohighlight">\( 1.0 \times 10^{-32}\)</span> m<span class="math notranslate nohighlight">\(^3\)</span>.
+But the volume actually occupied by each particle, even taking them all to have the volume corresponding to the classical radius of the
+electron is <span class="math notranslate nohighlight">\(&lt; 1.0 \times 10^{-43}\)</span> m<span class="math notranslate nohighlight">\(^3\)</span>. Therefore the volume occupied by the particles is surely negligible compared to the volme
+occupied by the gas.</p>
+<p>We might, however, worry about the assumption that the particles do not exert any force on each other - as they are all charged, turely this
+is not true? However, the high temperature means that the particles are moving very fast, so maybe the force is not significant? Let’s
+compare kinetic and potential energies.</p>
+<p>The average distance between the particles is <span class="math notranslate nohighlight">\((1.0 \times 10^{-32})^{1/3} = 2.1 \times 10^{-11}\)</span> m. If ywo neighbouring particles have
+charge <span class="math notranslate nohighlight">\(e\)</span> (which six out of seven do) then the electrostatic potential energy is <span class="math notranslate nohighlight">\(|V| = \frac{e^{2}}{4 \pi \epsilon_{0} r} = 1.0 \times 
+10^{-17}\)</span> J. The kinetic energy is given, as we will see later by <span class="math notranslate nohighlight">\(\frac{3}{2} k_{B} T = 3.1 \times 10^{-16}\)</span> J  which is about 30 times as
+big as the  electrostatic potential energy between two neighbouring particles. Therefore, it seems as though
+neglecting the electrostatic potential is not unreasonable.</p>
+<p>We conclude that, despite the extremely high density, it probable <em>is</em> reasonable to treat the core of the Sun as an ideal gas!</p>
+<p>(this conclusion was first reached by Sir Arthur Standley Eddington in the 1920s, and resulted in the development of modern theories of
+stellar interiors.)</p>
+</div>
+</div>
+</div>
+<p>Empirical studies by Robert Boyle (1627–1691), Jacques Charles (1746–1823) and Amedeo Avogadro
+(177-1856) established that, for <strong>dilute</strong> gases (i.e. those with low number density, which makes
+them good approximations to an ideal gas),</p>
+<ul class="simple">
+<li><p>at constant <span class="math notranslate nohighlight">\(T\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(PV\)</span> = constant (Boyle’s law);</p></li>
+<li><p>at constant <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(N\)</span>, <span class="math notranslate nohighlight">\(V \propto T\)</span> (Charles’s law);</p></li>
+<li><p>at constant <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(V \propto N\)</span>.</p></li>
+</ul>
+<p>Combining these three laws gives us the ideal gas law</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-1">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-1" title="Permalink to this equation">#</a></span>\[PV = Nk_{B}T\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_B\)</span> is Boltzmann’s constant, numerically equal to <span class="math notranslate nohighlight">\(1.381 \times 10^{-23}\)</span> J/K. Because thermodynamics
+is a science of bulk properties, not individual molecules, it is often convenient to work in terms of
+moles rather than molecules and write this as</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-2">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-2" title="Permalink to this equation">#</a></span>\[PV = nRT\]</div>
+<p>where <span class="math notranslate nohighlight">\(R = N_A k_B\)</span> = 8.3145 J/mol/K is the gas constant and <span class="math notranslate nohighlight">\(N_A = 6.022 \times 10^{23}\)</span> /mol is Avogadro’s
+number.</p>
+<p>The ideal gas law is an example of an equation of state. An equation of state is a relationship between
+variables that describe the physical state of a material, such as pressure, temperature, volume, etc.
+We will come back to equations of state and functions of state later in the course.</p>
+<p>We can represent properties of an ideal gas in two dimensional graphs, most commonly pressure as a function of volume, or
+<span class="math notranslate nohighlight">\(PV\)</span> diagrams. <a class="reference internal" href="../topic3.html#fig3-0"><span class="std std-numref">Fig. 3</span></a> shows <span class="math notranslate nohighlight">\(PV\)</span>-isotherms for a constant amount of an ideal gas for 4 temperatures <span class="math notranslate nohighlight">\(T_{4} &gt; \)</span>T_{3} &gt; T_{2} &gt;
+T_{1}$.</p>
+<figure class="align-center" id="fig3-0">
+<a class="reference internal image-reference" href="../_images/3_isotherm.png"><img alt="Isotherms" src="../_images/3_isotherm.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">Isotherms, or fixed-temperature curves, for a constant abount of an ideal gas. Source: Fig 18.6 from University Physics with Modern Physics
+(Pearson)</span><a class="headerlink" href="#fig3-0" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 3.2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Question</label><div class="sd-tab-content docutils">
+<p>Find the variation in atmospheric pressure with elevation in the Earth’s atmosphere. You may assume that T = 0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C and
+<span class="math notranslate nohighlight">\(g\)</span> = 9.8 m/s<span class="math notranslate nohighlight">\(^2\)</span> at all elevations.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>For a fluid in equilibrium <span class="math notranslate nohighlight">\(\frac{dP}{dy} = - \rho g\)</span>  where <span class="math notranslate nohighlight">\(y\)</span> is the elevation. Using <span class="math notranslate nohighlight">\(m_{\rm total} = n M\)</span> the ideal gas law can be
+expressed as <span class="math notranslate nohighlight">\( PV = \frac{m_{total}}{M} RT \)</span>
+so <span class="math notranslate nohighlight">\(\rho = \frac{m_{total}}{V} = \frac{PM}{RT}.\)</span> We can substitute for density and integrate
+<span class="math notranslate nohighlight">\(\int \frac{1}{P} dP = -\frac{Mg}{RT} \int dy\)</span> from sea level <span class="math notranslate nohighlight">\((P_{0}, y_{0}\)</span>) to elevation (<span class="math notranslate nohighlight">\(P_{1}, y_{1}\)</span>)
+<span class="math notranslate nohighlight">\(\ln \frac{P_1}{P_0} = - \frac{Mg}{RT} (y_1 - y_0)\)</span> so <span class="math notranslate nohighlight">\(P_1 = P_0 \exp \left( - \frac{Mg}{RT} (y_1 - y_0) \right)\)</span>.</p>
+<p>Pressure decreases exponentially with elevation. Setting <span class="math notranslate nohighlight">\(P_0\)</span> = 101 kPa and <span class="math notranslate nohighlight">\(y_0\)</span> = 0, we can evaluate the pressure at the summit of
+Everest (<span class="math notranslate nohighlight">\(y_1\)</span> = 8.86 x 10<span class="math notranslate nohighlight">\(^3\)</span> m). The atmosphere is predominantly N<span class="math notranslate nohighlight">\(_2\)</span> (amu = 28) and O<span class="math notranslate nohighlight">\(_2\)</span> (amu = 32) the mass of a mole of
+atmosphere is 29 g, so <span class="math notranslate nohighlight">\(M g y_1/(RT) = 1.10\)</span> and
+<span class="math notranslate nohighlight">\(P_1 = 1.10 \times 10^{5} \exp (-1.10) = 3.4 \times 10^{4}\)</span> Pa = 0.33 atm. This explains why mountaineers require oxygen, and jet planes
+required pressurised cabins.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-kinetic-theory-of-the-ideal-gas">
+<h1>The kinetic theory of the ideal gas<a class="headerlink" href="#the-kinetic-theory-of-the-ideal-gas" title="Permalink to this heading">#</a></h1>
+<p>Suppose we have a box of volume <span class="math notranslate nohighlight">\(V\)</span> containing <span class="math notranslate nohighlight">\(N\)</span> molecules of an ideal gas. A
+molecule hits a wall of the container and bounces off it perfectly elastically, as
+shown in <a class="reference internal" href="../topic3.html#fig3-1"><span class="std std-numref">Fig. 4</span></a>. The result of this is that the <span class="math notranslate nohighlight">\(x\)</span> component of the velocity
+of the particle reverses direction, but the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> components don’t change, so
+the change in the momentum of the particle is <span class="math notranslate nohighlight">\(\Delta p_m = 2 m |v_x|\)</span>  where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the molecule.</p>
+<figure class="align-center" id="fig3-1">
+<a class="reference internal image-reference" href="../_images/3_gas_molecule.png"><img alt="Gas molecule bounding off a wall" src="../_images/3_gas_molecule.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">A gas molecule bouncing off a wall</span><a class="headerlink" href="#fig3-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Kinetic theory deals in averages, so we need to work out the average number
+of molecules that hit the wall in some small time <span class="math notranslate nohighlight">\(\Delta t\)</span>. Our molecule with <span class="math notranslate nohighlight">\(x\)</span>-
+velocity <span class="math notranslate nohighlight">\(v_x\)</span>  will travel a distance <span class="math notranslate nohighlight">\(v_x \Delta t\)</span> in the <span class="math notranslate nohighlight">\(x\)</span> direction during this time, so it
+can hit the wall only if it is within this distance and is travelling in the right
+direction (a 50% chance, if its motion is random). Therefore the probability that it will hit the wall
+during the period in question is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} A | v_{x} | \frac{\Delta T}{V}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> is the area of the wall. Whenever it does hit
+the wall, its momentum changes by <span class="math notranslate nohighlight">\(2 m|v_x|\)</span>, so by conservation of momentum it must impart an
+impulse <span class="math notranslate nohighlight">\(2m|v_x|\)</span> to the wall. Therefore the average force exerted by this molecule on the wall is</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta p_{m}}{\Delta t} = \frac{m v_{x}^{2} A}{V}.
+\]</div>
+<p>Summing over all the <span class="math notranslate nohighlight">\(N\)</span> molecules and dividing through by the area gives</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-3">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-3" title="Permalink to this equation">#</a></span>\[P = \frac{1}{A} \frac{dp}{dt} = \frac{N m &lt;v_{x}^{2}&gt;}{V}\]</div>
+<p>where <span class="math notranslate nohighlight">\(&lt;v_x^2&gt;\)</span> is the mean square velocity in the <span class="math notranslate nohighlight">\(x\)</span> direction  and the pressure <span class="math notranslate nohighlight">\(P\)</span> is the force per unit area.
+But if the molecules are moving in random directions we must have</p>
+<div class="math notranslate nohighlight">
+\[
+&lt;v_x^{2}&gt; = &lt;v_y^{2}&gt; = &lt;v_z^{2}&gt; = \frac{1}{3}&lt;v^{2}&gt;
+\]</div>
+<p>because there is no preferred direction and <span class="math notranslate nohighlight">\(v^2 = v_x^{2} + v_y^{2} = v_z^{3}\)</span>.</p>
+<p>Therefore we obtain</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-4">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-4" title="Permalink to this equation">#</a></span>\[PV = \frac{1}{3} Nm&lt;v^{2}&gt; = \frac{2}{3} N &lt;\frac{1}{2} m v^{2}&gt;\]</div>
+<p>where <span class="math notranslate nohighlight">\(&lt;1/2 m v^2&gt;\)</span> is the average kinetic energy of a gas molecule.</p>
+<p>If we compare Equations <a class="reference internal" href="../topic3.html#equation-eqn3-1">(12)</a> and <a class="reference internal" href="../topic3.html#equation-eqn3-4">(15)</a> we see that</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-5">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-5" title="Permalink to this equation">#</a></span>\[&lt;\frac{1}{2} m v^2 &gt; = \frac{3}{2} k_{B} T.\]</div>
+<p>This justifies the statement we made earlier, that temperature is a measure of the average kinetic
+energy of molecules. It should be noted that we are only considering translational kinetic energy here:
+molecules made of more than one atom may have internal kinetic energy relating to rotational or
+vibrational motion.</p>
+<p>If we write the mean square velocity in terms of its components we have</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-6">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-6" title="Permalink to this equation">#</a></span>\[&lt;\frac{1}{2} m v_{x}^{2}&gt; =
+&lt;\frac{1}{2} m v_{y}^{2}&gt; =
+&lt;\frac{1}{2} m v_{z}^{2}&gt; =
+\frac{1}{2} k_{B} T.\]</div>
+<p>Each individual component of the motion contributes <span class="math notranslate nohighlight">\(1/2 k_B T\)</span> to the total thermal energy. The principle of equipartition of energy
+states that every independent degree of freedom, i.e. quadratic term in the total energy, should have an equal share of the total - so,
+since each translational degree of freedom contributes <span class="math notranslate nohighlight">\(1/2 k_B T\)</span>, any additional degrees of freedom, such as the rotational and
+vibrational motion we just mentioned, should do the same. This has interesting implications for the heat capacity, as we shall now see.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="heat-capacity-of-ideal-gases-and-equipartition-of-energy">
+<span id="topic3-heat-capacity"></span><h1>Heat capacity of ideal gases and equipartition of energy<a class="headerlink" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h1>
+<p>If we supply heat to a gas at constant volume and raise its temperature by an amount delta T, by definition we have supplied heat
+<span class="math notranslate nohighlight">\(Q =  nc\Delta T\)</span>,  where <span class="math notranslate nohighlight">\(n\)</span> is the number of moles and <span class="math notranslate nohighlight">\(c\)</span> is the molar heat capacity. Equation <a class="reference internal" href="../topic3.html#equation-eqn3-5">(16)</a> says that if we raise the
+temperature of n moles of an ideal gas by an amount <span class="math notranslate nohighlight">\(\delta T\)</span>, we increase the kinetic energy of its molecules by an amount</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{3}{2} N k_{B} \Delta T = \frac{3}{2} nR\Delta T.
+\]</div>
+<p>Equating these two, we conclude that</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-7">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-7" title="Permalink to this equation">#</a></span>\[c_{V} = \frac{3}{2} R. \]</div>
+<p>However, there are some subtleties that we have to consider here.</p>
+<ol class="arabic simple">
+<li><p>In Equation <a class="reference internal" href="../topic3.html#equation-eqn3-7">(18)</a> we have specified the molar heat capacity at <em>constant volume</em>. This is because if we heat the gas at constant
+volume,
+the heat energy supplied cannout do anything except increase the internal energy of the gas. This would not be true if we did not keep the
+volume constant: for example, if we heat the gas at constant pressure, it will expand, and this means that the gas pressure will do work on
+the surroundings of the gas.</p></li>
+<li><p>We have assumed that the gas molecules have only translational kinetic energy, so if we add heat <span class="math notranslate nohighlight">\(Q\)</span> it is just divided equally among the
+three components of the particle velocity as in Equation <a class="reference internal" href="../topic3.html#equation-eqn3-6">(17)</a>. This will be true of nomatomic gases like helium and neon. It is
+<em>not</em> true of
+more complicated molecules.</p></li>
+</ol>
+<section id="heat-capacity-of-a-diatomic-gas">
+<h2>Heat capacity of a diatomic gas<a class="headerlink" href="#heat-capacity-of-a-diatomic-gas" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="fig3-2">
+<img alt="Rotation of a diatomic molecule" src="../_images/3_rotation_diatomic.png" />
+<figcaption>
+<p><span class="caption-text">Rotation of a diatomic molecule</span><a class="headerlink" href="#fig3-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Let’s consider a diatomic gas such as oxygen or nitrogen as two atoms joined by a bond, as illustrated in <a class="reference internal" href="../topic3.html#fig3-2"><span class="std std-numref">Fig. 5</span></a>. Each molecule
+can move in
+three dimensions: it has  three <em>translational</em> degrees of freedom. It can also rotate about either of two axes perpendicular to the line
+joining the atoms (rotation around the axis joining the two atoms doesn’t count, because in an ideal gas we assume the atoms have
+negligible size, so such a
+rotation is invisible): it has two <em>rotational</em> degrees of freedom. In addition the bond between the two atoms can behave like a spring: the
+atomis can vibrate to and fro along the line joining them. As the energy associated with this has two quadratic terms, <span class="math notranslate nohighlight">\(1/2 k x^2\)</span> (where
+k is the spring constant) for the potential energy and <span class="math notranslate nohighlight">\(1/2 m v_{\rm vib}^2\)</span> for the kinetic energy, it counts as two degrees of freedom,
+We therefore conclude that the total number of degrees of freedmon is 3 + 2 + 2 = 7, and so raising the temperature of a mole of such a gas
+by an amount <span class="math notranslate nohighlight">\(\Delta T\)</span> should required</p>
+<div class="math notranslate nohighlight">
+\[
+Q = \frac{7}{2} N_{A} k_{B} \Delta T,
+\]</div>
+<p>and therefore the molar heat capacity of a diatomic gas at constant volume should be <span class="math notranslate nohighlight">\(c_{V} = 7/2 R\)</span>.</p>
+<figure class="align-center" id="fig3-3">
+<img alt="Molar heat capacities of some diatomic gases" src="../_images/3_molar_heat_capacities.png" />
+<figcaption>
+<p><span class="caption-text">Molar heat capacities of some diatomic gases, as a funciton of temperature. Data from <a class="reference external" href="https://janaf.nist.gov">NIST-JANAF thermochemical
+tables</a></span><a class="headerlink" href="#fig3-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>However we see from <a class="reference internal" href="../topic3.html#fig3-3"><span class="std std-numref">Fig. 6</span></a> that this is not so. The molar heat capacity of helium (and other
+noble gases) behaves as  we expect,  but the  diatmoic gases approach <span class="math notranslate nohighlight">\(7/2 R\)</span> only at high temperatures. At room temperature common diatomic
+gases such as hydrogen, nitrogen and oxygen have <span class="math notranslate nohighlight">\(c_{V} = \frac{5}{2} R\)</span> -  see <a class="reference internal" href="../topic3.html#molar-heat-capacities"><span class="std std-numref">Table 5</span></a>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Table entries from Table 18.1 of University Physics with Modern Physics (Pearson)</p>
+</aside>
+<table class="table" id="molar-heat-capacities">
+<caption><span class="caption-text">Molar heat capacities of gases at room temperature</span><a class="headerlink" href="#molar-heat-capacities" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Gas</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(C_{V}\)</span> J mol<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(R\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>He</p></td>
+<td><p>12.47</p></td>
+<td><p>1.50</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ar</p></td>
+<td><p>12.47</p></td>
+<td><p>1.50</p></td>
+</tr>
+<tr class="row-even"><td><p>H<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>20.42</p></td>
+<td><p>2.46</p></td>
+</tr>
+<tr class="row-odd"><td><p>N<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>20.76</p></td>
+<td><p>2.50</p></td>
+</tr>
+<tr class="row-even"><td><p>O<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>20.85</p></td>
+<td><p>2.51</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>20.85</p></td>
+<td><p>2.51</p></td>
+</tr>
+<tr class="row-even"><td><p>CO<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>28.46</p></td>
+<td><p>3.42</p></td>
+</tr>
+<tr class="row-odd"><td><p>SO<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>31.39</p></td>
+<td><p>3.78</p></td>
+</tr>
+</tbody>
+</table>
+<p>The reason for this turns out to be quantum mechanical. Vibration and rotation are both quantized, and the first excited vibrational state
+is too high to reach at room temperature for most gases. Therefore the vibrational degrees of freedom are <strong>frozen out</strong> and the gas behaves
+as if it had 5 degrees of freedom (three translational and two rotational). The spacing of the vibrational energy levels is inversely
+proportional to the square root of the mass, which explains why heavy diatomic molecules like bromide <em>do</em> behave as if they have 7 degrees
+of freedom. <a class="reference internal" href="../topic3.html#fig3-3a"><span class="std std-numref">Fig. 7</span></a> shows the experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for molecular hydrogen, which is representative of light diatomic
+molecules, requiring very high temperatures in order that <span class="math notranslate nohighlight">\(C_{V} \sim 7/2 R\)</span>.</p>
+<figure class="align-center" id="fig3-3a">
+<a class="reference internal image-reference" href="../_images/3_hydrogen.png"><img alt="Molar heat capacity of hydrogen gas" src="../_images/3_hydrogen.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text">Experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for <span class="math notranslate nohighlight">\(H_{2}\)</span> gas. Source: Fig 18.19 from University Physics with Modern Physics
+(Pearson)</span><a class="headerlink" href="#fig3-3a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="heat-capacity-of-solids">
+<h2>Heat capacity of solids<a class="headerlink" href="#heat-capacity-of-solids" title="Permalink to this heading">#</a></h2>
+<p>We can extend the idea of equipartition of energy to solid materials. If we model a solid as a set of atoms in a crystal lattice joined by
+springs, each atomic can vibrate in three dimensions which means it has six degrees of freedom. We therefore predict that the molar heat
+capacity of a solid should be <span class="math notranslate nohighlight">\(3 R\)</span> (independent of temperature). This is the <strong>Dulong-Petit law</strong>, first found experimentally in 1819 by
+the
+French physicists Pierre Louis Dulong and Alexis Therese Petit. At room temperature, it is obeyed quite well for some solids (e.g.
+lead); however, as with diatomic gases, the heat capacities of solids show a temperature dependence that is not predicted by the
+model. Improved models can be constructed using the principles of statistical mechanics: you will look into this next year.</p>
+<figure class="align-center" id="fig3-4">
+<img alt="Molar heat capacities of solid elements" src="../_images/3_solids.png" />
+<figcaption>
+<p><span class="caption-text">Experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for lead, aluminium, solicon and diamond. Source: Fig 18.21 from University Physics with Modern Physics</span><a class="headerlink" href="#fig3-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 3.3</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Question</label><div class="sd-tab-content docutils">
+<p>The specific heat capacity of isobutane (C<span class="math notranslate nohighlight">\(_4\)</span> H<span class="math notranslate nohighlight">\(_{10}\)</span>) at constant volume is 1.477 kJ/kg/K at room temperature. How many
+rotational and vibrational degrees of freedmon are active in this molecule?</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>The molar weight of isobutane is <span class="math notranslate nohighlight">\(4 \times 12 + 10\)</span> = 58 g. Its molar hear capacity is therefore 1477 x 0.058 = 85.66 J/mol/K. This is
+equal to <span class="math notranslate nohighlight">\(\frac{f}{2} R\)</span>,
+where <span class="math notranslate nohighlight">\(f\)</span> is the total number of degrees of freedom. Dividing 85.66 by <span class="math notranslate nohighlight">\(R/2\)</span> gives <span class="math notranslate nohighlight">\(f\)</span> = 20.6.  We subtract 3 for the translational kinetic
+energy  degrees of freedom and get 17.6, which indicates that 17 degrees of freedom are  completely active, and one is partially active (we
+can see from <a class="reference internal" href="../topic3.html#fig3-3"><span class="std std-numref">Fig. 6</span></a> that the transition from <span class="math notranslate nohighlight">\(n\)</span> to <span class="math notranslate nohighlight">\(n+1\)</span> degrees of freedom is not
+sharp - it is possible to be <em>in between</em>. This is because the molecules in a gas do not all have the sample energy - see next section).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-maxwell-boltzmann-distribution">
+<h1>The Maxwell-Boltzmann distribution<a class="headerlink" href="#the-maxwell-boltzmann-distribution" title="Permalink to this heading">#</a></h1>
+<p>The temperature of an ideal gas defined the <em>average</em> kinetic energy of its molecules, according to Equation <a class="reference internal" href="../topic3.html#equation-eqn3-5">(16)</a>. However, the
+energies
+of the
+individual molecules actually span a wide range. This is described by the <strong>Maxwell-Boltzmann</strong> distribution of molecular speeds, which is
+given by</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-8">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-8" title="Permalink to this equation">#</a></span>\[f(v) = \frac{4}{\sqrt\pi} \left( \frac{m}{2 k_{B} T} \right)^{3/2} v^2 \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right).\]</div>
+<p>Here <span class="math notranslate nohighlight">\(f(v)\)</span> is the probability that a molecule has a speed between <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(v+dv\)</span>, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the molecule, and <span class="math notranslate nohighlight">\(T\)</span> is the
+temperature. The factor <span class="math notranslate nohighlight">\(\exp (-mv^{2}/2k_{B}T)\)</span>, which is the negative exponential of the relevant energy (in this case <span class="math notranslate nohighlight">\(\frac{1}{2} m 
+v^2\)</span>) divided by <span class="math notranslate nohighlight">\(k_B T\)</span> is called a <strong>Boltzmann factor</strong>.  Boltzmann factors occur frequently in thermodynamics and statistical mechanics,
+for  example in the Saha equation in astrophysics. It can be derived using statistical mechanics.</p>
+<figure class="align-center" id="fig3-5">
+<img alt="Maxwell Boltzmann distribution for O2 at different temperatures" src="../_images/3_Maxwell_Boltzmann.png" />
+<figcaption>
+<p><span class="caption-text">Maxwell-Boltzmann distribution for O<span class="math notranslate nohighlight">\(_2\)</span> at three different temperatures</span><a class="headerlink" href="#fig3-5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="properties-of-the-maxwell-boltzmann-distribution">
+<h2>Properties of the Maxwell-Boltzmann distribution<a class="headerlink" href="#properties-of-the-maxwell-boltzmann-distribution" title="Permalink to this heading">#</a></h2>
+<div class="alert alert-block alert-warning">
+The following derivation is not examinable (that would be mean)
+</div>
+<p>We already know that <span class="math notranslate nohighlight">\(&lt;m v^2&gt; = 3 k_B T\)</span> from Equation <a class="reference internal" href="../topic3.html#equation-eqn3-5">(16)</a> so it must be true that <span class="math notranslate nohighlight">\(&lt;v^2&gt; = 3 k_B T/m\)</span>. The most probable
+value of <span class="math notranslate nohighlight">\(v\)</span> can be found by differentiating Equation <a class="reference internal" href="../topic3.html#equation-eqn3-8">(19)</a> and setting the derivative to zero.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{df}{dv} = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B} T}\right)^{3/2} \left[ 2 v \exp \left( -\frac{mv^{2}}{2 k_{B} T}\right) - 
+\frac{v^{3} m}{k_{B} T} \exp \left( - \frac{m v^2}{2 k_{B} T}\right) \right]
+\]</div>
+<p>using the product role. This is zero for <span class="math notranslate nohighlight">\(v = 0\)</span>, which is not useful, and for
+<span class="math notranslate nohighlight">\(2 v = \frac{v^{3} m}{k_{B} T}\)</span> which gives <span class="math notranslate nohighlight">\(v_{\rm max} =  \sqrt{2 k_{B}T/m}.\)</span>  Finally, since <span class="math notranslate nohighlight">\(f(v)\)</span> is a probability distribution, we
+can find the expectation value of
+<span class="math notranslate nohighlight">\(v\)</span>  from</p>
+<div class="math notranslate nohighlight">
+\[
+&lt;v&gt; = \int_{0}^{\infty} v f(v)dv = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B}T}\right)^{3/2} \int_{0}^{\infty} v^{3} \exp \left( -\frac{m 
+v^{2}}{2 k_{B} T} \right) dv.
+\]</div>
+<p>This looks nasty but isn’t: if we write <span class="math notranslate nohighlight">\(\alpha = m/(2 k_{B}T)\)</span> for convenience and change variables to <span class="math notranslate nohighlight">\(x = v^2\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{0}^{\infty} v^{3} \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right) dv = \frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx,
+\]</div>
+<p>and this can be done by parts to get</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx = \frac{1}{2} \left[ -\frac{1}{\alpha} x e^{-\alpha x}\right]_{0}^{\infty} + 
+\frac{1}{2\alpha} \int_{0}^{\infty} e^{-\alpha x} dx = \frac{1}{2\alpha} \left[ -\frac{1}{\alpha} e^{-\alpha x}\right]_{0}^{\infty} = 
+\frac{1}{2\alpha^2} = \frac{2 k_{B}^{2} T^{2}}{m^{2}}.
+\]</div>
+<p>Therefore <span class="math notranslate nohighlight">\(&lt;v&gt; = \sqrt{8 k_{B} T/\pi m}\)</span>. So in conclusion</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-9">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-9" title="Permalink to this equation">#</a></span>\[v_{\rm max} = \sqrt{ \frac{2 k_{B} T}{m}}; &lt;v&gt; = \sqrt{\frac{8 k_{B} T}{\pi m}}; v_{\rm rms} = \sqrt{&lt;v^{2}&gt;} = \sqrt{\frac{3 k_{B} T}{m}}.\]</div>
+<p>Since <span class="math notranslate nohighlight">\(2 &lt; 8/\pi &lt; 3,\)</span> these are in increasing order: the root-mean-square speed is greater than the mean speed, which in turn is greater
+than the most probable speed. This is because the distribution has a long tail out to high speeds. From kinetic theory (Eqn <a class="reference internal" href="../topic3.html#equation-eqn3-5">(16)</a>) we
+obtained <span class="math notranslate nohighlight">\(&lt;\frac{1}{2} m v^{2}&gt; = \frac{3}{2} k_{B} T\)</span>
+so <span class="math notranslate nohighlight">\(&lt;v^{2}&gt; = v_{\rm rms}\)</span> and is more commonly used than the most probable or mean - greater weight is given to higher speeds.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 3.4</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Question</label><div class="sd-tab-content docutils">
+<p>What is the most probable, mean and rms speed of oxygen molecules at room temperature (20<span class="math notranslate nohighlight">\(^{\circ}\)</span> C)?</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Solution</label><div class="sd-tab-content docutils">
+<p>The mass of a hydrogen atom (1 proton) is <span class="math notranslate nohighlight">\(1.67 \times 10^{-27}\)</span> kg, so oxygen (8 protons and neutrons) has a mass of <span class="math notranslate nohighlight">\(2.67 \times 10^{-26}\)</span>
+kg and diatomic oxygen has <span class="math notranslate nohighlight">\(m = 5.34 \times 10^{-26}\)</span> kg. Inserting <span class="math notranslate nohighlight">\(T\)</span> = 293 K and <span class="math notranslate nohighlight">\(k_B = 1.38 \times 10^{-23}\)</span> J/K into Eqn <a class="reference internal" href="../topic3.html#equation-eqn3-9">(20)</a>
+yields <span class="math notranslate nohighlight">\(v_{\rm max} = 390 {\rm m/s}; &lt;v&gt; = 440 {\rm m/s}; v_{\rm rms} = 480 {\rm m/s}.\)</span> Light elements (H, He) have much higher speeds, so
+have largely escaped from low surface gravity environments such as the Earth (unlike
+gas giants Jupiter and Saturn).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mean-free-path">
+<h1>Mean free path<a class="headerlink" href="#mean-free-path" title="Permalink to this heading">#</a></h1>
+<p>In reality, gas molecules have finite sizes, so may collide with one another. We can extimate the frequency of collisions and distance
+dravelled between collisions, by considering <span class="math notranslate nohighlight">\(N\)</span> spherical, identical molecules of radius <span class="math notranslate nohighlight">\(r\)</span> in a volume <span class="math notranslate nohighlight">\(V\)</span>. Considering the motion of a
+single molecule, with speed <span class="math notranslate nohighlight">\(v\)</span>, it will collide with another molecule as it sweeps out a cylinder of radius <span class="math notranslate nohighlight">\(2r\)</span>, with it axis parallel to
+its motion - see <a class="reference internal" href="../topic3.html#fig3-6"><span class="std std-numref">Fig. 10</span></a>. In time <span class="math notranslate nohighlight">\(dt\)</span> it will travel a distance <span class="math notranslate nohighlight">\(v dt\)</span> so collisions will occur within the volume
+<span class="math notranslate nohighlight">\(4 \pi r^{2} v dt.\)</span> There are <span class="math notranslate nohighlight">\(N/V \)</span>molcules per unit volume so the number <span class="math notranslate nohighlight">\(dN\)</span> with centres in the cylinder are <span class="math notranslate nohighlight">\(dN = 4 \pi r^{2} v dt 
+\frac{N}{V}\)</span>, So the number of collisions per unit time is <span class="math notranslate nohighlight">\(\frac{dN}{dt} = 4 \pi r^{2} v \frac{N}{V}\)</span>. Considering the motion of all
+molecules is rather more involved, and results in a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> more collisions <span class="math notranslate nohighlight">\(\frac{dN}{dt} = 4\sqrt{2} \pi r^{2} v 
+\frac{N}{V}\)</span>.</p>
+<figure class="align-center" id="fig3-6">
+<a class="reference internal image-reference" href="../_images/3_mfp.png"><img alt="Mean free path" src="../_images/3_mfp.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">In a time <span class="math notranslate nohighlight">\(dt\)</span> a molecule with radius <span class="math notranslate nohighlight">\(r\)</span> will collide with any other molecules within a cylindrical volume of radius <span class="math notranslate nohighlight">\(2r\)</span> and length <span class="math notranslate nohighlight">\(v 
+dt\)</span>. Source: Fig 18.15 from University Physics with Modern Physics
+(Pearson)</span><a class="headerlink" href="#fig3-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The average time <span class="math notranslate nohighlight">\(t_{\rm mean}\)</span> between collisions, the <strong>mean free time</strong>, is the recipricol of this expression  <span class="math notranslate nohighlight">\(t_{\rm mean} = \frac{V}{4 
+\sqrt{2} \pi r^{2} v N}\)</span>. The average distance travelled between collisions, the <strong>mean free path</strong>, denoted <span class="math notranslate nohighlight">\(\lambda\)</span>, is the molecule’s
+speed multipled by <span class="math notranslate nohighlight">\(t_{\rm mean}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eqn3-10">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn3-10" title="Permalink to this equation">#</a></span>\[\lambda = v t_{\rm mean} = \frac{V}{4 \sqrt{2} \pi r^{2} N}.\]</div>
+<p>The more molecules there are and the larger the molecule, the shorter the distance betqween collisions. Note that the mean free path does
+not depend on the speed of the molecule. We can also express the mean free path in terms of macroscopic properties of the gas using the
+ideal gas equation <span class="math notranslate nohighlight">\(PV = N k_B T\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{k_{B} T}{4 \sqrt{2} \pi r^{2} P}. 
+\]</div>
+<p>If the temperature is increased at constant pressure, the gas expands, so the average distance between molecules increases, so <span class="math notranslate nohighlight">\(\lambda\)</span>
+increases. If the pressure is increase at fixed temperature, the gas compreses and <span class="math notranslate nohighlight">\(\lambda\)</span> decreases.</p>
+<p>We can estimate these quantities for an oxygen molecule (<span class="math notranslate nohighlight">\(r = 2.0 \times 10^{-10}\)</span> m) at a pressure of 1 atm and temperature of 20<span class="math notranslate nohighlight">\(^{\circ}\)</span>
+C  using <span class="math notranslate nohighlight">\(v = v_{\rm rms}\)</span> from Example 3.3. We obtain <span class="math notranslate nohighlight">\(\lambda= 5.6 \times 10^{-8}\)</span> m and <span class="math notranslate nohighlight">\(t_{\rm mean} = 1.2 \times 10^{-10}\)</span> s. A typical
+molecule undergoes nearly 10 <em>billion</em> collisions per second.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./PHY11006"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 3: The Ideal Gas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-an-ideal-gas">The definition of an ideal gas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kinetic-theory-of-the-ideal-gas">The kinetic theory of the ideal gas</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy">Heat capacity of ideal gases and equipartition of energy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-a-diatomic-gas">Heat capacity of a diatomic gas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-maxwell-boltzmann-distribution">The Maxwell-Boltzmann distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-maxwell-boltzmann-distribution">Properties of the Maxwell-Boltzmann distribution</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-free-path">Mean free path</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

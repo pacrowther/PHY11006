@@ -1,0 +1,865 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 7: The Second Law of Thermodynamics and Entropy &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topic7';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Summary" href="summary.html" />
+    <link rel="prev" title="Topic 6: Heat Engines" href="topic6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic2.html">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic4.html">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftopic7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/topic7.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 7: The Second Law of Thermodynamics and Entropy</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-of-the-clausius-and-kelvin-statements-of-the-second-law">Equivalence of the Clausius and Kelvin statements of the Second Law</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-implies-kelvin">Clausius implies Kelvin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelvin-implies-clausius">Kelvin implies Clausius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-implies-carnot">Clausius implies Carnot</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-law-of-thermodynamics">The Third Law of Thermodynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">Entropy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-the-first-law">Entropy and the First Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-in-reversible-and-irreversible-processes">Entropy in reversible and irreversible processes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-as-a-measure-of-disorder">Entropy as a measure of disorder</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-7-the-second-law-of-thermodynamics-and-entropy">
+<h1>Topic 7: The Second Law of Thermodynamics and Entropy<a class="headerlink" href="#topic-7-the-second-law-of-thermodynamics-and-entropy" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>In Section <a class="reference internal" href="topic6.html#topic6-carnot"><span class="std std-ref">The Carnot cycle: the ‘perfect’ heat engine</span></a> we said that no heat engine can possibly be more efficient than
+a Carnot engine, and in
+Section <a class="reference internal" href="topic1.html#topic1-intro"><span class="std std-ref">Introduction</span></a> we said that when we place two bodies of different temperature in
+thermal contact, heat
+flows from the hotter body to the cooler body. These are, in fact, two statements of the Second Law
+of Thermodynamics:</p>
+<div class="alert alert-block alert-info">
+No process can have as its sole result the transfer of heat from a colder to a
+hotter body (Clausius Statement)
+</div>
+<p>In other words, heat does not flow spontaneously from cold to hot.</p>
+<div class="alert alert-block alert-info">
+No engine working between two given temperatures can be more
+efficient than a Carnot engine (Carnot engine statement)
+</div>
+<p>There is also a third statement of the Second Law:</p>
+<div class="alert alert-block alert-info">
+No process can have as its sole result the complete conversion of heat into
+work (Kelvin statement)
+</div>
+<p>The Clausius and Kelvin statements of the Second Law are in fact precisely equivalent, though this is
+not obvious at first glance, and the Carnot statement can be proved from the Clausius statement.
+Notice that both the Clausius and the Kelvin statements imply an <strong>arrow of time</strong>: if we were to consider
+a time-reversed version of Clausius statement, we would see heat flowing from the hotter body to
+the cooler, which is perfectly legitimate, and likewise a time-reversed version of the Kelvin statement
+would involve the complete conversion of work into heat, which is also legitimate.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="equivalence-of-the-clausius-and-kelvin-statements-of-the-second-law">
+<h1>Equivalence of the Clausius and Kelvin statements of the Second Law<a class="headerlink" href="#equivalence-of-the-clausius-and-kelvin-statements-of-the-second-law" title="Permalink to this heading">#</a></h1>
+<p>In order to prove that two statements A and B are equivalent, we need to prove that A implies B <em>and</em> B implies A. If that is the case, then
+whenever A is true, B is true, and vice versa, so thy are equivalent.
+For the Clausius and Kelvin statements, we can prove both implications by contradiction.</p>
+<section id="clausius-implies-kelvin">
+<h2>Clausius implies Kelvin<a class="headerlink" href="#clausius-implies-kelvin" title="Permalink to this heading">#</a></h2>
+<p>Suppose that Claus’ statement is true but Kelvin’s is not. If Kelvin’s statement is not true we
+can build an engine K that converts heat into
+work. We connect this to a Carnot engine working in reverse as shown in <a class="reference internal" href="#fig7-1"><span class="std std-numref">Fig. 16</span></a>.</p>
+<figure class="align-center" id="fig7-1">
+<a class="reference internal image-reference" href="_images/7_Kelvin_Clausius1.png"><img alt="If Kelvin is false, so is Clausius" src="_images/7_Kelvin_Clausius1.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">If Kelvin is false, so is Clausius.</span><a class="headerlink" href="#fig7-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>By the First Law, <span class="math notranslate nohighlight">\(W = Q_K\)</span> and also <span class="math notranslate nohighlight">\(W = Q_{H} - Q_{C}\)</span>. Therefore <span class="math notranslate nohighlight">\(Q_C{} = Q_{H} - Q_{K}\)</span>. Therefore the composite engine has the effect
+of taking heat <span class="math notranslate nohighlight">\(Q_C\)</span> from the cold reservoir and transferring it to the hot reservoir. But this
+is in violation of Clausius’ statement,
+which contradicts our initial assumption. Therefore, Clausius’ statement implies Kelvin’s
+statement.</p>
+</section>
+<section id="kelvin-implies-clausius">
+<h2>Kelvin implies Clausius<a class="headerlink" href="#kelvin-implies-clausius" title="Permalink to this heading">#</a></h2>
+<p>We can use the same approach here. Assume that Clausius’ statement is not true, and that we can
+therefore build a machine that simply
+transports heat <span class="math notranslate nohighlight">\(Q_{C}^{'}\)</span> from a cold reservoir to a hot reservoir. Connect this to a Carnot
+engine running forwards, which takes heat
+<span class="math notranslate nohighlight">\(Q_{H}\)</span> from a hot reservoir, does work <span class="math notranslate nohighlight">\(W\)</span>, and rejects heat <span class="math notranslate nohighlight">\(Q_{C}\)</span>. If we adjust the
+Clausius machine so that <span class="math notranslate nohighlight">\(Q_{C} = Q_{C}^{'}\)</span>, then
+the combined engine takes in heat <span class="math notranslate nohighlight">\(Q_{H} - Q_{C}\)</span> and converts it completely to work, which violates Kelvin’s statement. Therefore, if
+Kelvin’s statement is true, Clausius’ statement must also be true.</p>
+</section>
+<section id="clausius-implies-carnot">
+<h2>Clausius implies Carnot<a class="headerlink" href="#clausius-implies-carnot" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="fig7-2">
+<a class="reference internal image-reference" href="_images/7_Clausius_Carnot1.png"><img alt="Clausius' statement implies Carnot's." src="_images/7_Clausius_Carnot1.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Clausius’ statement implies Carnot’s.</span><a class="headerlink" href="#fig7-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Assume that Carnot’s statement is not true, and we can therefore build an engine <span class="math notranslate nohighlight">\(E\)</span> that has a
+higher efficiency than a Carnot engine. We
+connect this super-efficient engine to a Carnot engine running in reverse, as shown in Fig 7.2. Engine <span class="math notranslate nohighlight">\(E\)</span> takes in heat <span class="math notranslate nohighlight">\(Q_{H}^{'}\)</span>, does
+work <span class="math notranslate nohighlight">\(W\)</span>, and ejects  heat Q<span class="math notranslate nohighlight">\(_{C}^{'}\)</span>; the Carnot engine takes in heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> and the work done by engine <span class="math notranslate nohighlight">\(E\)</span>, and ejects heat <span class="math notranslate nohighlight">\(Q_{H}\)</span>.
+Since <span class="math notranslate nohighlight">\(\eta = W/Q_{H}\)</span>,
+and we have assumed that <span class="math notranslate nohighlight">\(\eta_{E} &gt; \eta_{C}\)</span>, it follows that <span class="math notranslate nohighlight">\(Q_{H}^{'} &lt; Q_{H}\)</span>. The First Law tells us that</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{H} - Q_{C} = Q_{H}^{'} - Q_{C}^{'}
+\]</div>
+<p>(taking all the <span class="math notranslate nohighlight">\(Q\)</span>’s to be positive). Therefore <span class="math notranslate nohighlight">\(Q_{C}^{'} &lt; Q_{C}\)</span> and the net effect of the combined engine is to take heat
+<span class="math notranslate nohighlight">\(Q_{C} - Q_{C}^{'}\)</span> from the cold reservoir and eject it into the hot reservoir, which violates
+Clausius’ statement, Therefore Clausius’
+statement of the Second Law implies that engine <span class="math notranslate nohighlight">\(E\)</span> cannot exist.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-third-law-of-thermodynamics">
+<h1>The Third Law of Thermodynamics<a class="headerlink" href="#the-third-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
+<p>If we could run a Carnot engine with its cold reservoir at 0 K, we could violate Kelvin’s
+statement, because such an engine would have
+<span class="math notranslate nohighlight">\(\eta\)</span> = 1, and would therefore convert all the input heat into work. This is forbidden by the
+<strong>Third Law of Thermodynamics</strong>, Nernst’s
+statement of which is</p>
+<div class="alert alert-block alert-info">
+It is impossible for any procedure to lead to the isotherm T = 0 in a finite number of steps.
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="entropy">
+<h1>Entropy<a class="headerlink" href="#entropy" title="Permalink to this heading">#</a></h1>
+<p>From the Carnot cycle definition of thermodynamic temperature, Equation <a class="reference internal" href="topic6.html#equation-eqn6-7">(36)</a>, we know that <span class="math notranslate nohighlight">\(\frac{|Q_{H}|}{T_{H}} = 
+\frac{|Q_{C}|}{T_{C}}\)</span>. Accounting properly for the signs, i.e. recognising that <span class="math notranslate nohighlight">\(Q_{C} &lt; 0\)</span>, we also have</p>
+<div class="math notranslate nohighlight" id="equation-eqn7-1">
+<span class="eqno">(41)<a class="headerlink" href="#equation-eqn7-1" title="Permalink to this equation">#</a></span>\[\sum_{Cycle} \frac{\Delta Q}{T} = \frac{Q_H}{T_H} + \frac{Q_C}{T_C} = 0.\]</div>
+<p>We can generalise this sum to an integral around a closed loop (imagine lots of mini Carnot
+cycles working between temperatures <span class="math notranslate nohighlight">\(T\)</span> and
+<span class="math notranslate nohighlight">\(T+dT\)</span>, all satisfying Equation <a class="reference internal" href="#equation-eqn7-1">(41)</a>):</p>
+<div class="math notranslate nohighlight" id="equation-eqn7-2">
+<span class="eqno">(42)<a class="headerlink" href="#equation-eqn7-2" title="Permalink to this equation">#</a></span>\[\oint \frac{\bar{d} Q_{\rm rev}}{T} = 0.\]</div>
+<p>This holds only if the loop consists entirely of <em>reversible</em> processes, which is why we put the label ‘rev’ in the <span class="math notranslate nohighlight">\(\bar{d}Q\)</span>.</p>
+<p>It follows from this that the quantity <span class="math notranslate nohighlight">\(\bar{d}Q_{\rm rev}/T\)</span> is an <em>exact differential</em>, i.e. the value of the integral between two states
+A and B is independent of the path taken.</p>
+<figure class="align-center" id="fig7-3">
+<a class="reference internal image-reference" href="_images/7_paths1.png"><img alt="Two arbitrary paths between states A and B" src="_images/7_paths1.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Two arbritrary paths between states A and B</span><a class="headerlink" href="#fig7-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>To see this, consider states A and B in <a class="reference internal" href="#fig7-3"><span class="std std-numref">Fig. 18</span></a>. The two paths connecting A and B are
+both reversible. We can integrate from A to B along
+path 1 and get <span class="math notranslate nohighlight">\(\Delta S_{1} = \int_{1} \frac{\bar{d}Q}{T}\)</span>, or we can integrate along path 2 and get <span class="math notranslate nohighlight">\(\Delta S_{2} = \int_{2} 
+\frac{\bar{d}Q}{T}\)</span>. But we can also reverse the direction of path 2, since we have defined it
+to be reversible, and integrate from B to A,
+which must give us <span class="math notranslate nohighlight">\(\int_{-2} \frac{\bar{d}Q}{T} = - \int_{2} \frac{\bar{d}Q}{T} = -\Delta S_{2}\)</span>, where the minus sign indicates that path
+2 is taken in reverse.</p>
+<p>Now, if we integrate from A to B via path 1, and then from B to A via path 2, we have completed a closed reversible cycle, and Eqn
+<a class="reference internal" href="#equation-eqn7-2">(42)</a> tells us that</p>
+<div class="math notranslate nohighlight">
+\[
+\oint \frac{\bar{d} Q_{\rm rev}}{T} = \Delta S_{1} - \Delta S_{2} = 0.
+\]</div>
+<p>Therefore since paths 1 and 2 were arbitrary, we must have</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{A}^{B} \frac{\bar{d}Q_{\rm rev}}{T} = \Delta S_{1} 
+\]</div>
+<p>for any <em>reversible</em> path. Therefore <span class="math notranslate nohighlight">\(\bar{d}Q_{\rm rev}/T\)</span> is an exact differential. It follows that the quantity <span class="math notranslate nohighlight">\(S\)</span> defined by</p>
+<div class="math notranslate nohighlight" id="equation-eqn7-3">
+<span class="eqno">(43)<a class="headerlink" href="#equation-eqn7-3" title="Permalink to this equation">#</a></span>\[dS = \frac{\bar{d}Q_{\rm rev}}{T}\]</div>
+<p>is a function of state. We call <span class="math notranslate nohighlight">\(S\)</span> the <strong>entropy</strong> of the state.</p>
+<p>This definition only allows us to calculate <em>changes</em> in entropy, <span class="math notranslate nohighlight">\(\Delta S\)</span>; if we try to
+calculate the absolute value of <span class="math notranslate nohighlight">\(S\)</span> we have an
+undetermined integration constant. To calculate absolute values of <span class="math notranslate nohighlight">\(S\)</span> we need a microscopic
+definition in terms of individual particles.
+you will meet this definition (and show that it is equivalent to the definition in Eqn
+<a class="reference internal" href="#equation-eqn7-2">(42)</a>) when you study statistical mechanics
+next
+year.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="entropy-and-the-first-law">
+<h1>Entropy and the First Law<a class="headerlink" href="#entropy-and-the-first-law" title="Permalink to this heading">#</a></h1>
+<p>We can write Eqn <a class="reference internal" href="#equation-eqn7-2">(42)</a> as <span class="math notranslate nohighlight">\(T dS = \bar{d} Q_{\rm rev}\)</span>. If we also assume that we are dealing with an ideal gas, such that <span class="math notranslate nohighlight">\(\bar{d}W 
+= -P dV\)</span>, we can write the differential form of the First Law as</p>
+<div class="math notranslate nohighlight" id="equation-eqn7-4">
+<span class="eqno">(44)<a class="headerlink" href="#equation-eqn7-4" title="Permalink to this equation">#</a></span>\[dU = T dS - P dV\]</div>
+<p>But now a miracle has occurred: <em>everything</em> in Eqn <a class="reference internal" href="#equation-eqn7-4">(44)</a> is a function of state, and
+therefore Eqn <a class="reference internal" href="#equation-eqn7-4">(44)</a> holds
+<em>irrespective</em> of the
+path
+taken. This can be very useful: if you want to calculate <span class="math notranslate nohighlight">\(\Delta U\)</span> for an irreversible process, and you know the start and end states, you
+can apply Eqn <a class="reference internal" href="#equation-eqn7-4">(44)</a> to <em>any</em> reversible path between the start and end states and the result will be the same as for the irreversible
+process.  (This doesn’t mean that the heat supplied and the work done will be the same:
+<span class="math notranslate nohighlight">\(\bar{d}Q\)</span> and <span class="math notranslate nohighlight">\(\bar{d}W\)</span> are still inexact
+differentials.  But the changes in internal energy, entropy and volume will be the same.)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="entropy-in-reversible-and-irreversible-processes">
+<h1>Entropy in reversible and irreversible processes<a class="headerlink" href="#entropy-in-reversible-and-irreversible-processes" title="Permalink to this heading">#</a></h1>
+<p>So far we have considered entropy in the context of reversible processes. What about irreversible processes?</p>
+<p>Irreversible processes are irreversible because energy has dissipated in a way that cannot be
+reversed .e.g friction. This is clearly not
+work: as we noted in Section 1, work is energy transfer associated with ordered motion, and is therefore reversible. Hence, if we suppose
+that the maximum work that can be extracted from a reversible transition between state A and state B is <span class="math notranslate nohighlight">\(W_{\rm rev}\)</span> (i.e. <span class="math notranslate nohighlight">\(\Delta U = Q - 
+W_{\rm rev}\)</span>, since we’ve defined <span class="math notranslate nohighlight">\(W_{\rm rev}\)</span> as work done <em>by</em> the system), we expect that an irreversible transition between the same
+two states will extract work <span class="math notranslate nohighlight">\(W_{\rm irr} &lt; W_{\rm rev}\)</span>.</p>
+<p>If we make this transition infinitesimal, such that states A and B are very close together,
+we can write</p>
+<div class="math notranslate nohighlight">
+\[
+dU = \bar{d} Q_{\rm rev} - \bar{d} W_{\rm rev} = \bar{d} Q_{\rm irr} - \bar{d} W_{\rm irr}
+\]</div>
+<p>(again, recall that the minus sign here is because the work is done <em>by</em>, not <em>on</em>, the system). So we have</p>
+<div class="math notranslate nohighlight" id="equation-eqn7-5">
+<span class="eqno">(45)<a class="headerlink" href="#equation-eqn7-5" title="Permalink to this equation">#</a></span>\[dS =- \frac{\bar{d}Q_{\rm rev}}{T} = \frac{\bar{d}Q_{\rm irr}}{T} + \frac{1}{T} \left( \bar{d}W_{\rm rev} - \bar{d} W_{\rm irr} \right) &gt; 
+\frac{\bar{d} Q_{\rm irr}}{T}.\]</div>
+<p>This emphasises that the definition of <span class="math notranslate nohighlight">\(S\)</span> refers to the heat supplied in a <em>reversible</em> process. If you have an <em>irreversible</em> process, the
+definition <span class="math notranslate nohighlight">\(dS = \bar{d}Q/T\)</span> does not apply. This means that if we wish to calculate the entropy
+change associated with an irreversible
+process, we cannot simply integrate <span class="math notranslate nohighlight">\(\bar{d}Q/T\)</span>. Fortunately, there is a solution to this, because entropy is a function of state: if we
+can define a <em>reversible</em> path with the same initial and final state, we can use this to
+calculate <span class="math notranslate nohighlight">\(\Delta S\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 7.1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>Suppose that we connect a small system with temperature <span class="math notranslate nohighlight">\(T_{S}\)</span> to a very large heat reservoir with temperature <span class="math notranslate nohighlight">\(T_{R}\)</span>. The two will reach
+equilibrium at temperature <span class="math notranslate nohighlight">\(T_{R}\)</span> (we assume that the heat transfer to or from the small system
+has negligible effect on the temperature of
+the reservoir). What is the change in entropy (i) of the small system; (ii) of the large reservoir; (iii) of the Universe? Assume that the
+volume of the small system does not change, and that the combined system of the small system plus the reservoir is thermally isolated from
+the rest of the Universe.</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p>This is an irreversible process, since reversing it would require heat to flow from cold to hot without doing any work, which contravenes
+the Second Law. However, we can replace it with a reversible transfer of heat at constant
+temperature for the reservoir, and constant volume
+for the small system.</p>
+<p>The heat transferred to or from the small system is <span class="math notranslate nohighlight">\(\Delta Q_{S} = C_{V} (T_{R} - T_{S})\)</span>,m where <span class="math notranslate nohighlight">\(C_{V}\)</span> is the heat capacity of the small
+system at constant volume. <span class="math notranslate nohighlight">\(\Delta Q_{S}\)</span> is positive if the small system was initially cooler than the reservoir (heat is supplied <em>to</em> the
+small system) and negative if the small system was initially warmer (heat is lost <em>from</em> the small system). Since the combined system is
+thermally isolated and no work is being done, we must have <span class="math notranslate nohighlight">\(\Delta Q_{R} = - \Delta Q_{S}\)</span>.</p>
+<p>As the reservoir is at constant temperature throughout, the entropy change is <span class="math notranslate nohighlight">\(\Delta S_{R} = \frac{\Delta Q_{R}}{T_{R}} = - \frac{C_{V} 
+(T_{R} - T_{S})}{T_{R}} = C_{V} \left( \frac{T_{S}}{T_{R}} - 1\right)\)</span>. For the small system, <span class="math notranslate nohighlight">\(dS = \bar{d}Q/T = C_{V} dT/T\)</span>. We can
+integrate this from <span class="math notranslate nohighlight">\(T_{S}\)</span> to <span class="math notranslate nohighlight">\(T_{R}\)</span>: <span class="math notranslate nohighlight">\(\Delta S_{S} = \int_{T_{S}}^{T_{R}} \frac{C_{V} dT}{T} = C_{V} \ln \left( \frac{T_R}{T_S} 
+\right)\)</span>. The total entropy change is <span class="math notranslate nohighlight">\(\Delta S_{\rm tot} = C_{V} \left( \ln \left( \frac{T_R}{T_S}\right) + \frac{T_S}{T_R} - 1 \right)\)</span>.</p>
+<p>There are various points to note here</p>
+<ol class="arabic simple">
+<li><p>Although the temperature of the reservoir does not change, its entropy does.</p></li>
+<li><p>Although the heat flow into or out of the two subsystems is the same (apart from the sign), the entropy change is not.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta S_{\rm tot}\)</span> is always greater than zero if <span class="math notranslate nohighlight">\(T_{\rm R} \neq T_{S}\)</span>.</p></li>
+</ol>
+<p>Point 3 is illustrated in <a class="reference internal" href="#fig7-4"><span class="std std-numref">Fig. 19</span></a>. We can also deduced it by differentiating the above
+expression for <span class="math notranslate nohighlight">\(\Delta S_{\rm tot}\)</span>. If we write <span class="math notranslate nohighlight">\(r = T_{R} / T_{S}\)</span>, we
+have <span class="math notranslate nohighlight">\(\frac{d (\Delta S_{\rm tot})}{dr} = C_{V} \left( \frac{1}{r} - \frac{1}{r^2} \right)\)</span>, which is equal to zero when <span class="math notranslate nohighlight">\(r = 1\)</span> at which
+point <span class="math notranslate nohighlight">\(\Delta S_{\rm tot} = C_{V} (\ln (1) + 1 - 1) = 0\)</span>. This must be a minimum, because the derivative is positive (curve rising) for <span class="math notranslate nohighlight">\(r &gt; 
+1\)</span> and negative (curve falling) for <span class="math notranslate nohighlight">\(r &lt; 1\)</span>. Hence <span class="math notranslate nohighlight">\(\Delta S_{\rm tot} \leq 0\)</span> for all values of <span class="math notranslate nohighlight">\(T_{R}/T_{S}\)</span>, and is zero only if <span class="math notranslate nohighlight">\(T_{R} 
+= T_{S}\)</span> and there is no heat flow.</p>
+</div>
+</div>
+</div>
+<figure class="align-center" id="fig7-4">
+<a class="reference internal image-reference" href="_images/7_entropy_change1.png"><img alt="Entropy changes for example 7.1" src="_images/7_entropy_change1.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Entropy changes for example 7.1</span><a class="headerlink" href="#fig7-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In the above example, the entropy change of the small system is negative when the system cools to equilibrium, and positive when it warms,
+as we would expect since the heat flow is negative when it cools (heat is transferred <em>from</em> the small system) and positive when it warms
+(heat is transferred <em>to</em> the small system). However, the <em>total</em> change in entropy, taking the surroundings into account, is always
+positive (except in the case where the two systems were already in equilibrium before being brought into contact). In contrast, if we have
+a <em>reversible</em> process, the entropy change in the surroundings will always balance the entropy change in the small system.</p>
+<div class="math notranslate nohighlight" id="equation-eqn7-7">
+<span class="eqno">(46)<a class="headerlink" href="#equation-eqn7-7" title="Permalink to this equation">#</a></span>\[dS_{\rm tot}^{\rm rev} - dS_{\rm sys}^{\rm rev} + dS_{\rm surr}^{\rm rev} = 0\]</div>
+<p>This is necessary so if the process is quasistatic, since - by definition - we are assuming in a quasistatic process that the system is
+essentially in equilibrium with its surroundings, i.e. at the same temperature. So, if the system receives heat <span class="math notranslate nohighlight">\(\bar{d}Q_{\rm rev}\)</span> from
+its surroundings at temperature <span class="math notranslate nohighlight">\(T\)</span>, its entropy change is <span class="math notranslate nohighlight">\(dS_{\rm sys} = \bar{d}Q_{\rm rev}/T\)</span> and the entropy change of the surroundings
+is <span class="math notranslate nohighlight">\(dS_{\rm surr} = -\bar{d}Q_{\rm rev}/T\)</span>.</p>
+<p>This leads to yet another statement of the Second Law</p>
+<div class="alert alert-block alert-info">
+The entropy of a thermally isolated system cannot decrease
+</div>
+<p>Note the key qualifier: not just any system, but a <em>thermally isolated</em> system. If the system is not thermally isolated, by definition hear
+can flow into and out of the system, and this will be accompanied by a change in entropy, which can be positive <em>or</em> negative. This explains
+why we see many processes in nature, e.g. crystal growth, which appear to be associated with a decrease in entropy: in such cases the
+entropy of the system may indeed decrease, but it is not a thermally isolated system, and the decrease is compensated by an increase in the
+entropy of the surroundings, as in Example 7.1</p>
+<p>The Universe is the ultimate thermally isolated system, so the entropy statement of the Second Law implies that the entropy of the Universe
+cannot decrease.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 7.2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Question</label><div class="sd-tab-content docutils">
+<p>Calculate the entropy change in the system and its surroundings for each stage of the Carnot cycle.</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>A Carnot cycle consists of 4 stages (i) isothermal compression at <span class="math notranslate nohighlight">\(T_{C}\)</span>; (ii) adiabatic compression increasing the temperature to <span class="math notranslate nohighlight">\(T_{H}\)</span>;
+(iii) isothermal expansion at temperature <span class="math notranslate nohighlight">\(T_{H}\)</span>; (iv) adiabatic expansion decreasing the temperature back to <span class="math notranslate nohighlight">\(T_{C}\)</span>.</p>
+<p>We can do the adiabatic steps 2 and 4 immediately: by definition, in an adiabatic process no
+heat is transferred, so <span class="math notranslate nohighlight">\(\Delta S_{\rm sys} = 
+\Delta S_{\rm surr} = 0\)</span>.</p>
+<p>In step 1 work is done <em>on</em> the gas, but the internal energy of the gas does not change (in an isothermal process <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>), so heat
+must be expelled by the gas, hence <span class="math notranslate nohighlight">\(Q &lt; 0\)</span>. The entropy change of the system is <span class="math notranslate nohighlight">\(\Delta S_{\rm sys} = -|Q_{C}|/T_{C}\)</span> (we do not need to do
+an integration because the temperature is constant). Conversely, the surroundings (the cold
+reservoir) <em>receive</em> heat <span class="math notranslate nohighlight">\(|Q_{C}|\)</span>, so the
+entropy change is <span class="math notranslate nohighlight">\(\Delta S_{\rm surr} = |Q_{C}|/T_{C}\)</span>.</p>
+<p>In step 3, work is done <em>by</em> the gas, so it must take in heat (<span class="math notranslate nohighlight">\(Q &gt; 0\)</span>). The entropy change of the system is <span class="math notranslate nohighlight">\(\Delta S_{\rm sys} = 
+Q_{H}/T_{H}\)</span>, and the entropy change of the surroundings (the hot reservoir) is <span class="math notranslate nohighlight">\(\Delta S_{\rm surr} = -Q_{H}/T_{H}\)</span>. But from Eqn
+<a class="reference internal" href="topic6.html#equation-eqn6-7">(36)</a> we know that <span class="math notranslate nohighlight">\(Q_{H}/T_{H} = |Q_{C}|/T_{C}\)</span>, and so we can write these as <span class="math notranslate nohighlight">\(\Delta S_{\rm sys} = |Q_{C}|/T_{C}\)</span> and <span class="math notranslate nohighlight">\(\Delta 
+S_{\rm surr} = -|Q_{C}|/T_{C}\)</span>.</p>
+<p>From this we see that (1) the <em>total</em> entropy change of the system is zero, as it must be, since this is a closed cycle and entropy is a
+function of state; (2) the entropy change of <em>system plus surroundings</em> is zero not for the cycle as a whole, but also for each
+individual step. This is what we would expect for reversible processes.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="entropy-as-a-measure-of-disorder">
+<h1>Entropy as a measure of disorder<a class="headerlink" href="#entropy-as-a-measure-of-disorder" title="Permalink to this heading">#</a></h1>
+<p>Total entropy increases in irreversible processes, but is zero in reversible processes. We saw that what makes a process irreversible is the
+dissipation of energy - in essence, some of the energy that would, in a reversible system, be released as work (ordered motion) is instead
+dissipated in some disordered fashion. Also, the entropy of a system increases when heat flows <em>into</em> it, and decreases when heat flows
+<em>out</em> of it, and we saw that heat is energy associated with <em>disordered</em> (i.e. random) motion. These observations suggest that entropy is
+in some way associated with disorder. This is indeed true, and you will explore the microscopic definition of entropy next year.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Topic 6: Heat Engines</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="summary.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summary</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-of-the-clausius-and-kelvin-statements-of-the-second-law">Equivalence of the Clausius and Kelvin statements of the Second Law</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-implies-kelvin">Clausius implies Kelvin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kelvin-implies-clausius">Kelvin implies Clausius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-implies-carnot">Clausius implies Carnot</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-third-law-of-thermodynamics">The Third Law of Thermodynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy">Entropy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-the-first-law">Entropy and the First Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-in-reversible-and-irreversible-processes">Entropy in reversible and irreversible processes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-as-a-measure-of-disorder">Entropy as a measure of disorder</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

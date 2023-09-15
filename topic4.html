@@ -1,0 +1,698 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 4: The First Law of Thermodynamics &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'topic4';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Topic 5: Thermodynamic Processes" href="topic5.html" />
+    <link rel="prev" title="Topic 3: The Ideal Gas" href="topic3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic2.html">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftopic4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/topic4.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 4: The First Law of Thermodynamics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 4: The First Law of Thermodynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-and-work">Heat and work</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-work">Some examples of work</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy">Internal energy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-process">Cyclic process</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-4-the-first-law-of-thermodynamics">
+<span id="topic4"></span><h1>Topic 4: The First Law of Thermodynamics<a class="headerlink" href="#topic-4-the-first-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>In general, a thermodynamic system is a collection of objects that is convenient to regard as a unit,
+and that may have the potential to exchange energy with its surroundings (e.g. popcorn kernels
+heated in a pot expand and does work as it exerts an upward force and moves the lid). Such a process,
+in which there are changes in the state of a thermodynamic system is a thermodynamic process.
+The first law of thermodynamics relates heat supplied, work done and internal energy. In fact, it is
+simply a statement of energy conservation:</p>
+<div class="alert alert-block alert-info">
+The total energy of an isolated system is constant
+</div>
+<p>Here, an <strong>isolated system</strong> is one which is not in any sort of contact with the outside world: it is not
+exerting or subjected to any forces, it is not supplying or being supplied with heat or any other form
+of energy. In this form, the law seems like a statement of the obvious. The first law is more useful if
+we permit some contact with the outside world</p>
+<div class="alert alert-block alert-info">
+The change in the internal energy of a system is equal to the heat supplied to
+the system plus the work done on the system.
+</div>
+<p>This can be expressed mathematically as</p>
+<div class="math notranslate nohighlight" id="equation-eqn4-1">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eqn4-1" title="Permalink to this equation">#</a></span>\[\Delta U = Q + W.\]</div>
+<p>where U is the change in internal energy, Q is the heat supplied to the system, and W is the work
+done on the system. Note the sign conventions here: if the system actually radiates heat, Q &lt; 0, and
+if the system does work on its surroundings, W &lt; 0.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="heat-and-work">
+<h1>Heat and work<a class="headerlink" href="#heat-and-work" title="Permalink to this heading">#</a></h1>
+<p>Both heat and work are forms of energy. Heat is the energy that flows between two systems in thermal contact with each other if they are not
+in thermal equilibrium, i.e. heat flow results from a difference in temperature. We have seen that the temperature of a body is related to
+the average kinetic energy of its constituent atoms, so we can conclude that <em>heat is energy
+transfer associated with random motion of
+atoms</em>.</p>
+<p>Work, on the other hand, is energy transfer associated with <em>directed</em> motion, and in particular with the application of a force. In one
+dimension, we can write</p>
+<div class="math notranslate nohighlight">
+\[
+W = \int F dx.
+\]</div>
+<p>In the next section, we will see that we need to treat this integral with great care, because it is <strong>path dependent</strong>. Suppose I need to
+move a box from my office (E43) to Clive Tadhunter’s office (E37), which is no the other side of the mid-corridor fire door. If I can simply
+move it the 10 m or so down the corridor, I will have done some amount of work <span class="math notranslate nohighlight">\(F \Delta x\)</span> where <span class="math notranslate nohighlight">\(\Delta x\)</span> in this case is 10 m. However,
+if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up<br />
+Hounsfield Road, into the main entrance on D floor, up the stairs to E floor, and along the<br />
+corridor to E37, I will have done considerably
+more work to achieve the same end result.</p>
+<p>The same is true of heat: the amount of heat I need to supply to raise the temperature of an object by a certain amount <span class="math notranslate nohighlight">\(\Delta T\)</span> depends
+on the way that I do it, in other words the path that the temperature takes from <span class="math notranslate nohighlight">\(T\)</span> to <span class="math notranslate nohighlight">\(T + \Delta T\)</span>. This path dependence of heat and
+work turns out to be critical to practical applications of thermodynamics, as we shall see later in the course. The difference between the
+ordered motion of work and the disordered motion of heat is also very important, as we will see when we consider the Second Law and the
+concept of entropy.</p>
+<section id="some-examples-of-work">
+<h2>Some examples of work<a class="headerlink" href="#some-examples-of-work" title="Permalink to this heading">#</a></h2>
+<p>In general, we have, for a force <span class="math notranslate nohighlight">\(F\)</span> applied over a small displacement <span class="math notranslate nohighlight">\(\Delta x\)</span>, <span class="math notranslate nohighlight">\(\Delta W = F \Delta x\)</span>. (This is assuming that the force
+and the displacement are parallel; if they are not we need to write <span class="math notranslate nohighlight">\(\Delta W = {\textbf F} \cdot \Delta {\textbf x}\)</span> where
+<span class="math notranslate nohighlight">\(\textbf{F}\)</span> and <span class="math notranslate nohighlight">\(\Delta \textbf{x}\)</span> are vectors).</p>
+<p>For gases, it is usually more useful to work in terms of pressure: since <span class="math notranslate nohighlight">\(f = PA\)</span> where <span class="math notranslate nohighlight">\(A\)</span> is
+the area over which the pressure acts, the
+work done by pressure <span class="math notranslate nohighlight">\(P\)</span> is <span class="math notranslate nohighlight">\( PA \Delta x = P \Delta V\)</span>, where <span class="math notranslate nohighlight">\(\Delta V\)</span> is the change in the
+volume of the gas. Note that the work done
+<strong>on</strong> the gas, which is what we usually for the First Law is equal to <span class="math notranslate nohighlight">\(- P \Delta V\)</span>.</p>
+<p>Other forms of work include stretching a spring, where <span class="math notranslate nohighlight">\(\Delta W = f \Delta L\)</span> where <span class="math notranslate nohighlight">\(f\)</span> is the first applied to the spring and <span class="math notranslate nohighlight">\(\Delta L\)</span>
+is the change in its length, expanding a liquid droplet (<span class="math notranslate nohighlight">\(\Delta W = \gamma \Delta A\)</span> where <span class="math notranslate nohighlight">\(\gamma\)</span> is the surface tension and <span class="math notranslate nohighlight">\(\Delta A\)</span>
+is the change in area), applying an electric field to a charged particle, and so on. In the rest
+of this course we shall usually be using
+<span class="math notranslate nohighlight">\(-P \Delta V\)</span>, but it is important to remember that the First Law does not <em>only</em> apply to expanding gases!</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="internal-energy">
+<h1>Internal energy<a class="headerlink" href="#internal-energy" title="Permalink to this heading">#</a></h1>
+<p>The internal energy of a system is the total energy of its constituent particles. This includes the translational, rotational and
+vibrational energy that we considered in Section <a class="reference internal" href="topic3.html#topic3-heat-capacity"><span class="std std-ref">Heat capacity of ideal gases and equipartition of energy</span></a>, and also the
+potential energy due to forces between atoms, which we neglected in the
+ideal gas but which are obviously important in liquids and solids.</p>
+<p>Unlike heat and work, internal energy is a <strong>function of state</strong>: it is determined only be the current properties of the system, not by
+its history. If I take a system that is in state A (say, a gas with a specified <span class="math notranslate nohighlight">\(P, T\)</span> and <span class="math notranslate nohighlight">\(V\)</span>) and by supplying heat and/or by doing work I
+take it to state B, the change in its internal energy <em>is not path dependent</em>: whatever combination of heat and work I applied, in whatever
+order, the change in the internal energy will be the same.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 4.1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>One mole of a monatomic ideal gas, say argon, is enclosed in a contained which has one movable wall, so that the gas remains at the same
+pressure as the outside environment. (Neglect any frictional forces). The gas is heated at a constant pressure by an amount <span class="math notranslate nohighlight">\(\Delta T\)</span>.</p>
+<ul class="simple">
+<li><p>What is the work done on the gas?</p></li>
+<li><p>What is the change in the internal energy of the gas?</p></li>
+<li><p>What is the heat supplied to the gas?</p></li>
+<li><p>What is the relation between the molar heat capacity at constant pressure, <span class="math notranslate nohighlight">\(c_{P}\)</span>, and the molar heat at constant volume, <span class="math notranslate nohighlight">\(c_{V}\)</span>?</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p>If the gas is heated at constant pressure, then since <span class="math notranslate nohighlight">\(PV = RT\)</span> (for one mole), the volume
+must change. The amount of work done <em>by</em> the
+gas is <span class="math notranslate nohighlight">\(P \Delta V = R \Delta T\)</span>, so the amount of work done <em>on</em> the gas is <span class="math notranslate nohighlight">\(-R \Delta T\)</span>. From Equation <a class="reference internal" href="topic3.html#equation-eqn3-5">(16)</a>, we know that the
+change in the internal energy of the gas is <span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T\)</span>. (As this is a monatomic
+ideal gas, its internal energy is just the kinetic energy of its atoms: there is no rotational or vibrational degrees of freedom to worry
+about).</p>
+<p>Therefore from the First Law we have <span class="math notranslate nohighlight">\(Q - \Delta U - W = \frac{3}{2} R \Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T\)</span>.
+But by definition we know <span class="math notranslate nohighlight">\(Q = c_{P} \Delta T\)</span> where <span class="math notranslate nohighlight">\(c_{P}\)</span> is the molar heat capacity at constant pressure, and at constant volume
+we know that <span class="math notranslate nohighlight">\(\Delta U = Q = c_{V} \Delta T\)</span> since no work is done. Therefore as we have previously deduced (Equation <a class="reference internal" href="topic3.html#equation-eqn3-7">(18)</a>)
+<span class="math notranslate nohighlight">\(c_{V} = \frac{3}{2} R\)</span> and so <span class="math notranslate nohighlight">\(c_{P} = \frac{5}{2} R = c_{V} + R\)</span>. Note that although a more complicated gas, such as isobutane from
+Example 3.2, would have a larger value of <span class="math notranslate nohighlight">\(c_{V}\)</span>, it would still be true that <span class="math notranslate nohighlight">\(c_{P} = c_{V} + R\)</span>, since the work done by the gas
+pressure would be the same (provided that the gas could be treated as an ideal gas).</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cyclic-process">
+<h1>Cyclic process<a class="headerlink" href="#cyclic-process" title="Permalink to this heading">#</a></h1>
+<p>A process that eventually returns a system to its initial staret is called a cyclic process. For such a process, the final state is the same
+as the initial state, so the total internal energy change most be zero. If a net quantity of work <span class="math notranslate nohighlight">\(W\)</span> is done on the system, an equal amount
+of work must have flowed into the system as heat <span class="math notranslate nohighlight">\(Q\)</span>.</p>
+<p>Every day your body (a thermodynamic system) goes through a cyclic process. Heat is added by metabolizing food, and your body does work in
+breathing, walking and other activies. If you return to the same state at the end of the day,
+the net change in your internal energy is
+zero i.e. <span class="math notranslate nohighlight">\(\Delta U = 0\)</span> so <span class="math notranslate nohighlight">\(Q = -W\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 4.2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Question</label><div class="sd-tab-content docutils">
+<p>One gram of water (1 cm<span class="math notranslate nohighlight">\(^{3}\)</span>) becomes 1671 cm<span class="math notranslate nohighlight">\(^{3}\)</span> of steam when boiled at a constant pressure of 1 atm (101 kPa). Compute (i) the work
+done vaporizing the water and (ii) its increase in internal energy. (Note the heat of vaporization at this pressure is <span class="math notranslate nohighlight">\(L_{V} = 2.26 \times 
+10^{6}\)</span> J/kg</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>The water does work <span class="math notranslate nohighlight">\(P (V_{2} - V_{1}) = 1.67 \times 10^{2}\)</span> J so the work done on the water is <span class="math notranslate nohighlight">\(W = - 1.67 \times 10^{2}\)</span> J. From Eqn
+<a class="reference internal" href="topic2.html#equation-eqn2-6">(11)</a> <span class="math notranslate nohighlight">\(Q = m L_{V} = 2.26 \times 10^{3}\)</span> J. The first law of thermodynamics holds for
+thermodynamic processes of all kinds,
+<span class="math notranslate nohighlight">\(\Delta U = Q + W  = 2.09 \times 10^{3}\)</span> J. Over 90% of the heat remains in the system as an increase in internal energy, with the remainder
+leaving the system as it expands from liquid to vapour.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="topic3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Topic 3: The Ideal Gas</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="topic5.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Topic 5: Thermodynamic Processes</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 4: The First Law of Thermodynamics</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-and-work">Heat and work</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-examples-of-work">Some examples of work</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy">Internal energy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cyclic-process">Cyclic process</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
