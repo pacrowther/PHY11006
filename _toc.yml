@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: topic1.md
+- file: topic2.md
+- file: topic3.md
+- file: topic4.md
+- file: topic5.md
+- file: topic6.md
+- file: topic7.md
+- file: summary.md
+

@@ -1,0 +1,870 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 5: Thermodynamic Processes &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PHY11006/topic5';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic2.html">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic4.html">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPHY11006/topic5.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/PHY11006/topic5.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 5: Thermodynamic Processes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 5: Thermodynamic Processes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-functions-of-state">Thermodynamic functions of state</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reversible-and-irreversible-processes">Reversible and irreversible processes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-differential-form-of-the-first-law">The differential form of the First Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-with-a-constant-function-of-state">Processes  with a constant function of state</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isobaric-processes">Isobaric processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isothermal-process">Isothermal process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isochoric-processes">Isochoric processes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adiabatic-processes">Adiabatic processes</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-5-thermodynamic-processes">
+<h1>Topic 5: Thermodynamic Processes<a class="headerlink" href="#topic-5-thermodynamic-processes" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>We have said that heat and work are path-dependent quantities: the amount of heat you need to
+supply to a system, or the amount of work you need to do, to take it from state A to state B depends
+on the path you take to get there. But what, in this context, do we mean by <em>path</em>?</p>
+<p>Let’s consider an ideal gas, with equation of state <span class="math notranslate nohighlight">\(PV = nRT\)</span>. (The same ideas will apply to any
+system, but the variables we use to specify the system may be different.) For a fixed mass of gas, the
+state of the gas is defined by any two of the variables (<span class="math notranslate nohighlight">\(P,V,T\)</span>), because we can always use the equation
+of state to find the third. So we can specify our initial and final states as points on a plot of <span class="math notranslate nohighlight">\(P\)</span>
+against <span class="math notranslate nohighlight">\(V\)</span>. As the gas moves from state A to state B, it will pass through intermediate states, each of
+which can also be specified as a point on the <span class="math notranslate nohighlight">\(PV\)</span> plot. Therefore, any path between A and B is represented
+by a line joining A and B on the plot, and conversely any line joining A and B on the plot is a
+possible - if not necessarily practical - way in which the gas could be taken from state A to state B by
+supplying some combination of heat and work.</p>
+<p>In general, these paths will not be analytically calculable - we’d have to model the system in a
+computer to work out exactly how to move the gas from state A to state B along some random wiggly path.
+Therefore, we restrict our attention to those paths that lead to simple equations that we can solve.
+This is, of course, what the 19th century developers of thermodynamics also did, since they had no
+computers to do the calculations for them. Real applications of thermodynamics, e.g. real engines,
+do not follow these simple paths, but it is often possible to construct an idealised version of the engine
+that does, and this will give us some insight into how the engine performs. Later in the course we will
+look at idealised versions of some typical engines, including steam engines, petrol engines and diesel
+engines.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="thermodynamic-functions-of-state">
+<h1>Thermodynamic functions of state<a class="headerlink" href="#thermodynamic-functions-of-state" title="Permalink to this heading">#</a></h1>
+<p>To define the state of a system, we have to specify its properties. The properties that are useful for
+this are the ones that do not depend on the prior history of the state: for example, we cannot use the
+work done on a system to define its state, because the amount of work that has been done to put the
+system into some state A depends on its history. Properties of a system that depend only on its current
+state and not on its history are called <strong>functions of state</strong>. Examples of functions of state include
+pressure, temperature, volume, mass, density, magnetisation, electric charge, etc. Examples of variables
+which are not functions of state include, as we have seen, history-dependent variables such as work
+done and heat supplied, and also things that can change without changing the state, such as the kinetic
+energy of one atom of a gas (the temperature depends on the average kinetic energy, not the kinetic
+energy of one individual particle). The properties of a particular system may create relationships between
+functions of state, and these are called <strong>equations of state</strong>. The only equation of state we are
+using in this course is the ideal gas law, but there are many others: for example, numerous modifications
+of the ideal gas law designed to make it a better representation of real gases (the best known
+of these is the van der Waals equation of state, but there are many others), equations of state for
+nuclear matter, used to model the behaviour of neutron stars in astrophysics, equations of state for
+solid materials used to model their behaviour in the context of engineering or geology, and so on.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="reversible-and-irreversible-processes">
+<h1>Reversible and irreversible processes<a class="headerlink" href="#reversible-and-irreversible-processes" title="Permalink to this heading">#</a></h1>
+<p>If a system is left undisturbed for a long time, it will settle into equilibrium with its surroundings. In a system in equilibrium, all the
+functions of state have fixed, stable, well-defined values. If we slowly make an incremental change to one of the properties, say volume,
+the system will move from the original equilibrium to a new, very slightly different one. We can move it back to its original equilibrium by
+reversing the change, or we can continue to move it towards a new equilibrium in a different state. A slow process like this, where the
+system is never significantly out of thermal equilibrium, is called a <strong>quasistatic process</strong>.</p>
+<p>In many cases, quasistatic processes are <strong>reversible</strong>: that is, if we reverse the direction of change, we can move the system back to its
+original state along the same path. This is not always true: for example, processes that involve friction are never reversible- there’s no
+way that the heat you generated as you dragged that large box over the carpet can ever be collected together and reassembled into the work
+that was expended in doing the dragging, however slowly you did it.</p>
+<p>Changes t=of state that involve <em>rapid</em> changes to one or more functionso f starte are obviously not quasistatic, and in general are
+<strong>irreversible</strong>: for example: if youwere to expand a volume of gas slowl by moving a postion, that would be reversible, but if you expand
+it rapidly by setting off an explosion, that would be irreversible. Most real thermodynamic processes are irreversibe - you cannot refil
+your petrol tank by reversing the the action of the engine. When we study the action of heat engines later in the course, we will use
+idealised paths on the <span class="math notranslate nohighlight">\(PV\)</span> plot which <em>are</em> quasistatic and reversible.</p>
+<p>Given that the laws of physics are reversible, it may seem surprising that so many real-world processes are not Later inn the course we will
+expore this using the concept of <strong>entropy</strong>, and next year you will study the microscopic-level iinterpretation of entropy as part of
+statistical mechanics.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-differential-form-of-the-first-law">
+<h1>The differential form of the First Law<a class="headerlink" href="#the-differential-form-of-the-first-law" title="Permalink to this heading">#</a></h1>
+<p>In order to calculate the heat suppied and work done along a particular path on the <span class="math notranslate nohighlight">\(PV\)</span> plot, we will use the ifferential form of the First
+Law. For an infinitesimal change <span class="math notranslate nohighlight">\(dU\)</span> we have</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-1">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-1" title="Permalink to this equation">#</a></span>\[dU = \bar{d}Q + \bar{d}W\]</div>
+<p>The symbol <span class="math notranslate nohighlight">\(\bar{d}\)</span> indicates an <strong>inexact differential</strong>. For an <strong>exact differential</strong> such as <span class="math notranslate nohighlight">\(dU\)</span> we can write
+<span class="math notranslate nohighlight">\(\int_{x_{1}}^{x_{2}} dU = U(x_{2}) - U(x_{1})\)</span>, regardless of exactly how we do the integral. This is the same thing as saying that <span class="math notranslate nohighlight">\(U\)</span> is
+a function of state. On the other hand, <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(W\)</span> are not functions of state, so the result of doing such an integral over <span class="math notranslate nohighlight">\(\bar{d}Q\)</span> or
+<span class="math notranslate nohighlight">\(\bar{d}W\)</span> would depend on the parth we took from <span class="math notranslate nohighlight">\(x_{1}\)</span> to <span class="math notranslate nohighlight">\(x_{2}\)</span>.</p>
+<p>In order to <em>do</em> an integral over <span class="math notranslate nohighlight">\(\bar{d}Q\)</span> or <span class="math notranslate nohighlight">\(\bar{d}W\)</span>, we need to express it in terms of variables that <em>are</em> functions of staste. For
+example, if we can write <span class="math notranslate nohighlight">\(\bar{d}W = -P dV\)</span>, and we can use an equation of state to relate <span class="math notranslate nohighlight">\(P\)</span> to <span class="math notranslate nohighlight">\(V\)</span> along a particular path, then we can
+calculate <span class="math notranslate nohighlight">\(W\)</span> along the path, because both <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(V\)</span> are functions of state, so the integal is well-defined.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="processes-with-a-constant-function-of-state">
+<h1>Processes  with a constant function of state<a class="headerlink" href="#processes-with-a-constant-function-of-state" title="Permalink to this heading">#</a></h1>
+<p>One way to simplify our calculations is to consider processes where one of the relevant functions of starte is held constant throughout the
+process. When we are using an ideal gas as our working fluid, the relevant functions of state are <em>pressure, temperature</em> and <em>volume</em>.</p>
+<section id="isobaric-processes">
+<h2>Isobaric processes<a class="headerlink" href="#isobaric-processes" title="Permalink to this heading">#</a></h2>
+<p><strong>Isobaric processes</strong> take place at constant <strong>pressure</strong> (the word derives from the Greek for equal weight). On a <span class="math notranslate nohighlight">\(PV\)</span> plot, an isobaric
+process is a horizontal line. Because the pressure is constant, calculating the work done in an isobaric process is simple</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-2">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-2" title="Permalink to this equation">#</a></span>\[W = -\int_{V_{i}}^{V_{f}} P dV = - P (V_{f} - V_{i}),\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_{i}\)</span> and <span class="math notranslate nohighlight">\(V_{f}\)</span> are the initial and final volumes respectively. Also by definition, <span class="math notranslate nohighlight">\(Q = C_{P} (T_{f} - T_{i})\)</span>, where <span class="math notranslate nohighlight">\(C_{P}\)</span> is
+the heat capacity of the wortking fluid at constant pressure, The initial and final temperatures <span class="math notranslate nohighlight">\(T_{i}\)</span> and <span class="math notranslate nohighlight">\(T_{f}\)</span> can be calculated
+uding
+the equation of state.</p>
+<p>Isobaric processes are common in real life: if you heat something in an open container, the process is isobaric (but not, in general, either
+quasistatic or reversible - you can’t un-cook something by refrigerating it!).</p>
+</section>
+<section id="isothermal-process">
+<h2>Isothermal process<a class="headerlink" href="#isothermal-process" title="Permalink to this heading">#</a></h2>
+<p><strong>Isothermal processes</strong> take place at constant <strong>temperature</strong>. For an ideal gas, since <span class="math notranslate nohighlight">\(PV = nRT\)</span>, an ispthermal process onn a <span class="math notranslate nohighlight">\(PV\)</span> plot
+is a curve with <span class="math notranslate nohighlight">\(P \propto 1/V\)</span>. Since the internal energy of an ideal gas is determined by its temperature, <span class="math notranslate nohighlight">\(U\)</span> does not change during an
+isothermal process, so <span class="math notranslate nohighlight">\(Q = -W\)</span>.</p>
+<p>The work done during an ospthermal process can be calculated by using <span class="math notranslate nohighlight">\(P = nRT/V\)</span>. Assuming a fixed mass of gas, <span class="math notranslate nohighlight">\(n\)</span>, <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are all
+constant, so</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-3">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-3" title="Permalink to this equation">#</a></span>\[W = -\int_{V_{i}}^{V_{f}} P dV = - nRT \int_{V_{i}}^{V_{f}} \frac{dV}{V} = - nRT \ln \frac{V_{f}}{V_{i}}.\]</div>
+</section>
+<section id="isochoric-processes">
+<h2>Isochoric processes<a class="headerlink" href="#isochoric-processes" title="Permalink to this heading">#</a></h2>
+<p><strong>Isochoric processes</strong> take place at constant <strong>volume</strong> (because the word isochoric, which comes from the Greek for equal space, is not
+common and is not obviously connected to volume, the work isocolumic is often used instead). An isochoric process is a vertical line on a
+<span class="math notranslate nohighlight">\(PV\)</span> plot. Since the work done by a gas is <span class="math notranslate nohighlight">\(P \Delta V\)</span> and <span class="math notranslate nohighlight">\(\Delta V = 0\)</span>, no work is done by the gas during an isochoric process, so
+<span class="math notranslate nohighlight">\(\Delta U = Q\)</span>. By definition, <span class="math notranslate nohighlight">\(Q = C_{V} (T_{f} - T_{i})\)</span>, where <span class="math notranslate nohighlight">\(C_{V}\)</span> is the heat capacity of the working fluid at constant volume.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 5.1a</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>Suppose we take one mole of a monatomic ideal gas at pressure <span class="math notranslate nohighlight">\(P_1\)</span> and volume <span class="math notranslate nohighlight">\(V_1\)</span>, and heat it at constant pressure until it reaches
+volume <span class="math notranslate nohighlight">\(V_{2}\)</span>. We then heat it at constant volume until it reaches pressure <span class="math notranslate nohighlight">\(P_2\)</span>. What are (i) the heat supplied; (ii) the work done;
+(iii) the change in internal energy?</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p>Let’s label the four states A, B, C and D, where A is (<span class="math notranslate nohighlight">\(P_1, V_1\)</span>), B is (<span class="math notranslate nohighlight">\(P_1, V_2\)</span>), C is (<span class="math notranslate nohighlight">\(P_2, V_2)\)</span> and D is (<span class="math notranslate nohighlight">\(P_2, V_1)\)</span>.</p>
+<p>From the ideal gas law, <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we see that <span class="math notranslate nohighlight">\(T_{A} = P_1 V_1 / R\)</span>, <span class="math notranslate nohighlight">\(T_{B} = O_1 V_2 /R\)</span>, <span class="math notranslate nohighlight">\(T_{C} = P_2 V_2 /R\)</span> and <span class="math notranslate nohighlight">\(T_{D} = P_2 V_1 /R\)</span>.
+Since we have one mole of a monatomic ideal gas, the heat capacity at constant pressure is <span class="math notranslate nohighlight">\(C_{P} = \frac{5}{2} R\)</span> and the heat capacity at
+constant volume is  <span class="math notranslate nohighlight">\(C_{V} = \frac{3}{2} R\)</span>.</p>
+<p>The heat supplied going from A to B is <span class="math notranslate nohighlight">\(Q_{AB} = C_{P} (T_{B} - T_{A}) = \frac{5}{2} P_1 (V_2 - V_1).\)</span> From B to C the heat supplied is
+<span class="math notranslate nohighlight">\(Q_{BC} = C_{V} (T_{C} - T_{B}) = \frac{3}{2} V_2 (P_2 - P_1).\)</span> Therefore the total heat supplied is</p>
+<div class="math notranslate nohighlight">
+\[Q_{ABC} = \frac{5}{2} P_1 V_2 - 
+\frac{5}{2} P_1 V_1 + \frac{3}{2} P_2 V_2 - \frac{3}{2} P_1 V_2 = \frac{3}{2} P_2 V_2 - \frac{5}{2} P_1 V_1 + P_1 V_2.
+\]</div>
+<p>There is no work done in the isochoric process from B to C, so the total work done <em>on</em> the gas is just
+<span class="math notranslate nohighlight">\(W_{AB} = - P \Delta V = P_1 (V_1 - V_2).\)</span> The change in internal energy is <span class="math notranslate nohighlight">\(\Delta U = Q+ W = \frac{3}{2} (P_2 V_2 - P_1 V_1).\)</span></p>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 5.1b</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Question</label><div class="sd-tab-content docutils">
+<p>If instead we first heat the gas at constant volume until it reaches pressure <span class="math notranslate nohighlight">\(P_{2}\)</span> and then heat it at constant pressure until it
+reaches
+volume <span class="math notranslate nohighlight">\(V_{2}\)</span>, what are the heat supplied, work down and change in internal energy?</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>If we start with the isochoric step <span class="math notranslate nohighlight">\(Q_{AD} = C_{V} (T_{D} - T_{A}) = \frac{3}{2} V_{1} (P_2 - P_1)\)</span>. Then the isobaric step gives
+<span class="math notranslate nohighlight">\(Q_{DC} = C_{P} (T_{C} - T_{D}) = \frac{5}{2} P_{2} (V_2 - V_1).\)</span> The total heat supplied is</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{ADC} = \frac{3}{2} P_2 V_1 - \frac{3}{2} P_1 V_1 + \frac{5}{2} P_2 V_2 - \frac{5}{2} P_2 V_1 = \frac{5}{2} P_2 V_2 - \frac{3}{2} P_1 V_1 
+- P_2 - V_1.
+\]</div>
+<p>There is no work done from A to D, to the total work done on the gas is <span class="math notranslate nohighlight">\(W_{DC} = - P \Delta V = P_2 (V_1 - V_2).\)</span> The change in internal
+energy is <span class="math notranslate nohighlight">\(\Delta U = Q + W = \frac{3}{2} (P_2 V_2 - P_1 V_1).\)</span></p>
+<p>Note that the change in internal energy is the same in both cases, as it should be because internal energy is a function of state. However,
+the heat supplied and the work done both differ. If we were to combined this as a cycle ADCBA, running the first parth in reverse, the net
+work done on the gas would be <span class="math notranslate nohighlight">\((P_2 - P_1)/(V_1 - V_2)\)</span>, i.e. the gas would <em>do</em> net work <span class="math notranslate nohighlight">\((P_2 - P_1)(V_2 - V_1)\)</span> on its surroundings since
+<span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>. This is the basis on which <strong>heat engines</strong> work: They convert heat to work by tracing out a closed cycle on the <span class="math notranslate nohighlight">\(PV\)</span> plot.</p>
+<p>Also note that since <span class="math notranslate nohighlight">\(PV = RT\)</span> for one mole of gas, we can write <span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} R (T_{C} - T_{A}) = C_{V} \Delta T.\)</span>
+This is what we should expect: we saw above that for an isochoric process <span class="math notranslate nohighlight">\(\Delta U = Q = C_{V} \Delta T\)</span>, and as <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are
+both functions of state, it must therefore always be true that <span class="math notranslate nohighlight">\(\Delta U = C_{V} \Delta T\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="adiabatic-processes">
+<h1>Adiabatic processes<a class="headerlink" href="#adiabatic-processes" title="Permalink to this heading">#</a></h1>
+<p>Isobaric, isochoric and isopthermal processes are three of the simple paths we will use to construct idealised heat engines. The forth path
+is slightly different: instread of constraining one of the functions of tstate, we constrain one of the variables of the First Law, namely
+<span class="math notranslate nohighlight">\(Q\)</span>. An <strong>adiabatic process</strong> is a reversible process in which there is no heat flow, i.e. Q<span class="math notranslate nohighlight">\( = 0\)</span> and <span class="math notranslate nohighlight">\(dU = \bar{d}W\)</span>. Note that an
+adiabatic process is <em>not</em> isothermal: the internal energy of the working fluid does changem but it changes because work is done, not
+because heat is supplied.</p>
+<p>If the working fluid is <span class="math notranslate nohighlight">\(n\)</span> moles of an ideal gas, we know that <span class="math notranslate nohighlight">\(dU = n c_{V} dT\)</span>, where <span class="math notranslate nohighlight">\(c_{V}\)</span> is the molar heat capacity, and <span class="math notranslate nohighlight">\(\bar{d} W 
+= - P dV\)</span>. Since <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we can write</p>
+<div class="math notranslate nohighlight">
+\[
+n c_{V} dT = - \frac{nRT}{V} dV,
+\]</div>
+<p>and separating variables gives</p>
+<div class="math notranslate nohighlight">
+\[
+c_{V} \frac{dT}{T} = -R \frac{dV}{V}.
+\]</div>
+<p>We can now integrate this from <span class="math notranslate nohighlight">\(V_{i}\)</span> to <span class="math notranslate nohighlight">\(V_{f}\)</span> (corresponding to <span class="math notranslate nohighlight">\(T_{i}\)</span> to <span class="math notranslate nohighlight">\(T_{f}\)</span>) to get
+<span class="math notranslate nohighlight">\(c_{V} \ln (T_{f}/T_{i}) = - 
+R \ln (V_{f}/V_{i})\)</span>. Taking antilogs of this gives <span class="math notranslate nohighlight">\(T_{f}^{c_{V}} V_{f}^{R} = P_{i}^{c_{V}} V_{i}^{R}\)</span>.</p>
+<p>Since we usually work in terms of <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(V\)</span> it is useful to eliminate <span class="math notranslate nohighlight">\(T (= PV/nR\)</span>). This gives</p>
+<div class="math notranslate nohighlight">
+\[
+P_{f}^{c_{V}} V_{f}^{c_{V}+R} = P_{i}^{c_{V}} V_{i}^{c_{V}+R}.
+\]</div>
+<p>But we know that <span class="math notranslate nohighlight">\(c_{P} = c_{V} + R\)</span>  (see Example 4.1), so we can write this as</p>
+<div class="math notranslate nohighlight">
+\[
+P_{f}^{c_{V}} V_{f}^{c_{P}} = P_{i}^{c_{V}} V_{i}^{c_{P}}.
+\]</div>
+<p>If we define <span class="math notranslate nohighlight">\(\gamma = c_{P}/c_{V}\)</span>, we can take the <span class="math notranslate nohighlight">\(c_{v}\)</span>-th root of this to obtain</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-4">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-4" title="Permalink to this equation">#</a></span>\[PV^{\gamma} = {\rm constant}.\]</div>
+<p>using this and <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we also have</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-5">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-5" title="Permalink to this equation">#</a></span>\[TV^{\gamma-1} = {\rm constant}.\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-6">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-6" title="Permalink to this equation">#</a></span>\[PT^{\gamma/(1-\gamma)} = {\rm constant}.\]</div>
+<p>(not, of course, numerically the same constants!).</p>
+<p>This allows us to determine the work done along an adiabatic path. If we know the initial pressure and volume, we can calculate <span class="math notranslate nohighlight">\(P_{i} 
+V_{i}^{\gamma} = K\)</span>, say. Then</p>
+<div class="math notranslate nohighlight">
+\[
+W = - \int_{V_{i}}^{V_{f}} P dV = - K \int_{V_{i}}^{V_{j}} V^{-gamma} dV = - \frac{K}{1-\gamma} [ V^{1-\gamma}]_{V_{i}}^{V_{f}} = 
+\frac{K}{\gamma -1} \left( V_{f}^{1-\gamma} - V_{i}^{1-\gamma} \right).
+\]</div>
+<p>But since <span class="math notranslate nohighlight">\(P V^{\gamma}\)</span> is constant, <span class="math notranslate nohighlight">\(K = P_{f} V_{f}\)</span> we can simpify this to</p>
+<div class="math notranslate nohighlight" id="equation-eqn5-7">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn5-7" title="Permalink to this equation">#</a></span>\[W = \frac{1}{\gamma -1} (P_f V_f - P_i V_i).\]</div>
+<p>Note that, because <span class="math notranslate nohighlight">\(Q = 0\)</span>, this must be equal to the change in internal energy <span class="math notranslate nohighlight">\(\Delta U = n c_{V} (T_f - T_i).\)</span> This is easily verified
+using the ideal gas law.</p>
+<table class="table" id="ratio-of-heat-capacities">
+<caption><span class="caption-text">Molar Heat Capacities of Gases at Low Pressure</span><a class="headerlink" href="#ratio-of-heat-capacities" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Gas</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_{V}\)</span> (J mol<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(c_{P}\)</span> (J mol<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span>)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\gamma = c_{p}/c_{v}\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>He</p></td>
+<td><p>12.47</p></td>
+<td><p>20.78</p></td>
+<td><p>1.67</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ar</p></td>
+<td><p>12.47</p></td>
+<td><p>20.78</p></td>
+<td><p>1.67</p></td>
+</tr>
+<tr class="row-even"><td><p>H<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>20.42</p></td>
+<td><p>28.74</p></td>
+<td><p>1.41</p></td>
+</tr>
+<tr class="row-odd"><td><p>N<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>20.76</p></td>
+<td><p>29.07</p></td>
+<td><p>1.40</p></td>
+</tr>
+<tr class="row-even"><td><p>O<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>20.85</p></td>
+<td><p>29.17</p></td>
+<td><p>1.40</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>20.85</p></td>
+<td><p>29.16</p></td>
+<td><p>1.40</p></td>
+</tr>
+<tr class="row-even"><td><p>CO<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>28.46</p></td>
+<td><p>36.94</p></td>
+<td><p>1.30</p></td>
+</tr>
+<tr class="row-odd"><td><p>SO<span class="math notranslate nohighlight">\(_{2}\)</span></p></td>
+<td><p>31.39</p></td>
+<td><p>40.37</p></td>
+<td><p>1.29</p></td>
+</tr>
+</tbody>
+</table>
+<p>Measured values of <span class="math notranslate nohighlight">\(c_{P}\)</span> and <span class="math notranslate nohighlight">\(c_{V}\)</span> are presented in <a class="reference internal" href="../topic5.html#ratio-of-heat-capacities"><span class="std std-numref">Table 6</span></a> for real gases at low pressures, together with
+the ratio of their heat capacities, <span class="math notranslate nohighlight">\(\gamma\)</span>. An ideal monatomic gas has <span class="math notranslate nohighlight">\(c_{V} = \frac{3}{2} R\)</span> and <span class="math notranslate nohighlight">\(c_{P} = \frac{5}{2} R\)</span> so <span class="math notranslate nohighlight">\(\gamma\)</span> =
+5/3, in agreement with empirical results for helium and argon. For most diatomic gases at room temperature <span class="math notranslate nohighlight">\(c_{V} = \frac{5}{2} R\)</span> and
+<span class="math notranslate nohighlight">\(c_{P} = \frac{7}{2} R\)</span> so <span class="math notranslate nohighlight">\(\gamma\)</span> = 7/5, again in excellent agreement with empirical values for N<span class="math notranslate nohighlight">\(_{2}\)</span>, O<span class="math notranslate nohighlight">\(_{2}\)</span>, CO.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 5.2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Question</label><div class="sd-tab-content docutils">
+<p>One mole of nitrogen, initially at a pressure of 101 kPa and a temperature of 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, is adiabatically compressed to half its
+original  volume. What are its final pressure and temperature? How much work has been done?</p>
+<p>(Nitrogen gas is a diatomic molecule, and at room  temperature it has <span class="math notranslate nohighlight">\(\gamma\)</span> = 7/5.)</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>Since the final volume is half the initial volume, <span class="math notranslate nohighlight">\(P_{f}  = P_{i} V_{i}^{\gamma} / V_{f}^{\gamma} = 2^{\gamma} P_{i}\)</span> = 267 kPa.</p>
+<p>Likewise, using Equation <a class="reference internal" href="../topic5.html#equation-eqn5-5">(27)</a>, <span class="math notranslate nohighlight">\(T_{f} = T_{i} V_{i}^{\gamma -1}/V_{f}^{\gamma -1} = 2^{\gamma -1} T_{i}\)</span> = 393 K = 120<span class="math notranslate nohighlight">\(^{\circ}\)</span> C.</p>
+<p>The initial volume is <span class="math notranslate nohighlight">\(V_{i}  n R T_{i} / P_i} = 1 \times 8.31 \times 298 / 101000\)</span> = 0.0245 m<span class="math notranslate nohighlight">\(^{3}\)</span> so that the work done is <span class="math notranslate nohighlight">\(W = 
+\frac{5}{2} \left( (267000/2) - 101000 \right) \times 0.0245\)</span> = 1.99 kJ.</p>
+</div>
+</div>
+</div>
+<p>In real life, adiabatic processes are often <em>fast</em> processes: no heat is transferrred because the system does not have time to reach
+equilibrium. However, when we do calculations in this course, we shall assume thast adiabatic processes take place slowly and reversibly
+within a container that is completely insulated from its surroundings, so that no heat flows in or out.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 5.3</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Question</label><div class="sd-tab-content docutils">
+<p>A typical bedroom contains about 2500 moles of air. Find the change in the internal energy of this much air when it is cooled from
+35.0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C
+to 26.0<span class="math notranslate nohighlight">\(^{\circ}\)</span> C at a constant pressure of 1.0 atm. Treat the air as an ideal diatnoic gas with <span class="math notranslate nohighlight">\(\gamma\)</span> = 7/5.</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Solution</label><div class="sd-tab-content docutils">
+<div class="math notranslate nohighlight">
+\[
+c_{V}  = \frac{R}{\gamma - 1} = 20.79 {\rm K/mol/K}
+\]</div>
+<p>so <span class="math notranslate nohighlight">\(dU = n c_{V} dT = (2500) (20.78) (26.0 - 35.0) = -4.68 \times 10^{5}\)</span> J. To cool 2500 moles of air by 9 degrees, an air conditioner
+needs to extract this much energy and transfer it to the air outside.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./PHY11006"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 5: Thermodynamic Processes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-functions-of-state">Thermodynamic functions of state</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#reversible-and-irreversible-processes">Reversible and irreversible processes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-differential-form-of-the-first-law">The differential form of the First Law</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#processes-with-a-constant-function-of-state">Processes  with a constant function of state</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isobaric-processes">Isobaric processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isothermal-process">Isothermal process</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isochoric-processes">Isochoric processes</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#adiabatic-processes">Adiabatic processes</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

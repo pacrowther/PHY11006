@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Topic 6: Heat Engines &#8212; PHY11006 - Thermal</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PHY11006/topic6';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logouni.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logouni.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    PHY11006 - Thermal Physics
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../topic1.html">Topic 1: Temperature and Thermal Equilibrium</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic2.html">Topic 2: Heat and Heat Transfer</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic3.html">Topic 3: The Ideal Gas</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic4.html">Topic 4: The First Law of Thermodynamics</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic5.html">Topic 5: Thermodynamic Processes</a></li>
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic6.html">Topic 6: Heat Engines</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../summary.html">Summary</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FPHY11006/topic6.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/PHY11006/topic6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Topic 6: Heat Engines</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 6: Heat Engines</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-efficiency-of-a-heat-engine">Thermal efficiency of a heat engine</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-carnot-cycle-the-perfect-heat-engine">The Carnot cycle: the ‘perfect’ heat engine</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-heat-pumps">Refrigerators and heat pumps</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="topic-6-heat-engines">
+<h1>Topic 6: Heat Engines<a class="headerlink" href="#topic-6-heat-engines" title="Permalink to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<p>As we saw in example 5.1, tracing out a closed cycle on a <span class="math notranslate nohighlight">\(PV\)</span> plot can result in a partial conversion of
+heat into work (only partial, because not all the heat supplied is converted: some is output as waste
+heat). Macroscopic kinetic energy is energy associated with organized, coordinated motions of many
+molecules, whereas heat transfer involves changes in energy of disordered molecular motion.
+Conversion of mechanical energy into heat involves an increase of disorder. As a prelude to the second
+law of thermodynamics we will consider two classes of device: <strong>heat engines</strong> are partly
+successful in converting heat into work. Refrigerators are partly successful in transporting
+heat from cooler to hotter bodies.</p>
+<p>A heat engine is any device that takes in heat <span class="math notranslate nohighlight">\(Q_H\)</span>, converts some of it into work <span class="math notranslate nohighlight">\(W\)</span>, and outputs the
+rest as waste heat <span class="math notranslate nohighlight">\(Q_C\)</span> . The engine contains a <strong>working fluid</strong> that undergoes various processes (heating,
+cooling, compression, expansion) in the course of the cycle. In the heat engines we shall consider in
+this course, we will assume that the working fluid is an ideal gas and that all the processes involved
+are quasistatic and reversible. In real engines, this is not true: many real engine cycles, such as the
+steam engine, rely in part on a phase change (the working fluid of a steam engine is water, which
+spends part of the cycle as liquid water, part as water vapour, and part as liquid and vapour in
+equilibrium), which means that the working fluid cannot be modelled as an ideal gas, and of course all
+real engines lose some energy to irreversible processes such as friction. However, a number of
+common engines can be reasonably well modelled as a cycle of reversible processes applied to an
+ideal gas as working fluid, and we shall look at some of these in this section.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="thermal-efficiency-of-a-heat-engine">
+<h1>Thermal efficiency of a heat engine<a class="headerlink" href="#thermal-efficiency-of-a-heat-engine" title="Permalink to this heading">#</a></h1>
+<p>The <strong>thermal efficiency</strong> of a heat engine, usually denoted <span class="math notranslate nohighlight">\(\eta\)</span>, is the fraction of the input heat that is converted into work in one
+complete cycle</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-1">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-1" title="Permalink to this equation">#</a></span>\[\eta = \frac{|W|}{Q_{H}}.\]</div>
+<p>Here I have written <span class="math notranslate nohighlight">\(|W|\)</span>, because our First Law definition of <span class="math notranslate nohighlight">\(W\)</span> is the work done <em>on</em> the system, and the porpose of a heat engine is to
+<em>do</em> work, so we expect <span class="math notranslate nohighlight">\(W &lt; 0\)</span>. Since the engine returns to its initial state at the end of each cycle, and we know that <span class="math notranslate nohighlight">\(U\)</span> is a function
+of state, we must have <span class="math notranslate nohighlight">\(\Delta U = 0\)</span> at the end end of a cycle, and therefore <span class="math notranslate nohighlight">\(\Delta Q = Q_{H} - |Q_{C}| = |W|\)</span>. Again we write <span class="math notranslate nohighlight">\(|Q_{C}|\)</span>
+because we defined <span class="math notranslate nohighlight">\(Q_{C}\)</span> above as the heat <em>given out</em> by the system, whereas in our definition of the First
+Law Q$ us always heat <em>supplied</em> to the system. Substituting this into Equation <a class="reference internal" href="../topic6.html#equation-eqn6-1">(30)</a> gives</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-2">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-2" title="Permalink to this equation">#</a></span>\[\eta = 1- \frac{|Q_{C}|}{Q_{H}}.\]</div>
+<p>Obviously the aim of engine designers is to maximise <span class="math notranslate nohighlight">\(\eta\)</span>.</p>
+<p><a class="reference internal" href="../topic6.html#fig6-0"><span class="std std-numref">Fig. 11</span></a> shows the operation of a petrol engine. First a mixture of
+air and petrol vapour flows into a cylinder through an open intake value while the piston descends, increasing the volume of the cylinder
+from a minimum of <span class="math notranslate nohighlight">\(V\)</span> (when the piston is all the way up) to a maximum of <span class="math notranslate nohighlight">\(rV\)</span> (when it is all the way down). The quantity <span class="math notranslate nohighlight">\(r\)</span> is called the
+<strong>compression ratio</strong>. At the end of this <em>intake stroke</em>, the intake value closes and the mixture is compressed to volume <span class="math notranslate nohighlight">\(V\)</span> during the
+<em>compression stroke</em>. The mixture is then ignited nby the spark plug, and the heated gas expands back to volume <span class="math notranslate nohighlight">\(rV\)</span>, pushing on the piston
+and doing work; this is the <em>power stroke</em>. Finally the exhaust valve opens, and the combustion products are pushed out (during the <em>exhaust
+stroke</em>), leaving the cylinder ready for the next intake stroke.</p>
+<figure class="align-center" id="fig6-0">
+<a class="reference internal image-reference" href="../_images/6_engine.png"><img alt="Cycle of a four-stroke internal-combustion engine." src="../_images/6_engine.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-text">Cycle of an internal-combustion engine. Source: Fig 20.5 from University Physics with Modern Physics (Pearson)</span><a class="headerlink" href="#fig6-0" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="some-idealised-heat-engines">
+<h1>Some idealised heat engines<a class="headerlink" href="#some-idealised-heat-engines" title="Permalink to this heading">#</a></h1>
+<figure class="align-center" id="fig6-1">
+<a class="reference internal image-reference" href="../_images/6_Otto.png"><img alt="Otto cycle" src="../_images/6_Otto.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-text">The Otto cycle. Source: <a class="reference external" href="http://en.wikipedia.org/wiki/Otto_cycle#/media/File:P-V_Otto_cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="the-otto-cycle">
+<h2>The Otto cycle<a class="headerlink" href="#the-otto-cycle" title="Permalink to this heading">#</a></h2>
+<p>The <strong>Otto cycle</strong> is an idealised version of the petrol engine. As shown in <a class="reference internal" href="../topic6.html#fig6-1"><span class="std std-numref">Fig. 12</span></a>, the Otto cycle consists of six processes, but
+the first and last do not affect the work done or the efficiency, and can be neglected.</p>
+<p>In the Otto cycle, heat is added at constant volume in step 2-3 (this represents the injection and ignition of the fuel) and rejected at
+constant volume in step 4-1 (when the exhaust valve is opened). Work is done adiabatically <em>on</em> the gas in step 1-2 as the piston moves up
+from BDC (bottom dead centre) to TDC (top dead centre), and <em>by</em> the gas as it forces the poston back out in step 3-4. Although we think of
+a petrol engine as being driven by petrol, the working fuild is actually air, or more precisely a mixture of air and combustion products:
+the petrol powers the engine by supplying the input heat in step 2-3.</p>
+<p>From Equation 6.2, the efficiency of the Otto engine is <span class="math notranslate nohighlight">\(\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}\)</span>, since the heat supplied at constant volume
+is <span class="math notranslate nohighlight">\(Q = C_{V} \Delta T\)</span> and we assume that <span class="math notranslate nohighlight">\(C_{V}\)</span> is the same in both steps (note that in a real  engine it won’t be, since the working gas
+has a different chemical composition after ignition).</p>
+<p>Since steps 1-2 and 3-4 are both adiabatic, we know from Equation <a class="reference internal" href="../topic5.html#equation-eqn5-5">(27)</a> that <span class="math notranslate nohighlight">\(T_{4} V_{1}^{\gamma -1} = T_{3} V_{2}^{\gamma - 1}\)</span>
+and <span class="math notranslate nohighlight">\(T_{1} V_{1}^{\gamma -1} = T_{2} V_{2}^{\gamma - 1}\)</span>. Therefore we can write <span class="math notranslate nohighlight">\(T_{4} - T_{1} = T_{3} \left( 
+\frac{V_{2}}{V_{1}}\right)^{\gamma-1}  - T_{2} \left (\frac{V_{2}}{V_{1}}\right)^{\gamma-1} = (T_{3} - T_{2} 
+\left( \frac{V_{2}}{V_{1}} \right)^{\gamma-1}\)</span>, and hence we can simplify the efficiency to</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-3">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-3" title="Permalink to this equation">#</a></span>\[\eta = 1 - \left( \frac{V_{2}}{V_{1}}\right)^{\gamma-1} = 1 - \frac{1}{r^{\gamma-1}},\]</div>
+<p>where <span class="math notranslate nohighlight">\(r = V_{1} / V_{2}\)</span> is the compression ratio. Therefore, to maximise the efficiency of a petrol engine, we should
+aim to maximise the compression ratio. This is limited by the fact that <span class="math notranslate nohighlight">\(T_{2} = T_{1} r^{\gamma-1}\)</span>: if we increae the compression ratio
+too much, the temperature inside the cylinder will increae to the point where the fuel ignites prematurely, before the spark. Typical
+compression ratios for petrol engines are around 10:1 (between 8:2 and 12:1).</p>
+</section>
+<section id="diesel-cycle">
+<h2>Diesel cycle<a class="headerlink" href="#diesel-cycle" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="fig6-2">
+<a class="reference internal image-reference" href="../_images/6_Diesel.png"><img alt="Diesel cycle" src="../_images/6_Diesel.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-text">The Diesel cycle. Source: <a class="reference external" href="http://en.wikipedia.org/wiki/Diesel_cycle#/media/File:Diesel_cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Diesel cycle, as its name suggests, is an idealised version of the diesel engine. The difference between the Diesel cycle and the Otto
+cycle is that the heating stage 2-3 takes place at constant pressure, rather than at constant volume as in the Otto cycle. The intake stroke
+(step 0-1) and exhaust stroke (step 4-0) shown in <a class="reference internal" href="../topic6.html#fig6-1"><span class="std std-numref">Fig. 12</span></a> do exist in the Diesel cycle, but have been omitted from
+<a class="reference internal" href="../topic6.html#fig6-2"><span class="std std-numref">Fig. 13</span></a>.</p>
+<p>The thermal efficiency of a diesel engine is given by <span class="math notranslate nohighlight">\(\eta = 1 - \frac{C_{V} (T_{4} - T_{1})}{C_{P} (T_{3} - T_{2})}\)</span>. This is more
+complicated to work out than the petrol engine, because there are three volumes involved instead of two. We define the
+compression ratio <span class="math notranslate nohighlight">\(r = V_{1} / V_{2}\)</span> as before, also also the <strong>cut-off ratio</strong>, <span class="math notranslate nohighlight">\(\alpha = V_{3} / V_{2}\)</span>. From the ideal gas law we deduce
+that it is also true that <span class="math notranslate nohighlight">\(\alpha = T_{3} / T_{2}\)</span>.</p>
+<p>From step 3-4 we deduce that <span class="math notranslate nohighlight">\(T_{4} V_{1}^{\gamma-1} = T_{3} V_{3}^{\gamma-1} = (\alpha T_{2}) (\alpha V_{2})^{\gamma-1} = \alpha^{\gamma} 
+T_{2} V_{2}^{\gamma-1}.\)</span> From step 1-2 we have <span class="math notranslate nohighlight">\(T_{1} V_{1}^{\gamma-1} = T_{2} V_{2}^{\gamma-1}\)</span>, so <span class="math notranslate nohighlight">\(T_{4} - T_{1} = \left( 
+\frac{V_{2}}{V_{1}}\right)^{\gamma-1} (\alpha^{\gamma} - 1) T_{2} = \frac{\alpha^{\gamma} - 1}{r^{\gamma-1}} T_{2}\)</span>
+and <span class="math notranslate nohighlight">\(T_{3} - T_{2} = (\alpha -1) T_{2}\)</span>; Hence</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-4">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-4" title="Permalink to this equation">#</a></span>\[\eta = 1 - \frac{C_{V}}{C_{P}} \frac{1}{r^{\gamma-1}} \frac{\alpha^{\gamma} - 1}{\alpha -1} = 1 - \frac{1}{r^{\gamma-1}} 
+\frac{\alpha^{\gamma} - 1}{\gamma (\alpha - 1)}.\]</div>
+<p>How does this compare with the efficiency of the Otto cycle?</p>
+<p>If we write <span class="math notranslate nohighlight">\(\beta = \alpha -1\)</span> then <span class="math notranslate nohighlight">\(\alpha^{\gamma} = (1+\beta)^{\gamma} = 1 + \gamma \beta + \frac{1}{2} \gamma (\gamma - 1) \beta^{2} + \cdots &gt; 1 + \gamma \beta,\)</span>
+since both <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> are greater than 1. Therefore</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\alpha^{\gamma} - 1}{\gamma(\alpha - 1)} &gt; \frac{\gamma \beta}{\gamma \beta} = 1,
+\]</div>
+<p>so for the same compression ratio, <span class="math notranslate nohighlight">\(r\)</span>, the Otto cycle has a higher efficiency than the Diesel cycle. However, in practice diesel engines
+can run at higher compression ratios than petrol engines (between 14:1 and 23:1, so roughly double a typical petrol engine compression
+ratio), and the factor <span class="math notranslate nohighlight">\(\frac{\alpha^{\gamma} - 1}{\gamma(\alpha-1)}\)</span> is not very much greater than 1 (typical values of <span class="math notranslate nohighlight">\(\alpha\)</span> seem to be
+around 2, which for a diatomic working gas with <span class="math notranslate nohighlight">\(\gamma\)</span> = 7/5 gives 1.17), so a typical diesel engine is likely to be more efficient than a
+typical petrol engine.</p>
+<p>The value of <span class="math notranslate nohighlight">\(\alpha\)</span> is contrained by <span class="math notranslate nohighlight">\(T_{3}\)</span>, which is set by the temperature at which the fuel will ignite: unlike a petrol engine,
+diseel engines have no need for spark plugs since the full ignites spontaneously when it reaches the appopriate temperature. Since
+<span class="math notranslate nohighlight">\(T_{2}/T_{1} = r^{\gamma -1}\)</span>, we can express <span class="math notranslate nohighlight">\(\alpha\)</span> in terms of the compression ratio, <span class="math notranslate nohighlight">\(T_{1}\)</span> and <span class="math notranslate nohighlight">\(T{3}\)</span> by</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-5">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-5" title="Permalink to this equation">#</a></span>\[\alpha = \frac{T_{3}}{T_{2}} = \frac{T_{3}}{T_{1}} \frac{T_{1}}{T_{2}} = \frac{1}{r^{\gamma -1}} \frac{T_{3}}{T_{1}}\]</div>
+<p>As <span class="math notranslate nohighlight">\(T_{1}\)</span> and <span class="math notranslate nohighlight">\(T_{3}\)</span> are reasonably well defined, this means that the cut-off ratio is not really an independent parameter; if we know
+the flame temperature <span class="math notranslate nohighlight">\(T_{3}\)</span> and the inlet temperature <span class="math notranslate nohighlight">\(T_{1}\)</span>, it is set by the compression ratio.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-carnot-cycle-the-perfect-heat-engine">
+<span id="topic6-carnot"></span><h1>The Carnot cycle: the ‘perfect’ heat engine<a class="headerlink" href="#the-carnot-cycle-the-perfect-heat-engine" title="Permalink to this heading">#</a></h1>
+<p>The best possible cycle for a heat engine was proposed in 1824 by the French physicist Sadi Carnot (1796-1832). The <strong>Carnot cycle</strong> is
+shown in <a class="reference internal" href="../topic6.html#fig6-3"><span class="std std-numref">Fig. 14</span></a>: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step
+1-2: work
+is done in all four steps. Only two temperatures are involved: <span class="math notranslate nohighlight">\(T_{3} = T_{4} = T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{1} = T_{2} = T_{C}\)</span>.</p>
+<figure class="align-center" id="fig6-3">
+<a class="reference internal image-reference" href="../_images/6_Carnot.png"><img alt="Carnot cycle" src="../_images/6_Carnot.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-text">The Carnot cycle.</span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Taking each step in turn:</p>
+<ol class="arabic simple">
+<li><p>Step 1-2, work done on system <span class="math notranslate nohighlight">\(W_{12} = n R T_{C} \ln (V_{1} / V_{2})\)</span>. As this step is isothermal <span class="math notranslate nohighlight">\(\Delta U = 0\)</span> and so the system must
+output heat <span class="math notranslate nohighlight">\(|Q_{12}| = n R T_{C} \ln (V_{1} / V_{2})\)</span>.</p></li>
+<li><p>Step 2-3: as this step is adiabatic, the heat supplied is zero, and from Equation <a class="reference internal" href="../topic5.html#equation-eqn5-7">(29)</a>, the work done is <span class="math notranslate nohighlight">\(W_{23} = 
+\frac{1}{\gamma-1} (P_{3} V_{3} - P_{2} V_{2})  = n c_{V} (T_{H} - T_{C})\)</span>.</p></li>
+<li><p>Step 3-4: work done <em>by</em> system <span class="math notranslate nohighlight">\(|W_{34}| = n R T_{H} \ln (V_{4} / V_{3})\)</span>. Since <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>, the system must take in heat <span class="math notranslate nohighlight">\(Q_{34} = 
+n R T_{H} \ln (V_{4}/ V_{3})\)</span>.</p></li>
+<li><p>Step 4-1: the work done <em>by</em> the system is <span class="math notranslate nohighlight">\(|W_{41}| = n c_{V} (T_{H} - T_{C}).\)</span> As the same temperatures are involved as in step 2-3
+these just cancel out so the net work done <em>by</em> the system is <span class="math notranslate nohighlight">\(|W_{34}| - W_{12}\)</span>.</p></li>
+</ol>
+<p>To simplify the resulting expression we use Equation <a class="reference internal" href="../topic5.html#equation-eqn5-5">(27)</a> to deduce <span class="math notranslate nohighlight">\(V_{2} T_{C}^{\gamma-1} = V_{3} T_{H}^{\gamma-1}\)</span>
+and <span class="math notranslate nohighlight">\(V_{1} T_{C}^{\gamma-1} = V_{4} T_{H}^{\gamma-1}\)</span>. Therefore we conclude that <span class="math notranslate nohighlight">\(V_{1}/V_{2} = V_{4}/V_{3}\)</span>. Hence the net work done by
+the system is <span class="math notranslate nohighlight">\(|W| = n R (T_{H} - T_{C}) \ln (V_{4}/V_{3})\)</span>, and the heat supplied is <span class="math notranslate nohighlight">\(Q_{H} = Q_{34} = n R T_{H} \ln (V_{4}/V_{3})\)</span>.
+From Equation <a class="reference internal" href="../topic6.html#equation-eqn6-1">(30)</a> the efficiency of the Carnot cycle is</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-6">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-6" title="Permalink to this equation">#</a></span>\[\eta = 1 - \frac{T_{C}}{T_{H}}.\]</div>
+<p>The Carnot cycle is not an idealised version of a real engine - in practical terms it is <em>extremely</em> difficult to supply heat without
+raising the temperature of your working fluid. It was deliberately desgined as a theoretical construct to demonstrate maximium efficiency.
+We shall see in the next section that the Second Law of Thermodynamics can be used to demonstraet that it is impossible for any engine, real
+or idealized, to be more dfficient than a Carnot engine.</p>
+<p>Equation <a class="reference internal" href="../topic6.html#equation-eqn6-6">(35)</a> can be used to define the <strong>thermodynamic temperature</strong>, because although we used the ideal gas law to derive it, it
+is in fact  indepdent of the working substance of the cycle. Therefore, if a Carnot cycle takes in heat <span class="math notranslate nohighlight">\(Q_{H}\)</span> and rejects heat <span class="math notranslate nohighlight">\(|Q_{C}|\)</span>,
+we can define the <strong>Kelvin temperature</strong></p>
+<div class="math notranslate nohighlight" id="equation-eqn6-7">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-7" title="Permalink to this equation">#</a></span>\[\frac{T_{C}}{T_{H}} = \frac{|Q_{C}|}{Q_{H}}.\]</div>
+<p>Since the Carnot cycle is purely theoretical and does not correspond to any real device, this is not a very useful definition in practical
+terms, but it is closely connected to the definition of temperature in terms of entropy, which <em>is</em> useful.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="refrigerators-and-heat-pumps">
+<h1>Refrigerators and heat pumps<a class="headerlink" href="#refrigerators-and-heat-pumps" title="Permalink to this heading">#</a></h1>
+<p>A heat engine takes in heat from a hot reservoir, converts some of it to mechanical work and rejects the rest to a cold reservoir. Our
+idealised cycles all use reversible processes, so we should be able to run them in reverse. In reverse, the working fuild takes in heat from
+a cold reservoir, some work is done on it, and the resulting (greater) heat is expelled into a hot reservoir. The net effect of doing work
+on the system is to move heat from the cold reservoir to the hot reservoir - in orther words, it’s a refrigerator. (A heat pump is
+thermodynamically equivalent to a refrigerator, but it has a different purpose: the aim of a refrigerator is to cool the cool reservoir;
+i.e.
+the interior of the fridge, whereas the aim of a heat pump is to heat the hot reservoir, i.e. the interior of the building).</p>
+<p>Real internal comustion engines are not reversible, because the heating stage (step 2-3 in the Otto and Diesel cycles) is achieved by
+igniting the fuel, which is not a reversible procedure. External combustion engines, such as the Stirling and Rankine cycles, are much more
+promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in <a class="reference internal" href="../topic6.html#fig6-4"><span class="std std-numref">Fig. 15</span></a>.</p>
+<figure class="align-center" id="fig6-4">
+<img alt="Schematic diagram of a heat pump or refrigerator" src="../_images/6_fridge.png" />
+<figcaption>
+<p><span class="caption-text">Schematic diagram of a heat pump or refrigerator. Source:
+<a class="reference external" href="http://en.wikipedia.org/wiki/Refrigerator#/media/File:Refrigerator-cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In <a class="reference internal" href="../topic6.html#fig6-4"><span class="std std-numref">Fig. 15</span></a> hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure
+liquid
+flows through an expansion valve (2), which caused a drop i pressure and temperature. The cold, low pressure fiuid (a mixture of liquid and
+vapour) then passes through the evaporator (3) where it is converted to a vapoour, taking in heat from its surroundings. It then passes to
+the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage.</p>
+<p>The equivalent of efficiency for a refrigerator or heat pump is called the <strong>coefficient of performance</strong>. This is defined broadly as the
+ratio of the desired outout to the work done, which means that it is different for refrigerators and heat pumps. For a refrigerator the
+desired output is the removal of heat from the cold reservoir, so the coefficient of performance is</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-8">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-8" title="Permalink to this equation">#</a></span>\[COP_{R} = \frac{Q_{C}}{W}\]</div>
+<p>whereas for a heat pump the desired output is the supply of heat to the hot reservoir, so</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-9">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-9" title="Permalink to this equation">#</a></span>\[COP_{HP} = \frac{|Q_{H}|}{W}\]</div>
+<p>From the first law, <span class="math notranslate nohighlight">\(W = |Q_{H}| - Q_{C}\)</span>, giving</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-10">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-10" title="Permalink to this equation">#</a></span>\[\begin{split}COP_{R} = \frac{Q_{C}}{|Q_{H}| - Q_{C}} \\
+COP_{HP} = \frac{|Q_{H}|}{|Q_{H}| - Q_{C}}.\end{split}\]</div>
+<p>If the refrigerator cycle were an ideal cycle with thermal efficiency <span class="math notranslate nohighlight">\(\eta= 1 - T_{C}/T_{H}\)</span> the coefficients of performance would be</p>
+<div class="math notranslate nohighlight" id="equation-eqn6-11">
+<span class="eqno">()<a class="headerlink" href="#equation-eqn6-11" title="Permalink to this equation">#</a></span>\[\begin{split}COP_{R} = \frac{T_{C}}{T_{H} - T_{C}} \\
+COP_{HP} = \frac{T_{H}}{T_{H} - T_{C}}.\end{split}\]</div>
+<p>Notice that these are typically greater than one. For example, if your kitchen has a temperature of 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C and you want your fridge
+to be at
+4<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C nby a
+heat pump
+operating
+between the house and outside aire with a temperature of 4<span class="math notranslate nohighlight">\(^{\circ}\)</span> C the ideal coefficient of performance would be 298/21 = 14.2. These
+values
+represent the maximum theoretically achievable, and in the real world coefficients of performance will be substantially less than this,
+especially for heat pumps since one should take into account the power required to circulate the heat around the house e.g. by pumping hot
+water through the radiator system, However, even real coefficients fo performance are significantly greater than unity.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./PHY11006"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Topic 6: Heat Engines</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-efficiency-of-a-heat-engine">Thermal efficiency of a heat engine</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-carnot-cycle-the-perfect-heat-engine">The Carnot cycle: the ‘perfect’ heat engine</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-heat-pumps">Refrigerators and heat pumps</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Paul Crowther
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
