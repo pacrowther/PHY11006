@@ -174,16 +174,79 @@ $T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compressi
 As $T_{1}$ and $T_{3}$ are reasonably well defined, this means that the cut-off ratio is not really an independent parameter; if we know 
 the flame temperature $T_{3}$ and the inlet temperature $T_{1}$, it is set by the compression ratio.
 
+
+## Stirling cycle
+
+<div class="alert alert-block alert-warning">
+The following content is not currently examinable (but is retained since it may appear in previous exam questions)
+</div>
+
+```{figure} Images/6_Diesel.png
+:name: fig6.3
+:alt: Stirling cycle
+:align: center
+:width: 70%
+The Stirling cycle. Source: [Wikipedia](https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg)
+
+```
+
+Unlike the Otto and Diesel cycles, the Stirling cycle relates to an __external combustion engine__, where the heat is supplied from an external 
+heat 
+reservoir.  This has the advantage that the engine can use a very wide range of heat sources, since the fuel never comes into contact with the 
+working gas.  The disadvantage is that the heat needs to be transported from the external reservoir to the working fluid via some sort of heat 
+exchanger, which is likely to reduce the efficiency of real Stirling engines compared to the idealised model described here. 
+
+The Stirling cycle is more complicated to analyse than the Otto or Diesel cycles, because the compression and power strokes are isothermal rather 
+than adiabatic, so heat is supplied or rejected in all four steps.
+
+1. Step 1-2: work done on system $W_{12} = n R T_{C} \ln (V_{1}/V_{2})$. As this step is isothermal, $\Delta U = 0$ and so the system must output 
+heat $|Q_{12}| = n R T_{C} \ln (V_{1}/V_{2})$.
+
+2. Step 2-3: isochoric heating, so no work done and the system takes in heat $Q_{23} = n c_{V} (T_{H} - T_{C})$.
+
+3. Step 3-4: work done _by_ system $|W_{34}| = n R T_{H} \ln (V_{1}/V_{2})$. Since $\Delta U = 0$, the system must take in heat $Q_{34} = n R 
+T_{H} 
+\ln (V_{1}/V_{2})$.
+
+4. Step 4-1: isochoric cooling: no work, and the system outputs heat $|Q_{41}| = n c_{V} (T_{H} - T_{C}).$
+
+The net work done by the system is therefore $|W| = |W_{34}| - W_{12} = n R (T_{H} - T_{C}) \ln (V_{1}/V_{2})$, and the heat supplied is $Q_{H} = 
+Q_{23} + Q_{34} = n(c_{v} (T_{H} - T_{C}) + R T_{H} \ln (V_{1}/V_{2}))$. Therefore the efficiency of the cycle is, from Equation {eq}`eqn6.1`.
+
+$$
+\eta = \frac{R(T_{H} - T_{C}) \ln (V_{1}/V_{2})}{c_{v}(T_{H} - T_{C}) + R T_{H} \ln (V_{1}/V_{2})}.
+$$
+
+However, this is not the whole story.  The Stirling engine is a __regenerative engine__: the heat released in step 4-1 is stored in a heat 
+exchanger  and used to reheat the working gas in step 2-3.  If this is perfectly efficient (which, of course, it won’t be in the real world), 
+steps 2-3 and  4-1 cancel each other out, and we have
+
+
+$$
+\eta = \frac{R(T_{H} - T_{C}) \ln (V_{1}/V_{2})}{R T_{H} \ln (V_{1}/V_{2})} = 1 - \frac{T_{C}}{T_{H}}.
+$$
+
+We shall see later that this is in fact the theoretical maximum for the efficiency of a heat engine.  As one would expect, this is not achieved in 
+real-world Stirling engines (no real engine is as efficient as the idealised cycles we have been considering here, but the difference between real 
+and idealised Stirling engines is greater than most).  However, real Stirling engines do have good efficiency, com­parable with diesel engines.  
+
+Unlike internal-combustion engines, Stirling engines are genuinely reversible: instead of using the heat difference between the two reservoirs to 
+generate mechanical work, mechanical work can be supplied to transfer heat from the cold reservoir to the hot reservoir.  This is not used in 
+domestic refrigerators, because cycles involving phase changes are more cost-effective, but is widely used in cryocoolers (i.e. refrigerators 
+working at temperatures below about -40$^{\circ}$ C). 
+
+Stirling engines are also very quiet, and have been used in submarines for this reason.
+
 (topic6-carnot)=
 # The Carnot cycle: the 'perfect' heat engine
 
 The best possible cycle for a heat engine was proposed in 1824 by the French physicist Sadi Carnot (1796-1832). The __Carnot cycle__ is 
-shown in {numref}`fig6.3`: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step 
+shown in {numref}`fig6.4`: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step 
 1-2: work 
 is done in all four steps. Only two temperatures are involved: $T_{3} = T_{4} = T_{H}$ and $T_{1} = T_{2} = T_{C}$.
 
 ```{figure} Images/6_Carnot.png
-:name: fig6.3
+:name: fig6.4
 :alt: Carnot cycle
 :align: center
 :width: 70%
@@ -234,6 +297,46 @@ we can define the __Kelvin temperature__
 Since the Carnot cycle is purely theoretical and does not correspond to any real device, this is not a very useful definition in practical 
 terms, but it is closely connected to the definition of temperature in terms of entropy, which _is_ useful.
 
+# A two-phase heat engine
+
+<div class="alert alert-block  alert-warning">
+The following content is not currently examinable (but is retained since it may appear in previous exam questions)
+</div>
+
+```{figure} Images/6_Rankine.png
+:name: fig6.5
+:alt: Rankine cycle
+:align: center
+Rankine cycle
+
+```
+
+Thermodynamics was invented in the age of the steam engine, so unsurprisingly there is a thermodynamic cycle representing the idealised steam 
+engine.  This is the __Rankine cycle__ (see {numref}`fig6.5`), developed in the 1850s by the Scottish physicist William Rankine (1820–1872).  The 
+Rankine cycle differs from those discussed above in that it involves a phase change: the working fluid (water in steam engines) is liquid for part 
+of the cycle. Obviously this cannot be represented by an ideal gas, because the ideal gas law does not model phase changes.
+
+In {numref}`fig6.5`, the area to the left of the black curve is the liquid state, to the right is gas, and under the curve is a mixture of gas and 
+liquid in equilibrium.  The cycle consists of four processes:
+
+1. Step 1-2: the working fluid, in the liquid state, is pumped from low to high pressure.  This is an adiabatic compression, but because liquids 
+are nearly incompressible there is very little change of volume and therefore very little work done.
+
+2. Step 2-3: the high-pressure liquid is heated at constant pressure.  It boils and becomes a _dry vapour_ (the word dry means that there are no 
+liquid droplets remaining).
+
+3. Step 3-4: the vapour expands adiabatically.  This is the power stroke which does the useful work.  As the vapour cools during the 
+expansion, some liquid droplets may form (making it a _wet vapour_).
+
+4. Step 4-1: the vapour is cooled at constant pressure, condensing back into a liquid.
+
+The Rankine engine is an external combustion engine, using an external heat source in step 2-3 (in a steam locomotive, it's the fire under the 
+boiler).  Although steam engines are no longer used in transport, the Rankine cycle also describes steam turbines, which are used in power 
+stations to generate electricity from heat.  As with the Stirling engine, the Rankine engine is not dependent on any particular fuel.
+
+The advantage of the two-phase operation is that the initial adiabatic heating requires very little work: the power required by the pump is only 
+1–3% of the turbine output power.  If this were done in the gas phase, the power required to drive the pump would be substantially greater.
+
 # Refrigerators and heat pumps
 
 A heat engine takes in heat from a hot reservoir, converts some of it to mechanical work and rejects the rest to a cold reservoir. Our 
@@ -248,11 +351,11 @@ the interior of the fridge, whereas the aim of a heat pump is to heat the hot re
 Real internal combustion engines are not reversible, because the heating stage (step 2-3 in the 
 Otto and Diesel cycles) is achieved by 
 igniting the fuel, which is not a reversible procedure. External combustion engines, such as the Stirling and Rankine cycles, are much more 
-promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in {numref}`fig6.4`.
+promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in {numref}`fig6.6`.
 
 
 ```{figure} Images/6_fridge.png
-:name: fig6.4
+:name: fig6.6
 :alt: Schematic diagram of a heat pump or refrigerator
 :align: center
 Schematic diagram of a heat pump or refrigerator. Source: 
@@ -260,7 +363,7 @@ Schematic diagram of a heat pump or refrigerator. Source:
 
 ```
 
-In {numref}`fig6.4` hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure 
+In {numref}`fig6.6` hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure 
 liquid 
 flows through an expansion valve (2), which caused a drop i pressure and temperature. The cold, 
 low pressure fluid (a mixture of liquid and 

@@ -194,6 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -465,11 +466,11 @@ For the Clausius and Kelvin statements, we can prove both implications by contra
 <h2>Clausius implies Kelvin<a class="headerlink" href="#clausius-implies-kelvin" title="Permalink to this heading">#</a></h2>
 <p>Suppose that Claus’ statement is true but Kelvin’s is not. If Kelvin’s statement is not true we
 can build an engine K that converts heat into
-work. We connect this to a Carnot engine working in reverse as shown in <a class="reference internal" href="#fig7-1"><span class="std std-numref">Fig. 16</span></a>.</p>
+work. We connect this to a Carnot engine working in reverse as shown in <a class="reference internal" href="#fig7-1"><span class="std std-numref">Fig. 18</span></a>.</p>
 <figure class="align-center" id="fig7-1">
 <a class="reference internal image-reference" href="_images/7_Kelvin_Clausius1.png"><img alt="If Kelvin is false, so is Clausius" src="_images/7_Kelvin_Clausius1.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">If Kelvin is false, so is Clausius.</span><a class="headerlink" href="#fig7-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">If Kelvin is false, so is Clausius.</span><a class="headerlink" href="#fig7-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>By the First Law, <span class="math notranslate nohighlight">\(W = Q_K\)</span> and also <span class="math notranslate nohighlight">\(W = Q_{H} - Q_{C}\)</span>. Therefore <span class="math notranslate nohighlight">\(Q_C{} = Q_{H} - Q_{K}\)</span>. Therefore the composite engine has the effect
@@ -494,7 +495,7 @@ Kelvin’s statement is true, Clausius’ statement must also be true.</p>
 <figure class="align-center" id="fig7-2">
 <a class="reference internal image-reference" href="_images/7_Clausius_Carnot1.png"><img alt="Clausius' statement implies Carnot's." src="_images/7_Clausius_Carnot1.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Clausius’ statement implies Carnot’s.</span><a class="headerlink" href="#fig7-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Clausius’ statement implies Carnot’s.</span><a class="headerlink" href="#fig7-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Assume that Carnot’s statement is not true, and we can therefore build an engine <span class="math notranslate nohighlight">\(E\)</span> that has a
@@ -541,10 +542,10 @@ A and B is independent of the path taken.</p>
 <figure class="align-center" id="fig7-3">
 <a class="reference internal image-reference" href="_images/7_paths1.png"><img alt="Two arbitrary paths between states A and B" src="_images/7_paths1.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Two arbritrary paths between states A and B</span><a class="headerlink" href="#fig7-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Two arbritrary paths between states A and B</span><a class="headerlink" href="#fig7-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>To see this, consider states A and B in <a class="reference internal" href="#fig7-3"><span class="std std-numref">Fig. 18</span></a>. The two paths connecting A and B are
+<p>To see this, consider states A and B in <a class="reference internal" href="#fig7-3"><span class="std std-numref">Fig. 20</span></a>. The two paths connecting A and B are
 both reversible. We can integrate from A to B along
 path 1 and get <span class="math notranslate nohighlight">\(\Delta S_{1} = \int_{1} \frac{\bar{d}Q}{T}\)</span>, or we can integrate along path 2 and get <span class="math notranslate nohighlight">\(\Delta S_{2} = \int_{2} 
 \frac{\bar{d}Q}{T}\)</span>. But we can also reverse the direction of path 2, since we have defined it
@@ -650,7 +651,7 @@ integrate this from <span class="math notranslate nohighlight">\(T_{S}\)</span> 
 <li><p>Although the heat flow into or out of the two subsystems is the same (apart from the sign), the entropy change is not.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta S_{\rm tot}\)</span> is always greater than zero if <span class="math notranslate nohighlight">\(T_{\rm R} \neq T_{S}\)</span>.</p></li>
 </ol>
-<p>Point 3 is illustrated in <a class="reference internal" href="#fig7-4"><span class="std std-numref">Fig. 19</span></a>. We can also deduced it by differentiating the above
+<p>Point 3 is illustrated in <a class="reference internal" href="#fig7-4"><span class="std std-numref">Fig. 21</span></a>. We can also deduced it by differentiating the above
 expression for <span class="math notranslate nohighlight">\(\Delta S_{\rm tot}\)</span>. If we write <span class="math notranslate nohighlight">\(r = T_{R} / T_{S}\)</span>, we
 have <span class="math notranslate nohighlight">\(\frac{d (\Delta S_{\rm tot})}{dr} = C_{V} \left( \frac{1}{r} - \frac{1}{r^2} \right)\)</span>, which is equal to zero when <span class="math notranslate nohighlight">\(r = 1\)</span> at which
 point <span class="math notranslate nohighlight">\(\Delta S_{\rm tot} = C_{V} (\ln (1) + 1 - 1) = 0\)</span>. This must be a minimum, because the derivative is positive (curve rising) for <span class="math notranslate nohighlight">\(r &gt; 
@@ -662,7 +663,7 @@ point <span class="math notranslate nohighlight">\(\Delta S_{\rm tot} = C_{V} (\
 <figure class="align-center" id="fig7-4">
 <a class="reference internal image-reference" href="_images/7_entropy_change1.png"><img alt="Entropy changes for example 7.1" src="_images/7_entropy_change1.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Entropy changes for example 7.1</span><a class="headerlink" href="#fig7-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Entropy changes for example 7.1</span><a class="headerlink" href="#fig7-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In the above example, the entropy change of the small system is negative when the system cools to equilibrium, and positive when it warms,
