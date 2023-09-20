@@ -243,7 +243,8 @@ $$
 P_{f}^{c_{V}} V_{f}^{c_{P}} = P_{i}^{c_{V}} V_{i}^{c_{P}}.
 $$
 
-If we define the adiabatic index $\gamma = c_{P}/c_{V}$, we can take the 
+If we define the __adiabatic index__ $\gamma = c_{P}/c_{V}$, we can take 
+the 
 $c_{v}$-th root of this to obtain
 
 ```{math}
