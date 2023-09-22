@@ -299,10 +299,6 @@ terms, but it is closely connected to the definition of temperature in terms of 
 
 # A two-phase heat engine
 
-<div class="alert alert-block  alert-warning">
-The following content is not currently examinable (but is retained since it may appear in previous exam questions)
-</div>
-
 ```{figure} Images/6_Rankine.png
 :name: fig6.5
 :alt: Rankine cycle
@@ -312,9 +308,9 @@ Rankine cycle
 ```
 
 Thermodynamics was invented in the age of the steam engine, so unsurprisingly there is a thermodynamic cycle representing the idealised steam 
-engine.  This is the __Rankine cycle__ (see {numref}`fig6.5`), developed in the 1850s by the Scottish physicist William Rankine (1820–1872).  The 
-Rankine cycle differs from those discussed above in that it involves a phase change: the working fluid (water in steam engines) is liquid for part 
-of the cycle. Obviously this cannot be represented by an ideal gas, because the ideal gas law does not model phase changes.
+engine.  This is the __Rankine cycle__ (see {numref}`fig6.5`), developed in the 1850s by the Scottish physicist William Rankine (1820-1872).  
+The  Rankine cycle differs from those discussed above in that it involves a phase change: the working fluid (water in steam engines) is 
+liquid for part of the cycle. Obviously this cannot be represented by an ideal gas, because the ideal gas law does not model phase changes.
 
 In {numref}`fig6.5`, the area to the left of the black curve is the liquid state, to the right is gas, and under the curve is a mixture of gas and 
 liquid in equilibrium.  The cycle consists of four processes:
