@@ -194,6 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -560,17 +561,36 @@ defined as an object that is 100% efficient at emitting or absorbing radiation).
 emissivity <span class="math notranslate nohighlight">\(\epsilon\)</span>, which is a number between 0 and 1: a body with emissivity <span class="math notranslate nohighlight">\(\epsilon\)</span> will radiate power</p>
 <div class="math notranslate nohighlight" id="equation-eqn2-3">
 <span class="eqno">(8)<a class="headerlink" href="#equation-eqn2-3" title="Permalink to this equation">#</a></span>\[H = A \epsilon \sigma T^{4}\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Emissivities cited from the <a class="reference external" href="https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html">Engineering<br />
+Toolbox</a></p>
+</aside>
 <p>The emissivity is a property of the material and of the nature of the surface: for example, highly
 polished stainless steel has an emissivity of 0.075, but rough, weathered stainless steel has an
 emissivity of 0.85. Generally, shiny, polished surfaces have very low emissivity and rough, dark
 surfaces have high emissivity.</p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p>Values cited from the <a class="reference external" href="https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html">Engineering Toolbox</a></p>
-</aside>
 <p>Since electromagnetic radiation can propagate in a vacuum, radiative heat transfer differs from convective
 and conductive heat transfer in not requiring the two bodies to be in physical contact - for
-example, the Sun can heat the Earth by radiative heat transfer.</p>
+example, the Sun can heat the Earth by radiative heat transfer. The equilibrium temperature <span class="math notranslate nohighlight">\(T\)</span> of
+a (rotating) planet of radius <span class="math notranslate nohighlight">\(R\)</span> at a distance <span class="math notranslate nohighlight">\(d\)</span> from its parent star (luminosity <span class="math notranslate nohighlight">\(L\)</span>) can be obtained
+by balancing the energy received</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{L}{4 \pi d^{2}} \pi R^{2} (1-A)
+\]</div>
+<p>where A is the Albedo (or reflectivity), and the energy emitted</p>
+<div class="math notranslate nohighlight">
+\[
+4 \pi R^{2} \epsilon \sigma T^{4}.
+\]</div>
+<p>So the planetary temperature</p>
+<div class="math notranslate nohighlight">
+\[
+T^{4} = \frac{L(1-A}}{16 \pi d^2 \epsilon \sigma}
+\]</div>
+<p>is independent of its radius. Inserting suitable quantities for the Earth (<span class="math notranslate nohighlight">\(A\)</span> = 0.3, <span class="math notranslate nohighlight">\(\epsilon\)</span> = 0.6)
+and the Solar constant (<span class="math notranslate nohighlight">\(L/4 \pi d^{2}\)</span> = 1360 W m<span class="math notranslate nohighlight">\(^{-2}\)</span>) then <span class="math notranslate nohighlight">\(T\)</span> = 289 K for the Earth.</p>
 <p>Thermal radiation has a continuous spectrum extending over the whole wavelength range, but the
 wavelength of peak emission depends on the temperature according to <strong>Wien’s law</strong>,</p>
 <div class="math notranslate nohighlight" id="equation-eqn2-4">

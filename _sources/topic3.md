@@ -234,7 +234,36 @@ If we write the mean square velocity in terms of its components we have
 Each individual component of the motion contributes $1/2 k_B T$ to the total thermal energy. The principle of equipartition of energy 
 states that every independent degree of freedom, i.e. quadratic term in the total energy, should have an equal share of the total - so, 
 since each translational degree of freedom contributes $1/2 k_B T$, any additional degrees of freedom, such as the rotational and 
-vibrational motion we just mentioned, should do the same. This has interesting implications for the heat capacity, as we shall now see.
+vibrational motion we just mentioned, should do the same. This has interesting implications for the heat capacity, as we shall see below.
+
+The thermal (kinetic) energy, $K$, of the Sun is
+
+$$
+K = \frac{3}{2} k_{B} T N
+$$
+
+where $N = M_{\odot}/m_{p}$ is the number of particles (assuming purely hydrogen), $M_{\odot}$ is the Solar mass, and $m_{p} = 1.67 \times 
+10^{-27}$ kg is the proton mass.
+
+The gravitational potential energy, $U$, of the Sun, under the simplifying assumption of a uniform density sphere, is
+
+$$
+ U = -\frac{3 G M_{\odot}^{2}}{5 R_{\odot}$
+$$
+where $R_{\odot}$ is the radius of the Sun. 
+
+From statistical physics, the Virial theorem states that
+
+$$
+2K + U = 0
+$$
+
+for an body in equilibrium, i.e. the sum of twice the kinetic energy plus the potential energy is zero. From the Virial theorem
+we can evaluate the __average__ temperature of the Sun
+
+$$
+T = \frac{G M_{\odot} m_{p}}{5 k_{B} R_{\odot}} = 4.6 \times 10^{6} {\rm K}.
+$$
 
 (topic3-heat-capacity)=
 # Heat capacity of ideal gases and equipartition of energy

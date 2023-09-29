@@ -149,19 +149,41 @@ emissivity $\epsilon$, which is a number between 0 and 1: a body with emissivity
 H = A \epsilon \sigma T^{4}
 ```
 
+
+```{margin}
+Emissivities cited from the [Engineering  
+Toolbox](https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html)
+```
+
 The emissivity is a property of the material and of the nature of the surface: for example, highly
 polished stainless steel has an emissivity of 0.075, but rough, weathered stainless steel has an
 emissivity of 0.85. Generally, shiny, polished surfaces have very low emissivity and rough, dark
 surfaces have high emissivity.
 
-```{margin}
-Values cited from the [Engineering Toolbox](https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html)
-```
-
 Since electromagnetic radiation can propagate in a vacuum, radiative heat transfer differs from convective 
 and conductive heat transfer in not requiring the two bodies to be in physical contact - for
-example, the Sun can heat the Earth by radiative heat transfer.
+example, the Sun can heat the Earth by radiative heat transfer. The equilibrium temperature $T$ of
+a (rotating) planet of radius $R$ at a distance $d$ from its parent star (luminosity $L$) can be obtained
+by balancing the energy received 
 
+$$
+\frac{L}{4 \pi d^{2}} \pi R^{2} (1-A)
+$$
+where A is the Albedo (or reflectivity), and the energy emitted
+
+$$
+4 \pi R^{2} \epsilon \sigma T^{4}.
+$$
+
+So the planetary temperature 
+
+$$
+T^{4} = \frac{L(1-A}}{16 \pi d^2 \epsilon \sigma}
+$$
+
+is independent of its radius. Inserting suitable quantities for the Earth ($A$ = 0.3, $\epsilon$ = 0.6)
+and the Solar constant ($L/4 \pi d^{2}$ = 1360 W m$^{-2}$) then $T$ = 289 K for the Earth.
+ 
 Thermal radiation has a continuous spectrum extending over the whole wavelength range, but the
 wavelength of peak emission depends on the temperature according to __Wien's law__,
 
