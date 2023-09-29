@@ -178,7 +178,7 @@ $$
 So the planetary temperature 
 
 $$
-T^{4} = \frac{L(1-A}}{16 \pi d^2 \epsilon \sigma}
+T^{4} = \frac{L(1-A)}{16 \pi d^2 \epsilon \sigma}
 $$
 
 is independent of its radius. Inserting suitable quantities for the Earth ($A$ = 0.3, $\epsilon$ = 0.6)

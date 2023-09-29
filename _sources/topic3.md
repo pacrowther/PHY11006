@@ -248,7 +248,7 @@ where $N = M_{\odot}/m_{p}$ is the number of particles (assuming purely hydrogen
 The gravitational potential energy, $U$, of the Sun, under the simplifying assumption of a uniform density sphere, is
 
 $$
- U = -\frac{3 G M_{\odot}^{2}}{5 R_{\odot}$
+ U = -\frac{3 G M_{\odot}^{2}}{5 R_{\odot}}
 $$
 where $R_{\odot}$ is the radius of the Sun. 
 
