@@ -201,7 +201,8 @@ pointer on a scale) or as a heat-operated switch (the bending makes or breaks an
 
 ````{tab-set}
 ```{tab-item} Question
-A mercury thermometer has a cylondrical bulb 2 cm in length and 0.8 cm in diameter, attached to a cylindrical tube 0.30 mm in diameter and 
+A mercury thermometer has a cylindrical bulb 2 cm in length and 0.8 cm in 
+diameter, attached to a cylindrical tube 0.30 mm in diameter and 
 15 cm in length. The coefficient of linear thermal expansion of mercury is 61 $\mu$m/m/K. By how much does the mercury 
 rise up the tube for a change in temperature of 1$^{\circ}$ C?
 ```
