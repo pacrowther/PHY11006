@@ -208,12 +208,15 @@ rise up the tube for a change in temperature of 1$^{\circ}$ C?
 ```
 
 ```{tab-item} Solution
-The volume of the mercury in the bulb is $\pi r^2 L = 1.00$ cm$^{3}$ and we can neglect the volume in the tube (the largest it could 
+The volume of the mercury in the bulb is $\pi r^2 L = 1.01$ cm$^{3}$ and 
+we can neglect the volume in the tube (the largest it could 
 possibly be is 0.01 cm$^{3}$. The coefficient of linear expansion is $61 \times 10^{-6}$ 
 K$^{-1}$, but we need the coefficient of volume 
 expansion, so we use Equation {eq}`eqn1.5` to get $183 \times 10^{-6}$ K$^{-1}$.  Therefore the volume of the 
-mercury increases by $1.83 \times 10^{-4}$ cm$^{3}$ for a temperature rise of 1 K. This must go up the tube, which has a cross-sectional 
-area of $\pi r^{2} = 7.07 \times 10^{-4}$ cm$^{2}$. The mercury rises by $1.83 \times 10^{-4} / 7.07 \times 10^{-4}$ = 0.26 cm. 
+mercury increases by $1.85 \times 10^{-4}$ cm$^{3}$ for a temperature rise 
+of 1 K. This must go up the tube, which has a cross-sectional 
+area of $\pi r^{2} = 7.07 \times 10^{-4}$ cm$^{2}$. The mercury rises by 
+$1.84 \times 10^{-4} / 7.07 \times 10^{-4}$ = 0.26 cm. 
 ```
 ````
 `````
