@@ -98,7 +98,8 @@ of 2.5 mm thick glass separated by a 5 mm air gap (the thermal conductivity of a
 
 ```{tab-item} Solution
 The first part is straightforward. We assume that the temperature decreases linearly through the
-glass, so $dT/dx = \Delta T/ dx = -15/0.0025 = -6000$ K/m. Therefore $H = 1.00 \times 0.96 \times 60$ = 5800 W 
+glass, so $dT/dx = \Delta T/ dx = -15/0.0025 = -6000$ K/m. Therefore $H = 
+1.00 \times 0.96 \times 6000$ = 5800 W 
 (rounding to two significant figures to match the precision of the input variables).
 
 For the second part, we have three distinct regions of heat flow: the inner pane, the outer pane and the air gap. 
