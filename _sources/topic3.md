@@ -45,15 +45,15 @@ core of the Sun as an ideal gas?
 ```
 
 ```{tab-item} Solution
-If the helium fraction is 2/3 by mass, then, given that helium has a mass four times that of hydrogen, there most be 2 hydrogen atoms for 
+If the helium fraction is 2/3 by mass, then, given that helium has a mass four times that of hydrogen, there must be 2 hydrogen atoms for 
 every helium. If they are all fully ionized, that means that the particles in the Solar core are 
 in the ratio 4 electrons: 2 protons: 1 
-helium nucleus. The total mass of one set of particles is 6 u, so the average mass per particle is 6/7 $u = 1.4 \times 10^{-27}$ kg. This 
-means that there are $1.0 x 10^{32}$ particles per cubic metre, so each particle occupies a 
+helium nucleus. The total mass of one set of particles is 6 $u$ (= proton mass), so the average mass per particle is 6/7 $u = 1.4 \times 10^{-27}$ kg. This 
+means that there are $1.48 \times 10^{5} / 1.4 times 10^{-27} = 1.0 \times 10^{32}$ particles per cubic metre, so each particle occupies a 
 volume of $ 1.0 \times 10^{-32}$ m$^3$. 
 But the volume actually occupied by each particle, even taking them all to have the volume corresponding to the classical radius of the 
-electron is $< 1.0 \times 10^{-43}$ m$^3$. Therefore the volume occupied by the particles is 
-surely negligible compared to the volume 
+electron is $4/3 \pi r^{3} = 1.0 \times 10^{-43}$ m$^3$. Therefore the volume occupied by the particles is 
+surely _negligible _compared to the volume 
 occupied by the gas.
 
 We might, however, worry about the assumption that the particles do not exert any force on each 
@@ -61,7 +61,7 @@ other - as they are all charged, surely this
 is not true? However, the high temperature means that the particles are moving very fast, so maybe the force is not significant? Let's 
 compare kinetic and potential energies.
 
-The average distance between the particles is $(1.0 \times 10^{-32})^{1/3} = 2.1 \times 10^{-11}$ m. If ywo neighbouring particles have 
+The average distance between the particles is $(1.0 \times 10^{-32})^{1/3} = 2.1 \times 10^{-11}$ m. If two neighbouring particles have 
 charge $e$ (which six out of seven do) then the electrostatic potential energy is $|V| = \frac{e^{2}}{4 \pi \epsilon_{0} r} = 1.0 \times 
 10^{-17}$ J. The kinetic energy is given, as we will see later by $\frac{3}{2} k_{B} T = 3.1 \times 10^{-16}$ J  which is about 30 times as 
 big as the  electrostatic potential energy between two neighbouring particles. Therefore, it seems as though 
