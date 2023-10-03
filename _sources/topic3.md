@@ -118,7 +118,7 @@ variables that describe the physical state of a material, such as pressure, temp
 We will come back to equations of state and functions of state later in the course.
 
 We can represent properties of an ideal gas in two dimensional graphs, most commonly pressure as a function of volume, or
-$PV$ diagrams. {numref}`fig3.0` shows $PV$-isotherms for a constant amount of an ideal gas for 4 temperatures $T_{4} > $T_{3} > T_{2} > T_{1}$.
+$PV$ diagrams. {numref}`fig3.0` shows $PV$-isotherms for a constant amount of an ideal gas for 4 temperatures $T_{4} > T_{3} > T_{2} > T_{1}$.
 
 ```{figure} Images/3_isotherm.png
 :name: fig3.0
