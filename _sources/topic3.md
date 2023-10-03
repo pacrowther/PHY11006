@@ -129,7 +129,7 @@ This form of the ideal gas law usefully links pressure, density and temperature.
 is composed of $\sim$80% N$_{2}$ ($M$=0.028 kg) and $\sim$20% O$_{2}$ ($M$=0.032 kg) so $M$=0.029 kg overall and $R_{\rm specific}$ = 287 J kg$^{-1}$ K$^{-1}$. At sea level
 the atmospheric pressure (1 atm) is $1.01 \times 10^{5}$ Pa and temperature is $\sim 15^{\circ}$ C (288 K) so $\rho = 1.23$ kg m$^{-3}$.
 
-The ideal gas law is an example of an equation of state. An equation of state is a relationship between
+The ideal gas law is an example of an __equation of state__. An equation of state is a relationship between
 variables that describe the physical state of a material, such as pressure, temperature, volume, etc.
 We will come back to equations of state and functions of state later in the course.
 
