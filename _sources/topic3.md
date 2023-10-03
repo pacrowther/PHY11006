@@ -48,13 +48,15 @@ core of the Sun as an ideal gas?
 If the helium fraction is 2/3 by mass, then, given that helium has a mass four times that of hydrogen, there must be 2 hydrogen atoms for 
 every helium. If they are all fully ionized, that means that the particles in the Solar core are 
 in the ratio 4 electrons: 2 protons: 1 
-helium nucleus. The total mass of one set of particles is 6 $u$ (= proton mass), so the average mass per particle is 6/7 $u = 1.4 \times 10^{-27}$ kg. This 
-means that there are $1.48 \times 10^{5} / 1.4 times 10^{-27} = 1.0 \times 10^{32}$ particles per cubic metre, so each particle occupies a 
+helium nucleus ( 2 protons, 2 neutrons). The total mass of one set of particles is 6 $u$ (= proton mass), since the electron mass is negligible, 
+so the average mass per particle is 6/7 $u = 1.4 \times 10^{-27}$ kg. This 
+means that there are $1.48 \times 10^{5} / 1.4 \times 10^{-27} = 1.0 \times 10^{32}$ particles per cubic metre, so each particle occupies a 
 volume of $ 1.0 \times 10^{-32}$ m$^3$. 
 But the volume actually occupied by each particle, even taking them all to have the volume corresponding to the classical radius of the 
-electron is $4/3 \pi r^{3} = 1.0 \times 10^{-43}$ m$^3$. Therefore the volume occupied by the particles is 
+electron is $4 \pi r^{3}/3 = 1.0 \times 10^{-43}$ m$^3$ (in reality hydrogen and helium are both fully ionized within the Sun).
+. Therefore the volume occupied by the particles is 
 surely _negligible _compared to the volume 
-occupied by the gas (in reality hydrogen and helium are both fully ionized within the Sun).
+occupied by the gas.
 
 We might, however, worry about the assumption that the particles do not exert any force on each 
 other - as they are all charged, surely this 
