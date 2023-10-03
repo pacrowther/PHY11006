@@ -54,7 +54,7 @@ volume of $ 1.0 \times 10^{-32}$ m$^3$.
 But the volume actually occupied by each particle, even taking them all to have the volume corresponding to the classical radius of the 
 electron is $4/3 \pi r^{3} = 1.0 \times 10^{-43}$ m$^3$. Therefore the volume occupied by the particles is 
 surely _negligible _compared to the volume 
-occupied by the gas.
+occupied by the gas (in reality hydrogen and helium are both fully ionized within the Sun).
 
 We might, however, worry about the assumption that the particles do not exert any force on each 
 other - as they are all charged, surely this 
