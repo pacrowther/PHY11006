@@ -286,9 +286,9 @@ $$
 (topic3-heat-capacity)=
 # Heat capacity of ideal gases and equipartition of energy
 
-If we supply heat to a gas at constant volume and raise its temperature by an amount delta T, by definition we have supplied heat 
+If we supply heat to a gas at constant volume and raise its temperature by an amount $\Delta T$, by definition we have supplied heat 
 $Q =  nc\Delta T$,  where $n$ is the number of moles and $c$ is the molar heat capacity. Equation {eq}`eqn3.5` says that if we raise the 
-temperature of n moles of an ideal gas by an amount $\delta T$, we increase the kinetic energy of its molecules by an amount 
+temperature of n moles of an ideal gas by an amount $\Delta T$, we increase the kinetic energy of its molecules by an amount 
 
 $$
 \frac{3}{2} N k_{B} \Delta T = \frac{3}{2} nR\Delta T.
