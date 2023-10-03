@@ -113,9 +113,26 @@ we assume that a typical human has a mass of 60 kg and is composed of water (18 
 $6\times 10^{4} N_{A} / 18 = 2\times 10^{27}$ molecules make up their body. 
 ```
 
+It is sometimes useful to express the ideal gas law in a different (molar) form, involving density. $n$ is equal
+to the total mass of gas ($m$, in kg) divided by the molar mass $M$ (kg per mole) i.e. $n = m/M$ and introducing
+density $\rho = m/V$ we can express the ideal gas law as
+
+$$
+P = \rho \frac{R}{M} T
+$$
+and defining the _specific gas constant_ $R_{\rm specific} = R/M$ we obtain
+
+$$
+P = \rho R_{\rm specific} T.
+$$
+This form of the ideal gas law usefully links pressure, density and temperature. By way of example, the Earth's atmosphere
+is composed of $\sim$80% N$_{2}$ ($M$=0.028 kg) and $\sim$20% O$_{2}$ ($M$=0.032 kg) so $M$=0.029 kg overall and $R_{\rm specific}$ = 287 J kg$^{-1}$ K$^{-1}$. At sea level
+the atmospheric pressure (1 atm) is $1.01 \times 10^{5}$ Pa and temperature is $\sim 15^{\circ}$ C (288 K) so $\rho = 1.23$ kg m$^{-3}$.
+
 The ideal gas law is an example of an equation of state. An equation of state is a relationship between
 variables that describe the physical state of a material, such as pressure, temperature, volume, etc.
 We will come back to equations of state and functions of state later in the course.
+
 
 We can represent properties of an ideal gas in two dimensional graphs, most commonly pressure as a function of volume, or
 $PV$ diagrams. {numref}`fig3.0` shows $PV$-isotherms for a constant amount of an ideal gas for 4 temperatures $T_{4} > T_{3} > T_{2} > T_{1}$.
@@ -253,7 +270,7 @@ $$
 $$
 where $R_{\odot}$ is the radius of the Sun. 
 
-From statistical physics, the Virial theorem states that
+From statistical physics, the __Virial theorem__ states that
 
 $$
 2K + U = 0
