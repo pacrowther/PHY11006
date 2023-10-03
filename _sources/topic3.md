@@ -178,7 +178,7 @@ direction (a 50% chance, if its motion is random). Therefore the probability tha
 during the period in question is
 
 $$
-\frac{1}{2} A | v_{x} | \frac{\Delta T}{V}
+\frac{1}{2} A | v_{x} | \frac{\Delta t}{V}
 $$
  where $A$ is the area of the wall. Whenever it does hit
 the wall, its momentum changes by $2 m|v_x|$, so by conservation of momentum it must impart an
