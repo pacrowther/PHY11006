@@ -48,7 +48,7 @@ core of the Sun as an ideal gas?
 If the helium fraction is 2/3 by mass, then, given that helium has a mass four times that of hydrogen, there most be 2 hydrogen atoms for 
 every helium. If they are all fully ionized, that means that the particles in the Solar core are 
 in the ratio 4 electrons: 2 protons: 1 
-helium nucleus. The total mass of one set of particles is 6 u, so the average mass per particle is 6/7 $u = 1.4 x 10^{-2}7$ kg. This 
+helium nucleus. The total mass of one set of particles is 6 u, so the average mass per particle is 6/7 $u = 1.4 \times 10^{-27}$ kg. This 
 means that there are $1.0 x 10^{32}$ particles per cubic metre, so each particle occupies a 
 volume of $ 1.0 \times 10^{-32}$ m$^3$. 
 But the volume actually occupied by each particle, even taking them all to have the volume corresponding to the classical radius of the 
