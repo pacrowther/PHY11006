@@ -30,9 +30,9 @@ This can be expressed mathematically as
 :label: eqn4.1
 \Delta U = Q + W.
 ```
-where U is the change in internal energy, Q is the heat supplied to the system, and W is the work
-done on the system. Note the sign conventions here: if the system actually radiates heat, Q < 0, and
-if the system does work on its surroundings, W < 0.
+where $\Delta U$ is the change in internal energy, $Q$ is the heat supplied to the system, and $W$ is the work
+done on the system. Note the sign conventions here: if the system actually radiates heat, $Q$ < 0, and
+if the system does work on its surroundings, $W$ < 0.
 
 # Heat and work
 
@@ -52,8 +52,8 @@ $$
 In the next section, we will see that we need to treat this integral with great care, because it is __path dependent__. Suppose I need to 
 move a box from my office (E43) to Clive Tadhunter's office (E37), which is no the other side of the mid-corridor fire door. If I can simply 
 move it the 10 m or so down the corridor, I will have done some amount of work $F \Delta x$ where $\Delta x$ in this case is 10 m. However, 
-if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up  
-Hounsfield Road, into the main entrance on D floor, up the stairs to E floor, and along the  
+if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up Hounsfield Road, into the main entrance on D floor, up 
+the stairs to E floor, and along the  
 corridor to E37, I will have done considerably 
 more work to achieve the same end result.
 
