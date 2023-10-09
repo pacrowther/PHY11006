@@ -78,7 +78,7 @@ stellar interiors.)
 `````
 
 Empirical studies by Robert Boyle (1627--1691), Jacques Charles (1746--1823) and Amedeo Avogadro
-(177-1856) established that, for __dilute__ gases (i.e. those with low number density, which makes
+(1776-1856) established that, for __dilute__ gases (i.e. those with low number density, which makes
 them good approximations to an ideal gas),
 
 * at constant $T$ and $N$, $PV$ = constant (Boyle's law);
@@ -92,7 +92,7 @@ Combining these three laws gives us the ideal gas law
 PV = Nk_{B}T
 ```
 
-where $k_B$ is Boltzmann's constant, numerically equal to $1.381 \times 10^{-23}$ J/K. Because thermodynamics
+where $k_B$ is Boltzmann's constant, numerically equal to $1.381 \times 10^{-23}$ J K$^{-1}$. Because thermodynamics
 is a science of bulk properties, not individual molecules, it is often convenient to work in terms of
 moles rather than molecules and write this as
 
@@ -101,7 +101,7 @@ moles rather than molecules and write this as
 PV = nRT
 ```
 
-where $R = N_A k_B$ = 8.3145 J/mol/K is the gas constant and $N_A = 6.022 \times 10^{23}$ /mol is 
+where $R = N_A k_B$ = 8.3145 J mol$^{-1}$ K$^{-1}$ is the gas constant and $N_A = 6.022 \times 10^{23}$ mol$^{-1}$ is 
 Avogadro's
 number.
 
@@ -109,7 +109,7 @@ number.
 Note that for some reason the mole is defined in terms of _grams_ of a substance rather 
 than_kilograms_. Be very careful not to make errors of a factor of 1000 when working in moles! 
 If 
-we assume that a typical human has a mass of 60 kg and is composed of water (18 g/mol) then 
+we assume that a typical human has a mass of 60 kg and is composed of water (18 g mol$^{-1}$) then 
 $6\times 10^{4} N_{A} / 18 = 2\times 10^{27}$ molecules make up their body. 
 ```
 
