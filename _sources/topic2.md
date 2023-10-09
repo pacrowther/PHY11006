@@ -190,7 +190,7 @@ wavelength of peak emission depends on the temperature according to __Wien's law
 
 ```{math}
 :label: eqn2.4
-\lambda_{\rm max} T = 2.989 \times 10^{-3} {\rm m K}.
+\lambda_{\rm max} T = 2.898 \times 10^{-3} {\rm m K}.
 ```
 
 At temperatures near room temperature, ~300 K, emission peaks around 10 $\mu$m, in the infrared part
