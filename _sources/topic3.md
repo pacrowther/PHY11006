@@ -276,12 +276,157 @@ $$
 2K + U = 0
 $$
 
-for an body in equilibrium, i.e. the sum of twice the kinetic energy plus the potential energy is zero. From the Virial theorem
+for an body in equilibrium, i.e. the sum of twice the kinetic energy plus the potential energy is zero. From the Virial theorem 
 we can evaluate the __average__ temperature of the Sun
 
 $$
 T = \frac{G M_{\odot} m_{p}}{5 k_{B} R_{\odot}} = 4.6 \times 10^{6} {\rm K}.
 $$
+
+(maxwell-boltzmann)=
+# The Maxwell-Boltzmann distribution
+
+The temperature of an ideal gas defined the _average_ kinetic energy of its molecules, according to Equation {eq}`eqn3.5`. However, the 
+energies 
+of the 
+individual molecules actually span a wide range. This is described by the __Maxwell-Boltzmann__ distribution of molecular speeds, which is 
+given by
+
+```{math}
+:label: eqn3.8
+f(v) = \frac{4}{\sqrt\pi} \left( \frac{m}{2 k_{B} T} \right)^{3/2} v^2 \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right).
+```
+
+Here $f(v)$ is the probability that a molecule has a speed between $v$ and $v+dv$, $m$ is the mass of the molecule, and $T$ is the 
+temperature. The factor $\exp (-mv^{2}/2k_{B}T)$, which is the negative exponential of the relevant energy (in this case $\frac{1}{2} m 
+v^2$) divided by $k_B T$ is called a __Boltzmann factor__.  Boltzmann factors occur frequently in thermodynamics and statistical mechanics, 
+for  example in the Saha equation in astrophysics. It can be derived using statistical mechanics.
+
+```{figure} Images/3_Maxwell_Boltzmann.png
+:name: fig3.5
+:alt: Maxwell Boltzmann distribution for O2 at different temperatures
+:align: center
+Maxwell-Boltzmann distribution for O$_2$ at three different temperatures
+```
+
+## Properties of the Maxwell-Boltzmann distribution
+
+<div class="alert alert-block alert-warning">
+The following derivation is not examinable (that would be mean)
+</div>
+
+We already know that $<m v^2> = 3 k_B T$ from Equation {eq}`eqn3.5` so it must be true that $<v^2> = 3 k_B T/m$. The most probable
+value of $v$ can be found by differentiating Equation {eq}`eqn3.8` and setting the derivative to zero. 
+
+$$
+\frac{df}{dv} = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B} T}\right)^{3/2} \left[ 2 v \exp \left( -\frac{mv^{2}}{2 k_{B} T}\right) - 
+\frac{v^{3} m}{k_{B} T} \exp \left( - \frac{m v^2}{2 k_{B} T}\right) \right]
+$$
+using the product role. This is zero for $v = 0$, which is not useful, and for 
+$2 v = \frac{v^{3} m}{k_{B} T}$ which gives $v_{\rm max} =  \sqrt{2 k_{B}T/m}.$  Finally, since $f(v)$ is a probability distribution, we 
+can find the expectation value of 
+$v$  from
+
+$$
+<v> = \int_{0}^{\infty} v f(v)dv = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B}T}\right)^{3/2} \int_{0}^{\infty} v^{3} \exp \left( -\frac{m 
+v^{2}}{2 k_{B} T} \right) dv.
+$$
+
+This looks nasty but isn't: if we write $\alpha = m/(2 k_{B}T)$ for convenience and change variables to $x = v^2$, we have
+
+$$
+\int_{0}^{\infty} v^{3} \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right) dv = \frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx,
+$$
+
+and this can be done by parts to get
+
+$$
+\frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx = \frac{1}{2} \left[ -\frac{1}{\alpha} x e^{-\alpha x}\right]_{0}^{\infty} + 
+\frac{1}{2\alpha} \int_{0}^{\infty} e^{-\alpha x} dx = \frac{1}{2\alpha} \left[ -\frac{1}{\alpha} e^{-\alpha x}\right]_{0}^{\infty} = 
+\frac{1}{2\alpha^2} = \frac{2 k_{B}^{2} T^{2}}{m^{2}}.
+$$
+
+Therefore $<v> = \sqrt{8 k_{B} T/\pi m}$. So in conclusion
+
+```{math}
+:label: eqn3.9
+v_{\rm max} = \sqrt{ \frac{2 k_{B} T}{m}}; <v> = \sqrt{\frac{8 k_{B} T}{\pi m}}; v_{\rm rms} = \sqrt{<v^{2}>} = \sqrt{\frac{3 k_{B} T}{m}}.
+```
+
+Since $2 < 8/\pi < 3,$ these are in increasing order: the root-mean-square speed is greater than the mean speed, which in turn is greater 
+than the most probable speed. This is because the distribution has a long tail out to high speeds. From kinetic theory (Eqn {eq}`eqn3.5`) we 
+obtained $<\frac{1}{2} m v^{2}> = \frac{3}{2} k_{B} T$
+so $<v^{2}> = v_{\rm rms}$ and is more commonly used than the most probable or mean - greater weight is given to higher speeds.
+
+`````{admonition} Example 3.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+What is the most probable, mean and rms speed of oxygen molecules at room temperature (20$^{\circ}$ C)?
+```
+
+```{tab-item} Solution
+The mass of a hydrogen atom (1 proton) is $1.67 \times 10^{-27}$ kg, so oxygen (8 protons and neutrons) has a mass of $2.67 \times 10^{-26}$ 
+kg and diatomic oxygen has $m = 5.34 \times 10^{-26}$ kg. Inserting $T$ = 293 K and $k_B = 1.38 \times 10^{-23}$ J/K into Eqn {eq}`eqn3.9` 
+yields $v_{\rm max} = 390 {\rm m/s}; <v> = 440 {\rm m/s}; v_{\rm rms} = 480 {\rm m/s}.$ Light elements (H, He) have much higher speeds, so 
+have largely escaped from low surface gravity environments such as the Earth (unlike 
+gas giants Jupiter and Saturn).
+``` 
+````
+`````
+
+
+# Mean free path
+
+In reality, gas molecules have finite sizes, so may collide with one another. We can estimate 
+the frequency of collisions and distance 
+travelled between collisions, by considering $N$ spherical, identical molecules of radius $r$ in 
+a volume $V$. Considering the motion of a 
+single molecule, with speed $v$, it will collide with another molecule as it sweeps out a cylinder of radius $2r$, with it axis parallel to 
+its motion - see {numref}`fig3.6`. In time $dt$ it will travel a distance $v dt$ so collisions will occur within the volume 
+$4 \pi r^{2} v dt.$ There are $N/V$ molecules per unit volume so the number $dN$ with centres in 
+the cylinder are $dN = 4 \pi r^{2} v dt 
+\frac{N}{V}$, So the number of collisions per unit time is $\frac{dN}{dt} = 4 \pi r^{2} v \frac{N}{V}$. Considering the motion of all 
+molecules is rather more involved, and results in a factor of $\sqrt{2}$ more collisions $\frac{dN}{dt} = 4\sqrt{2} \pi r^{2} v 
+\frac{N}{V}$.
+
+
+```{figure} Images/3_mfp.png
+:name: fig3.6
+:alt: Mean free path
+:align: center
+:width: 50%
+In a time $dt$ a molecule with radius $r$ will collide with any other molecules within a cylindrical volume of radius $2r$ and length $v 
+dt$. Source: Fig 18.15 from University Physics with Modern Physics 
+(Pearson)
+```
+
+The average time $t_{\rm mean}$ between collisions, the __mean free time__, is the recipricol of this expression  $t_{\rm mean} = \frac{V}{4 
+\sqrt{2} \pi r^{2} v N}$. The average distance travelled between collisions, the __mean free path__, denoted $\lambda$, is the molecule's 
+speed multipled by $t_{\rm mean}$
+
+
+```{math}
+:label: eqn3.10
+\lambda = v t_{\rm mean} = \frac{V}{4 \sqrt{2} \pi r^{2} N}.
+```
+The more molecules there are and the larger the molecule, the shorter the distance between collisions. Note that the mean free path does 
+not depend on the speed of the molecule. We can also express the mean free path in terms of macroscopic properties of the gas using the 
+ideal gas equation $PV = N k_B T$.
+
+$$
+\lambda = \frac{k_{B} T}{4 \sqrt{2} \pi r^{2} P}. 
+$$
+
+If the temperature is increased at constant pressure, the gas expands, so the average distance between molecules increases, so $\lambda$ 
+increases. If the pressure is increase at fixed temperature, the gas compresses and $\lambda$ 
+decreases.
+
+We can estimate these quantities for an oxygen molecule ($r = 2.0 \times 10^{-10}$ m) at a pressure of 1 atm and temperature of 20$^{\circ}$ 
+C  using $v = v_{\rm rms}$ from Example 3.3. We obtain $\lambda= 5.6 \times 
+10^{-8}$ m and $t_{\rm mean} = 1.2 \times 10^{-10}$ s. A typical 
+molecule undergoes nearly 10 _billion_ collisions per second.
 
 (topic3-heat-capacity)=
 # Heat capacity of ideal gases and equipartition of energy
@@ -426,7 +571,7 @@ Experimental values of $C_{V}$ for lead, aluminium, silicon and diamond. Source:
 University Physics with Modern Physics 
 ```
 
-`````{admonition} Example 3.3
+`````{admonition} Example 3.4
 :class: dropdown
 
 ````{tab-set}
@@ -446,147 +591,4 @@ sharp - it is possible to be _in between_. This is because the molecules in a ga
 ````
 `````
 
-(maxwell-boltzmann)=
-# The Maxwell-Boltzmann distribution
 
-The temperature of an ideal gas defined the _average_ kinetic energy of its molecules, according to Equation {eq}`eqn3.5`. However, the 
-energies 
-of the 
-individual molecules actually span a wide range. This is described by the __Maxwell-Boltzmann__ distribution of molecular speeds, which is 
-given by
-
-```{math}
-:label: eqn3.8
-f(v) = \frac{4}{\sqrt\pi} \left( \frac{m}{2 k_{B} T} \right)^{3/2} v^2 \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right).
-```
-
-Here $f(v)$ is the probability that a molecule has a speed between $v$ and $v+dv$, $m$ is the mass of the molecule, and $T$ is the 
-temperature. The factor $\exp (-mv^{2}/2k_{B}T)$, which is the negative exponential of the relevant energy (in this case $\frac{1}{2} m 
-v^2$) divided by $k_B T$ is called a __Boltzmann factor__.  Boltzmann factors occur frequently in thermodynamics and statistical mechanics, 
-for  example in the Saha equation in astrophysics. It can be derived using statistical mechanics.
-
-```{figure} Images/3_Maxwell_Boltzmann.png
-:name: fig3.5
-:alt: Maxwell Boltzmann distribution for O2 at different temperatures
-:align: center
-Maxwell-Boltzmann distribution for O$_2$ at three different temperatures
-```
-
-## Properties of the Maxwell-Boltzmann distribution
-
-<div class="alert alert-block alert-warning">
-The following derivation is not examinable (that would be mean)
-</div>
-
-We already know that $<m v^2> = 3 k_B T$ from Equation {eq}`eqn3.5` so it must be true that $<v^2> = 3 k_B T/m$. The most probable
-value of $v$ can be found by differentiating Equation {eq}`eqn3.8` and setting the derivative to zero. 
-
-$$
-\frac{df}{dv} = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B} T}\right)^{3/2} \left[ 2 v \exp \left( -\frac{mv^{2}}{2 k_{B} T}\right) - 
-\frac{v^{3} m}{k_{B} T} \exp \left( - \frac{m v^2}{2 k_{B} T}\right) \right]
-$$
-using the product role. This is zero for $v = 0$, which is not useful, and for 
-$2 v = \frac{v^{3} m}{k_{B} T}$ which gives $v_{\rm max} =  \sqrt{2 k_{B}T/m}.$  Finally, since $f(v)$ is a probability distribution, we 
-can find the expectation value of 
-$v$  from
-
-$$
-<v> = \int_{0}^{\infty} v f(v)dv = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B}T}\right)^{3/2} \int_{0}^{\infty} v^{3} \exp \left( -\frac{m 
-v^{2}}{2 k_{B} T} \right) dv.
-$$
-
-This looks nasty but isn't: if we write $\alpha = m/(2 k_{B}T)$ for convenience and change variables to $x = v^2$, we have
-
-$$
-\int_{0}^{\infty} v^{3} \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right) dv = \frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx,
-$$
-
-and this can be done by parts to get
-
-$$
-\frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx = \frac{1}{2} \left[ -\frac{1}{\alpha} x e^{-\alpha x}\right]_{0}^{\infty} + 
-\frac{1}{2\alpha} \int_{0}^{\infty} e^{-\alpha x} dx = \frac{1}{2\alpha} \left[ -\frac{1}{\alpha} e^{-\alpha x}\right]_{0}^{\infty} = 
-\frac{1}{2\alpha^2} = \frac{2 k_{B}^{2} T^{2}}{m^{2}}.
-$$
-
-Therefore $<v> = \sqrt{8 k_{B} T/\pi m}$. So in conclusion
-
-```{math}
-:label: eqn3.9
-v_{\rm max} = \sqrt{ \frac{2 k_{B} T}{m}}; <v> = \sqrt{\frac{8 k_{B} T}{\pi m}}; v_{\rm rms} = \sqrt{<v^{2}>} = \sqrt{\frac{3 k_{B} T}{m}}.
-```
-
-Since $2 < 8/\pi < 3,$ these are in increasing order: the root-mean-square speed is greater than the mean speed, which in turn is greater 
-than the most probable speed. This is because the distribution has a long tail out to high speeds. From kinetic theory (Eqn {eq}`eqn3.5`) we 
-obtained $<\frac{1}{2} m v^{2}> = \frac{3}{2} k_{B} T$
-so $<v^{2}> = v_{\rm rms}$ and is more commonly used than the most probable or mean - greater weight is given to higher speeds.
-
-`````{admonition} Example 3.4
-:class: dropdown
-
-````{tab-set}
-```{tab-item} Question
-What is the most probable, mean and rms speed of oxygen molecules at room temperature (20$^{\circ}$ C)?
-```
-
-```{tab-item} Solution
-The mass of a hydrogen atom (1 proton) is $1.67 \times 10^{-27}$ kg, so oxygen (8 protons and neutrons) has a mass of $2.67 \times 10^{-26}$ 
-kg and diatomic oxygen has $m = 5.34 \times 10^{-26}$ kg. Inserting $T$ = 293 K and $k_B = 1.38 \times 10^{-23}$ J/K into Eqn {eq}`eqn3.9` 
-yields $v_{\rm max} = 390 {\rm m/s}; <v> = 440 {\rm m/s}; v_{\rm rms} = 480 {\rm m/s}.$ Light elements (H, He) have much higher speeds, so 
-have largely escaped from low surface gravity environments such as the Earth (unlike 
-gas giants Jupiter and Saturn).
-``` 
-````
-`````
-
-
-# Mean free path
-
-In reality, gas molecules have finite sizes, so may collide with one another. We can estimate 
-the frequency of collisions and distance 
-travelled between collisions, by considering $N$ spherical, identical molecules of radius $r$ in 
-a volume $V$. Considering the motion of a 
-single molecule, with speed $v$, it will collide with another molecule as it sweeps out a cylinder of radius $2r$, with it axis parallel to 
-its motion - see {numref}`fig3.6`. In time $dt$ it will travel a distance $v dt$ so collisions will occur within the volume 
-$4 \pi r^{2} v dt.$ There are $N/V$ molecules per unit volume so the number $dN$ with centres in 
-the cylinder are $dN = 4 \pi r^{2} v dt 
-\frac{N}{V}$, So the number of collisions per unit time is $\frac{dN}{dt} = 4 \pi r^{2} v \frac{N}{V}$. Considering the motion of all 
-molecules is rather more involved, and results in a factor of $\sqrt{2}$ more collisions $\frac{dN}{dt} = 4\sqrt{2} \pi r^{2} v 
-\frac{N}{V}$.
-
-
-```{figure} Images/3_mfp.png
-:name: fig3.6
-:alt: Mean free path
-:align: center
-:width: 50%
-In a time $dt$ a molecule with radius $r$ will collide with any other molecules within a cylindrical volume of radius $2r$ and length $v 
-dt$. Source: Fig 18.15 from University Physics with Modern Physics 
-(Pearson)
-```
-
-The average time $t_{\rm mean}$ between collisions, the __mean free time__, is the recipricol of this expression  $t_{\rm mean} = \frac{V}{4 
-\sqrt{2} \pi r^{2} v N}$. The average distance travelled between collisions, the __mean free path__, denoted $\lambda$, is the molecule's 
-speed multipled by $t_{\rm mean}$
-
-
-```{math}
-:label: eqn3.10
-\lambda = v t_{\rm mean} = \frac{V}{4 \sqrt{2} \pi r^{2} N}.
-```
-The more molecules there are and the larger the molecule, the shorter the distance between collisions. Note that the mean free path does 
-not depend on the speed of the molecule. We can also express the mean free path in terms of macroscopic properties of the gas using the 
-ideal gas equation $PV = N k_B T$.
-
-$$
-\lambda = \frac{k_{B} T}{4 \sqrt{2} \pi r^{2} P}. 
-$$
-
-If the temperature is increased at constant pressure, the gas expands, so the average distance between molecules increases, so $\lambda$ 
-increases. If the pressure is increase at fixed temperature, the gas compresses and $\lambda$ 
-decreases.
-
-We can estimate these quantities for an oxygen molecule ($r = 2.0 \times 10^{-10}$ m) at a pressure of 1 atm and temperature of 20$^{\circ}$ 
-C  using $v = v_{\rm rms}$ from Example 3.3. We obtain $\lambda= 5.6 \times 
-10^{-8}$ m and $t_{\rm mean} = 1.2 \times 10^{-10}$ s. A typical 
-molecule undergoes nearly 10 _billion_ collisions per second.

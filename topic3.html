@@ -404,16 +404,16 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-an-ideal-gas">The definition of an ideal gas</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kinetic-theory-of-the-ideal-gas">The kinetic theory of the ideal gas</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy">Heat capacity of ideal gases and equipartition of energy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-a-diatomic-gas">Heat capacity of a diatomic gas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
-</ul>
-</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-maxwell-boltzmann-distribution">The Maxwell-Boltzmann distribution</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-maxwell-boltzmann-distribution">Properties of the Maxwell-Boltzmann distribution</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-free-path">Mean free path</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy">Heat capacity of ideal gases and equipartition of energy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-a-diatomic-gas">Heat capacity of a diatomic gas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -665,6 +665,127 @@ we can evaluate the <strong>average</strong> temperature of the Sun</p>
 T = \frac{G M_{\odot} m_{p}}{5 k_{B} R_{\odot}} = 4.6 \times 10^{6} {\rm K}.
 \]</div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="the-maxwell-boltzmann-distribution">
+<span id="maxwell-boltzmann"></span><h1>The Maxwell-Boltzmann distribution<a class="headerlink" href="#the-maxwell-boltzmann-distribution" title="Permalink to this heading">#</a></h1>
+<p>The temperature of an ideal gas defined the <em>average</em> kinetic energy of its molecules, according to Equation <a class="reference internal" href="#equation-eqn3-5">(16)</a>. However, the
+energies
+of the
+individual molecules actually span a wide range. This is described by the <strong>Maxwell-Boltzmann</strong> distribution of molecular speeds, which is
+given by</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-8">
+<span class="eqno">(18)<a class="headerlink" href="#equation-eqn3-8" title="Permalink to this equation">#</a></span>\[f(v) = \frac{4}{\sqrt\pi} \left( \frac{m}{2 k_{B} T} \right)^{3/2} v^2 \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right).\]</div>
+<p>Here <span class="math notranslate nohighlight">\(f(v)\)</span> is the probability that a molecule has a speed between <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(v+dv\)</span>, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the molecule, and <span class="math notranslate nohighlight">\(T\)</span> is the
+temperature. The factor <span class="math notranslate nohighlight">\(\exp (-mv^{2}/2k_{B}T)\)</span>, which is the negative exponential of the relevant energy (in this case <span class="math notranslate nohighlight">\(\frac{1}{2} m 
+v^2\)</span>) divided by <span class="math notranslate nohighlight">\(k_B T\)</span> is called a <strong>Boltzmann factor</strong>.  Boltzmann factors occur frequently in thermodynamics and statistical mechanics,
+for  example in the Saha equation in astrophysics. It can be derived using statistical mechanics.</p>
+<figure class="align-center" id="fig3-5">
+<img alt="Maxwell Boltzmann distribution for O2 at different temperatures" src="_images/3_Maxwell_Boltzmann.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Maxwell-Boltzmann distribution for O<span class="math notranslate nohighlight">\(_2\)</span> at three different temperatures</span><a class="headerlink" href="#fig3-5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="properties-of-the-maxwell-boltzmann-distribution">
+<h2>Properties of the Maxwell-Boltzmann distribution<a class="headerlink" href="#properties-of-the-maxwell-boltzmann-distribution" title="Permalink to this heading">#</a></h2>
+<div class="alert alert-block alert-warning">
+The following derivation is not examinable (that would be mean)
+</div>
+<p>We already know that <span class="math notranslate nohighlight">\(&lt;m v^2&gt; = 3 k_B T\)</span> from Equation <a class="reference internal" href="#equation-eqn3-5">(16)</a> so it must be true that <span class="math notranslate nohighlight">\(&lt;v^2&gt; = 3 k_B T/m\)</span>. The most probable
+value of <span class="math notranslate nohighlight">\(v\)</span> can be found by differentiating Equation <a class="reference internal" href="#equation-eqn3-8">(18)</a> and setting the derivative to zero.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{df}{dv} = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B} T}\right)^{3/2} \left[ 2 v \exp \left( -\frac{mv^{2}}{2 k_{B} T}\right) - 
+\frac{v^{3} m}{k_{B} T} \exp \left( - \frac{m v^2}{2 k_{B} T}\right) \right]
+\]</div>
+<p>using the product role. This is zero for <span class="math notranslate nohighlight">\(v = 0\)</span>, which is not useful, and for
+<span class="math notranslate nohighlight">\(2 v = \frac{v^{3} m}{k_{B} T}\)</span> which gives <span class="math notranslate nohighlight">\(v_{\rm max} =  \sqrt{2 k_{B}T/m}.\)</span>  Finally, since <span class="math notranslate nohighlight">\(f(v)\)</span> is a probability distribution, we
+can find the expectation value of
+<span class="math notranslate nohighlight">\(v\)</span>  from</p>
+<div class="math notranslate nohighlight">
+\[
+&lt;v&gt; = \int_{0}^{\infty} v f(v)dv = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B}T}\right)^{3/2} \int_{0}^{\infty} v^{3} \exp \left( -\frac{m 
+v^{2}}{2 k_{B} T} \right) dv.
+\]</div>
+<p>This looks nasty but isn’t: if we write <span class="math notranslate nohighlight">\(\alpha = m/(2 k_{B}T)\)</span> for convenience and change variables to <span class="math notranslate nohighlight">\(x = v^2\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{0}^{\infty} v^{3} \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right) dv = \frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx,
+\]</div>
+<p>and this can be done by parts to get</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx = \frac{1}{2} \left[ -\frac{1}{\alpha} x e^{-\alpha x}\right]_{0}^{\infty} + 
+\frac{1}{2\alpha} \int_{0}^{\infty} e^{-\alpha x} dx = \frac{1}{2\alpha} \left[ -\frac{1}{\alpha} e^{-\alpha x}\right]_{0}^{\infty} = 
+\frac{1}{2\alpha^2} = \frac{2 k_{B}^{2} T^{2}}{m^{2}}.
+\]</div>
+<p>Therefore <span class="math notranslate nohighlight">\(&lt;v&gt; = \sqrt{8 k_{B} T/\pi m}\)</span>. So in conclusion</p>
+<div class="math notranslate nohighlight" id="equation-eqn3-9">
+<span class="eqno">(19)<a class="headerlink" href="#equation-eqn3-9" title="Permalink to this equation">#</a></span>\[v_{\rm max} = \sqrt{ \frac{2 k_{B} T}{m}}; &lt;v&gt; = \sqrt{\frac{8 k_{B} T}{\pi m}}; v_{\rm rms} = \sqrt{&lt;v^{2}&gt;} = \sqrt{\frac{3 k_{B} T}{m}}.\]</div>
+<p>Since <span class="math notranslate nohighlight">\(2 &lt; 8/\pi &lt; 3,\)</span> these are in increasing order: the root-mean-square speed is greater than the mean speed, which in turn is greater
+than the most probable speed. This is because the distribution has a long tail out to high speeds. From kinetic theory (Eqn <a class="reference internal" href="#equation-eqn3-5">(16)</a>) we
+obtained <span class="math notranslate nohighlight">\(&lt;\frac{1}{2} m v^{2}&gt; = \frac{3}{2} k_{B} T\)</span>
+so <span class="math notranslate nohighlight">\(&lt;v^{2}&gt; = v_{\rm rms}\)</span> and is more commonly used than the most probable or mean - greater weight is given to higher speeds.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 3.3</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Question</label><div class="sd-tab-content docutils">
+<p>What is the most probable, mean and rms speed of oxygen molecules at room temperature (20<span class="math notranslate nohighlight">\(^{\circ}\)</span> C)?</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>The mass of a hydrogen atom (1 proton) is <span class="math notranslate nohighlight">\(1.67 \times 10^{-27}\)</span> kg, so oxygen (8 protons and neutrons) has a mass of <span class="math notranslate nohighlight">\(2.67 \times 10^{-26}\)</span>
+kg and diatomic oxygen has <span class="math notranslate nohighlight">\(m = 5.34 \times 10^{-26}\)</span> kg. Inserting <span class="math notranslate nohighlight">\(T\)</span> = 293 K and <span class="math notranslate nohighlight">\(k_B = 1.38 \times 10^{-23}\)</span> J/K into Eqn <a class="reference internal" href="#equation-eqn3-9">(19)</a>
+yields <span class="math notranslate nohighlight">\(v_{\rm max} = 390 {\rm m/s}; &lt;v&gt; = 440 {\rm m/s}; v_{\rm rms} = 480 {\rm m/s}.\)</span> Light elements (H, He) have much higher speeds, so
+have largely escaped from low surface gravity environments such as the Earth (unlike
+gas giants Jupiter and Saturn).</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="mean-free-path">
+<h1>Mean free path<a class="headerlink" href="#mean-free-path" title="Permalink to this heading">#</a></h1>
+<p>In reality, gas molecules have finite sizes, so may collide with one another. We can estimate
+the frequency of collisions and distance
+travelled between collisions, by considering <span class="math notranslate nohighlight">\(N\)</span> spherical, identical molecules of radius <span class="math notranslate nohighlight">\(r\)</span> in
+a volume <span class="math notranslate nohighlight">\(V\)</span>. Considering the motion of a
+single molecule, with speed <span class="math notranslate nohighlight">\(v\)</span>, it will collide with another molecule as it sweeps out a cylinder of radius <span class="math notranslate nohighlight">\(2r\)</span>, with it axis parallel to
+its motion - see <a class="reference internal" href="#fig3-6"><span class="std std-numref">Fig. 6</span></a>. In time <span class="math notranslate nohighlight">\(dt\)</span> it will travel a distance <span class="math notranslate nohighlight">\(v dt\)</span> so collisions will occur within the volume
+<span class="math notranslate nohighlight">\(4 \pi r^{2} v dt.\)</span> There are <span class="math notranslate nohighlight">\(N/V\)</span> molecules per unit volume so the number <span class="math notranslate nohighlight">\(dN\)</span> with centres in
+the cylinder are <span class="math notranslate nohighlight">\(dN = 4 \pi r^{2} v dt 
+\frac{N}{V}\)</span>, So the number of collisions per unit time is <span class="math notranslate nohighlight">\(\frac{dN}{dt} = 4 \pi r^{2} v \frac{N}{V}\)</span>. Considering the motion of all
+molecules is rather more involved, and results in a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> more collisions <span class="math notranslate nohighlight">\(\frac{dN}{dt} = 4\sqrt{2} \pi r^{2} v 
+\frac{N}{V}\)</span>.</p>
+<figure class="align-center" id="fig3-6">
+<a class="reference internal image-reference" href="_images/3_mfp.png"><img alt="Mean free path" src="_images/3_mfp.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">In a time <span class="math notranslate nohighlight">\(dt\)</span> a molecule with radius <span class="math notranslate nohighlight">\(r\)</span> will collide with any other molecules within a cylindrical volume of radius <span class="math notranslate nohighlight">\(2r\)</span> and length <span class="math notranslate nohighlight">\(v 
+dt\)</span>. Source: Fig 18.15 from University Physics with Modern Physics
+(Pearson)</span><a class="headerlink" href="#fig3-6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The average time <span class="math notranslate nohighlight">\(t_{\rm mean}\)</span> between collisions, the <strong>mean free time</strong>, is the recipricol of this expression  <span class="math notranslate nohighlight">\(t_{\rm mean} = \frac{V}{4 
+\sqrt{2} \pi r^{2} v N}\)</span>. The average distance travelled between collisions, the <strong>mean free path</strong>, denoted <span class="math notranslate nohighlight">\(\lambda\)</span>, is the molecule’s
+speed multipled by <span class="math notranslate nohighlight">\(t_{\rm mean}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-eqn3-10">
+<span class="eqno">(20)<a class="headerlink" href="#equation-eqn3-10" title="Permalink to this equation">#</a></span>\[\lambda = v t_{\rm mean} = \frac{V}{4 \sqrt{2} \pi r^{2} N}.\]</div>
+<p>The more molecules there are and the larger the molecule, the shorter the distance between collisions. Note that the mean free path does
+not depend on the speed of the molecule. We can also express the mean free path in terms of macroscopic properties of the gas using the
+ideal gas equation <span class="math notranslate nohighlight">\(PV = N k_B T\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{k_{B} T}{4 \sqrt{2} \pi r^{2} P}. 
+\]</div>
+<p>If the temperature is increased at constant pressure, the gas expands, so the average distance between molecules increases, so <span class="math notranslate nohighlight">\(\lambda\)</span>
+increases. If the pressure is increase at fixed temperature, the gas compresses and <span class="math notranslate nohighlight">\(\lambda\)</span>
+decreases.</p>
+<p>We can estimate these quantities for an oxygen molecule (<span class="math notranslate nohighlight">\(r = 2.0 \times 10^{-10}\)</span> m) at a pressure of 1 atm and temperature of 20<span class="math notranslate nohighlight">\(^{\circ}\)</span>
+C  using <span class="math notranslate nohighlight">\(v = v_{\rm rms}\)</span> from Example 3.3. We obtain <span class="math notranslate nohighlight">\(\lambda= 5.6 \times 
+10^{-8}\)</span> m and <span class="math notranslate nohighlight">\(t_{\rm mean} = 1.2 \times 10^{-10}\)</span> s. A typical
+molecule undergoes nearly 10 <em>billion</em> collisions per second.</p>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="heat-capacity-of-ideal-gases-and-equipartition-of-energy">
 <span id="topic3-heat-capacity"></span><h1>Heat capacity of ideal gases and equipartition of energy<a class="headerlink" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h1>
 <p>If we supply heat to a gas at constant volume and raise its temperature by an amount <span class="math notranslate nohighlight">\(\Delta T\)</span>, by definition we have supplied heat
@@ -676,10 +797,10 @@ temperature of n moles of an ideal gas by an amount <span class="math notranslat
 \]</div>
 <p>Equating these two, we conclude that</p>
 <div class="math notranslate nohighlight" id="equation-eqn3-7">
-<span class="eqno">(18)<a class="headerlink" href="#equation-eqn3-7" title="Permalink to this equation">#</a></span>\[c_{V} = \frac{3}{2} R. \]</div>
+<span class="eqno">(21)<a class="headerlink" href="#equation-eqn3-7" title="Permalink to this equation">#</a></span>\[c_{V} = \frac{3}{2} R. \]</div>
 <p>However, there are some subtleties that we have to consider here.</p>
 <ol class="arabic simple">
-<li><p>In Equation <a class="reference internal" href="#equation-eqn3-7">(18)</a> we have specified the molar heat capacity at <em>constant volume</em>. This is because if we heat the gas at constant
+<li><p>In Equation <a class="reference internal" href="#equation-eqn3-7">(21)</a> we have specified the molar heat capacity at <em>constant volume</em>. This is because if we heat the gas at constant
 volume,
 the heat energy supplied cannot do anything except increase the internal energy of the gas. This would not be true if we did not keep the
 volume constant: for example, if we heat the gas at constant pressure, it will expand, and this means that the gas pressure will do work on
@@ -695,10 +816,10 @@ more complicated molecules.</p></li>
 <figure class="align-center" id="fig3-2">
 <img alt="Rotation of a diatomic molecule" src="_images/3_rotation_diatomic.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Rotation of a diatomic molecule</span><a class="headerlink" href="#fig3-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Rotation of a diatomic molecule</span><a class="headerlink" href="#fig3-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Let’s consider a diatomic gas such as oxygen or nitrogen as two atoms joined by a bond, as illustrated in <a class="reference internal" href="#fig3-2"><span class="std std-numref">Fig. 5</span></a>. Each molecule
+<p>Let’s consider a diatomic gas such as oxygen or nitrogen as two atoms joined by a bond, as illustrated in <a class="reference internal" href="#fig3-2"><span class="std std-numref">Fig. 7</span></a>. Each molecule
 can move in
 three dimensions: it has  three <em>translational</em> degrees of freedom. It can also rotate about either of two axes perpendicular to the line
 joining the atoms (rotation around the axis joining the two atoms doesn’t count, because in an ideal gas we assume the atoms have
@@ -717,12 +838,12 @@ Q = \frac{7}{2} N_{A} k_{B} \Delta T,
 <figure class="align-center" id="fig3-3">
 <img alt="Molar heat capacities of some diatomic gases" src="_images/3_molar_heat_capacities.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Molar heat capacities of some diatomic gases, as a function of temperature. Data from
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Molar heat capacities of some diatomic gases, as a function of temperature. Data from
 <a class="reference external" href="https://janaf.nist.gov">NIST-JANAF thermochemical
 tables</a></span><a class="headerlink" href="#fig3-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>However we see from <a class="reference internal" href="#fig3-3"><span class="std std-numref">Fig. 6</span></a> that this is not so. The molar heat capacity of helium (and other
+<p>However we see from <a class="reference internal" href="#fig3-3"><span class="std std-numref">Fig. 8</span></a> that this is not so. The molar heat capacity of helium (and other
 noble gases) behaves as  we expect,  but the  diatomic gases approach <span class="math notranslate nohighlight">\(7/2 R\)</span> only at high
 temperatures. At room temperature common diatomic
 gases such as hydrogen, nitrogen and oxygen have <span class="math notranslate nohighlight">\(c_{V} = \frac{5}{2} R\)</span> -  see <a class="reference internal" href="#molar-heat-capacities"><span class="std std-numref">Table 5</span></a>.</p>
@@ -777,12 +898,12 @@ gases such as hydrogen, nitrogen and oxygen have <span class="math notranslate n
 is too high to reach at room temperature for most gases. Therefore the vibrational degrees of freedom are <strong>frozen out</strong> and the gas behaves
 as if it had 5 degrees of freedom (three translational and two rotational). The spacing of the vibrational energy levels is inversely
 proportional to the square root of the mass, which explains why heavy diatomic molecules like bromide <em>do</em> behave as if they have 7 degrees
-of freedom. <a class="reference internal" href="#fig3-3a"><span class="std std-numref">Fig. 7</span></a> shows the experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for molecular hydrogen, which is representative of light diatomic
+of freedom. <a class="reference internal" href="#fig3-3a"><span class="std std-numref">Fig. 9</span></a> shows the experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for molecular hydrogen, which is representative of light diatomic
 molecules, requiring very high temperatures in order that <span class="math notranslate nohighlight">\(C_{V} \sim 7/2 R\)</span>.</p>
 <figure class="align-center" id="fig3-3a">
 <a class="reference internal image-reference" href="_images/3_hydrogen.png"><img alt="Molar heat capacity of hydrogen gas" src="_images/3_hydrogen.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for <span class="math notranslate nohighlight">\(H_{2}\)</span> gas. Source: Fig 18.19 from University Physics with Modern Physics
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for <span class="math notranslate nohighlight">\(H_{2}\)</span> gas. Source: Fig 18.19 from University Physics with Modern Physics
 (Pearson)</span><a class="headerlink" href="#fig3-3a" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -799,153 +920,32 @@ model. Improved models can be constructed using the principles of statistical me
 <figure class="align-center" id="fig3-4">
 <img alt="Molar heat capacities of solid elements" src="_images/3_solids.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for lead, aluminium, silicon and diamond. Source: Fig 18.21 from
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Experimental values of <span class="math notranslate nohighlight">\(C_{V}\)</span> for lead, aluminium, silicon and diamond. Source: Fig 18.21 from
 University Physics with Modern Physics</span><a class="headerlink" href="#fig3-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="dropdown admonition">
-<p class="admonition-title">Example 3.3</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-Question</label><div class="sd-tab-content docutils">
-<p>The specific heat capacity of isobutane (C<span class="math notranslate nohighlight">\(_4\)</span> H<span class="math notranslate nohighlight">\(_{10}\)</span>) at constant volume is 1.477 kJ/kg/K at room temperature. How many
-rotational and vibrational degrees of freedom are active in this molecule?</p>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-Solution</label><div class="sd-tab-content docutils">
-<p>The molar weight of isobutane is <span class="math notranslate nohighlight">\(4 \times 12 + 10\)</span> = 58 g. Its molar hear capacity is therefore 1477 x 0.058 = 85.66 J/mol/K. This is
-equal to <span class="math notranslate nohighlight">\(\frac{f}{2} R\)</span>,
-where <span class="math notranslate nohighlight">\(f\)</span> is the total number of degrees of freedom. Dividing 85.66 by <span class="math notranslate nohighlight">\(R/2\)</span> gives <span class="math notranslate nohighlight">\(f\)</span> = 20.6.  We subtract 3 for the translational kinetic
-energy  degrees of freedom and get 17.6, which indicates that 17 degrees of freedom are  completely active, and one is partially active (we
-can see from <a class="reference internal" href="#fig3-3"><span class="std std-numref">Fig. 6</span></a> that the transition from <span class="math notranslate nohighlight">\(n\)</span> to <span class="math notranslate nohighlight">\(n+1\)</span> degrees of freedom is not
-sharp - it is possible to be <em>in between</em>. This is because the molecules in a gas do not all have the sample energy - see next section).</p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="the-maxwell-boltzmann-distribution">
-<span id="maxwell-boltzmann"></span><h1>The Maxwell-Boltzmann distribution<a class="headerlink" href="#the-maxwell-boltzmann-distribution" title="Permalink to this heading">#</a></h1>
-<p>The temperature of an ideal gas defined the <em>average</em> kinetic energy of its molecules, according to Equation <a class="reference internal" href="#equation-eqn3-5">(16)</a>. However, the
-energies
-of the
-individual molecules actually span a wide range. This is described by the <strong>Maxwell-Boltzmann</strong> distribution of molecular speeds, which is
-given by</p>
-<div class="math notranslate nohighlight" id="equation-eqn3-8">
-<span class="eqno">(19)<a class="headerlink" href="#equation-eqn3-8" title="Permalink to this equation">#</a></span>\[f(v) = \frac{4}{\sqrt\pi} \left( \frac{m}{2 k_{B} T} \right)^{3/2} v^2 \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right).\]</div>
-<p>Here <span class="math notranslate nohighlight">\(f(v)\)</span> is the probability that a molecule has a speed between <span class="math notranslate nohighlight">\(v\)</span> and <span class="math notranslate nohighlight">\(v+dv\)</span>, <span class="math notranslate nohighlight">\(m\)</span> is the mass of the molecule, and <span class="math notranslate nohighlight">\(T\)</span> is the
-temperature. The factor <span class="math notranslate nohighlight">\(\exp (-mv^{2}/2k_{B}T)\)</span>, which is the negative exponential of the relevant energy (in this case <span class="math notranslate nohighlight">\(\frac{1}{2} m 
-v^2\)</span>) divided by <span class="math notranslate nohighlight">\(k_B T\)</span> is called a <strong>Boltzmann factor</strong>.  Boltzmann factors occur frequently in thermodynamics and statistical mechanics,
-for  example in the Saha equation in astrophysics. It can be derived using statistical mechanics.</p>
-<figure class="align-center" id="fig3-5">
-<img alt="Maxwell Boltzmann distribution for O2 at different temperatures" src="_images/3_Maxwell_Boltzmann.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Maxwell-Boltzmann distribution for O<span class="math notranslate nohighlight">\(_2\)</span> at three different temperatures</span><a class="headerlink" href="#fig3-5" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="properties-of-the-maxwell-boltzmann-distribution">
-<h2>Properties of the Maxwell-Boltzmann distribution<a class="headerlink" href="#properties-of-the-maxwell-boltzmann-distribution" title="Permalink to this heading">#</a></h2>
-<div class="alert alert-block alert-warning">
-The following derivation is not examinable (that would be mean)
-</div>
-<p>We already know that <span class="math notranslate nohighlight">\(&lt;m v^2&gt; = 3 k_B T\)</span> from Equation <a class="reference internal" href="#equation-eqn3-5">(16)</a> so it must be true that <span class="math notranslate nohighlight">\(&lt;v^2&gt; = 3 k_B T/m\)</span>. The most probable
-value of <span class="math notranslate nohighlight">\(v\)</span> can be found by differentiating Equation <a class="reference internal" href="#equation-eqn3-8">(19)</a> and setting the derivative to zero.</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{df}{dv} = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B} T}\right)^{3/2} \left[ 2 v \exp \left( -\frac{mv^{2}}{2 k_{B} T}\right) - 
-\frac{v^{3} m}{k_{B} T} \exp \left( - \frac{m v^2}{2 k_{B} T}\right) \right]
-\]</div>
-<p>using the product role. This is zero for <span class="math notranslate nohighlight">\(v = 0\)</span>, which is not useful, and for
-<span class="math notranslate nohighlight">\(2 v = \frac{v^{3} m}{k_{B} T}\)</span> which gives <span class="math notranslate nohighlight">\(v_{\rm max} =  \sqrt{2 k_{B}T/m}.\)</span>  Finally, since <span class="math notranslate nohighlight">\(f(v)\)</span> is a probability distribution, we
-can find the expectation value of
-<span class="math notranslate nohighlight">\(v\)</span>  from</p>
-<div class="math notranslate nohighlight">
-\[
-&lt;v&gt; = \int_{0}^{\infty} v f(v)dv = \frac{4}{\sqrt{\pi}} \left( \frac{m}{2 k_{B}T}\right)^{3/2} \int_{0}^{\infty} v^{3} \exp \left( -\frac{m 
-v^{2}}{2 k_{B} T} \right) dv.
-\]</div>
-<p>This looks nasty but isn’t: if we write <span class="math notranslate nohighlight">\(\alpha = m/(2 k_{B}T)\)</span> for convenience and change variables to <span class="math notranslate nohighlight">\(x = v^2\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[
-\int_{0}^{\infty} v^{3} \exp \left( -\frac{m v^{2}}{2 k_{B} T}\right) dv = \frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx,
-\]</div>
-<p>and this can be done by parts to get</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{1}{2} \int_{0}^{\infty} x e^{-\alpha x} dx = \frac{1}{2} \left[ -\frac{1}{\alpha} x e^{-\alpha x}\right]_{0}^{\infty} + 
-\frac{1}{2\alpha} \int_{0}^{\infty} e^{-\alpha x} dx = \frac{1}{2\alpha} \left[ -\frac{1}{\alpha} e^{-\alpha x}\right]_{0}^{\infty} = 
-\frac{1}{2\alpha^2} = \frac{2 k_{B}^{2} T^{2}}{m^{2}}.
-\]</div>
-<p>Therefore <span class="math notranslate nohighlight">\(&lt;v&gt; = \sqrt{8 k_{B} T/\pi m}\)</span>. So in conclusion</p>
-<div class="math notranslate nohighlight" id="equation-eqn3-9">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eqn3-9" title="Permalink to this equation">#</a></span>\[v_{\rm max} = \sqrt{ \frac{2 k_{B} T}{m}}; &lt;v&gt; = \sqrt{\frac{8 k_{B} T}{\pi m}}; v_{\rm rms} = \sqrt{&lt;v^{2}&gt;} = \sqrt{\frac{3 k_{B} T}{m}}.\]</div>
-<p>Since <span class="math notranslate nohighlight">\(2 &lt; 8/\pi &lt; 3,\)</span> these are in increasing order: the root-mean-square speed is greater than the mean speed, which in turn is greater
-than the most probable speed. This is because the distribution has a long tail out to high speeds. From kinetic theory (Eqn <a class="reference internal" href="#equation-eqn3-5">(16)</a>) we
-obtained <span class="math notranslate nohighlight">\(&lt;\frac{1}{2} m v^{2}&gt; = \frac{3}{2} k_{B} T\)</span>
-so <span class="math notranslate nohighlight">\(&lt;v^{2}&gt; = v_{\rm rms}\)</span> and is more commonly used than the most probable or mean - greater weight is given to higher speeds.</p>
 <div class="dropdown admonition">
 <p class="admonition-title">Example 3.4</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-6">
 Question</label><div class="sd-tab-content docutils">
-<p>What is the most probable, mean and rms speed of oxygen molecules at room temperature (20<span class="math notranslate nohighlight">\(^{\circ}\)</span> C)?</p>
+<p>The specific heat capacity of isobutane (C<span class="math notranslate nohighlight">\(_4\)</span> H<span class="math notranslate nohighlight">\(_{10}\)</span>) at constant volume is 1.477 kJ/kg/K at room temperature. How many
+rotational and vibrational degrees of freedom are active in this molecule?</p>
 </div>
 <input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
 Solution</label><div class="sd-tab-content docutils">
-<p>The mass of a hydrogen atom (1 proton) is <span class="math notranslate nohighlight">\(1.67 \times 10^{-27}\)</span> kg, so oxygen (8 protons and neutrons) has a mass of <span class="math notranslate nohighlight">\(2.67 \times 10^{-26}\)</span>
-kg and diatomic oxygen has <span class="math notranslate nohighlight">\(m = 5.34 \times 10^{-26}\)</span> kg. Inserting <span class="math notranslate nohighlight">\(T\)</span> = 293 K and <span class="math notranslate nohighlight">\(k_B = 1.38 \times 10^{-23}\)</span> J/K into Eqn <a class="reference internal" href="#equation-eqn3-9">(20)</a>
-yields <span class="math notranslate nohighlight">\(v_{\rm max} = 390 {\rm m/s}; &lt;v&gt; = 440 {\rm m/s}; v_{\rm rms} = 480 {\rm m/s}.\)</span> Light elements (H, He) have much higher speeds, so
-have largely escaped from low surface gravity environments such as the Earth (unlike
-gas giants Jupiter and Saturn).</p>
+<p>The molar weight of isobutane is <span class="math notranslate nohighlight">\(4 \times 12 + 10\)</span> = 58 g. Its molar hear capacity is therefore 1477 x 0.058 = 85.66 J/mol/K. This is
+equal to <span class="math notranslate nohighlight">\(\frac{f}{2} R\)</span>,
+where <span class="math notranslate nohighlight">\(f\)</span> is the total number of degrees of freedom. Dividing 85.66 by <span class="math notranslate nohighlight">\(R/2\)</span> gives <span class="math notranslate nohighlight">\(f\)</span> = 20.6.  We subtract 3 for the translational kinetic
+energy  degrees of freedom and get 17.6, which indicates that 17 degrees of freedom are  completely active, and one is partially active (we
+can see from <a class="reference internal" href="#fig3-3"><span class="std std-numref">Fig. 8</span></a> that the transition from <span class="math notranslate nohighlight">\(n\)</span> to <span class="math notranslate nohighlight">\(n+1\)</span> degrees of freedom is not
+sharp - it is possible to be <em>in between</em>. This is because the molecules in a gas do not all have the sample energy - see next section).</p>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="mean-free-path">
-<h1>Mean free path<a class="headerlink" href="#mean-free-path" title="Permalink to this heading">#</a></h1>
-<p>In reality, gas molecules have finite sizes, so may collide with one another. We can estimate
-the frequency of collisions and distance
-travelled between collisions, by considering <span class="math notranslate nohighlight">\(N\)</span> spherical, identical molecules of radius <span class="math notranslate nohighlight">\(r\)</span> in
-a volume <span class="math notranslate nohighlight">\(V\)</span>. Considering the motion of a
-single molecule, with speed <span class="math notranslate nohighlight">\(v\)</span>, it will collide with another molecule as it sweeps out a cylinder of radius <span class="math notranslate nohighlight">\(2r\)</span>, with it axis parallel to
-its motion - see <a class="reference internal" href="#fig3-6"><span class="std std-numref">Fig. 10</span></a>. In time <span class="math notranslate nohighlight">\(dt\)</span> it will travel a distance <span class="math notranslate nohighlight">\(v dt\)</span> so collisions will occur within the volume
-<span class="math notranslate nohighlight">\(4 \pi r^{2} v dt.\)</span> There are <span class="math notranslate nohighlight">\(N/V\)</span> molecules per unit volume so the number <span class="math notranslate nohighlight">\(dN\)</span> with centres in
-the cylinder are <span class="math notranslate nohighlight">\(dN = 4 \pi r^{2} v dt 
-\frac{N}{V}\)</span>, So the number of collisions per unit time is <span class="math notranslate nohighlight">\(\frac{dN}{dt} = 4 \pi r^{2} v \frac{N}{V}\)</span>. Considering the motion of all
-molecules is rather more involved, and results in a factor of <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> more collisions <span class="math notranslate nohighlight">\(\frac{dN}{dt} = 4\sqrt{2} \pi r^{2} v 
-\frac{N}{V}\)</span>.</p>
-<figure class="align-center" id="fig3-6">
-<a class="reference internal image-reference" href="_images/3_mfp.png"><img alt="Mean free path" src="_images/3_mfp.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">In a time <span class="math notranslate nohighlight">\(dt\)</span> a molecule with radius <span class="math notranslate nohighlight">\(r\)</span> will collide with any other molecules within a cylindrical volume of radius <span class="math notranslate nohighlight">\(2r\)</span> and length <span class="math notranslate nohighlight">\(v 
-dt\)</span>. Source: Fig 18.15 from University Physics with Modern Physics
-(Pearson)</span><a class="headerlink" href="#fig3-6" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The average time <span class="math notranslate nohighlight">\(t_{\rm mean}\)</span> between collisions, the <strong>mean free time</strong>, is the recipricol of this expression  <span class="math notranslate nohighlight">\(t_{\rm mean} = \frac{V}{4 
-\sqrt{2} \pi r^{2} v N}\)</span>. The average distance travelled between collisions, the <strong>mean free path</strong>, denoted <span class="math notranslate nohighlight">\(\lambda\)</span>, is the molecule’s
-speed multipled by <span class="math notranslate nohighlight">\(t_{\rm mean}\)</span></p>
-<div class="math notranslate nohighlight" id="equation-eqn3-10">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eqn3-10" title="Permalink to this equation">#</a></span>\[\lambda = v t_{\rm mean} = \frac{V}{4 \sqrt{2} \pi r^{2} N}.\]</div>
-<p>The more molecules there are and the larger the molecule, the shorter the distance between collisions. Note that the mean free path does
-not depend on the speed of the molecule. We can also express the mean free path in terms of macroscopic properties of the gas using the
-ideal gas equation <span class="math notranslate nohighlight">\(PV = N k_B T\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-\lambda = \frac{k_{B} T}{4 \sqrt{2} \pi r^{2} P}. 
-\]</div>
-<p>If the temperature is increased at constant pressure, the gas expands, so the average distance between molecules increases, so <span class="math notranslate nohighlight">\(\lambda\)</span>
-increases. If the pressure is increase at fixed temperature, the gas compresses and <span class="math notranslate nohighlight">\(\lambda\)</span>
-decreases.</p>
-<p>We can estimate these quantities for an oxygen molecule (<span class="math notranslate nohighlight">\(r = 2.0 \times 10^{-10}\)</span> m) at a pressure of 1 atm and temperature of 20<span class="math notranslate nohighlight">\(^{\circ}\)</span>
-C  using <span class="math notranslate nohighlight">\(v = v_{\rm rms}\)</span> from Example 3.3. We obtain <span class="math notranslate nohighlight">\(\lambda= 5.6 \times 
-10^{-8}\)</span> m and <span class="math notranslate nohighlight">\(t_{\rm mean} = 1.2 \times 10^{-10}\)</span> s. A typical
-molecule undergoes nearly 10 <em>billion</em> collisions per second.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1019,16 +1019,16 @@ molecule undergoes nearly 10 <em>billion</em> collisions per second.</p>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-definition-of-an-ideal-gas">The definition of an ideal gas</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-kinetic-theory-of-the-ideal-gas">The kinetic theory of the ideal gas</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy">Heat capacity of ideal gases and equipartition of energy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-a-diatomic-gas">Heat capacity of a diatomic gas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
-</ul>
-</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-maxwell-boltzmann-distribution">The Maxwell-Boltzmann distribution</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-maxwell-boltzmann-distribution">Properties of the Maxwell-Boltzmann distribution</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-free-path">Mean free path</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-ideal-gases-and-equipartition-of-energy">Heat capacity of ideal gases and equipartition of energy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-a-diatomic-gas">Heat capacity of a diatomic gas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
