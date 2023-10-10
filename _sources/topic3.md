@@ -289,8 +289,9 @@ $$
 The temperature of an ideal gas defined the _average_ kinetic energy of its molecules, according to Equation {eq}`eqn3.5`. However, the 
 energies 
 of the 
-individual molecules actually span a wide range. This is described by the __Maxwell-Boltzmann__ distribution of molecular speeds, which is 
-given by
+individual molecules actually span a wide range. This is described by the 
+__Maxwell-Boltzmann__ distribution of molecular speeds, which shown in
+{numref}`fig3.5` and mathematically is expressed as
 
 ```{math}
 :label: eqn3.8
@@ -587,8 +588,7 @@ where $f$ is the total number of degrees of freedom. Dividing 85.66 by $R/2$ giv
 energy  degrees of freedom and get 17.6, which indicates that 17 degrees of freedom are  completely active, and one is partially active (we 
 can see from {numref}`fig3.3` that the transition from $n$ to $n+1$ degrees of freedom is not 
 sharp - it is possible to be _in between_. This is because the molecules 
-in a gas do not all have the same energy - recall 
-{ref}`maxwell-boltzmann)` ).
+in a gas do not all have the same energy - recall {numref}`fig3.5`.).
  ``` 
 ````
 `````
