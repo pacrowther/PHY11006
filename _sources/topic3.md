@@ -586,7 +586,9 @@ equal to $\frac{f}{2} R$,
 where $f$ is the total number of degrees of freedom. Dividing 85.66 by $R/2$ gives $f$ = 20.6.  We subtract 3 for the translational kinetic 
 energy  degrees of freedom and get 17.6, which indicates that 17 degrees of freedom are  completely active, and one is partially active (we 
 can see from {numref}`fig3.3` that the transition from $n$ to $n+1$ degrees of freedom is not 
-sharp - it is possible to be _in between_. This is because the molecules in a gas do not all have the sample energy - see next section).
+sharp - it is possible to be _in between_. This is because the molecules 
+in a gas do not all have the same energy - recall 
+{ref}`maxwell-boltzmann)` ).
  ``` 
 ````
 `````
