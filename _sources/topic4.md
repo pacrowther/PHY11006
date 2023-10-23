@@ -152,7 +152,8 @@ done vaporizing the water and (ii) its increase in internal energy. (Note the he
 ```
 
 ```{tab-item} Solution
-The water does work $P (V_{2} - V_{1}) = 1.67 \times 10^{2}$ J so the work done on the water is $W = - 1.67 \times 10^{2}$ J. From Eqn 
+The water does work $P (V_{2} - V_{1}) = 1.69 \times 10^{2}$ J so the work done 
+on the water is $W = - 1.69 \times 10^{2}$ J. From Eqn 
 {eq}`eqn2.6` $Q = m L_{V} = 2.26 \times 10^{3}$ J. The first law of thermodynamics holds for 
 thermodynamic processes of all kinds,
 $\Delta U = Q + W  = 2.09 \times 10^{3}$ J. Over 90% of the heat remains in the system as an increase in internal energy, with the remainder 
