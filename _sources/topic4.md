@@ -132,7 +132,8 @@ pressure would be the same (provided that the gas could be treated as an ideal g
 
 # Cyclic process
 
-A process that eventually returns a system to its initial staret is called a cyclic process. For such a process, the final state is the same 
+A process that eventually returns a system to its initial state is called a 
+cyclic process. For such a process, the final state is the same 
 as the initial state, so the total internal energy change most be zero. If a net quantity of work $W$ is done on the system, an equal amount 
 of work must have flowed into the system as heat $Q$.
 
