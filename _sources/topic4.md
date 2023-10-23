@@ -114,11 +114,13 @@ pressure as the outside environment. (Neglect any frictional forces). The gas is
 If the gas is heated at constant pressure, then since $PV = RT$ (for one mole), the volume 
 must change. The amount of work done _by_ the 
 gas is $P \Delta V = R \Delta T$, so the amount of work done _on_ the gas is $-R \Delta T$. From Equation {eq}`eqn3.5`, we know that the 
-change in the internal energy of the gas is $\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T$. (As this is a monatomic 
+change in the internal energy of the gas is
+$\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T$. (As this is a monatomic 
 ideal gas, its internal energy is just the kinetic energy of its atoms: there is no rotational or vibrational degrees of freedom to worry 
 about).
 
-Therefore from the First Law we have $Q - \Delta U - W = \frac{3}{2} R \Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T$. 
+Therefore from the First Law we have $Q = \Delta U - W = \frac{3}{2} R 
+\Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T$. 
 But by definition we know $Q = c_{P} \Delta T$ where $c_{P}$ is the molar heat capacity at constant pressure, and at constant volume
 we know that $\Delta U = Q = c_{V} \Delta T$ since no work is done. Therefore as we have previously deduced (Equation {eq}`eqn3.7`) 
 $c_{V} = \frac{3}{2} R$ and so $c_{P} = \frac{5}{2} R = c_{V} + R$. Note that although a more complicated gas, such as isobutane from 
