@@ -154,7 +154,8 @@ volume $V_{2}$. We then heat it at constant volume until it reaches pressure $P_
 ```{tab-item} Solution
 Let's label the four states A, B, C and D, where A is ($P_1, V_1$), B is ($P_1, V_2$), C is ($P_2, V_2)$ and D is ($P_2, V_1)$.
 
-From the ideal gas law, $PV = nRT$, we see that $T_{A} = P_1 V_1 / R$, $T_{B} = O_1 V_2 /R$, $T_{C} = P_2 V_2 /R$ and $T_{D} = P_2 V_1 /R$. 
+From the ideal gas law, $PV = nRT$, we see that $T_{A} = P_1 V_1 / R$, 
+$T_{B} = P_1 V_2 /R$, $T_{C} = P_2 V_2 /R$ and $T_{D} = P_2 V_1 /R$. 
 Since we have one mole of a monatomic ideal gas, the heat capacity at constant pressure is $C_{P} = \frac{5}{2} R$ and the heat capacity at 
 constant volume is  $C_{V} = \frac{3}{2} R$.
 
@@ -187,7 +188,7 @@ $Q_{DC} = C_{P} (T_{C} - T_{D}) = \frac{5}{2} P_{2} (V_2 - V_1).$ The total heat
 
 $$
 Q_{ADC} = \frac{3}{2} P_2 V_1 - \frac{3}{2} P_1 V_1 + \frac{5}{2} P_2 V_2 - \frac{5}{2} P_2 V_1 = \frac{5}{2} P_2 V_2 - \frac{3}{2} P_1 V_1 
-- P_2 - V_1.
+- P_2 V_1.
 $$
 
 There is no work done from A to D, to the total work done on the gas is $W_{DC} = - P \Delta V = P_2 (V_1 - V_2).$ The change in internal 
@@ -195,7 +196,8 @@ energy is $\Delta U = Q + W = \frac{3}{2} (P_2 V_2 - P_1 V_1).$
 
 Note that the change in internal energy is the same in both cases, as it should be because internal energy is a function of state. However, 
 the heat supplied and the work done both differ. If we were to combined this as a cycle ADCBA, running the first path in reverse, the net 
-work done on the gas would be $(P_2 - P_1)/(V_1 - V_2)$, i.e. the gas would _do_ net work $(P_2 - P_1)(V_2 - V_1)$ on its surroundings since 
+work done on the gas would be $(P_2 - P_1) (V_1 - V_2)$, i.e. the gas 
+would _do_ net work $(P_2 - P_1)(V_2 - V_1)$ on its surroundings since 
 $V_2 > V_1$. This is the basis on which __heat engines__ work: They convert heat to work by tracing out a closed cycle on the $PV$ plot.
 
 Also note that since $PV = RT$ for one mole of gas, we can write $\Delta U = \frac{3}{2} R (T_{C} - T_{A}) = C_{V} \Delta T.$

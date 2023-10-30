@@ -194,6 +194,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -559,7 +560,8 @@ volume <span class="math notranslate nohighlight">\(V_{2}\)</span>. We then heat
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Solution</label><div class="sd-tab-content docutils">
 <p>Let’s label the four states A, B, C and D, where A is (<span class="math notranslate nohighlight">\(P_1, V_1\)</span>), B is (<span class="math notranslate nohighlight">\(P_1, V_2\)</span>), C is (<span class="math notranslate nohighlight">\(P_2, V_2)\)</span> and D is (<span class="math notranslate nohighlight">\(P_2, V_1)\)</span>.</p>
-<p>From the ideal gas law, <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we see that <span class="math notranslate nohighlight">\(T_{A} = P_1 V_1 / R\)</span>, <span class="math notranslate nohighlight">\(T_{B} = O_1 V_2 /R\)</span>, <span class="math notranslate nohighlight">\(T_{C} = P_2 V_2 /R\)</span> and <span class="math notranslate nohighlight">\(T_{D} = P_2 V_1 /R\)</span>.
+<p>From the ideal gas law, <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we see that <span class="math notranslate nohighlight">\(T_{A} = P_1 V_1 / R\)</span>,
+<span class="math notranslate nohighlight">\(T_{B} = P_1 V_2 /R\)</span>, <span class="math notranslate nohighlight">\(T_{C} = P_2 V_2 /R\)</span> and <span class="math notranslate nohighlight">\(T_{D} = P_2 V_1 /R\)</span>.
 Since we have one mole of a monatomic ideal gas, the heat capacity at constant pressure is <span class="math notranslate nohighlight">\(C_{P} = \frac{5}{2} R\)</span> and the heat capacity at
 constant volume is  <span class="math notranslate nohighlight">\(C_{V} = \frac{3}{2} R\)</span>.</p>
 <p>The heat supplied going from A to B is <span class="math notranslate nohighlight">\(Q_{AB} = C_{P} (T_{B} - T_{A}) = \frac{5}{2} P_1 (V_2 - V_1).\)</span> From B to C the heat supplied is
@@ -591,13 +593,14 @@ Solution</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[
 Q_{ADC} = \frac{3}{2} P_2 V_1 - \frac{3}{2} P_1 V_1 + \frac{5}{2} P_2 V_2 - \frac{5}{2} P_2 V_1 = \frac{5}{2} P_2 V_2 - \frac{3}{2} P_1 V_1 
-- P_2 - V_1.
+- P_2 V_1.
 \]</div>
 <p>There is no work done from A to D, to the total work done on the gas is <span class="math notranslate nohighlight">\(W_{DC} = - P \Delta V = P_2 (V_1 - V_2).\)</span> The change in internal
 energy is <span class="math notranslate nohighlight">\(\Delta U = Q + W = \frac{3}{2} (P_2 V_2 - P_1 V_1).\)</span></p>
 <p>Note that the change in internal energy is the same in both cases, as it should be because internal energy is a function of state. However,
 the heat supplied and the work done both differ. If we were to combined this as a cycle ADCBA, running the first path in reverse, the net
-work done on the gas would be <span class="math notranslate nohighlight">\((P_2 - P_1)/(V_1 - V_2)\)</span>, i.e. the gas would <em>do</em> net work <span class="math notranslate nohighlight">\((P_2 - P_1)(V_2 - V_1)\)</span> on its surroundings since
+work done on the gas would be <span class="math notranslate nohighlight">\((P_2 - P_1) (V_1 - V_2)\)</span>, i.e. the gas
+would <em>do</em> net work <span class="math notranslate nohighlight">\((P_2 - P_1)(V_2 - V_1)\)</span> on its surroundings since
 <span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>. This is the basis on which <strong>heat engines</strong> work: They convert heat to work by tracing out a closed cycle on the <span class="math notranslate nohighlight">\(PV\)</span> plot.</p>
 <p>Also note that since <span class="math notranslate nohighlight">\(PV = RT\)</span> for one mole of gas, we can write <span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} R (T_{C} - T_{A}) = C_{V} \Delta T.\)</span>
 This is what we should expect: we saw above that for an isochoric process <span class="math notranslate nohighlight">\(\Delta U = Q = C_{V} \Delta T\)</span>, and as <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are
