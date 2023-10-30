@@ -279,7 +279,8 @@ W = - \int_{V_{i}}^{V_{f}} P dV = - K \int_{V_{i}}^{V_{j}} V^{-\gamma} dV = - \f
 \frac{K}{\gamma -1} \left( V_{f}^{1-\gamma} - V_{i}^{1-\gamma} \right).
 $$
 
-But since $P V^{\gamma}$ is constant, $K = P_{f} V_{f}$ we can simplify this to
+But since $P V^{\gamma}$ is constant, $K = P_{f} V_{f}^{\gamma}$ we can 
+simplify this to
 
 ```{math}
 :label: eqn5.7
