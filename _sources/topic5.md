@@ -10,7 +10,9 @@ Let's consider an ideal gas, with equation of state $PV = nRT$. (The same ideas 
 system, but the variables we use to specify the system may be different.) For a fixed mass of gas, the
 state of the gas is defined by any two of the variables ($P,V,T$), because we can always use the equation 
 of state to find the third. So we can specify our initial and final states as points on a plot of $P$
-against $V$. As the gas moves from state A to state B, it will pass through intermediate states, each of
+against $V$. 
+
+As the gas moves from state A to state B, it will pass through intermediate states, each of
 which can also be specified as a point on the $PV$ plot. Therefore, any path between A and B is represented 
 by a line joining A and B on the plot, and conversely any line joining A and B on the plot is a
 possible - if not necessarily practical - way in which the gas could be taken from state A to state B by
@@ -20,7 +22,9 @@ In general, these paths will not be analytically calculable - we'd have to model
 computer to work out exactly how to move the gas from state A to state B along some random wiggly path.
 Therefore, we restrict our attention to those paths that lead to simple equations that we can solve.
 This is, of course, what the 19th century developers of thermodynamics also did, since they had no
-computers to do the calculations for them. Real applications of thermodynamics, e.g. real engines,
+computers to do the calculations for them. 
+
+Real applications of thermodynamics, e.g. real engines,
 do not follow these simple paths, but it is often possible to construct an idealised version of the engine
 that does, and this will give us some insight into how the engine performs. Later in the course we will
 look at idealised versions of some typical engines, including steam engines, petrol engines and diesel
@@ -31,13 +35,17 @@ engines.
 To define the state of a system, we have to specify its properties. The properties that are useful for
 this are the ones that do not depend on the prior history of the state: for example, we cannot use the
 work done on a system to define its state, because the amount of work that has been done to put the
-system into some state A depends on its history. Properties of a system that depend only on its current
+system into some state A depends on its history. 
+
+Properties of a system that depend only on its current
 state and not on its history are called __functions of state__. Examples of functions of state include 
 pressure, temperature, volume, mass, density, magnetisation, electric charge, etc. Examples of variables
-which are not functions of state include, as we have seen, history-dependent variables such as work
+which are _not_ functions of state include, as we have seen, history-dependent variables such as work
 done and heat supplied, and also things that can change without changing the state, such as the kinetic
 energy of one atom of a gas (the temperature depends on the average kinetic energy, not the kinetic
-energy of one individual particle). The properties of a particular system may create relationships between 
+energy of one individual particle). 
+
+The properties of a particular system may create relationships between 
 functions of state, and these are called __equations of state__. The only equation of state we are
 using in this course is the ideal gas law, but there are many others: for example, numerous modifications 
 of the ideal gas law designed to make it a better representation of real gases (the best known
@@ -59,7 +67,7 @@ original state along the same path. This is not always true: for example, proces
 way that the heat you generated as you dragged that large box over the carpet can ever be collected together and reassembled into the work 
 that was expended in doing the dragging, however slowly you did it.
 
-Changes t=of state that involve _rapid_ changes to one or more functions of state are 
+Changes of state that involve _rapid_ changes to one or more functions of state are 
 obviously not quasistatic, and in general are 
 __irreversible__: for example: if you were to expand a volume of gas slowly by moving a piston, 
 that would be reversible, but if you expand 
