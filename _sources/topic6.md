@@ -113,6 +113,23 @@ too much, the temperature inside the cylinder will increase to the point where t
 prematurely, before the spark. Typical 
 compression ratios for petrol engines are around 10:1 (between 8:2 and 12:1).
 
+`````{admonition} Example 6.1
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+Calculate the theoretical efficiency of an Otto-cycle engine with $r$=9.5 and $\gamma$=7/5. If the engine
+takes in 10 kJ of heat from burning its fuel, how much heat does it discard to the outside air?```
+
+```{tab-item} Solution
+
+$\eta  = 1 - \frac{1}{r^{\gamma-1}}$ = 0.59 or 59%, so $|W| = \eta Q_{H}$ = 5.9 kJ.
+
+```
+````
+`````
+
+
 ## Diesel cycle
 
 ```{figure} Images/6_Diesel.png
@@ -174,7 +191,7 @@ $T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compressi
 As $T_{1}$ and $T_{3}$ are reasonably well defined, this means that the cut-off ratio is not really an independent parameter; if we know 
 the flame temperature $T_{3}$ and the inlet temperature $T_{1}$, it is set by the compression ratio.
 
-`````{admonition} Example 6.1
+`````{admonition} Example 6.2
 :class: dropdown
 
 ````{tab-set}
