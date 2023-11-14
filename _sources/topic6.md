@@ -332,6 +332,27 @@ we can define the __Kelvin temperature__
 Since the Carnot cycle is purely theoretical and does not correspond to any real device, this is not a very useful definition in practical 
 terms, but it is closely connected to the definition of temperature in terms of entropy, which _is_ useful.
 
+`````{admonition} Example 6.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A Carnot engine, whose high temperature reservior is at 620 K, takes in 550 J of heat at this temperature in each cycle and gives up 335 J to the low temperature reservoir.
+(i) How much mechanical work does the engine perform during each cycle? (ii) What is the temperature of the low temperature reservoir? (iii) What is the thermal efficiency of the cycle?
+```
+
+```{tab-item} Solution
+(i) $|W| = Q_{H} - |Q_{C}|$ = 550 - |335| = 215 J.
+
+(ii) $T_{C} = \frac{|Q_{C}|}{Q_{H}} T_{H} = \frac{|335|}{550} \times 620 = 378$ K 
+
+(iii) $\eta = \1 - \frac{T_{C}}{T_{H}} = 1 -  \frac{378}{620} = 0.39$ or 39%.
+
+```
+````
+`````
+
+
 # A two-phase heat engine
 
 ```{figure} Images/6_Rankine.png
