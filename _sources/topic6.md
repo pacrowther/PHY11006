@@ -363,7 +363,7 @@ engine completes 240 cycles in 1 minute. What is the theoretical maximum power o
 
 ```{tab-item} Solution
 
-For an idealised (Carnot) engine, $\eta = 1 \frac{T_{C}}{T_{H}} = 1 - \frac{350}{650} = 0.46 $ or 46%. 
+For an idealised (Carnot) engine, $\eta = 1 - \frac{T_{C}}{T_{H}} = 1 - \frac{350}{650} = 0.46 $ or 46%. 
 
 $|W| = \eta Q_{H} = 0.46 \times 1.5 \times 10^{4} = 6900$ J. 240 cycles per minute corresponds to 4 cycles per second.
 Power (W) is work per second (J/s), so $P = 6900 \times 4 = 26.7$ kW or 37 hp.  
