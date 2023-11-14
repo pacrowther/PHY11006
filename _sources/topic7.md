@@ -348,16 +348,6 @@ individual step. This is what we would expect for reversible processes.
 ````
 `````
 
-
-# Entropy as a measure of disorder
-
-Total entropy increases in irreversible processes, but is zero in reversible processes. We saw that what makes a process irreversible is the 
-dissipation of energy - in essence, some of the energy that would, in a reversible system, be released as work (ordered motion) is instead 
-dissipated in some disordered fashion. Also, the entropy of a system increases when heat flows _into_ it, and decreases when heat flows 
-_out_ of it, and we saw that heat is energy associated with _disordered_ (i.e. random) motion. These observations suggest that entropy is 
-in some way associated with disorder. This is indeed true, and you will explore the microscopic definition of entropy next year.
-
-
 `````{admonition} Example 7.3
 :class: dropdown
 
@@ -385,4 +375,34 @@ is zero since uniquely all processes are reversible in the Carnot cycle, in cont
 ``` 
 ````
 `````
+
+`````{admonition} Example 7.4
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+Heat from a very massive body at 25$^{\circ}$ C is added to 0.35 kg of ice at 0.0$^{\circ}$ C until it is all melted.
+(a) What is the change in entropy of the water? (b) What is the change in entropy of the massive body? (c) What is the total
+change in entropy of the water and heat source?
+```
+
+```{tab-item} Solution
+(a) The latent heat of fusion of water is $L_{t} = 3.34 \times 10^{5}$ J/K, so $Q = 0.35 \times 3.34 \times 10^{5} = 117 kJ  and
+$\Delta S = Q/T = 1.17 \times 10^{5}/273 = 428$ J/K.
+
+(b) $\Delta S = Q/T = -1.17 \times 10^{5}/298 = -393$ J/K. 
+
+(c) $\Delta S_{total} = 428 - 393 = 36$ J/K. 
+``` 
+````
+`````
+
+# Entropy as a measure of disorder
+
+Total entropy increases in irreversible processes, but is zero in reversible processes. We saw that what makes a process irreversible is the 
+dissipation of energy - in essence, some of the energy that would, in a reversible system, be released as work (ordered motion) is instead 
+dissipated in some disordered fashion. Also, the entropy of a system increases when heat flows _into_ it, and decreases when heat flows 
+_out_ of it, and we saw that heat is energy associated with _disordered_ (i.e. random) motion. These observations suggest that entropy is 
+in some way associated with disorder. This is indeed true, and you will explore the microscopic definition of entropy next year.
+
 
