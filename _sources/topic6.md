@@ -342,11 +342,11 @@ A Carnot engine, whose high temperature reservior is at 620 K, takes in 550 J of
 ```
 
 ```{tab-item} Solution
-(i) $|W| = Q_{H} - |Q_{C}|$ = 550 - |335| = 215 J.
+(i) $|W| = Q_{H} - |Q_{C}|$ = 550 - |-335| = 215 J.
 
-(ii) $T_{C} = \frac{|Q_{C}|}{Q_{H}} T_{H} = \frac{|335|}{550} \times 620 = 378$ K 
+(ii) $T_{C} = \frac{|Q_{C}|}{Q_{H}} T_{H} = \frac{|-335|}{550} \times 620 = 378$ K 
 
-(iii) $\eta = \1 - \frac{T_{C}}{T_{H}} = 1 -  \frac{378}{620} = 0.39$ or 39%.
+(iii) $\eta = 1 - \frac{T_{C}}{T_{H}} = 1 -  \frac{378}{620} = 0.39$ or 39%.
 
 ```
 ````
