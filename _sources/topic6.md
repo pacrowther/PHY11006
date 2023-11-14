@@ -352,6 +352,25 @@ A Carnot engine, whose high temperature reservior is at 620 K, takes in 550 J of
 ````
 `````
 
+`````{admonition} Example 6.4
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+You design an engine that takes in $1.5 \times 10^{4}$ J of heat at 650 K in each cycle and rejects heat at 350 K. The
+engine completes 240 cycles in 1 minute. What is the theoretical maximum power output of your engine in hp? (1 hp = 746 W)
+```
+
+```{tab-item} Solution
+
+For an idealised (Carnot) engine, $\eta = 1 \frac{T_{C}}{T_{H}} = 1 - \frac{350}{650} = 0.46 $ or 46%. 
+
+$|W| = \eta Q_{H} = 0.46 \times 1.5 \times 10^{4} = 6900$ J. 240 cycles per minute corresponds to 4 cycles per second.
+Power (W) is work per second (J/s), so $P = 6900 \times 4 = 26.7$ kW or 37 hp.  
+
+```
+````
+`````
 
 # A two-phase heat engine
 
@@ -463,3 +482,21 @@ represent the maximum theoretically achievable, and in the real world coefficien
 especially for heat pumps since one should take into account the power required to circulate the heat around the house e.g. by pumping hot 
 water through the radiator system, However, even real coefficients of performance are 
 significantly greater than unity.
+
+`````{admonition} Example 6.5
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A refrigerator has a coefficient of performance of 2.1. In each cycle it absorbs $3.4 \times 10^{4}$ J of heat from the cold reservoir.
+(a) How much mechanical energy is required each cycle to operate the refrigerator? (b) During each cycle how much hear is discarded to the high temperature reservoir?```
+
+```{tab-item} Solution
+
+(a) $COP_{R} = Q_{C}/W$ so $W = Q_{C}/COP_{R} = 3.4\times 10^{4}/2.1 = 16.2$ kJ.
+
+(b) $COP_{R} = Q_{C}/(Q_{H} - Q_{C})$ so $Q_{H} = Q_{C}(1 + 1/COP_{R}) = 3.4\times 10^{4} (1 + 1/2.1) = 50.2$ kJ.
+```
+````
+`````
+
