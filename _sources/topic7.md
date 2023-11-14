@@ -319,7 +319,7 @@ cannot decrease.
 
 ````{tab-set}
 ```{tab-item} Question
-Calculate the entropy change in the system and its surroundings for each stage of the Carnot cycle.
+Calculate the entropy change in the system and its surroundings for each stage of a Carnot cycle (Topic 6).
 ```
 
 ```{tab-item} Solution
@@ -357,4 +357,32 @@ dissipated in some disordered fashion. Also, the entropy of a system increases w
 _out_ of it, and we saw that heat is energy associated with _disordered_ (i.e. random) motion. These observations suggest that entropy is 
 in some way associated with disorder. This is indeed true, and you will explore the microscopic definition of entropy next year.
 
+
+`````{admonition} Example 7.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A Carnot engine takes 2000 J of heat from a reservoir at 500 K, does some work, and discards some heat to a reservoir at 350 K.
+(a) How much heat is discarded? (b) How much work is done? (c) What is its efficiency? (d What is the total entropy change?
+```
+
+```{tab-item} Solution
+(a) The heat discarded is $|Q_{C}| = Q_{H}\frac{T_{C}}{T_{H}} = 2000 \frac{350}{500} = 1400$ J
+
+(b) Work done $|W| = Q_{H} - |Q_{C}| = 2000 - 1400 = 600$ J
+
+(c) Efficiency of a Carnot engine is $\eta = 1 - T_{C}/T_{H} = 1 - \frac{350}{500} = 0.3$
+
+(d) There is no change in entropy during adiabatic compression or expansion. 
+
+During the isothermal expansion the engine takes in 2000 J of heat so $\Delta S_{H} = \frac{Q_{H}}{T_{H}} = 4$ J/K.
+
+During the isothermal compression the engine gives of 1400 J of heat so $\Delta S_{C} = \frac{Q_{C}}{T_{C}} = -4$ J/K
+
+so the net change in entropy is $\Delta S_{total} = \Delta S_{H} - \Delta S_{C} = 0$ (the sum of the entropy changes
+is zero since uniquely all processes are reversible in the Carnot cycle, in contrast to Otto, Diesel etc)
+``` 
+````
+`````
 
