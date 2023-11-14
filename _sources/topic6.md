@@ -489,7 +489,8 @@ significantly greater than unity.
 ````{tab-set}
 ```{tab-item} Question
 A refrigerator has a coefficient of performance of 2.1. In each cycle it absorbs $3.4 \times 10^{4}$ J of heat from the cold reservoir.
-(a) How much mechanical energy is required each cycle to operate the refrigerator? (b) During each cycle how much hear is discarded to the high temperature reservoir?```
+(a) How much mechanical energy is required each cycle to operate the refrigerator? (b) During each cycle how much hear is discarded to the high temperature reservoir?
+```
 
 ```{tab-item} Solution
 
