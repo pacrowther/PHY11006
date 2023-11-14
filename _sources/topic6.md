@@ -165,7 +165,7 @@ The value of $\alpha$ is constrained by $T_{3}$, which is set by the temperature
 fuel will ignite: unlike a petrol engine, 
 diesel engines have no need for spark plugs since the full ignites spontaneously when it reaches 
 the appropriate temperature. Since 
-$T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compression ratio, $T_{1}$ and $T{3}$ by
+$T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compression ratio, $T_{1}$ and $T_{3}$ by
 
 ```{math}
 :label: eqn6.5
@@ -174,6 +174,23 @@ $T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compressi
 As $T_{1}$ and $T_{3}$ are reasonably well defined, this means that the cut-off ratio is not really an independent parameter; if we know 
 the flame temperature $T_{3}$ and the inlet temperature $T_{1}$, it is set by the compression ratio.
 
+`````{admonition} Example 6.1
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A Diesel engine performs 2.2 kJ of mechanical work and discards 4.3 kJ of heat each cycle. (i) How much heat is supplied to the engine
+each cycle? )ii) What is the thermal efficiency of the engine?
+```
+
+```{tab-item} Solution
+(i) $|W|$ = 2200 J, $|Q_{C}|$ = 4300 J so $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
+
+(ii) $\eta = \frac{|W|}{Q_{H}} = \frac{2200}{6500} = 0.34$ or 34%.
+
+```
+````
+`````
 
 ## Stirling cycle
 
