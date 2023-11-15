@@ -354,7 +354,7 @@ individual step. This is what we would expect for reversible processes.
 ````{tab-set}
 ```{tab-item} Question
 A Carnot engine takes 2000 J of heat from a reservoir at 500 K, does some work, and discards some heat to a reservoir at 350 K.
-(a) How much heat is discarded? (b) How much work is done? (c) What is its efficiency? (d What is the total entropy change?
+(a) How much heat is discarded? (b) How much work is done? (c) What is its efficiency? (d) What is the total entropy change?
 ```
 
 ```{tab-item} Solution
@@ -383,16 +383,22 @@ is zero since uniquely all processes are reversible in the Carnot cycle, in cont
 ```{tab-item} Question
 Heat from a very massive body at 25$^{\circ}$ C is added to 0.35 kg of ice at 0.0$^{\circ}$ C until it is all melted.
 (a) What is the change in entropy of the water? (b) What is the change in entropy of the massive body? (c) What is the total
-change in entropy of the water and heat source?
+change in entropy of the water and heat source? (d) Compare your answer to part (a) with the change in entropy of water
+at 100$^{\circ}$ being vaporized and convered to steam at 100$^{\circ}$. Interpret your answer in the context of entropy
+being a measure of the randomness of a system.
 ```
 
 ```{tab-item} Solution
-(a) The latent heat of fusion of water is $L_{t} = 3.34 \times 10^{5}$ J/K, so $Q = 0.35 \times 3.34 \times 10^{5} = 117 kJ  and
+(a) The latent heat of fusion of water is $L_{f} = 3.34 \times 10^{5}$ J/kg, so $Q = 0.35 \times 3.34 \times 10^{5} = 117 kJ  and
 $\Delta S = Q/T = 1.17 \times 10^{5}/273 = 428$ J/K.
 
 (b) $\Delta S = Q/T = -1.17 \times 10^{5}/298 = -393$ J/K. 
 
 (c) $\Delta S_{total} = 428 - 393 = 36$ J/K. 
+
+(d) The latent heat of vaporization is $L_{v} = 2.26 \times 10^{6}$ J/kg, so $Q = 0.35 \times 2.26 \times 10^{6} = 791 kJ and
+$\Delta S = Q/T = 7.91 \times 10^{5}/373 = 2.12 kJ/K, five times greater than melting ice (steam is much more disordered 
+than liquid water). 
 ``` 
 ````
 `````
