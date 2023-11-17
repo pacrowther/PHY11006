@@ -119,7 +119,8 @@ compression ratios for petrol engines are around 10:1 (between 8:2 and 12:1).
 ````{tab-set}
 ```{tab-item} Question
 Calculate the theoretical efficiency of an Otto-cycle engine with $r$=9.5 and $\gamma$=7/5. If the engine
-takes in 10 kJ of heat from burning its fuel, how much heat does it discard to the outside air?```
+takes in 10 kJ of heat from burning its fuel, how much heat does it discard to the outside air?
+```
 
 ```{tab-item} Solution
 
