@@ -473,11 +473,9 @@ COP_{HP} = \frac{T_{H}}{T_{H} - T_{C}}.
 ```
 Notice that these are typically greater than one. For example, if your kitchen has a temperature of 25$^{\circ}$ C and you want your fridge 
 to be at 
-4$^{\circ}$ C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25$^{\circ}$ C nby a 
-heat pump 
-operating 
-between the house and outside air with a temperature of 4$^{\circ}$ C the ideal coefficient of performance would be 298/21 = 14.2. These 
-values 
+4$^{\circ}$ C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25$^{\circ}$ C by a 
+heat pump operating  between the house and outside air with a temperature of 4$^{\circ}$ C the ideal coefficient of performance would be 298/21 = 
+14.2. These  values 
 represent the maximum theoretically achievable, and in the real world coefficients of performance will be substantially less than this, 
 especially for heat pumps since one should take into account the power required to circulate the heat around the house e.g. by pumping hot 
 water through the radiator system, However, even real coefficients of performance are 
