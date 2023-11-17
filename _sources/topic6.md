@@ -203,7 +203,7 @@ each cycle? (ii) What is the thermal efficiency of the engine?
 
 ```{tab-item} Solution
 (i) Work done by the engine is 2200 J so work done on engine is $W$ = -2200 J. Heat given out by engine is 4300 J so 
-heat supplied to engine $Q_{C}$ = -4300 J so $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
+$Q_{C}$ = -4300 J therefore $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
 
 (ii) $\eta = \frac{|W|}{Q_{H}} = \frac{2200}{6500} = 0.34$ or 34%.
 
