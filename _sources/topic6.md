@@ -90,7 +90,7 @@ a petrol engine as being driven by petrol, the working fluid is actually air, or
 a mixture of air and combustion products: 
 the petrol powers the engine by supplying the input heat in step 2-3.
 
-From Equation 6.2, the efficiency of the Otto engine is $\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}$, since the heat supplied at constant volume 
+From Equation {eq}`eqn6.2`, the efficiency of the Otto engine is $\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}$, since the heat supplied at constant volume 
 is $Q = C_{V} \Delta T$ and we assume that $C_{V}$ is the same in both steps (note that in a real  engine it won't be, since the working gas 
 has a different chemical composition after ignition).
 
