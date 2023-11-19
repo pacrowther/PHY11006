@@ -195,6 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -406,10 +407,10 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-cycle">Stirling cycle</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-carnot-cycle-the-perfect-heat-engine">The Carnot cycle: the ‘perfect’ heat engine</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-two-phase-heat-engine">A two-phase heat engine</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-heat-pumps">Refrigerators and heat pumps</a></li>
@@ -598,35 +599,6 @@ Solution</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
-<section id="brayton-cycle">
-<h2>Brayton cycle<a class="headerlink" href="#brayton-cycle" title="Permalink to this heading">#</a></h2>
-<div class="alert alert-block alert-warning">
-The following content on the Brayton cycle is not currently examinable
-</div>
-<figure class="align-center" id="fig6-2a">
-<a class="reference internal image-reference" href="_images/6_open_Brayton_cycle.png"><img alt="Brayton cycle" src="_images/6_open_Brayton_cycle.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The (open) Brayton cycle. Source:
-<a class="reference external" href="https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/">www.nuclear-power.com</a></span><a class="headerlink" href="#fig6-2a" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations
-(closed cycle). A schematic of the open Brayton cycle is shown in <a class="reference internal" href="#fig6-2a"><span class="std std-numref">Fig. 14</span></a>. The four steps of the Brayton cycle are</p>
-<ol class="arabic simple">
-<li><p>1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)</p></li>
-<li><p>2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)</p></li>
-<li><p>3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)</p></li>
-<li><p>4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)</p></li>
-</ol>
-<p>The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor temperature ratio</p>
-<div class="math notranslate nohighlight">
-\[\eta = 1 - \frac{T_{1}}{T_{2}}\]</div>
-<p>and subsequently in terms of the compressor pressure ratio using the relationship between temperature and pressure for adiabatic processes</p>
-<div class="math notranslate nohighlight">
-\[\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/gamma} }\]</div>
-<p>so higher efficiency is achieved at high pressure ratios, subject to liimts set bu the maximum temperature that the turbine blades can withstand (approx
-1700 K).</p>
-</section>
 <section id="stirling-cycle">
 <h2>Stirling cycle<a class="headerlink" href="#stirling-cycle" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-block alert-warning">
@@ -635,10 +607,10 @@ The following content on the Stirling cycle is not currently examinable (but is 
 <figure class="align-center" id="fig6-3">
 <a class="reference internal image-reference" href="_images/6_Diesel.png"><img alt="Stirling cycle" src="_images/6_Diesel.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The Stirling cycle. Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The Stirling cycle. Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Unlike the Otto, Diesel and open Brayton cycles, the Stirling cycle relates to an <strong>external combustion engine</strong>, where the heat is supplied from an
+<p>Unlike the Otto and Diesel cycles, the Stirling cycle relates to an <strong>external combustion engine</strong>, where the heat is supplied from an
 external
 heat
 reservoir.  This has the advantage that the engine can use a very wide range of heat sources, since the fuel never comes into contact with the
@@ -677,6 +649,36 @@ domestic refrigerators, because cycles involving phase changes are more cost-eff
 working at temperatures below about -40<span class="math notranslate nohighlight">\(^{\circ}\)</span> C).</p>
 <p>Stirling engines are also very quiet, and have been used in submarines for this reason.</p>
 </section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="brayton-cycle">
+<h1>Brayton cycle<a class="headerlink" href="#brayton-cycle" title="Permalink to this heading">#</a></h1>
+<div class="alert alert-block alert-warning">
+The following content on the Brayton cycle is not currently examinable
+</div>
+<figure class="align-center" id="fig6-2a">
+<a class="reference internal image-reference" href="_images/6_open_Brayton_cycle.png"><img alt="Brayton cycle" src="_images/6_open_Brayton_cycle.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The (open) Brayton cycle. Source:
+<a class="reference external" href="https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/">www.nuclear-power.com</a></span><a class="headerlink" href="#fig6-2a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations
+(closed cycle). A schematic of the open Brayton cycle is shown in <a class="reference internal" href="#fig6-2a"><span class="std std-numref">Fig. 15</span></a>. The four steps of the Brayton cycle are</p>
+<ol class="arabic simple">
+<li><p>1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)</p></li>
+<li><p>2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)</p></li>
+<li><p>3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)</p></li>
+<li><p>4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)</p></li>
+</ol>
+<p>The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor <em>temperature ratio</em></p>
+<div class="math notranslate nohighlight">
+\[\eta = 1 - \frac{T_{1}}{T_{2}}\]</div>
+<p>and subsequently in terms of the compressor <em>pressure ratio</em> using the relationship between temperature and pressure for adiabatic processes</p>
+<div class="math notranslate nohighlight">
+\[\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/\gamma} }\]</div>
+<p>so higher efficiency is achieved at high pressure ratios (30-40 for modern engines), subject to limits set by the maximum temperature that the turbine
+blades can withstand (approx
+1700 K).</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="the-carnot-cycle-the-perfect-heat-engine">
 <span id="topic6-carnot"></span><h1>The Carnot cycle: the ‘perfect’ heat engine<a class="headerlink" href="#the-carnot-cycle-the-perfect-heat-engine" title="Permalink to this heading">#</a></h1>
@@ -931,10 +933,10 @@ Solution</label><div class="sd-tab-content docutils">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-cycle">Stirling cycle</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-carnot-cycle-the-perfect-heat-engine">The Carnot cycle: the ‘perfect’ heat engine</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-two-phase-heat-engine">A two-phase heat engine</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-heat-pumps">Refrigerators and heat pumps</a></li>

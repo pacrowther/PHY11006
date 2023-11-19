@@ -210,43 +210,6 @@ $Q_{C}$ = -4300 J therefore $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
 ```
 ````
 `````
-## Brayton cycle
-
-<div class="alert alert-block alert-warning">
-The following content on the Brayton cycle is not currently examinable
-</div>
-
-```{figure} Images/6_open_Brayton_cycle.png
-:name: fig6.2a
-:alt: Brayton cycle
-:align: center
-:width: 70%
-The (open) Brayton cycle. Source: 
-[www.nuclear-power.com](https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/)
-
-```
-
-The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations 
-(closed cycle). A schematic of the open Brayton cycle is shown in {numref}`fig6.2a`. The four steps of the Brayton cycle are
-
-1. 1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)
-
-2. 2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)
-
-3. 3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)
-
-4. 4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)
-
-The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor temperature ratio
-```{math}
-\eta = 1 - \frac{T_{1}}{T_{2}}
-```
-and subsequently in terms of the compressor pressure ratio using the relationship between temperature and pressure for adiabatic processes
-```{math}
-\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/gamma} }
-```
-so higher efficiency is achieved at high pressure ratios, subject to liimts set bu the maximum temperature that the turbine blades can withstand (approx 
-1700 K).
 
 ## Stirling cycle
 
@@ -263,7 +226,7 @@ The Stirling cycle. Source: [Wikipedia](https://en.wikipedia.org/wiki/Stirling_c
 
 ```
 
-Unlike the Otto, Diesel and open Brayton cycles, the Stirling cycle relates to an __external combustion engine__, where the heat is supplied from an 
+Unlike the Otto and Diesel cycles, the Stirling cycle relates to an __external combustion engine__, where the heat is supplied from an 
 external 
 heat 
 reservoir.  This has the advantage that the engine can use a very wide range of heat sources, since the fuel never comes into contact with the 
@@ -310,6 +273,48 @@ domestic refrigerators, because cycles involving phase changes are more cost-eff
 working at temperatures below about -40$^{\circ}$ C). 
 
 Stirling engines are also very quiet, and have been used in submarines for this reason.
+
+# Brayton cycle
+
+<div class="alert alert-block alert-warning">
+The following content on the Brayton cycle is not currently examinable
+</div>
+
+```{figure} Images/6_open_Brayton_cycle.png
+:name: fig6.2a
+:alt: Brayton cycle
+:align: center
+:width: 70%
+The (open) Brayton cycle. Source: 
+[www.nuclear-power.com](https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/)
+
+```
+
+The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations 
+(closed cycle). A schematic of the open Brayton cycle is shown in {numref}`fig6.2a`. The four steps of the Brayton cycle are
+
+1. 1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)
+
+2. 2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)
+
+3. 3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)
+
+4. 4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)
+
+The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor *temperature ratio*
+```{math}
+\eta = 1 - \frac{T_{1}}{T_{2}}
+```
+and subsequently in terms of the compressor *pressure ratio* using the relationship between temperature and pressure for adiabatic processes
+```{math}
+\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/\gamma} }
+```
+so higher efficiency is achieved at high pressure ratios (30-40 for modern engines), subject to limits set by the maximum temperature that the turbine 
+blades can withstand (approx 
+1700 K).
+
+
+
 
 (topic6-carnot)=
 # The Carnot cycle: the 'perfect' heat engine
