@@ -406,6 +406,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-cycle">Stirling cycle</a></li>
 </ul>
 </li>
@@ -597,18 +598,48 @@ Solution</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
+<section id="brayton-cycle">
+<h2>Brayton cycle<a class="headerlink" href="#brayton-cycle" title="Permalink to this heading">#</a></h2>
+<div class="alert alert-block alert-warning">
+The following content on the Brayton cycle is not currently examinable
+</div>
+<figure class="align-center" id="fig6-2a">
+<a class="reference internal image-reference" href="_images/6_open_Brayton_cycle.png"><img alt="Brayton cycle" src="_images/6_open_Brayton_cycle.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The (open) Brayton cycle. Source:
+<a class="reference external" href="https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/">www.nuclear-power.com</a></span><a class="headerlink" href="#fig6-2a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations
+(closed cycle). A schematic of the open Brayton cycle is shown in <a class="reference internal" href="#fig6-2a"><span class="std std-numref">Fig. 14</span></a>. The four steps of the Brayton cycle are</p>
+<ol class="arabic simple">
+<li><p>1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)</p></li>
+<li><p>2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)</p></li>
+<li><p>3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)</p></li>
+<li><p>4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)</p></li>
+</ol>
+<p>The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor temperature ratio</p>
+<div class="math notranslate nohighlight">
+\[\eta = 1 - \frac{T_{1}}{T_{2}}\]</div>
+<p>and subsequently in terms of the compressor pressure ratio using the relationship between temperature and pressure for adiabatic processes</p>
+<div class="math notranslate nohighlight">
+\[\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/gamma} }\]</div>
+<p>so higher efficiency is achieved at high pressure ratios, subject to liimts set bu the maximum temperature that the turbine blades can withstand (approx
+1700 K).</p>
+</section>
 <section id="stirling-cycle">
 <h2>Stirling cycle<a class="headerlink" href="#stirling-cycle" title="Permalink to this heading">#</a></h2>
 <div class="alert alert-block alert-warning">
-The following content is not currently examinable (but is retained since it may appear in previous exam questions)
+The following content on the Stirling cycle is not currently examinable (but is retained since it may appear in previous exam questions)
 </div>
 <figure class="align-center" id="fig6-3">
 <a class="reference internal image-reference" href="_images/6_Diesel.png"><img alt="Stirling cycle" src="_images/6_Diesel.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The Stirling cycle. Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The Stirling cycle. Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Unlike the Otto and Diesel cycles, the Stirling cycle relates to an <strong>external combustion engine</strong>, where the heat is supplied from an external
+<p>Unlike the Otto, Diesel and open Brayton cycles, the Stirling cycle relates to an <strong>external combustion engine</strong>, where the heat is supplied from an
+external
 heat
 reservoir.  This has the advantage that the engine can use a very wide range of heat sources, since the fuel never comes into contact with the
 working gas.  The disadvantage is that the heat needs to be transported from the external reservoir to the working fluid via some sort of heat
@@ -650,13 +681,13 @@ working at temperatures below about -40<span class="math notranslate nohighlight
 <section class="tex2jax_ignore mathjax_ignore" id="the-carnot-cycle-the-perfect-heat-engine">
 <span id="topic6-carnot"></span><h1>The Carnot cycle: the ‘perfect’ heat engine<a class="headerlink" href="#the-carnot-cycle-the-perfect-heat-engine" title="Permalink to this heading">#</a></h1>
 <p>The best possible cycle for a heat engine was proposed in 1824 by the French physicist Sadi Carnot (1796-1832). The <strong>Carnot cycle</strong> is
-shown in <a class="reference internal" href="#fig6-4"><span class="std std-numref">Fig. 15</span></a>: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step
+shown in <a class="reference internal" href="#fig6-4"><span class="std std-numref">Fig. 16</span></a>: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step
 1-2: work
 is done in all four steps. Only two temperatures are involved: <span class="math notranslate nohighlight">\(T_{3} = T_{4} = T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{1} = T_{2} = T_{C}\)</span>.</p>
 <figure class="align-center" id="fig6-4">
 <a class="reference internal image-reference" href="_images/6_Carnot.png"><img alt="Carnot cycle" src="_images/6_Carnot.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The Carnot cycle.</span><a class="headerlink" href="#fig6-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">The Carnot cycle.</span><a class="headerlink" href="#fig6-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Taking each step in turn:</p>
@@ -732,14 +763,14 @@ Power (W) is work per second (J/s), so <span class="math notranslate nohighlight
 <figure class="align-center" id="fig6-5">
 <img alt="Rankine cycle" src="_images/6_Rankine.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Rankine cycle</span><a class="headerlink" href="#fig6-5" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Rankine cycle</span><a class="headerlink" href="#fig6-5" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Thermodynamics was invented in the age of the steam engine, so unsurprisingly there is a thermodynamic cycle representing the idealised steam
-engine.  This is the <strong>Rankine cycle</strong> (see <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 16</span></a>), developed in the 1850s by the Scottish physicist William Rankine (1820-1872).<br />
+engine.  This is the <strong>Rankine cycle</strong> (see <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>), developed in the 1850s by the Scottish physicist William Rankine (1820-1872).<br />
 The  Rankine cycle differs from those discussed above in that it involves a phase change: the working fluid (water in steam engines) is
 liquid for part of the cycle. Obviously this cannot be represented by an ideal gas, because the ideal gas law does not model phase changes.</p>
-<p>In <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 16</span></a>, the area to the left of the black curve is the liquid state, to the right is gas, and under the curve is a mixture of gas and
+<p>In <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>, the area to the left of the black curve is the liquid state, to the right is gas, and under the curve is a mixture of gas and
 liquid in equilibrium.  The cycle consists of four processes:</p>
 <ol class="arabic simple">
 <li><p>Step 1-2: the working fluid, in the liquid state, is pumped from low to high pressure.  This is an adiabatic compression, but because liquids
@@ -769,15 +800,15 @@ the interior of the fridge, whereas the aim of a heat pump is to heat the hot re
 <p>Real internal combustion engines are not reversible, because the heating stage (step 2-3 in the
 Otto and Diesel cycles) is achieved by
 igniting the fuel, which is not a reversible procedure. External combustion engines, such as the Stirling and Rankine cycles, are much more
-promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in <a class="reference internal" href="#fig6-6"><span class="std std-numref">Fig. 17</span></a>.</p>
+promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in <a class="reference internal" href="#fig6-6"><span class="std std-numref">Fig. 18</span></a>.</p>
 <figure class="align-center" id="fig6-6">
 <img alt="Schematic diagram of a heat pump or refrigerator" src="_images/6_fridge.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Schematic diagram of a heat pump or refrigerator. Source:
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Schematic diagram of a heat pump or refrigerator. Source:
 <a class="reference external" href="http://en.wikipedia.org/wiki/Refrigerator#/media/File:Refrigerator-cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In <a class="reference internal" href="#fig6-6"><span class="std std-numref">Fig. 17</span></a> hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure
+<p>In <a class="reference internal" href="#fig6-6"><span class="std std-numref">Fig. 18</span></a> hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure
 liquid
 flows through an expansion valve (2), which causes a drop in pressure and temperature. The cold, low pressure fluid (a mixture of liquid and
 vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings. It then passes to
@@ -900,6 +931,7 @@ Solution</label><div class="sd-tab-content docutils">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-cycle">Stirling cycle</a></li>
 </ul>
 </li>
