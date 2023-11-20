@@ -124,7 +124,7 @@ takes in 10 kJ of heat from burning its fuel, how much heat does it discard to t
 
 ```{tab-item} Solution
 
-$\eta  = 1 - \frac{1}{r^{\gamma-1}}$ = 0.59 or 59%, so $|W| = \eta Q_{H}$ = 5.9 kJ.
+$\eta  = 1 - \frac{1}{r^{\gamma-1}}$ = 0.59 or 59%.  $Q_{C} = (1 - \eta) Q_{H}$ = 4.1 kJ.
 
 ```
 ````
