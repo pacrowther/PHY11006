@@ -214,7 +214,7 @@ $Q_{C}$ = -4300 J therefore $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
 ## Stirling cycle
 
 <div class="alert alert-block alert-warning">
-The following content on the Stirling cycle is not currently examinable (but is retained since it may appear in previous exam questions)
+Details specific to the Stirling cycle are not currently examinable 
 </div>
 
 ```{figure} Images/6_Diesel.png
@@ -277,7 +277,7 @@ Stirling engines are also very quiet, and have been used in submarines for this 
 # Brayton cycle
 
 <div class="alert alert-block alert-warning">
-The following content on the Brayton cycle is not currently examinable
+Details specific to the Brayton cycle are not currently examinable 
 </div>
 
 ```{figure} Images/6_open_Brayton_cycle.png
