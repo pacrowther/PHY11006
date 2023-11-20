@@ -390,9 +390,11 @@ being a measure of the randomness of a system.
 
 ```{tab-item} Solution
 (a) The latent heat of fusion of water is $L_{f} = 3.34 \times 10^{5}$ J/kg (Table 4 in Topic 2), so 
-$Q = 0.35 \times 3.34 \times 10^{5} = 117$ kJ  and $\Delta S = Q/T = 1.17 \times 10^{5}/273 = 428$ J/K.
+$Q = 0.35 \times 3.34 \times 10^{5} = 117$ kJ  and $\Delta S_{C} = Q/T_{C} 
+= 
+1.17 \times 10^{5}/273 = 428$ J/K.
 
-(b) $\Delta S = Q/T = -1.17 \times 10^{5}/298 = -393$ J/K. 
+(b) $\Delta S_{H} = Q/T_{H} = -1.17 \times 10^{5}/298 = -393$ J/K. 
 
 (c) $\Delta S_{total} = 428 - 393 = 36$ J/K. 
 
