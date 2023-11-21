@@ -304,7 +304,7 @@ This leads to yet another statement of the Second Law
 The entropy of a thermally isolated system cannot decrease
 </div>
 
-Note the key qualifier: not just any system, but a _thermally isolated_ system. If the system is not thermally isolated, by definition hear 
+Note the key qualifier: not just any system, but a _thermally isolated_ system. If the system is not thermally isolated, by definition heat
 can flow into and out of the system, and this will be accompanied by a change in entropy, which can be positive _or_ negative. This explains 
 why we see many processes in nature, e.g. crystal growth, which appear to be associated with a decrease in entropy: in such cases the 
 entropy of the system may indeed decrease, but it is not a thermally isolated system, and the decrease is compensated by an increase in the 
