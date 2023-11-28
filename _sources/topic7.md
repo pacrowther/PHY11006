@@ -85,7 +85,7 @@ Clausius' statement implies Carnot's.
 
 Assume that Carnot's statement is not true, and we can therefore build an engine $E$ that has a 
 higher efficiency than a Carnot engine. We 
-connect this super-efficient engine to a Carnot engine running in reverse, as shown in Fig 7.2. Engine $E$ takes in heat $Q_{H}^{'}$, does 
+connect this super-efficient engine to a Carnot engine running in reverse, as shown in {numref}`fig7.2`. Engine $E$ takes in heat $Q_{H}^{'}$, does 
 work $W$, and ejects  heat Q$_{C}^{'}$; the Carnot engine takes in heat $Q_{C}$ and the work done by engine $E$, and ejects heat $Q_{H}$. 
 Since $\eta = W/Q_{H}$,
 and we have assumed that $\eta_{E} > \eta_{C}$, it follows that $Q_{H}^{'} < Q_{H}$. The First Law tells us that 

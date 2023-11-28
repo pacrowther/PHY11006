@@ -479,11 +479,11 @@ Schematic diagram of a heat pump or refrigerator. Source:
 
 ```
 
-In {numref}`fig6.6` hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure 
-liquid 
-flows through an expansion valve (2), which causes a drop in pressure and temperature. The cold, low pressure fluid (a mixture of liquid and 
-vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings. It then passes to 
-the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage.
+In {numref}`fig6.6` hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat (corresponding to steps 3-2 in 
+{numref}`fig6.5`). The resulting high-pressure liquid 
+flows through an expansion valve (2), which causes a drop in pressure and temperature (steps 2-1 in {numref}`fig6.5`). The cold, low pressure fluid (a mixture of liquid and 
+vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings (steps 1-4 in {numref}`fig6.5`). It then passes to 
+the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage (steps 4-3 in {numref}`fig6.5`).
 
 The equivalent of efficiency for a refrigerator or heat pump is called the __coefficient of performance__. This is defined broadly as the 
 ratio of the desired output to the work done, which means that it is different for refrigerators 
