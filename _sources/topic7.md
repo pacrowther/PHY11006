@@ -218,7 +218,7 @@ $$
 
 ```{math}
 :label: eqn7.5
-dS =- \frac{\bar{d}Q_{\rm rev}}{T} = \frac{\bar{d}Q_{\rm irr}}{T} + \frac{1}{T} \left( \bar{d}W_{\rm rev} - \bar{d} W_{\rm irr} \right) > 
+dS = \frac{\bar{d}Q_{\rm rev}}{T} = \frac{\bar{d}Q_{\rm irr}}{T} + \frac{1}{T} \left( \bar{d}W_{\rm rev} - \bar{d} W_{\rm irr} \right) > 
 \frac{\bar{d} Q_{\rm irr}}{T}.
 ```
 This emphasises that the definition of $S$ refers to the heat supplied in a _reversible_ process. If you have an _irreversible_ process, the 
@@ -364,13 +364,13 @@ A Carnot engine takes 2000 J of heat from a reservoir at 500 K, does some work, 
 
 (c) Efficiency of a Carnot engine is $\eta = 1 - T_{C}/T_{H} = 1 - \frac{350}{500} = 0.3$
 
-(d) There is no change in entropy during adiabatic compression or expansion. 
+(d) There is no change in entropy during adiabatic compression or expansion ($Q = 0$). 
 
 During the isothermal expansion the engine takes in 2000 J of heat so $\Delta S_{H} = \frac{Q_{H}}{T_{H}} = 4$ J/K.
 
-During the isothermal compression the engine gives of 1400 J of heat so $\Delta S_{C} = \frac{Q_{C}}{T_{C}} = -4$ J/K
+During the isothermal compression the engine gives off 1400 J of heat so $\Delta S_{C} = \frac{Q_{C}}{T_{C}} = -4$ J/K
 
-so the net change in entropy is $\Delta S_{total} = \Delta S_{H} - \Delta S_{C} = 0$ (the sum of the entropy changes
+so the net change in entropy is $\Delta S_{total} = \Delta S_{H} + \Delta S_{C} = 0$ (the sum of the entropy changes
 is zero since uniquely all processes are reversible in the Carnot cycle, in contrast to Otto, Diesel etc)
 ``` 
 ````
