@@ -384,15 +384,14 @@ is zero since uniquely all processes are reversible in the Carnot cycle, in cont
 Heat from a very massive body at 25$^{\circ}$ C is added to 0.35 kg of ice at 0.0$^{\circ}$ C until it is all melted.
 (a) What is the change in entropy of the water? (b) What is the change in entropy of the massive body? (c) What is the total
 change in entropy of the water and heat source? (d) Compare your answer to part (a) with the change in entropy of water
-at 100$^{\circ}$ being vaporized and convered to steam at 100$^{\circ}$. Interpret your answer in the context of entropy
+at 100$^{\circ}$ being vaporized and convered to steam at 100$^{\circ}$ C. Interpret your answer in the context of entropy
 being a measure of the randomness of a system.
 ```
 
 ```{tab-item} Solution
 (a) The latent heat of fusion of water is $L_{f} = 3.34 \times 10^{5}$ J/kg (Table 4 in Topic 2), so 
-$Q = 0.35 \times 3.34 \times 10^{5} = 117$ kJ  and $\Delta S_{C} = Q/T_{C} 
-= 
-1.17 \times 10^{5}/273 = 428$ J/K.
+$Q = 0.35 \times 3.34 \times 10^{5} = 117$ kJ  and $\Delta S_{C} = Q/T_{C}$ 
+= $1.17 \times 10^{5}/273 = 428$ J/K.
 
 (b) $\Delta S_{H} = Q/T_{H} = -1.17 \times 10^{5}/298 = -393$ J/K. 
 
