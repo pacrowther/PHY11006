@@ -404,6 +404,29 @@ more disordered than liquid water).
 ````
 `````
 
+
+`````{admonition} Example 7.5
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+Suppose 1.0 kg of water at 100$^{\circ}$ C is placed in thermal contact with 1.0 kg of water at 0$^{\circ}$ C. What is the total change in entropy? Assume a constant 4190 J/kg/K heat 
+capacity of water.
+```
+
+```{tab-item} Solution
+Since equal amounts of hot (H = 373 K) and cold (C = 273 K) water are combined, the equilibrium temperature is 323 K. The entropy change is $\Delta S = \Delta Q/T = mc \integ_{T_{1}}^{T_{2}} 
+dT/T$ 
+so the entropy changes of hot water ($\Delta S_{H}$) and cold water ($\Delta S_{C}$) are
+
+$\Delta S_{H} = (1.0) (4190) \ln (323/373) = -603$ J/K and $\Delta S_{C} = (1.0) (4190) \ln (323/273) = +705$ J/K.
+
+So the total change in entropy is $\Delta S_{\rm total} = \Delta S_{H} + \Delta S_{C} = +102$ J/K. There is an increase in entropy since the heat flow is irreversible. Entropy increases
+continually as the two liquids come into equilibrium.  
+``` 
+````
+`````
+
 # Entropy as a measure of disorder
 
 Total entropy increases in irreversible processes, but is zero in reversible processes. We saw that what makes a process irreversible is the 
