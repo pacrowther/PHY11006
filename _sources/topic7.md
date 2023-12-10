@@ -415,8 +415,8 @@ capacity of water.
 ```
 
 ```{tab-item} Solution
-Since equal amounts of hot (H = 373 K) and cold (C = 273 K) water are combined, the equilibrium temperature is 323 K. The entropy change is $\Delta S = \Delta Q/T = mc \integ_{T_{1}}^{T_{2}} 
-dT/T$ 
+Since equal amounts of hot (H = 373 K) and cold (C = 273 K) water are combined, the equilibrium temperature is 323 K. The entropy change is $\Delta S = \Delta Q/T = mc \int_{T_{1}}^{T_{2}} 
+\frac{dT}{T}$ 
 so the entropy changes of hot water ($\Delta S_{H}$) and cold water ($\Delta S_{C}$) are
 
 $\Delta S_{H} = (1.0) (4190) \ln (323/373) = -603$ J/K and $\Delta S_{C} = (1.0) (4190) \ln (323/273) = +705$ J/K.
