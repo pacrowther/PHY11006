@@ -220,3 +220,21 @@ $1.84 \times 10^{-4} / 7.07 \times 10^{-4}$ = 0.26 cm.
 ```
 ````
 `````
+
+`````{admonition} Example 1.2
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A 200 cm$^{3}$ glass flask is filled to the brim with mercury at 20$^{\circ}$ C. How much mercury overflows when the temperature of the system is raised to 
+100$^{\circ}$ C? The coefficient of linear expansion of the glass is $0.40 \times 10^{-5}$ K$^{-1}$.
+```
+
+```{tab-item} Solution
+From Equation 5, $\beta_{\rm glass} = 3 \times \alpha_{\rm glass} = 1.20 \time 10^{-5}$ K$^{-1}$. From Table 1, $\beta_{\rm Hg} = 18 \times 10^{-5}$ K$^{-1}$, so $\beta_{\rm Hg} > \beta_{\rm 
+glass}$ as expected for overflow to occur. The volume overflow is $\Delta V_{\rm Hg} - \Delta V_{\rm glass} = $V_{0} \Delta T (\beta_{\rm Hg} - \beta_{\rm glass} = 200 \times 80 \times 16.8 
+\times 10^{-5}$ = 2.7 cm$^{-3}$.
+```
+````
+`````
+
