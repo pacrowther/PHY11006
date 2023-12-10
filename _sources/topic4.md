@@ -163,3 +163,28 @@ leaving the system as it expands from liquid to vapour.
 ````
 `````
 
+`````{admonition} Example 4.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item}  Question
+Gas in a cylinder expands from 0.110 m$^{3}$ to 0.320 m$^{3}$. Heat flows into the gas to keep pressure constant at $1.65 \times 10^{5}$ Pa. During the
+expansion, the total heat added is $1.15 \times 10^{5}$ J. 
+
+* Find the work done *by* the gas
+
+* Find the change of internal energy of the gas
+
+* Does it matter whether the gas is ideal?
+```
+
+```{tab-item} Solution
+Work done on the gas is $-P dV = -1.65 \times 10^{5}% (0.320 - 0.110) = -3.46 \times 10^{4}$ J so work done by the gas is $3.46 \times 10^{4}$ J.
+
+From the first law, the change of internal energy $\Delta U = Q + W = 1.15 \times 10^{5} + (-3.46 \times 10^{4}) = 8.03 \times 10^{4}$ J.
+
+No, the ideal gas law is not specified in this solution. 
+```
+````
+`````
+
