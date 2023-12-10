@@ -179,7 +179,7 @@ expansion, the total heat added is $1.15 \times 10^{5}$ J.
 ```
 
 ```{tab-item} Solution
-Work done on the gas is $-P dV = -1.65 \times 10^{5}% (0.320 - 0.110) = -3.46 \times 10^{4}$ J so work done by the gas is $3.46 \times 10^{4}$ J.
+Work done on the gas is $-P dV = -1.65 \times 10^{5} (0.320 - 0.110) = -3.46 \times 10^{4}$ J so work done by the gas is $3.46 \times 10^{4}$ J.
 
 From the first law, the change of internal energy $\Delta U = Q + W = 1.15 \times 10^{5} + (-3.46 \times 10^{4}) = 8.03 \times 10^{4}$ J.
 
