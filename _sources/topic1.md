@@ -235,7 +235,7 @@ From Equation 5, $\beta_{\rm glass} = 3 \times \alpha_{\rm glass} = 1.20 \times 
 \beta_{\rm 
 glass}$ as expected for overflow to occur. 
 
-The volume overflow is $\Delta V_{\rm Hg} - \Delta V_{\rm glass} = V_{0} \Delta T (\beta_{\rm Hg} - \beta_{\rm glass} = 200 \times 80 \times 16.8 
+The volume overflow is $\Delta V_{\rm Hg} - \Delta V_{\rm glass} = V_{0} \Delta T (\beta_{\rm Hg} - \beta_{\rm glass}) = 200 \times 80 \times 16.8 
 \times 10^{-5}$ = 2.7 cm$^{-3}$.
 ```
 ````
