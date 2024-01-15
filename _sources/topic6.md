@@ -217,7 +217,7 @@ $Q_{C}$ = -4300 J therefore $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
 Details specific to the Stirling cycle are not currently examinable 
 </div>
 
-```{figure} Images/6_Diesel.png
+```{figure} Images/6_Stirling.png
 :name: fig6.3
 :alt: Stirling cycle
 :align: center
