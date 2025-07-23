@@ -194,6 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -405,9 +407,12 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-cycle">Stirling cycle</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-carnot-cycle-the-perfect-heat-engine">The Carnot cycle: the ‘perfect’ heat engine</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-two-phase-heat-engine">A two-phase heat engine</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-heat-pumps">Refrigerators and heat pumps</a></li>
 </ul>
 
@@ -471,7 +476,7 @@ from a minimum of <span class="math notranslate nohighlight">\(V\)</span> (when 
 and doing work; this is the <em>power stroke</em>. Finally the exhaust valve opens, and the combustion products are pushed out (during the <em>exhaust
 stroke</em>), leaving the cylinder ready for the next intake stroke.</p>
 <figure class="align-center" id="fig6-0">
-<a class="reference internal image-reference" href="_images/6_engine1.png"><img alt="Cycle of a four-stroke internal-combustion engine." src="_images/6_engine1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/6_engine.png"><img alt="Cycle of a four-stroke internal-combustion engine." src="_images/6_engine.png" style="width: 100%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 11 </span><span class="caption-text">Cycle of an internal-combustion engine. Source: Fig 20.5 from University Physics with Modern Physics (Pearson)</span><a class="headerlink" href="#fig6-0" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -480,7 +485,7 @@ stroke</em>), leaving the cylinder ready for the next intake stroke.</p>
 <section class="tex2jax_ignore mathjax_ignore" id="some-idealised-heat-engines">
 <h1>Some idealised heat engines<a class="headerlink" href="#some-idealised-heat-engines" title="Permalink to this heading">#</a></h1>
 <figure class="align-center" id="fig6-1">
-<a class="reference internal image-reference" href="_images/6_Otto1.png"><img alt="Otto cycle" src="_images/6_Otto1.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="_images/6_Otto.png"><img alt="Otto cycle" src="_images/6_Otto.png" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 12 </span><span class="caption-text">The Otto cycle. Source: <a class="reference external" href="http://en.wikipedia.org/wiki/Otto_cycle#/media/File:P-V_Otto_cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -496,7 +501,7 @@ back out in step 3-4. Although we think of
 a petrol engine as being driven by petrol, the working fluid is actually air, or more precisely
 a mixture of air and combustion products:
 the petrol powers the engine by supplying the input heat in step 2-3.</p>
-<p>From Equation 6.2, the efficiency of the Otto engine is <span class="math notranslate nohighlight">\(\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}\)</span>, since the heat supplied at constant volume
+<p>From Equation <a class="reference internal" href="#equation-eqn6-2">(31)</a>, the efficiency of the Otto engine is <span class="math notranslate nohighlight">\(\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}\)</span>, since the heat supplied at constant volume
 is <span class="math notranslate nohighlight">\(Q = C_{V} \Delta T\)</span> and we assume that <span class="math notranslate nohighlight">\(C_{V}\)</span> is the same in both steps (note that in a real  engine it won’t be, since the working gas
 has a different chemical composition after ignition).</p>
 <p>Since steps 1-2 and 3-4 are both adiabatic, we know from Equation <a class="reference internal" href="topic5.html#equation-eqn5-5">(27)</a> that <span class="math notranslate nohighlight">\(T_{4} V_{1}^{\gamma -1} = T_{3} V_{2}^{\gamma - 1}\)</span>
@@ -513,11 +518,27 @@ r^{\gamma-1}\)</span>: if we increase the compression ratio
 too much, the temperature inside the cylinder will increase to the point where the fuel ignites
 prematurely, before the spark. Typical
 compression ratios for petrol engines are around 10:1 (between 8:2 and 12:1).</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 6.1</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Question</label><div class="sd-tab-content docutils">
+<p>Calculate the theoretical efficiency of an Otto-cycle engine with <span class="math notranslate nohighlight">\(r\)</span>=9.5 and <span class="math notranslate nohighlight">\(\gamma\)</span>=7/5. If the engine
+takes in 10 kJ of heat from burning its fuel, how much heat does it discard to the outside air?</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Solution</label><div class="sd-tab-content docutils">
+<p><span class="math notranslate nohighlight">\(\eta  = 1 - \frac{1}{r^{\gamma-1}}\)</span> = 0.59 or 59%.  <span class="math notranslate nohighlight">\(Q_{C} = (1 - \eta) Q_{H}\)</span> = 4.1 kJ.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="diesel-cycle">
 <h2>Diesel cycle<a class="headerlink" href="#diesel-cycle" title="Permalink to this heading">#</a></h2>
 <figure class="align-center" id="fig6-2">
-<a class="reference internal image-reference" href="_images/6_Diesel1.png"><img alt="Diesel cycle" src="_images/6_Diesel1.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="_images/6_Diesel.png"><img alt="Diesel cycle" src="_images/6_Diesel.png" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 13 </span><span class="caption-text">The Diesel cycle. Source: <a class="reference external" href="http://en.wikipedia.org/wiki/Diesel_cycle#/media/File:Diesel_cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -554,23 +575,121 @@ typical petrol engine.</p>
 fuel will ignite: unlike a petrol engine,
 diesel engines have no need for spark plugs since the full ignites spontaneously when it reaches
 the appropriate temperature. Since
-<span class="math notranslate nohighlight">\(T_{2}/T_{1} = r^{\gamma -1}\)</span>, we can express <span class="math notranslate nohighlight">\(\alpha\)</span> in terms of the compression ratio, <span class="math notranslate nohighlight">\(T_{1}\)</span> and <span class="math notranslate nohighlight">\(T{3}\)</span> by</p>
+<span class="math notranslate nohighlight">\(T_{2}/T_{1} = r^{\gamma -1}\)</span>, we can express <span class="math notranslate nohighlight">\(\alpha\)</span> in terms of the compression ratio, <span class="math notranslate nohighlight">\(T_{1}\)</span> and <span class="math notranslate nohighlight">\(T_{3}\)</span> by</p>
 <div class="math notranslate nohighlight" id="equation-eqn6-5">
 <span class="eqno">(34)<a class="headerlink" href="#equation-eqn6-5" title="Permalink to this equation">#</a></span>\[\alpha = \frac{T_{3}}{T_{2}} = \frac{T_{3}}{T_{1}} \frac{T_{1}}{T_{2}} = \frac{1}{r^{\gamma -1}} \frac{T_{3}}{T_{1}}\]</div>
 <p>As <span class="math notranslate nohighlight">\(T_{1}\)</span> and <span class="math notranslate nohighlight">\(T_{3}\)</span> are reasonably well defined, this means that the cut-off ratio is not really an independent parameter; if we know
 the flame temperature <span class="math notranslate nohighlight">\(T_{3}\)</span> and the inlet temperature <span class="math notranslate nohighlight">\(T_{1}\)</span>, it is set by the compression ratio.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 6.2</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Question</label><div class="sd-tab-content docutils">
+<p>A Diesel engine performs 2.2 kJ of mechanical work and discards 4.3 kJ of heat each cycle. (i) How much heat is supplied to the engine
+each cycle? (ii) What is the thermal efficiency of the engine?</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+Solution</label><div class="sd-tab-content docutils">
+<p>(i) Work done by the engine is 2200 J so work done on engine is <span class="math notranslate nohighlight">\(W\)</span> = -2200 J. Heat given out by engine is 4300 J so
+<span class="math notranslate nohighlight">\(Q_{C}\)</span> = -4300 J therefore <span class="math notranslate nohighlight">\(Q_{H} = |W| + |Q_{C}|\)</span> = 6500 J.</p>
+<p>(ii) <span class="math notranslate nohighlight">\(\eta = \frac{|W|}{Q_{H}} = \frac{2200}{6500} = 0.34\)</span> or 34%.</p>
+</div>
+</div>
+</div>
 </section>
+<section id="stirling-cycle">
+<h2>Stirling cycle<a class="headerlink" href="#stirling-cycle" title="Permalink to this heading">#</a></h2>
+<div class="alert alert-block alert-warning">
+Details specific to the Stirling cycle are not currently examinable 
+</div>
+<figure class="align-center" id="fig6-3">
+<a class="reference internal image-reference" href="_images/6_Stirling.png"><img alt="Stirling cycle" src="_images/6_Stirling.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The Stirling cycle. Source: <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Unlike the Otto and Diesel cycles, the Stirling cycle relates to an <strong>external combustion engine</strong>, where the heat is supplied from an
+external
+heat
+reservoir.  This has the advantage that the engine can use a very wide range of heat sources, since the fuel never comes into contact with the
+working gas.  The disadvantage is that the heat needs to be transported from the external reservoir to the working fluid via some sort of heat
+exchanger, which is likely to reduce the efficiency of real Stirling engines compared to the idealised model described here.</p>
+<p>The Stirling cycle is more complicated to analyse than the Otto or Diesel cycles, because the compression and power strokes are isothermal rather
+than adiabatic, so heat is supplied or rejected in all four steps.</p>
+<ol class="arabic simple">
+<li><p>Step 1-2: work done on system <span class="math notranslate nohighlight">\(W_{12} = n R T_{C} \ln (V_{1}/V_{2})\)</span>. As this step is isothermal, <span class="math notranslate nohighlight">\(\Delta U = 0\)</span> and so the system must output
+heat <span class="math notranslate nohighlight">\(|Q_{12}| = n R T_{C} \ln (V_{1}/V_{2})\)</span>.</p></li>
+<li><p>Step 2-3: isochoric heating, so no work done and the system takes in heat <span class="math notranslate nohighlight">\(Q_{23} = n c_{V} (T_{H} - T_{C})\)</span>.</p></li>
+<li><p>Step 3-4: work done <em>by</em> system <span class="math notranslate nohighlight">\(|W_{34}| = n R T_{H} \ln (V_{1}/V_{2})\)</span>. Since <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>, the system must take in heat <span class="math notranslate nohighlight">\(Q_{34} = n R 
+T_{H} 
+\ln (V_{1}/V_{2})\)</span>.</p></li>
+<li><p>Step 4-1: isochoric cooling: no work, and the system outputs heat <span class="math notranslate nohighlight">\(|Q_{41}| = n c_{V} (T_{H} - T_{C}).\)</span></p></li>
+</ol>
+<p>The net work done by the system is therefore <span class="math notranslate nohighlight">\(|W| = |W_{34}| - W_{12} = n R (T_{H} - T_{C}) \ln (V_{1}/V_{2})\)</span>, and the heat supplied is <span class="math notranslate nohighlight">\(Q_{H} = 
+Q_{23} + Q_{34} = n(c_{v} (T_{H} - T_{C}) + R T_{H} \ln (V_{1}/V_{2}))\)</span>. Therefore the efficiency of the cycle is, from Equation <a class="reference internal" href="#equation-eqn6-1">(30)</a>.</p>
+<div class="math notranslate nohighlight">
+\[
+\eta = \frac{R(T_{H} - T_{C}) \ln (V_{1}/V_{2})}{c_{v}(T_{H} - T_{C}) + R T_{H} \ln (V_{1}/V_{2})}.
+\]</div>
+<p>However, this is not the whole story.  The Stirling engine is a <strong>regenerative engine</strong>: the heat released in step 4-1 is stored in a heat
+exchanger  and used to reheat the working gas in step 2-3.  If this is perfectly efficient (which, of course, it won’t be in the real world),
+steps 2-3 and  4-1 cancel each other out, and we have</p>
+<div class="math notranslate nohighlight">
+\[
+\eta = \frac{R(T_{H} - T_{C}) \ln (V_{1}/V_{2})}{R T_{H} \ln (V_{1}/V_{2})} = 1 - \frac{T_{C}}{T_{H}}.
+\]</div>
+<p>We shall see later that this is in fact the theoretical maximum for the efficiency of a heat engine.  As one would expect, this is not achieved in
+real-world Stirling engines (no real engine is as efficient as the idealised cycles we have been considering here, but the difference between real
+and idealised Stirling engines is greater than most).  However, real Stirling engines do have good efficiency, com­parable with diesel engines.</p>
+<p>Unlike internal-combustion engines, Stirling engines are genuinely reversible: instead of using the heat difference between the two reservoirs to
+generate mechanical work, mechanical work can be supplied to transfer heat from the cold reservoir to the hot reservoir.  This is not used in
+domestic refrigerators, because cycles involving phase changes are more cost-effective, but is widely used in cryocoolers (i.e. refrigerators
+working at temperatures below about -40<span class="math notranslate nohighlight">\(^{\circ}\)</span> C).</p>
+<p>Stirling engines are also very quiet, and have been used in submarines for this reason.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="brayton-cycle">
+<h1>Brayton cycle<a class="headerlink" href="#brayton-cycle" title="Permalink to this heading">#</a></h1>
+<div class="alert alert-block alert-warning">
+Details specific to the Brayton cycle are not currently examinable 
+</div>
+<figure class="align-center" id="fig6-2a">
+<a class="reference internal image-reference" href="_images/6_open_Brayton_cycle.png"><img alt="Brayton cycle" src="_images/6_open_Brayton_cycle.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">The (open) Brayton cycle. Source:
+<a class="reference external" href="https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/">www.nuclear-power.com</a></span><a class="headerlink" href="#fig6-2a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations
+(closed cycle). A schematic of the open Brayton cycle is shown in <a class="reference internal" href="#fig6-2a"><span class="std std-numref">Fig. 15</span></a>. The four steps of the Brayton cycle are</p>
+<ol class="arabic simple">
+<li><p>1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)</p></li>
+<li><p>2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)</p></li>
+<li><p>3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)</p></li>
+<li><p>4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)</p></li>
+</ol>
+<p>The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor <em>temperature ratio</em></p>
+<div class="math notranslate nohighlight">
+\[\eta = 1 - \frac{T_{1}}{T_{2}}\]</div>
+<p>and subsequently in terms of the compressor <em>pressure ratio</em> using the relationship between temperature and pressure for adiabatic processes</p>
+<div class="math notranslate nohighlight">
+\[\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/\gamma} }\]</div>
+<p>so higher efficiency is achieved at high pressure ratios (30-40 for modern engines), subject to limits set by the maximum temperature that the turbine
+blades can withstand (approx
+1700 K).</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="the-carnot-cycle-the-perfect-heat-engine">
 <span id="topic6-carnot"></span><h1>The Carnot cycle: the ‘perfect’ heat engine<a class="headerlink" href="#the-carnot-cycle-the-perfect-heat-engine" title="Permalink to this heading">#</a></h1>
 <p>The best possible cycle for a heat engine was proposed in 1824 by the French physicist Sadi Carnot (1796-1832). The <strong>Carnot cycle</strong> is
-shown in <a class="reference internal" href="#fig6-3"><span class="std std-numref">Fig. 14</span></a>: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step
+shown in <a class="reference internal" href="#fig6-4"><span class="std std-numref">Fig. 16</span></a>: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step
 1-2: work
 is done in all four steps. Only two temperatures are involved: <span class="math notranslate nohighlight">\(T_{3} = T_{4} = T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{1} = T_{2} = T_{C}\)</span>.</p>
-<figure class="align-center" id="fig6-3">
-<a class="reference internal image-reference" href="_images/6_Carnot1.png"><img alt="Carnot cycle" src="_images/6_Carnot1.png" style="width: 70%;" /></a>
+<figure class="align-center" id="fig6-4">
+<a class="reference internal image-reference" href="_images/6_Carnot.png"><img alt="Carnot cycle" src="_images/6_Carnot.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">The Carnot cycle.</span><a class="headerlink" href="#fig6-3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">The Carnot cycle.</span><a class="headerlink" href="#fig6-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Taking each step in turn:</p>
@@ -604,6 +723,72 @@ we can define the <strong>Kelvin temperature</strong></p>
 <span class="eqno">(36)<a class="headerlink" href="#equation-eqn6-7" title="Permalink to this equation">#</a></span>\[\frac{T_{C}}{T_{H}} = \frac{|Q_{C}|}{Q_{H}}.\]</div>
 <p>Since the Carnot cycle is purely theoretical and does not correspond to any real device, this is not a very useful definition in practical
 terms, but it is closely connected to the definition of temperature in terms of entropy, which <em>is</em> useful.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 6.3</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Question</label><div class="sd-tab-content docutils">
+<p>A Carnot engine, whose high temperature reservior is at 620 K, takes in 550 J of heat at this temperature in each cycle and gives up 335 J to the low temperature reservoir.
+(i) How much mechanical work does the engine perform during each cycle? (ii) What is the temperature of the low temperature reservoir? (iii) What is the thermal efficiency of the cycle?</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>(i) <span class="math notranslate nohighlight">\(|W| = Q_{H} - |Q_{C}|\)</span> = 550 - |-335| = 215 J.</p>
+<p>(ii) <span class="math notranslate nohighlight">\(T_{C} = \frac{|Q_{C}|}{Q_{H}} T_{H} = \frac{|-335|}{550} \times 620 = 378\)</span> K</p>
+<p>(iii) <span class="math notranslate nohighlight">\(\eta = 1 - \frac{T_{C}}{T_{H}} = 1 -  \frac{378}{620} = 0.39\)</span> or 39%.</p>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 6.4</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Question</label><div class="sd-tab-content docutils">
+<p>You design an engine that takes in <span class="math notranslate nohighlight">\(1.5 \times 10^{4}\)</span> J of heat at 650 K in each cycle and rejects heat at 350 K. The
+engine completes 240 cycles in 1 minute. What is the theoretical maximum power output of your engine in hp? (1 hp = 746 W)</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Solution</label><div class="sd-tab-content docutils">
+<p>For an idealised (Carnot) engine, <span class="math notranslate nohighlight">\(\eta = 1 - \frac{T_{C}}{T_{H}} = 1 - \frac{350}{650} = 0.46 \)</span> or 46%.</p>
+<p><span class="math notranslate nohighlight">\(|W| = \eta Q_{H} = 0.46 \times 1.5 \times 10^{4} = 6900\)</span> J. 240 cycles per minute corresponds to 4 cycles per second.
+Power (P) is work done per cycle (W) times number of cycles (per second),
+so <span class="math notranslate nohighlight">\(P = 6900 \times 4 = 26.7\)</span> kW or 37 hp.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a-two-phase-heat-engine">
+<h1>A two-phase heat engine<a class="headerlink" href="#a-two-phase-heat-engine" title="Permalink to this heading">#</a></h1>
+<figure class="align-center" id="fig6-5">
+<img alt="Rankine cycle" src="_images/6_Rankine.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Rankine cycle</span><a class="headerlink" href="#fig6-5" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Thermodynamics was invented in the age of the steam engine, so unsurprisingly there is a thermodynamic cycle representing the idealised steam
+engine.  This is the <strong>Rankine cycle</strong> (see <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>), developed in the 1850s by the Scottish physicist William Rankine (1820-1872).<br />
+The  Rankine cycle differs from those discussed above in that it involves a phase change: the working fluid (water in steam engines) is
+liquid for part of the cycle. Obviously this cannot be represented by an ideal gas, because the ideal gas law does not model phase changes.</p>
+<p>In <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>, the area to the left of the black curve is the liquid state, to the right is gas, and under the curve is a mixture of gas and
+liquid in equilibrium.  The cycle consists of four processes:</p>
+<ol class="arabic simple">
+<li><p>Step 1-2: the working fluid, in the liquid state, is pumped from low to high pressure.  This is an adiabatic compression, but because liquids
+are nearly incompressible there is very little change of volume and therefore very little work done.</p></li>
+<li><p>Step 2-3: the high-pressure liquid is heated at constant pressure.  It boils and becomes a <em>dry vapour</em> (the word dry means that there are no
+liquid droplets remaining).</p></li>
+<li><p>Step 3-4: the vapour expands adiabatically.  This is the power stroke which does the useful work.  As the vapour cools during the
+expansion, some liquid droplets may form (making it a <em>wet vapour</em>).</p></li>
+<li><p>Step 4-1: the vapour is cooled at constant pressure, condensing back into a liquid.</p></li>
+</ol>
+<p>The Rankine engine is an external combustion engine, using an external heat source in step 2-3 (in a steam locomotive, it’s the fire under the
+boiler).  Although steam engines are no longer used in transport, the Rankine cycle also describes steam turbines, which are used in power
+stations to generate electricity from heat.  As with the Stirling engine, the Rankine engine is not dependent on any particular fuel.</p>
+<p>The advantage of the two-phase operation is that the initial adiabatic heating requires very little work: the power required by the pump is only
+1–3% of the turbine output power.  If this were done in the gas phase, the power required to drive the pump would be substantially greater.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="refrigerators-and-heat-pumps">
 <h1>Refrigerators and heat pumps<a class="headerlink" href="#refrigerators-and-heat-pumps" title="Permalink to this heading">#</a></h1>
@@ -618,20 +803,19 @@ the interior of the fridge, whereas the aim of a heat pump is to heat the hot re
 <p>Real internal combustion engines are not reversible, because the heating stage (step 2-3 in the
 Otto and Diesel cycles) is achieved by
 igniting the fuel, which is not a reversible procedure. External combustion engines, such as the Stirling and Rankine cycles, are much more
-promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in <a class="reference internal" href="#fig6-4"><span class="std std-numref">Fig. 15</span></a>.</p>
-<figure class="align-center" id="fig6-4">
-<img alt="Schematic diagram of a heat pump or refrigerator" src="_images/6_fridge1.png" />
+promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in <a class="reference internal" href="#fig6-6"><span class="std std-numref">Fig. 18</span></a>.</p>
+<figure class="align-center" id="fig6-6">
+<img alt="Schematic diagram of a heat pump or refrigerator" src="_images/6_fridge.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Schematic diagram of a heat pump or refrigerator. Source:
-<a class="reference external" href="http://en.wikipedia.org/wiki/Refrigerator#/media/File:Refrigerator-cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-4" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Schematic diagram of a heat pump or refrigerator. Source:
+<a class="reference external" href="http://en.wikipedia.org/wiki/Refrigerator#/media/File:Refrigerator-cycle.svg">Wikipedia</a></span><a class="headerlink" href="#fig6-6" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In <a class="reference internal" href="#fig6-4"><span class="std std-numref">Fig. 15</span></a> hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure
-liquid
-flows through an expansion valve (2), which caused a drop i pressure and temperature. The cold,
-low pressure fluid (a mixture of liquid and
-vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings. It then passes to
-the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage.</p>
+<p>In <a class="reference internal" href="#fig6-6"><span class="std std-numref">Fig. 18</span></a> hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat (corresponding to steps 3-2 in
+<a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>). The resulting high-pressure liquid
+flows through an expansion valve (2), which causes a drop in pressure and temperature (steps 2-1 in <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>). The cold, low pressure fluid (a mixture of liquid and
+vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings (steps 1-4 in <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>). It then passes to
+the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage (steps 4-3 in <a class="reference internal" href="#fig6-5"><span class="std std-numref">Fig. 17</span></a>).</p>
 <p>The equivalent of efficiency for a refrigerator or heat pump is called the <strong>coefficient of performance</strong>. This is defined broadly as the
 ratio of the desired output to the work done, which means that it is different for refrigerators
 and heat pumps. For a refrigerator the
@@ -651,15 +835,30 @@ COP_{HP} = \frac{|Q_{H}|}{|Q_{H}| - Q_{C}}.\end{split}\]</div>
 COP_{HP} = \frac{T_{H}}{T_{H} - T_{C}}.\end{split}\]</div>
 <p>Notice that these are typically greater than one. For example, if your kitchen has a temperature of 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C and you want your fridge
 to be at
-4<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C nby a
-heat pump
-operating
-between the house and outside air with a temperature of 4<span class="math notranslate nohighlight">\(^{\circ}\)</span> C the ideal coefficient of performance would be 298/21 = 14.2. These
-values
+4<span class="math notranslate nohighlight">\(^{\circ}\)</span> C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25<span class="math notranslate nohighlight">\(^{\circ}\)</span> C by a
+heat pump operating  between the house and outside air with a temperature of 4<span class="math notranslate nohighlight">\(^{\circ}\)</span> C the ideal coefficient of performance would be 298/21 =
+14.2. These  values
 represent the maximum theoretically achievable, and in the real world coefficients of performance will be substantially less than this,
 especially for heat pumps since one should take into account the power required to circulate the heat around the house e.g. by pumping hot
 water through the radiator system, However, even real coefficients of performance are
 significantly greater than unity.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 6.5</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+Question</label><div class="sd-tab-content docutils">
+<p>A refrigerator has a coefficient of performance of 2.1. In each cycle it absorbs <span class="math notranslate nohighlight">\(3.4 \times 10^{4}\)</span> J of heat from the cold reservoir.
+(a) How much mechanical energy is required each cycle to operate the refrigerator? (b) During each cycle how much heat is discarded to the high temperature reservoir?</p>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+Solution</label><div class="sd-tab-content docutils">
+<p>(a) <span class="math notranslate nohighlight">\(COP_{R} = Q_{C}/W\)</span> so <span class="math notranslate nohighlight">\(W = Q_{C}/COP_{R} = 3.4\times 10^{4}/2.1 = 16.2\)</span> kJ.</p>
+<p>(b) <span class="math notranslate nohighlight">\(COP_{R} = Q_{C}/(Q_{H} - Q_{C})\)</span> so <span class="math notranslate nohighlight">\(Q_{H} = Q_{C}(1 + 1/COP_{R}) = 3.4\times 10^{4} (1 + 1/2.1) = 50.2\)</span> kJ.</p>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -735,9 +934,12 @@ significantly greater than unity.</p>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#some-idealised-heat-engines">Some idealised heat engines</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-otto-cycle">The Otto cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diesel-cycle">Diesel cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stirling-cycle">Stirling cycle</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#brayton-cycle">Brayton cycle</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-carnot-cycle-the-perfect-heat-engine">The Carnot cycle: the ‘perfect’ heat engine</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a-two-phase-heat-engine">A two-phase heat engine</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-heat-pumps">Refrigerators and heat pumps</a></li>
 </ul>
 

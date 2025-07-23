@@ -30,9 +30,9 @@ This can be expressed mathematically as
 :label: eqn4.1
 \Delta U = Q + W.
 ```
-where U is the change in internal energy, Q is the heat supplied to the system, and W is the work
-done on the system. Note the sign conventions here: if the system actually radiates heat, Q < 0, and
-if the system does work on its surroundings, W < 0.
+where $\Delta U$ is the change in internal energy, $Q$ is the heat supplied to the system, and $W$ is the work
+done on the system. Note the sign conventions here: if the system actually radiates heat, $Q$ < 0, and
+if the system does work on its surroundings, $W$ < 0.
 
 # Heat and work
 
@@ -52,8 +52,8 @@ $$
 In the next section, we will see that we need to treat this integral with great care, because it is __path dependent__. Suppose I need to 
 move a box from my office (E43) to Clive Tadhunter's office (E37), which is no the other side of the mid-corridor fire door. If I can simply 
 move it the 10 m or so down the corridor, I will have done some amount of work $F \Delta x$ where $\Delta x$ in this case is 10 m. However, 
-if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up  
-Hounsfield Road, into the main entrance on D floor, up the stairs to E floor, and along the  
+if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up Hounsfield Road, into the main entrance on D floor, up 
+the stairs to E floor, and along the  
 corridor to E37, I will have done considerably 
 more work to achieve the same end result.
 
@@ -114,11 +114,13 @@ pressure as the outside environment. (Neglect any frictional forces). The gas is
 If the gas is heated at constant pressure, then since $PV = RT$ (for one mole), the volume 
 must change. The amount of work done _by_ the 
 gas is $P \Delta V = R \Delta T$, so the amount of work done _on_ the gas is $-R \Delta T$. From Equation {eq}`eqn3.5`, we know that the 
-change in the internal energy of the gas is $\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T$. (As this is a monatomic 
+change in the internal energy of the gas is
+$\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T$. (As this is a monatomic 
 ideal gas, its internal energy is just the kinetic energy of its atoms: there is no rotational or vibrational degrees of freedom to worry 
 about).
 
-Therefore from the First Law we have $Q - \Delta U - W = \frac{3}{2} R \Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T$. 
+Therefore from the First Law we have $Q = \Delta U - W = \frac{3}{2} R 
+\Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T$. 
 But by definition we know $Q = c_{P} \Delta T$ where $c_{P}$ is the molar heat capacity at constant pressure, and at constant volume
 we know that $\Delta U = Q = c_{V} \Delta T$ since no work is done. Therefore as we have previously deduced (Equation {eq}`eqn3.7`) 
 $c_{V} = \frac{3}{2} R$ and so $c_{P} = \frac{5}{2} R = c_{V} + R$. Note that although a more complicated gas, such as isobutane from 
@@ -130,7 +132,8 @@ pressure would be the same (provided that the gas could be treated as an ideal g
 
 # Cyclic process
 
-A process that eventually returns a system to its initial staret is called a cyclic process. For such a process, the final state is the same 
+A process that eventually returns a system to its initial state is called a 
+cyclic process. For such a process, the final state is the same 
 as the initial state, so the total internal energy change most be zero. If a net quantity of work $W$ is done on the system, an equal amount 
 of work must have flowed into the system as heat $Q$.
 
@@ -150,11 +153,37 @@ done vaporizing the water and (ii) its increase in internal energy. (Note the he
 ```
 
 ```{tab-item} Solution
-The water does work $P (V_{2} - V_{1}) = 1.67 \times 10^{2}$ J so the work done on the water is $W = - 1.67 \times 10^{2}$ J. From Eqn 
+The water does work $P (V_{2} - V_{1}) = 1.69 \times 10^{2}$ J so the work done 
+on the water is $W = - 1.69 \times 10^{2}$ J. From Eqn 
 {eq}`eqn2.6` $Q = m L_{V} = 2.26 \times 10^{3}$ J. The first law of thermodynamics holds for 
 thermodynamic processes of all kinds,
 $\Delta U = Q + W  = 2.09 \times 10^{3}$ J. Over 90% of the heat remains in the system as an increase in internal energy, with the remainder 
 leaving the system as it expands from liquid to vapour.
+```
+````
+`````
+
+`````{admonition} Example 4.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item}  Question
+Gas in a cylinder expands from 0.110 m$^{3}$ to 0.320 m$^{3}$. Heat flows into the gas to keep pressure constant at $1.65 \times 10^{5}$ Pa. During the
+expansion, the total heat added is $1.15 \times 10^{5}$ J. 
+
+* Find the work done *by* the gas
+
+* Find the change of internal energy of the gas
+
+* Does it matter whether the gas is ideal?
+```
+
+```{tab-item} Solution
+Work done on the gas is $-P dV = -1.65 \times 10^{5} (0.320 - 0.110) = -3.46 \times 10^{4}$ J so work done by the gas is $3.46 \times 10^{4}$ J.
+
+From the first law, the change of internal energy $\Delta U = Q + W = 1.15 \times 10^{5} + (-3.46 \times 10^{4}) = 8.03 \times 10^{4}$ J.
+
+No, the ideal gas law is not specified in this solution. 
 ```
 ````
 `````

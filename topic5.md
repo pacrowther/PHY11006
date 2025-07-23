@@ -10,7 +10,9 @@ Let's consider an ideal gas, with equation of state $PV = nRT$. (The same ideas 
 system, but the variables we use to specify the system may be different.) For a fixed mass of gas, the
 state of the gas is defined by any two of the variables ($P,V,T$), because we can always use the equation 
 of state to find the third. So we can specify our initial and final states as points on a plot of $P$
-against $V$. As the gas moves from state A to state B, it will pass through intermediate states, each of
+against $V$. 
+
+As the gas moves from state A to state B, it will pass through intermediate states, each of
 which can also be specified as a point on the $PV$ plot. Therefore, any path between A and B is represented 
 by a line joining A and B on the plot, and conversely any line joining A and B on the plot is a
 possible - if not necessarily practical - way in which the gas could be taken from state A to state B by
@@ -20,7 +22,9 @@ In general, these paths will not be analytically calculable - we'd have to model
 computer to work out exactly how to move the gas from state A to state B along some random wiggly path.
 Therefore, we restrict our attention to those paths that lead to simple equations that we can solve.
 This is, of course, what the 19th century developers of thermodynamics also did, since they had no
-computers to do the calculations for them. Real applications of thermodynamics, e.g. real engines,
+computers to do the calculations for them. 
+
+Real applications of thermodynamics, e.g. real engines,
 do not follow these simple paths, but it is often possible to construct an idealised version of the engine
 that does, and this will give us some insight into how the engine performs. Later in the course we will
 look at idealised versions of some typical engines, including steam engines, petrol engines and diesel
@@ -31,13 +35,17 @@ engines.
 To define the state of a system, we have to specify its properties. The properties that are useful for
 this are the ones that do not depend on the prior history of the state: for example, we cannot use the
 work done on a system to define its state, because the amount of work that has been done to put the
-system into some state A depends on its history. Properties of a system that depend only on its current
+system into some state A depends on its history. 
+
+Properties of a system that depend only on its current
 state and not on its history are called __functions of state__. Examples of functions of state include 
 pressure, temperature, volume, mass, density, magnetisation, electric charge, etc. Examples of variables
-which are not functions of state include, as we have seen, history-dependent variables such as work
+which are _not_ functions of state include, as we have seen, history-dependent variables such as work
 done and heat supplied, and also things that can change without changing the state, such as the kinetic
 energy of one atom of a gas (the temperature depends on the average kinetic energy, not the kinetic
-energy of one individual particle). The properties of a particular system may create relationships between 
+energy of one individual particle). 
+
+The properties of a particular system may create relationships between 
 functions of state, and these are called __equations of state__. The only equation of state we are
 using in this course is the ideal gas law, but there are many others: for example, numerous modifications 
 of the ideal gas law designed to make it a better representation of real gases (the best known
@@ -59,7 +67,7 @@ original state along the same path. This is not always true: for example, proces
 way that the heat you generated as you dragged that large box over the carpet can ever be collected together and reassembled into the work 
 that was expended in doing the dragging, however slowly you did it.
 
-Changes t=of state that involve _rapid_ changes to one or more functions of state are 
+Changes of state that involve _rapid_ changes to one or more functions of state are 
 obviously not quasistatic, and in general are 
 __irreversible__: for example: if you were to expand a volume of gas slowly by moving a piston, 
 that would be reversible, but if you expand 
@@ -154,7 +162,8 @@ volume $V_{2}$. We then heat it at constant volume until it reaches pressure $P_
 ```{tab-item} Solution
 Let's label the four states A, B, C and D, where A is ($P_1, V_1$), B is ($P_1, V_2$), C is ($P_2, V_2)$ and D is ($P_2, V_1)$.
 
-From the ideal gas law, $PV = nRT$, we see that $T_{A} = P_1 V_1 / R$, $T_{B} = O_1 V_2 /R$, $T_{C} = P_2 V_2 /R$ and $T_{D} = P_2 V_1 /R$. 
+From the ideal gas law, $PV = nRT$, we see that $T_{A} = P_1 V_1 / R$, 
+$T_{B} = P_1 V_2 /R$, $T_{C} = P_2 V_2 /R$ and $T_{D} = P_2 V_1 /R$. 
 Since we have one mole of a monatomic ideal gas, the heat capacity at constant pressure is $C_{P} = \frac{5}{2} R$ and the heat capacity at 
 constant volume is  $C_{V} = \frac{3}{2} R$.
 
@@ -187,7 +196,7 @@ $Q_{DC} = C_{P} (T_{C} - T_{D}) = \frac{5}{2} P_{2} (V_2 - V_1).$ The total heat
 
 $$
 Q_{ADC} = \frac{3}{2} P_2 V_1 - \frac{3}{2} P_1 V_1 + \frac{5}{2} P_2 V_2 - \frac{5}{2} P_2 V_1 = \frac{5}{2} P_2 V_2 - \frac{3}{2} P_1 V_1 
-- P_2 - V_1.
+- P_2 V_1.
 $$
 
 There is no work done from A to D, to the total work done on the gas is $W_{DC} = - P \Delta V = P_2 (V_1 - V_2).$ The change in internal 
@@ -195,7 +204,8 @@ energy is $\Delta U = Q + W = \frac{3}{2} (P_2 V_2 - P_1 V_1).$
 
 Note that the change in internal energy is the same in both cases, as it should be because internal energy is a function of state. However, 
 the heat supplied and the work done both differ. If we were to combined this as a cycle ADCBA, running the first path in reverse, the net 
-work done on the gas would be $(P_2 - P_1)/(V_1 - V_2)$, i.e. the gas would _do_ net work $(P_2 - P_1)(V_2 - V_1)$ on its surroundings since 
+work done on the gas would be $(P_2 - P_1) (V_1 - V_2)$, i.e. the gas 
+would _do_ net work $(P_2 - P_1)(V_2 - V_1)$ on its surroundings since 
 $V_2 > V_1$. This is the basis on which __heat engines__ work: They convert heat to work by tracing out a closed cycle on the $PV$ plot.
 
 Also note that since $PV = RT$ for one mole of gas, we can write $\Delta U = \frac{3}{2} R (T_{C} - T_{A}) = C_{V} \Delta T.$
@@ -243,7 +253,9 @@ $$
 P_{f}^{c_{V}} V_{f}^{c_{P}} = P_{i}^{c_{V}} V_{i}^{c_{P}}.
 $$
 
-If we define $\gamma = c_{P}/c_{V}$, we can take the $c_{v}$-th root of this to obtain
+If we define the __adiabatic index__ $\gamma = c_{P}/c_{V}$, we can take 
+the 
+$c_{v}$-th root of this to obtain
 
 ```{math}
 :label: eqn5.4
@@ -275,7 +287,8 @@ W = - \int_{V_{i}}^{V_{f}} P dV = - K \int_{V_{i}}^{V_{j}} V^{-\gamma} dV = - \f
 \frac{K}{\gamma -1} \left( V_{f}^{1-\gamma} - V_{i}^{1-\gamma} \right).
 $$
 
-But since $P V^{\gamma}$ is constant, $K = P_{f} V_{f}$ we can simplify this to
+But since $P V^{\gamma}$ is constant, $K = P_{f} V_{f}^{\gamma}$ we can 
+simplify this to
 
 ```{math}
 :label: eqn5.7

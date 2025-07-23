@@ -61,5 +61,5 @@ efficiency;
 # What you do not need to know
 
 You do not need to know the mathematical details of the Maxwell-Boltzmann distribution as worked
-out in Section {ref}`maxwell-boltzmann`.
+out in Section {ref}`maxwell-boltzmann`, nor specific details of the Stirling or Brayton cycles.
 

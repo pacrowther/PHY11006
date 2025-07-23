@@ -90,7 +90,7 @@ a petrol engine as being driven by petrol, the working fluid is actually air, or
 a mixture of air and combustion products: 
 the petrol powers the engine by supplying the input heat in step 2-3.
 
-From Equation 6.2, the efficiency of the Otto engine is $\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}$, since the heat supplied at constant volume 
+From Equation {eq}`eqn6.2`, the efficiency of the Otto engine is $\eta = 1 - \frac{T_4 - T_1}{T_3 - T_2}$, since the heat supplied at constant volume 
 is $Q = C_{V} \Delta T$ and we assume that $C_{V}$ is the same in both steps (note that in a real  engine it won't be, since the working gas 
 has a different chemical composition after ignition).
 
@@ -112,6 +112,24 @@ r^{\gamma-1}$: if we increase the compression ratio
 too much, the temperature inside the cylinder will increase to the point where the fuel ignites 
 prematurely, before the spark. Typical 
 compression ratios for petrol engines are around 10:1 (between 8:2 and 12:1).
+
+`````{admonition} Example 6.1
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+Calculate the theoretical efficiency of an Otto-cycle engine with $r$=9.5 and $\gamma$=7/5. If the engine
+takes in 10 kJ of heat from burning its fuel, how much heat does it discard to the outside air?
+```
+
+```{tab-item} Solution
+
+$\eta  = 1 - \frac{1}{r^{\gamma-1}}$ = 0.59 or 59%.  $Q_{C} = (1 - \eta) Q_{H}$ = 4.1 kJ.
+
+```
+````
+`````
+
 
 ## Diesel cycle
 
@@ -165,7 +183,7 @@ The value of $\alpha$ is constrained by $T_{3}$, which is set by the temperature
 fuel will ignite: unlike a petrol engine, 
 diesel engines have no need for spark plugs since the full ignites spontaneously when it reaches 
 the appropriate temperature. Since 
-$T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compression ratio, $T_{1}$ and $T{3}$ by
+$T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compression ratio, $T_{1}$ and $T_{3}$ by
 
 ```{math}
 :label: eqn6.5
@@ -174,16 +192,140 @@ $T_{2}/T_{1} = r^{\gamma -1}$, we can express $\alpha$ in terms of the compressi
 As $T_{1}$ and $T_{3}$ are reasonably well defined, this means that the cut-off ratio is not really an independent parameter; if we know 
 the flame temperature $T_{3}$ and the inlet temperature $T_{1}$, it is set by the compression ratio.
 
+`````{admonition} Example 6.2
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A Diesel engine performs 2.2 kJ of mechanical work and discards 4.3 kJ of heat each cycle. (i) How much heat is supplied to the engine
+each cycle? (ii) What is the thermal efficiency of the engine?
+```
+
+```{tab-item} Solution
+(i) Work done by the engine is 2200 J so work done on engine is $W$ = -2200 J. Heat given out by engine is 4300 J so 
+$Q_{C}$ = -4300 J therefore $Q_{H} = |W| + |Q_{C}|$ = 6500 J.
+
+(ii) $\eta = \frac{|W|}{Q_{H}} = \frac{2200}{6500} = 0.34$ or 34%.
+
+```
+````
+`````
+
+## Stirling cycle
+
+<div class="alert alert-block alert-warning">
+Details specific to the Stirling cycle are not currently examinable 
+</div>
+
+```{figure} Images/6_Stirling.png
+:name: fig6.3
+:alt: Stirling cycle
+:align: center
+:width: 70%
+The Stirling cycle. Source: [Wikipedia](https://en.wikipedia.org/wiki/Stirling_cycle#/media/File:Stirling_cycle_pV.svg)
+
+```
+
+Unlike the Otto and Diesel cycles, the Stirling cycle relates to an __external combustion engine__, where the heat is supplied from an 
+external 
+heat 
+reservoir.  This has the advantage that the engine can use a very wide range of heat sources, since the fuel never comes into contact with the 
+working gas.  The disadvantage is that the heat needs to be transported from the external reservoir to the working fluid via some sort of heat 
+exchanger, which is likely to reduce the efficiency of real Stirling engines compared to the idealised model described here. 
+
+The Stirling cycle is more complicated to analyse than the Otto or Diesel cycles, because the compression and power strokes are isothermal rather 
+than adiabatic, so heat is supplied or rejected in all four steps.
+
+1. Step 1-2: work done on system $W_{12} = n R T_{C} \ln (V_{1}/V_{2})$. As this step is isothermal, $\Delta U = 0$ and so the system must output 
+heat $|Q_{12}| = n R T_{C} \ln (V_{1}/V_{2})$.
+
+2. Step 2-3: isochoric heating, so no work done and the system takes in heat $Q_{23} = n c_{V} (T_{H} - T_{C})$.
+
+3. Step 3-4: work done _by_ system $|W_{34}| = n R T_{H} \ln (V_{1}/V_{2})$. Since $\Delta U = 0$, the system must take in heat $Q_{34} = n R 
+T_{H} 
+\ln (V_{1}/V_{2})$.
+
+4. Step 4-1: isochoric cooling: no work, and the system outputs heat $|Q_{41}| = n c_{V} (T_{H} - T_{C}).$
+
+The net work done by the system is therefore $|W| = |W_{34}| - W_{12} = n R (T_{H} - T_{C}) \ln (V_{1}/V_{2})$, and the heat supplied is $Q_{H} = 
+Q_{23} + Q_{34} = n(c_{v} (T_{H} - T_{C}) + R T_{H} \ln (V_{1}/V_{2}))$. Therefore the efficiency of the cycle is, from Equation {eq}`eqn6.1`.
+
+$$
+\eta = \frac{R(T_{H} - T_{C}) \ln (V_{1}/V_{2})}{c_{v}(T_{H} - T_{C}) + R T_{H} \ln (V_{1}/V_{2})}.
+$$
+
+However, this is not the whole story.  The Stirling engine is a __regenerative engine__: the heat released in step 4-1 is stored in a heat 
+exchanger  and used to reheat the working gas in step 2-3.  If this is perfectly efficient (which, of course, it won’t be in the real world), 
+steps 2-3 and  4-1 cancel each other out, and we have
+
+
+$$
+\eta = \frac{R(T_{H} - T_{C}) \ln (V_{1}/V_{2})}{R T_{H} \ln (V_{1}/V_{2})} = 1 - \frac{T_{C}}{T_{H}}.
+$$
+
+We shall see later that this is in fact the theoretical maximum for the efficiency of a heat engine.  As one would expect, this is not achieved in 
+real-world Stirling engines (no real engine is as efficient as the idealised cycles we have been considering here, but the difference between real 
+and idealised Stirling engines is greater than most).  However, real Stirling engines do have good efficiency, com­parable with diesel engines.  
+
+Unlike internal-combustion engines, Stirling engines are genuinely reversible: instead of using the heat difference between the two reservoirs to 
+generate mechanical work, mechanical work can be supplied to transfer heat from the cold reservoir to the hot reservoir.  This is not used in 
+domestic refrigerators, because cycles involving phase changes are more cost-effective, but is widely used in cryocoolers (i.e. refrigerators 
+working at temperatures below about -40$^{\circ}$ C). 
+
+Stirling engines are also very quiet, and have been used in submarines for this reason.
+
+# Brayton cycle
+
+<div class="alert alert-block alert-warning">
+Details specific to the Brayton cycle are not currently examinable 
+</div>
+
+```{figure} Images/6_open_Brayton_cycle.png
+:name: fig6.2a
+:alt: Brayton cycle
+:align: center
+:width: 70%
+The (open) Brayton cycle. Source: 
+[www.nuclear-power.com](https://www.nuclear-power.com/nuclear-engineering/thermodynamics/thermodynamic-cycles/brayton-cycle-gas-turbine-engine/)
+
+```
+
+The Brayton cycle describes the workings of a constant-pressure heat engine. Examples include jet engines (open cycle) and gas turbines in power stations 
+(closed cycle). A schematic of the open Brayton cycle is shown in {numref}`fig6.2a`. The four steps of the Brayton cycle are
+
+1. 1-2: Adiabatic compression (air compressed to high pressure and temperature within inlet and compressor)
+
+2. 2-3: Isobaric heat addition (via burining fuel-air mix in combustion chamber)
+
+3. 3-4: Adiabatic expansion (combustion products expand in the turbine and exhaust nozzle)
+
+4. 4-1: Isobatic heat rejection (gas discharged into atmosphere, cooled back to initial condition)
+
+The thermal efficiency of the Brayton cycle can be expressed in terms of the compressor *temperature ratio*
+```{math}
+\eta = 1 - \frac{T_{1}}{T_{2}}
+```
+and subsequently in terms of the compressor *pressure ratio* using the relationship between temperature and pressure for adiabatic processes
+```{math}
+\eta = 1 - \frac{1}{ (P_{2}/P_{1})^{(\gamma-1)/\gamma} }
+```
+so higher efficiency is achieved at high pressure ratios (30-40 for modern engines), subject to limits set by the maximum temperature that the turbine 
+blades can withstand (approx 
+1700 K).
+
+
+
+
 (topic6-carnot)=
 # The Carnot cycle: the 'perfect' heat engine
 
 The best possible cycle for a heat engine was proposed in 1824 by the French physicist Sadi Carnot (1796-1832). The __Carnot cycle__ is 
-shown in {numref}`fig6.3`: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step 
+shown in {numref}`fig6.4`: it consists of two adiabatic steps and two isothermal steps. Heat is supplied in step 3-4 and rejected in step 
 1-2: work 
 is done in all four steps. Only two temperatures are involved: $T_{3} = T_{4} = T_{H}$ and $T_{1} = T_{2} = T_{C}$.
 
 ```{figure} Images/6_Carnot.png
-:name: fig6.3
+:name: fig6.4
 :alt: Carnot cycle
 :align: center
 :width: 70%
@@ -234,6 +376,83 @@ we can define the __Kelvin temperature__
 Since the Carnot cycle is purely theoretical and does not correspond to any real device, this is not a very useful definition in practical 
 terms, but it is closely connected to the definition of temperature in terms of entropy, which _is_ useful.
 
+`````{admonition} Example 6.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A Carnot engine, whose high temperature reservior is at 620 K, takes in 550 J of heat at this temperature in each cycle and gives up 335 J to the low temperature reservoir.
+(i) How much mechanical work does the engine perform during each cycle? (ii) What is the temperature of the low temperature reservoir? (iii) What is the thermal efficiency of the cycle?
+```
+
+```{tab-item} Solution
+(i) $|W| = Q_{H} - |Q_{C}|$ = 550 - |-335| = 215 J.
+
+(ii) $T_{C} = \frac{|Q_{C}|}{Q_{H}} T_{H} = \frac{|-335|}{550} \times 620 = 378$ K 
+
+(iii) $\eta = 1 - \frac{T_{C}}{T_{H}} = 1 -  \frac{378}{620} = 0.39$ or 39%.
+
+```
+````
+`````
+
+`````{admonition} Example 6.4
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+You design an engine that takes in $1.5 \times 10^{4}$ J of heat at 650 K in each cycle and rejects heat at 350 K. The
+engine completes 240 cycles in 1 minute. What is the theoretical maximum power output of your engine in hp? (1 hp = 746 W)
+```
+
+```{tab-item} Solution
+
+For an idealised (Carnot) engine, $\eta = 1 - \frac{T_{C}}{T_{H}} = 1 - \frac{350}{650} = 0.46 $ or 46%. 
+
+$|W| = \eta Q_{H} = 0.46 \times 1.5 \times 10^{4} = 6900$ J. 240 cycles per minute corresponds to 4 cycles per second.
+Power (P) is work done per cycle (W) times number of cycles (per second), 
+so $P = 6900 \times 4 = 26.7$ kW or 37 hp.  
+
+```
+````
+`````
+
+# A two-phase heat engine
+
+```{figure} Images/6_Rankine.png
+:name: fig6.5
+:alt: Rankine cycle
+:align: center
+Rankine cycle
+
+```
+
+Thermodynamics was invented in the age of the steam engine, so unsurprisingly there is a thermodynamic cycle representing the idealised steam 
+engine.  This is the __Rankine cycle__ (see {numref}`fig6.5`), developed in the 1850s by the Scottish physicist William Rankine (1820-1872).  
+The  Rankine cycle differs from those discussed above in that it involves a phase change: the working fluid (water in steam engines) is 
+liquid for part of the cycle. Obviously this cannot be represented by an ideal gas, because the ideal gas law does not model phase changes.
+
+In {numref}`fig6.5`, the area to the left of the black curve is the liquid state, to the right is gas, and under the curve is a mixture of gas and 
+liquid in equilibrium.  The cycle consists of four processes:
+
+1. Step 1-2: the working fluid, in the liquid state, is pumped from low to high pressure.  This is an adiabatic compression, but because liquids 
+are nearly incompressible there is very little change of volume and therefore very little work done.
+
+2. Step 2-3: the high-pressure liquid is heated at constant pressure.  It boils and becomes a _dry vapour_ (the word dry means that there are no 
+liquid droplets remaining).
+
+3. Step 3-4: the vapour expands adiabatically.  This is the power stroke which does the useful work.  As the vapour cools during the 
+expansion, some liquid droplets may form (making it a _wet vapour_).
+
+4. Step 4-1: the vapour is cooled at constant pressure, condensing back into a liquid.
+
+The Rankine engine is an external combustion engine, using an external heat source in step 2-3 (in a steam locomotive, it's the fire under the 
+boiler).  Although steam engines are no longer used in transport, the Rankine cycle also describes steam turbines, which are used in power 
+stations to generate electricity from heat.  As with the Stirling engine, the Rankine engine is not dependent on any particular fuel.
+
+The advantage of the two-phase operation is that the initial adiabatic heating requires very little work: the power required by the pump is only 
+1–3% of the turbine output power.  If this were done in the gas phase, the power required to drive the pump would be substantially greater.
+
 # Refrigerators and heat pumps
 
 A heat engine takes in heat from a hot reservoir, converts some of it to mechanical work and rejects the rest to a cold reservoir. Our 
@@ -248,11 +467,11 @@ the interior of the fridge, whereas the aim of a heat pump is to heat the hot re
 Real internal combustion engines are not reversible, because the heating stage (step 2-3 in the 
 Otto and Diesel cycles) is achieved by 
 igniting the fuel, which is not a reversible procedure. External combustion engines, such as the Stirling and Rankine cycles, are much more 
-promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in {numref}`fig6.4`.
+promising. Domestic fridges use a reverse Rankine cycle, as shown schematically in {numref}`fig6.6`.
 
 
 ```{figure} Images/6_fridge.png
-:name: fig6.4
+:name: fig6.6
 :alt: Schematic diagram of a heat pump or refrigerator
 :align: center
 Schematic diagram of a heat pump or refrigerator. Source: 
@@ -260,12 +479,11 @@ Schematic diagram of a heat pump or refrigerator. Source:
 
 ```
 
-In {numref}`fig6.4` hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat. The resulting high-pressure 
-liquid 
-flows through an expansion valve (2), which caused a drop i pressure and temperature. The cold, 
-low pressure fluid (a mixture of liquid and 
-vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings. It then passes to 
-the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage.
+In {numref}`fig6.6` hot vapour enters the condenser (1), where it is condensed into a liquid, releasing heat (corresponding to steps 3-2 in 
+{numref}`fig6.5`). The resulting high-pressure liquid 
+flows through an expansion valve (2), which causes a drop in pressure and temperature (steps 2-1 in {numref}`fig6.5`). The cold, low pressure fluid (a mixture of liquid and 
+vapour) then passes through the evaporator (3) where it is converted to a vapour, taking in heat from its surroundings (steps 1-4 in {numref}`fig6.5`). It then passes to 
+the compressor (4) where it is pumped up to a high pressure (with a consequent increase in temperature) to return to the initial stage (steps 4-3 in {numref}`fig6.5`).
 
 The equivalent of efficiency for a refrigerator or heat pump is called the __coefficient of performance__. This is defined broadly as the 
 ratio of the desired output to the work done, which means that it is different for refrigerators 
@@ -299,12 +517,29 @@ COP_{HP} = \frac{T_{H}}{T_{H} - T_{C}}.
 ```
 Notice that these are typically greater than one. For example, if your kitchen has a temperature of 25$^{\circ}$ C and you want your fridge 
 to be at 
-4$^{\circ}$ C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25$^{\circ}$ C nby a 
-heat pump 
-operating 
-between the house and outside air with a temperature of 4$^{\circ}$ C the ideal coefficient of performance would be 298/21 = 14.2. These 
-values 
+4$^{\circ}$ C, the ideal coefficient of performance would be 277/21 = 13.2; conversely if your kitchen is heated to 25$^{\circ}$ C by a 
+heat pump operating  between the house and outside air with a temperature of 4$^{\circ}$ C the ideal coefficient of performance would be 298/21 = 
+14.2. These  values 
 represent the maximum theoretically achievable, and in the real world coefficients of performance will be substantially less than this, 
 especially for heat pumps since one should take into account the power required to circulate the heat around the house e.g. by pumping hot 
 water through the radiator system, However, even real coefficients of performance are 
 significantly greater than unity.
+
+`````{admonition} Example 6.5
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A refrigerator has a coefficient of performance of 2.1. In each cycle it absorbs $3.4 \times 10^{4}$ J of heat from the cold reservoir.
+(a) How much mechanical energy is required each cycle to operate the refrigerator? (b) During each cycle how much heat is discarded to the high temperature reservoir?
+```
+
+```{tab-item} Solution
+
+(a) $COP_{R} = Q_{C}/W$ so $W = Q_{C}/COP_{R} = 3.4\times 10^{4}/2.1 = 16.2$ kJ.
+
+(b) $COP_{R} = Q_{C}/(Q_{H} - Q_{C})$ so $Q_{H} = Q_{C}(1 + 1/COP_{R}) = 3.4\times 10^{4} (1 + 1/2.1) = 50.2$ kJ.
+```
+````
+`````
+

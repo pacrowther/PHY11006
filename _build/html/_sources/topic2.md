@@ -98,7 +98,8 @@ of 2.5 mm thick glass separated by a 5 mm air gap (the thermal conductivity of a
 
 ```{tab-item} Solution
 The first part is straightforward. We assume that the temperature decreases linearly through the
-glass, so $dT/dx = \Delta T/ dx = -15/0.0025 = -6000$ K/m. Therefore $H = 1.00 \times 0.96 \times 60$ = 5800 W 
+glass, so $dT/dx = \Delta T/ dx = -15/0.0025 = -6000$ K/m. Therefore $H = 
+1.00 \times 0.96 \times 6000$ = 5800 W 
 (rounding to two significant figures to match the precision of the input variables).
 
 For the second part, we have three distinct regions of heat flow: the inner pane, the outer pane and the air gap. 
@@ -149,25 +150,47 @@ emissivity $\epsilon$, which is a number between 0 and 1: a body with emissivity
 H = A \epsilon \sigma T^{4}
 ```
 
+
+```{margin}
+Emissivities cited from the [Engineering  
+Toolbox](https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html)
+```
+
 The emissivity is a property of the material and of the nature of the surface: for example, highly
 polished stainless steel has an emissivity of 0.075, but rough, weathered stainless steel has an
 emissivity of 0.85. Generally, shiny, polished surfaces have very low emissivity and rough, dark
 surfaces have high emissivity.
 
-```{margin}
-Values cited from the [Engineering Toolbox](https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html)
-```
-
 Since electromagnetic radiation can propagate in a vacuum, radiative heat transfer differs from convective 
 and conductive heat transfer in not requiring the two bodies to be in physical contact - for
-example, the Sun can heat the Earth by radiative heat transfer.
+example, the Sun can heat the Earth by radiative heat transfer. The equilibrium temperature $T$ of
+a (rotating) planet of radius $R$ at a distance $d$ from its parent star (luminosity $L$) can be obtained
+by balancing the energy received 
 
+$$
+\frac{L}{4 \pi d^{2}} \pi R^{2} (1-A)
+$$
+where A is the Albedo (or reflectivity), and the energy emitted
+
+$$
+4 \pi R^{2} \epsilon \sigma T^{4}.
+$$
+
+So the planetary temperature 
+
+$$
+T^{4} = \frac{L(1-A)}{16 \pi d^2 \epsilon \sigma}
+$$
+
+is independent of its radius. Inserting suitable quantities for the Earth ($A$ = 0.3, $\epsilon$ = 0.6)
+and the Solar constant ($L/4 \pi d^{2}$ = 1360 W m$^{-2}$) then $T$ = 289 K for the Earth.
+ 
 Thermal radiation has a continuous spectrum extending over the whole wavelength range, but the
 wavelength of peak emission depends on the temperature according to __Wien's law__,
 
 ```{math}
 :label: eqn2.4
-\lambda_{\rm max} T = 2.989 \times 10^{-3} {\rm m K}.
+\lambda_{\rm max} T = 2.898 \times 10^{-3} {\rm m K}.
 ```
 
 At temperatures near room temperature, ~300 K, emission peaks around 10 $\mu$m, in the infrared part
@@ -208,6 +231,8 @@ Table entries from Section 19.2 of AQA Physics A level textbook (Oxford) plus ic
   - $c$ (J kg$^{-1}$ K$^{-1}$)
 * - Aluminium 
   - 900
+* - Silicon
+  - 705
 * - Copper
   - 390
 * - Ice
@@ -298,4 +323,41 @@ Six ice cubes won't quite do it, so you need to add seven.
 ```
 ````
 `````
+
+
+`````{admonition} Example 2.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+You are designing an electronic circuit element made of 23 mg of silicon. The electric current through it adds energy at the rate of 7.4 mW. If your design
+doesn't allow any heat transfer out of the element, at what rate does its temperature increase?
+```
+
+```{tab-item} Solution
+From Table 3, $c$ = 705 J/kg/K for silicon. From Equation 10 $dQ/dt =  mc$ so $dT/dt = 1/(mc) \times dQ/dt = 7.4 \times 10^{-3}/(23\times 10^{-6} \times 705) = 0.46$ K/s. The
+circuit element would rapidly self-destruct due to a heat transfer of 27 K/minute. Heat  transfer is a critical design consideration in electronic circuit elements.
+```
+````
+`````
+
+
+
+`````{admonition} Example 2.4
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A thin square steel plate, 10 cm on a side, is heated in a forge to 800$^{\circ}$ C. If the emissivity is 0.60 what is the total rate of radiation of energy from the plate? What
+is the peak wavelength of emitted radiation?
+```
+
+```{tab-item} Solution
+From Equation 8, the power radiated $H = A \epsilon \sigma T^{4} = (0.020) \times (0.6) \times (5.67 \times 10^{-8}) \times (1067^{4}) = 900$ W recalling the surface area of both sides need 
+to be considered. From Equation 9, $\lambda_{\rm max} = 2.898 \times 10^{-3}/1073 = 2.7 \times 10^{-6}$ m or 2.7$\mu$m (near IR part of the electromagnetic spectrum). 
+```
+````
+`````
+
+
 

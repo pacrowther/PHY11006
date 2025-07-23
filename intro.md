@@ -2,11 +2,14 @@
 
 These notes have been produced by Prof Paul Crowther (Hicks E43) and are 
 intended to support and complement (not replace) lectures for
-the thermal topic of PHY11006 in 2023/24. Both these notes and lecture slides
+the thermal topic of PHY11006. Both these notes and lecture slides
 have been adapted from material produced by previous lecturers of this topic (Dr Rhoda
-Hawkins; Dr Susan Cartwright) and formatted in [Jupyter Book format](https://jupyterbook.org) for uniformity with
-mechanics and waves topics. A few sections have been added (e.g. mean free path) while others (e.g. Stirling
-and Rankine engines) have been omitted in 2023/24, but the syllabus remains largely unchanged overall.
+Hawkins; Dr Susan Cartwright) and formatted in [Jupyter Book format](https://jupyterbook.org). 
+The current syllabus was set in 2023/24, and involved the addition of a few sections 
+(e.g. mean free path) while others (e.g. Stirling and Rankine engines) were dropped from asessment. though the 
+syllabus remains largely unchanged overall. 
+Relevant content from University Physics with Modern Physics textbook (available electronically via Blackboard)
+are Chapter 17-20.
 
 # What is thermal physics?
 

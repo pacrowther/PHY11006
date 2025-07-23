@@ -201,18 +201,43 @@ pointer on a scale) or as a heat-operated switch (the bending makes or breaks an
 
 ````{tab-set}
 ```{tab-item} Question
-A mercury thermometer has a cylondrical bulb 2 cm in length and 0.8 cm in diameter, attached to a cylindrical tube 0.30 mm in diameter and 
+A mercury thermometer has a cylindrical bulb 2 cm in length and 0.8 cm in 
+diameter, attached to a cylindrical tube 0.30 mm in diameter and 
 15 cm in length. The coefficient of linear thermal expansion of mercury is 61 $\mu$m/m/K. By how much does the mercury 
 rise up the tube for a change in temperature of 1$^{\circ}$ C?
 ```
 
 ```{tab-item} Solution
-The volume of the mercury in the bulb is $\pi r^2 L = 1.00$ cm$^{3}$ and we can neglect the volume in the tube (the largest it could 
+The volume of the mercury in the bulb is $\pi r^2 L = 1.01$ cm$^{3}$ and 
+we can neglect the volume in the tube (the largest it could 
 possibly be is 0.01 cm$^{3}$. The coefficient of linear expansion is $61 \times 10^{-6}$ 
 K$^{-1}$, but we need the coefficient of volume 
 expansion, so we use Equation {eq}`eqn1.5` to get $183 \times 10^{-6}$ K$^{-1}$.  Therefore the volume of the 
-mercury increases by $1.83 \times 10^{-4}$ cm$^{3}$ for a temperature rise of 1 K. This must go up the tube, which has a cross-sectional 
-area of $\pi r^{2} = 7.07 \times 10^{-4}$ cm$^{2}$. The mercury rises by $1.83 \times 10^{-4} / 7.07 \times 10^{-4}$ = 0.26 cm. 
+mercury increases by $1.85 \times 10^{-4}$ cm$^{3}$ for a temperature rise 
+of 1 K. This must go up the tube, which has a cross-sectional 
+area of $\pi r^{2} = 7.07 \times 10^{-4}$ cm$^{2}$. The mercury rises by 
+$1.84 \times 10^{-4} / 7.07 \times 10^{-4}$ = 0.26 cm. 
 ```
 ````
 `````
+
+`````{admonition} Example 1.2
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A 200 cm$^{3}$ glass flask is filled to the brim with mercury at 20$^{\circ}$ C. How much mercury overflows when the temperature of the system is raised to 
+100$^{\circ}$ C? The coefficient of linear expansion of the glass is $0.40 \times 10^{-5}$ K$^{-1}$.
+```
+
+```{tab-item} Solution
+From Equation 5, $\beta_{\rm glass} = 3 \times \alpha_{\rm glass} = 1.20 \times 10^{-5}$ K$^{-1}$. From Table 1, $\beta_{\rm Hg} = 18 \times 10^{-5}$ K$^{-1}$, so $\beta_{\rm Hg} > 
+\beta_{\rm 
+glass}$ as expected for overflow to occur. 
+
+The volume overflow is $\Delta V_{\rm Hg} - \Delta V_{\rm glass} = V_{0} \Delta T (\beta_{\rm Hg} - \beta_{\rm glass}) = 200 \times 80 \times 16.8 
+\times 10^{-5}$ = 2.7 cm$^{-3}$.
+```
+````
+`````
+

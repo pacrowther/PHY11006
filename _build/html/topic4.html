@@ -194,6 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -444,9 +446,9 @@ the system plus the work done on the system.
 <p>This can be expressed mathematically as</p>
 <div class="math notranslate nohighlight" id="equation-eqn4-1">
 <span class="eqno">(22)<a class="headerlink" href="#equation-eqn4-1" title="Permalink to this equation">#</a></span>\[\Delta U = Q + W.\]</div>
-<p>where U is the change in internal energy, Q is the heat supplied to the system, and W is the work
-done on the system. Note the sign conventions here: if the system actually radiates heat, Q &lt; 0, and
-if the system does work on its surroundings, W &lt; 0.</p>
+<p>where <span class="math notranslate nohighlight">\(\Delta U\)</span> is the change in internal energy, <span class="math notranslate nohighlight">\(Q\)</span> is the heat supplied to the system, and <span class="math notranslate nohighlight">\(W\)</span> is the work
+done on the system. Note the sign conventions here: if the system actually radiates heat, <span class="math notranslate nohighlight">\(Q\)</span> &lt; 0, and
+if the system does work on its surroundings, <span class="math notranslate nohighlight">\(W\)</span> &lt; 0.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="heat-and-work">
 <h1>Heat and work<a class="headerlink" href="#heat-and-work" title="Permalink to this heading">#</a></h1>
@@ -464,8 +466,8 @@ W = \int F dx.
 <p>In the next section, we will see that we need to treat this integral with great care, because it is <strong>path dependent</strong>. Suppose I need to
 move a box from my office (E43) to Clive Tadhunter’s office (E37), which is no the other side of the mid-corridor fire door. If I can simply
 move it the 10 m or so down the corridor, I will have done some amount of work <span class="math notranslate nohighlight">\(F \Delta x\)</span> where <span class="math notranslate nohighlight">\(\Delta x\)</span> in this case is 10 m. However,
-if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up<br />
-Hounsfield Road, into the main entrance on D floor, up the stairs to E floor, and along the<br />
+if the fire door is jammed shut because of some fault, and I have to talk down several  flights of stairs to the Hicks SE exit, up Hounsfield Road, into the main entrance on D floor, up
+the stairs to E floor, and along the<br />
 corridor to E37, I will have done considerably
 more work to achieve the same end result.</p>
 <p>The same is true of heat: the amount of heat I need to supply to raise the temperature of an object by a certain amount <span class="math notranslate nohighlight">\(\Delta T\)</span> depends
@@ -521,12 +523,14 @@ Solution</label><div class="sd-tab-content docutils">
 <p>If the gas is heated at constant pressure, then since <span class="math notranslate nohighlight">\(PV = RT\)</span> (for one mole), the volume
 must change. The amount of work done <em>by</em> the
 gas is <span class="math notranslate nohighlight">\(P \Delta V = R \Delta T\)</span>, so the amount of work done <em>on</em> the gas is <span class="math notranslate nohighlight">\(-R \Delta T\)</span>. From Equation <a class="reference internal" href="topic3.html#equation-eqn3-5">(16)</a>, we know that the
-change in the internal energy of the gas is <span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T\)</span>. (As this is a monatomic
+change in the internal energy of the gas is
+<span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} N_{A} k_{B} \Delta T = \frac{3}{2} R \Delta T\)</span>. (As this is a monatomic
 ideal gas, its internal energy is just the kinetic energy of its atoms: there is no rotational or vibrational degrees of freedom to worry
 about).</p>
-<p>Therefore from the First Law we have <span class="math notranslate nohighlight">\(Q - \Delta U - W = \frac{3}{2} R \Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T\)</span>.
+<p>Therefore from the First Law we have <span class="math notranslate nohighlight">\(Q = \Delta U - W = \frac{3}{2} R 
+\Delta T - (- R \Delta T) = \frac{5}{2} R \Delta T\)</span>.
 But by definition we know <span class="math notranslate nohighlight">\(Q = c_{P} \Delta T\)</span> where <span class="math notranslate nohighlight">\(c_{P}\)</span> is the molar heat capacity at constant pressure, and at constant volume
-we know that <span class="math notranslate nohighlight">\(\Delta U = Q = c_{V} \Delta T\)</span> since no work is done. Therefore as we have previously deduced (Equation <a class="reference internal" href="topic3.html#equation-eqn3-7">(18)</a>)
+we know that <span class="math notranslate nohighlight">\(\Delta U = Q = c_{V} \Delta T\)</span> since no work is done. Therefore as we have previously deduced (Equation <a class="reference internal" href="topic3.html#equation-eqn3-7">(21)</a>)
 <span class="math notranslate nohighlight">\(c_{V} = \frac{3}{2} R\)</span> and so <span class="math notranslate nohighlight">\(c_{P} = \frac{5}{2} R = c_{V} + R\)</span>. Note that although a more complicated gas, such as isobutane from
 Example 3.2, would have a larger value of <span class="math notranslate nohighlight">\(c_{V}\)</span>, it would still be true that <span class="math notranslate nohighlight">\(c_{P} = c_{V} + R\)</span>, since the work done by the gas
 pressure would be the same (provided that the gas could be treated as an ideal gas).</p>
@@ -536,7 +540,8 @@ pressure would be the same (provided that the gas could be treated as an ideal g
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="cyclic-process">
 <h1>Cyclic process<a class="headerlink" href="#cyclic-process" title="Permalink to this heading">#</a></h1>
-<p>A process that eventually returns a system to its initial staret is called a cyclic process. For such a process, the final state is the same
+<p>A process that eventually returns a system to its initial state is called a
+cyclic process. For such a process, the final state is the same
 as the initial state, so the total internal energy change most be zero. If a net quantity of work <span class="math notranslate nohighlight">\(W\)</span> is done on the system, an equal amount
 of work must have flowed into the system as heat <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>Every day your body (a thermodynamic system) goes through a cyclic process. Heat is added by metabolizing food, and your body does work in
@@ -556,11 +561,35 @@ done vaporizing the water and (ii) its increase in internal energy. (Note the he
 <input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-3">
 Solution</label><div class="sd-tab-content docutils">
-<p>The water does work <span class="math notranslate nohighlight">\(P (V_{2} - V_{1}) = 1.67 \times 10^{2}\)</span> J so the work done on the water is <span class="math notranslate nohighlight">\(W = - 1.67 \times 10^{2}\)</span> J. From Eqn
+<p>The water does work <span class="math notranslate nohighlight">\(P (V_{2} - V_{1}) = 1.69 \times 10^{2}\)</span> J so the work done
+on the water is <span class="math notranslate nohighlight">\(W = - 1.69 \times 10^{2}\)</span> J. From Eqn
 <a class="reference internal" href="topic2.html#equation-eqn2-6">(11)</a> <span class="math notranslate nohighlight">\(Q = m L_{V} = 2.26 \times 10^{3}\)</span> J. The first law of thermodynamics holds for
 thermodynamic processes of all kinds,
 <span class="math notranslate nohighlight">\(\Delta U = Q + W  = 2.09 \times 10^{3}\)</span> J. Over 90% of the heat remains in the system as an increase in internal energy, with the remainder
 leaving the system as it expands from liquid to vapour.</p>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 4.3</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Question</label><div class="sd-tab-content docutils">
+<p>Gas in a cylinder expands from 0.110 m<span class="math notranslate nohighlight">\(^{3}\)</span> to 0.320 m<span class="math notranslate nohighlight">\(^{3}\)</span>. Heat flows into the gas to keep pressure constant at <span class="math notranslate nohighlight">\(1.65 \times 10^{5}\)</span> Pa. During the
+expansion, the total heat added is <span class="math notranslate nohighlight">\(1.15 \times 10^{5}\)</span> J.</p>
+<ul class="simple">
+<li><p>Find the work done <em>by</em> the gas</p></li>
+<li><p>Find the change of internal energy of the gas</p></li>
+<li><p>Does it matter whether the gas is ideal?</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>Work done on the gas is <span class="math notranslate nohighlight">\(-P dV = -1.65 \times 10^{5} (0.320 - 0.110) = -3.46 \times 10^{4}\)</span> J so work done by the gas is <span class="math notranslate nohighlight">\(3.46 \times 10^{4}\)</span> J.</p>
+<p>From the first law, the change of internal energy <span class="math notranslate nohighlight">\(\Delta U = Q + W = 1.15 \times 10^{5} + (-3.46 \times 10^{4}) = 8.03 \times 10^{4}\)</span> J.</p>
+<p>No, the ideal gas law is not specified in this solution.</p>
 </div>
 </div>
 </div>

@@ -85,7 +85,7 @@ Clausius' statement implies Carnot's.
 
 Assume that Carnot's statement is not true, and we can therefore build an engine $E$ that has a 
 higher efficiency than a Carnot engine. We 
-connect this super-efficient engine to a Carnot engine running in reverse, as shown in Fig 7.2. Engine $E$ takes in heat $Q_{H}^{'}$, does 
+connect this super-efficient engine to a Carnot engine running in reverse, as shown in {numref}`fig7.2`. Engine $E$ takes in heat $Q_{H}^{'}$, does 
 work $W$, and ejects  heat Q$_{C}^{'}$; the Carnot engine takes in heat $Q_{C}$ and the work done by engine $E$, and ejects heat $Q_{H}$. 
 Since $\eta = W/Q_{H}$,
 and we have assumed that $\eta_{E} > \eta_{C}$, it follows that $Q_{H}^{'} < Q_{H}$. The First Law tells us that 
@@ -218,7 +218,7 @@ $$
 
 ```{math}
 :label: eqn7.5
-dS =- \frac{\bar{d}Q_{\rm rev}}{T} = \frac{\bar{d}Q_{\rm irr}}{T} + \frac{1}{T} \left( \bar{d}W_{\rm rev} - \bar{d} W_{\rm irr} \right) > 
+dS = \frac{\bar{d}Q_{\rm rev}}{T} = \frac{\bar{d}Q_{\rm irr}}{T} + \frac{1}{T} \left( \bar{d}W_{\rm rev} - \bar{d} W_{\rm irr} \right) > 
 \frac{\bar{d} Q_{\rm irr}}{T}.
 ```
 This emphasises that the definition of $S$ refers to the heat supplied in a _reversible_ process. If you have an _irreversible_ process, the 
@@ -304,7 +304,7 @@ This leads to yet another statement of the Second Law
 The entropy of a thermally isolated system cannot decrease
 </div>
 
-Note the key qualifier: not just any system, but a _thermally isolated_ system. If the system is not thermally isolated, by definition hear 
+Note the key qualifier: not just any system, but a _thermally isolated_ system. If the system is not thermally isolated, by definition heat
 can flow into and out of the system, and this will be accompanied by a change in entropy, which can be positive _or_ negative. This explains 
 why we see many processes in nature, e.g. crystal growth, which appear to be associated with a decrease in entropy: in such cases the 
 entropy of the system may indeed decrease, but it is not a thermally isolated system, and the decrease is compensated by an increase in the 
@@ -319,7 +319,7 @@ cannot decrease.
 
 ````{tab-set}
 ```{tab-item} Question
-Calculate the entropy change in the system and its surroundings for each stage of the Carnot cycle.
+Calculate the entropy change in the system and its surroundings for each stage of a Carnot cycle (Topic 6).
 ```
 
 ```{tab-item} Solution
@@ -348,6 +348,84 @@ individual step. This is what we would expect for reversible processes.
 ````
 `````
 
+`````{admonition} Example 7.3
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+A Carnot engine takes 2000 J of heat from a reservoir at 500 K, does some work, and discards some heat to a reservoir at 350 K.
+(a) How much heat is discarded? (b) How much work is done? (c) What is its efficiency? (d) What is the total entropy change?
+```
+
+```{tab-item} Solution
+(a) The heat discarded is $|Q_{C}| = Q_{H}\frac{T_{C}}{T_{H}} = 2000 \frac{350}{500} = 1400$ J
+
+(b) Work done $|W| = Q_{H} - |Q_{C}| = 2000 - 1400 = 600$ J
+
+(c) Efficiency of a Carnot engine is $\eta = 1 - T_{C}/T_{H} = 1 - \frac{350}{500} = 0.3$
+
+(d) There is no change in entropy during adiabatic compression or expansion ($Q = 0$). 
+
+During the isothermal expansion the engine takes in 2000 J of heat so $\Delta S_{H} = \frac{Q_{H}}{T_{H}} = 4$ J/K.
+
+During the isothermal compression the engine gives off 1400 J of heat so $\Delta S_{C} = \frac{Q_{C}}{T_{C}} = -4$ J/K
+
+so the net change in entropy is $\Delta S_{total} = \Delta S_{H} + \Delta S_{C} = 0$ (the sum of the entropy changes
+is zero since uniquely all processes are reversible in the Carnot cycle, in contrast to Otto, Diesel etc)
+``` 
+````
+`````
+
+`````{admonition} Example 7.4
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+Heat from a very massive body at 25$^{\circ}$ C is added to 0.35 kg of ice at 0.0$^{\circ}$ C until it is all melted.
+(a) What is the change in entropy of the water? (b) What is the change in entropy of the massive body? (c) What is the total
+change in entropy of the water and heat source? (d) Compare your answer to part (a) with the change in entropy of water
+at 100$^{\circ}$ being vaporized and convered to steam at 100$^{\circ}$ C. Interpret your answer in the context of entropy
+being a measure of the randomness of a system.
+```
+
+```{tab-item} Solution
+(a) The latent heat of fusion of water is $L_{f} = 3.34 \times 10^{5}$ J/kg (Table 4 in Topic 2), so 
+$Q = 0.35 \times 3.34 \times 10^{5} = 117$ kJ  and $\Delta S_{C} = Q/T_{C}$ 
+= $1.17 \times 10^{5}/273 = 428$ J/K.
+
+(b) $\Delta S_{H} = Q/T_{H} = -1.17 \times 10^{5}/298 = -393$ J/K. 
+
+(c) $\Delta S_{total} = 428 - 393 = 36$ J/K. 
+
+(d) The latent heat of vaporization is $L_{v} = 2.26 \times 10^{6}$ J/kg (Table 4 in Topic 2), so 
+$Q = 0.35 \times 2.26 \times 10^{6} = 791$ kJ and $\Delta S = Q/T = 7.91 \times 10^{5}/373 = 2.12$ kJ/K, five times greater than melting ice (steam is much 
+more disordered than liquid water). 
+``` 
+````
+`````
+
+
+`````{admonition} Example 7.5
+:class: dropdown
+
+````{tab-set}
+```{tab-item} Question
+Suppose 1.0 kg of water at 100$^{\circ}$ C is placed in thermal contact with 1.0 kg of water at 0$^{\circ}$ C. What is the total change in entropy? Assume a constant 4190 J/kg/K heat 
+capacity of water.
+```
+
+```{tab-item} Solution
+Since equal amounts of hot (H = 373 K) and cold (C = 273 K) water are combined, the equilibrium temperature is 323 K. The entropy change is $\Delta S = \Delta Q/T = mc \int_{T_{1}}^{T_{2}} 
+\frac{dT}{T}$ 
+so the entropy changes of hot water ($\Delta S_{H}$) and cold water ($\Delta S_{C}$) are
+
+$\Delta S_{H} = (1.0) (4190) \ln (323/373) = -603$ J/K and $\Delta S_{C} = (1.0) (4190) \ln (323/273) = +705$ J/K.
+
+So the total change in entropy is $\Delta S_{\rm total} = \Delta S_{H} + \Delta S_{C} = +102$ J/K. There is an increase in entropy since the heat flow is irreversible. Entropy increases
+continually as the two liquids come into equilibrium.  
+``` 
+````
+`````
 
 # Entropy as a measure of disorder
 

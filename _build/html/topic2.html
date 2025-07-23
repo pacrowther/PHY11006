@@ -194,6 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -522,7 +524,8 @@ of 2.5 mm thick glass separated by a 5 mm air gap (the thermal conductivity of a
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Solution</label><div class="sd-tab-content docutils">
 <p>The first part is straightforward. We assume that the temperature decreases linearly through the
-glass, so <span class="math notranslate nohighlight">\(dT/dx = \Delta T/ dx = -15/0.0025 = -6000\)</span> K/m. Therefore <span class="math notranslate nohighlight">\(H = 1.00 \times 0.96 \times 60\)</span> = 5800 W
+glass, so <span class="math notranslate nohighlight">\(dT/dx = \Delta T/ dx = -15/0.0025 = -6000\)</span> K/m. Therefore <span class="math notranslate nohighlight">\(H = 
+1.00 \times 0.96 \times 6000\)</span> = 5800 W
 (rounding to two significant figures to match the precision of the input variables).</p>
 <p>For the second part, we have three distinct regions of heat flow: the inner pane, the outer pane and the air gap.
 We know the temperature of the inner face of the inner pane and the outer face of the outer pane, but we do not know the other two
@@ -560,21 +563,40 @@ defined as an object that is 100% efficient at emitting or absorbing radiation).
 emissivity <span class="math notranslate nohighlight">\(\epsilon\)</span>, which is a number between 0 and 1: a body with emissivity <span class="math notranslate nohighlight">\(\epsilon\)</span> will radiate power</p>
 <div class="math notranslate nohighlight" id="equation-eqn2-3">
 <span class="eqno">(8)<a class="headerlink" href="#equation-eqn2-3" title="Permalink to this equation">#</a></span>\[H = A \epsilon \sigma T^{4}\]</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Emissivities cited from the <a class="reference external" href="https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html">Engineering<br />
+Toolbox</a></p>
+</aside>
 <p>The emissivity is a property of the material and of the nature of the surface: for example, highly
 polished stainless steel has an emissivity of 0.075, but rough, weathered stainless steel has an
 emissivity of 0.85. Generally, shiny, polished surfaces have very low emissivity and rough, dark
 surfaces have high emissivity.</p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<p>Values cited from the <a class="reference external" href="https://www.engineeringtoolbox.com/emissivity-coefficients-d_447.html">Engineering Toolbox</a></p>
-</aside>
 <p>Since electromagnetic radiation can propagate in a vacuum, radiative heat transfer differs from convective
 and conductive heat transfer in not requiring the two bodies to be in physical contact - for
-example, the Sun can heat the Earth by radiative heat transfer.</p>
+example, the Sun can heat the Earth by radiative heat transfer. The equilibrium temperature <span class="math notranslate nohighlight">\(T\)</span> of
+a (rotating) planet of radius <span class="math notranslate nohighlight">\(R\)</span> at a distance <span class="math notranslate nohighlight">\(d\)</span> from its parent star (luminosity <span class="math notranslate nohighlight">\(L\)</span>) can be obtained
+by balancing the energy received</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{L}{4 \pi d^{2}} \pi R^{2} (1-A)
+\]</div>
+<p>where A is the Albedo (or reflectivity), and the energy emitted</p>
+<div class="math notranslate nohighlight">
+\[
+4 \pi R^{2} \epsilon \sigma T^{4}.
+\]</div>
+<p>So the planetary temperature</p>
+<div class="math notranslate nohighlight">
+\[
+T^{4} = \frac{L(1-A)}{16 \pi d^2 \epsilon \sigma}
+\]</div>
+<p>is independent of its radius. Inserting suitable quantities for the Earth (<span class="math notranslate nohighlight">\(A\)</span> = 0.3, <span class="math notranslate nohighlight">\(\epsilon\)</span> = 0.6)
+and the Solar constant (<span class="math notranslate nohighlight">\(L/4 \pi d^{2}\)</span> = 1360 W m<span class="math notranslate nohighlight">\(^{-2}\)</span>) then <span class="math notranslate nohighlight">\(T\)</span> = 289 K for the Earth.</p>
 <p>Thermal radiation has a continuous spectrum extending over the whole wavelength range, but the
 wavelength of peak emission depends on the temperature according to <strong>Wien’s law</strong>,</p>
 <div class="math notranslate nohighlight" id="equation-eqn2-4">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eqn2-4" title="Permalink to this equation">#</a></span>\[\lambda_{\rm max} T = 2.989 \times 10^{-3} {\rm m K}.\]</div>
+<span class="eqno">(9)<a class="headerlink" href="#equation-eqn2-4" title="Permalink to this equation">#</a></span>\[\lambda_{\rm max} T = 2.898 \times 10^{-3} {\rm m K}.\]</div>
 <p>At temperatures near room temperature, ~300 K, emission peaks around 10 <span class="math notranslate nohighlight">\(\mu\)</span>m, in the infrared part
 of the spectrum. This is why cameras operating at infrared wavelengths are known as thermal cameras
 and can be used to measure temperature. It is worth noting that thermal cameras translate to
@@ -613,13 +635,16 @@ in the course.</p>
 <tr class="row-even"><td><p>Aluminium</p></td>
 <td><p>900</p></td>
 </tr>
-<tr class="row-odd"><td><p>Copper</p></td>
+<tr class="row-odd"><td><p>Silicon</p></td>
+<td><p>705</p></td>
+</tr>
+<tr class="row-even"><td><p>Copper</p></td>
 <td><p>390</p></td>
 </tr>
-<tr class="row-even"><td><p>Ice</p></td>
+<tr class="row-odd"><td><p>Ice</p></td>
 <td><p>2100</p></td>
 </tr>
-<tr class="row-odd"><td><p>Water</p></td>
+<tr class="row-even"><td><p>Water</p></td>
 <td><p>4190</p></td>
 </tr>
 </tbody>
@@ -701,6 +726,40 @@ warm from -18<span class="math notranslate nohighlight">\(^{\circ}\)</span> C to
 \times (18 \times 2.1 + 334 + 4.2 \times 10) = 413.8 M\)</span> kJ. If we equate this to the heat supplied by the water, we  find <span class="math notranslate nohighlight">\(M = 52.5/413.8 = 
 0.127\)</span> kg.</p>
 <p>Six ice cubes won’t quite do it, so you need to add seven.</p>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 2.3</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Question</label><div class="sd-tab-content docutils">
+<p>You are designing an electronic circuit element made of 23 mg of silicon. The electric current through it adds energy at the rate of 7.4 mW. If your design
+doesn’t allow any heat transfer out of the element, at what rate does its temperature increase?</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Solution</label><div class="sd-tab-content docutils">
+<p>From Table 3, <span class="math notranslate nohighlight">\(c\)</span> = 705 J/kg/K for silicon. From Equation 10 <span class="math notranslate nohighlight">\(dQ/dt =  mc\)</span> so <span class="math notranslate nohighlight">\(dT/dt = 1/(mc) \times dQ/dt = 7.4 \times 10^{-3}/(23\times 10^{-6} \times 705) = 0.46\)</span> K/s. The
+circuit element would rapidly self-destruct due to a heat transfer of 27 K/minute. Heat  transfer is a critical design consideration in electronic circuit elements.</p>
+</div>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Example 2.4</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Question</label><div class="sd-tab-content docutils">
+<p>A thin square steel plate, 10 cm on a side, is heated in a forge to 800<span class="math notranslate nohighlight">\(^{\circ}\)</span> C. If the emissivity is 0.60 what is the total rate of radiation of energy from the plate? What
+is the peak wavelength of emitted radiation?</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Solution</label><div class="sd-tab-content docutils">
+<p>From Equation 8, the power radiated <span class="math notranslate nohighlight">\(H = A \epsilon \sigma T^{4} = (0.020) \times (0.6) \times (5.67 \times 10^{-8}) \times (1067^{4}) = 900\)</span> W recalling the surface area of both sides need
+to be considered. From Equation 9, <span class="math notranslate nohighlight">\(\lambda_{\rm max} = 2.898 \times 10^{-3}/1073 = 2.7 \times 10^{-6}\)</span> m or 2.7<span class="math notranslate nohighlight">\(\mu\)</span>m (near IR part of the electromagnetic spectrum).</p>
 </div>
 </div>
 </div>

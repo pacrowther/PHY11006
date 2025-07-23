@@ -194,6 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+
+
 <li class="toctree-l1"><a class="reference internal" href="topic7.html">Topic 7: The Second Law of Thermodynamics and Entropy</a></li>
 
 
@@ -435,7 +437,8 @@ on the path you take to get there. But what, in this context, do we mean by <em>
 system, but the variables we use to specify the system may be different.) For a fixed mass of gas, the
 state of the gas is defined by any two of the variables (<span class="math notranslate nohighlight">\(P,V,T\)</span>), because we can always use the equation
 of state to find the third. So we can specify our initial and final states as points on a plot of <span class="math notranslate nohighlight">\(P\)</span>
-against <span class="math notranslate nohighlight">\(V\)</span>. As the gas moves from state A to state B, it will pass through intermediate states, each of
+against <span class="math notranslate nohighlight">\(V\)</span>.</p>
+<p>As the gas moves from state A to state B, it will pass through intermediate states, each of
 which can also be specified as a point on the <span class="math notranslate nohighlight">\(PV\)</span> plot. Therefore, any path between A and B is represented
 by a line joining A and B on the plot, and conversely any line joining A and B on the plot is a
 possible - if not necessarily practical - way in which the gas could be taken from state A to state B by
@@ -444,7 +447,8 @@ supplying some combination of heat and work.</p>
 computer to work out exactly how to move the gas from state A to state B along some random wiggly path.
 Therefore, we restrict our attention to those paths that lead to simple equations that we can solve.
 This is, of course, what the 19th century developers of thermodynamics also did, since they had no
-computers to do the calculations for them. Real applications of thermodynamics, e.g. real engines,
+computers to do the calculations for them.</p>
+<p>Real applications of thermodynamics, e.g. real engines,
 do not follow these simple paths, but it is often possible to construct an idealised version of the engine
 that does, and this will give us some insight into how the engine performs. Later in the course we will
 look at idealised versions of some typical engines, including steam engines, petrol engines and diesel
@@ -455,13 +459,15 @@ engines.</p>
 <p>To define the state of a system, we have to specify its properties. The properties that are useful for
 this are the ones that do not depend on the prior history of the state: for example, we cannot use the
 work done on a system to define its state, because the amount of work that has been done to put the
-system into some state A depends on its history. Properties of a system that depend only on its current
+system into some state A depends on its history.</p>
+<p>Properties of a system that depend only on its current
 state and not on its history are called <strong>functions of state</strong>. Examples of functions of state include
 pressure, temperature, volume, mass, density, magnetisation, electric charge, etc. Examples of variables
-which are not functions of state include, as we have seen, history-dependent variables such as work
+which are <em>not</em> functions of state include, as we have seen, history-dependent variables such as work
 done and heat supplied, and also things that can change without changing the state, such as the kinetic
 energy of one atom of a gas (the temperature depends on the average kinetic energy, not the kinetic
-energy of one individual particle). The properties of a particular system may create relationships between
+energy of one individual particle).</p>
+<p>The properties of a particular system may create relationships between
 functions of state, and these are called <strong>equations of state</strong>. The only equation of state we are
 using in this course is the ideal gas law, but there are many others: for example, numerous modifications
 of the ideal gas law designed to make it a better representation of real gases (the best known
@@ -480,7 +486,7 @@ system is never significantly out of thermal equilibrium, is called a <strong>qu
 original state along the same path. This is not always true: for example, processes that involve friction are never reversible- there’s no
 way that the heat you generated as you dragged that large box over the carpet can ever be collected together and reassembled into the work
 that was expended in doing the dragging, however slowly you did it.</p>
-<p>Changes t=of state that involve <em>rapid</em> changes to one or more functions of state are
+<p>Changes of state that involve <em>rapid</em> changes to one or more functions of state are
 obviously not quasistatic, and in general are
 <strong>irreversible</strong>: for example: if you were to expand a volume of gas slowly by moving a piston,
 that would be reversible, but if you expand
@@ -559,7 +565,8 @@ volume <span class="math notranslate nohighlight">\(V_{2}\)</span>. We then heat
 </input><label class="sd-tab-label" for="sd-tab-item-1">
 Solution</label><div class="sd-tab-content docutils">
 <p>Let’s label the four states A, B, C and D, where A is (<span class="math notranslate nohighlight">\(P_1, V_1\)</span>), B is (<span class="math notranslate nohighlight">\(P_1, V_2\)</span>), C is (<span class="math notranslate nohighlight">\(P_2, V_2)\)</span> and D is (<span class="math notranslate nohighlight">\(P_2, V_1)\)</span>.</p>
-<p>From the ideal gas law, <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we see that <span class="math notranslate nohighlight">\(T_{A} = P_1 V_1 / R\)</span>, <span class="math notranslate nohighlight">\(T_{B} = O_1 V_2 /R\)</span>, <span class="math notranslate nohighlight">\(T_{C} = P_2 V_2 /R\)</span> and <span class="math notranslate nohighlight">\(T_{D} = P_2 V_1 /R\)</span>.
+<p>From the ideal gas law, <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we see that <span class="math notranslate nohighlight">\(T_{A} = P_1 V_1 / R\)</span>,
+<span class="math notranslate nohighlight">\(T_{B} = P_1 V_2 /R\)</span>, <span class="math notranslate nohighlight">\(T_{C} = P_2 V_2 /R\)</span> and <span class="math notranslate nohighlight">\(T_{D} = P_2 V_1 /R\)</span>.
 Since we have one mole of a monatomic ideal gas, the heat capacity at constant pressure is <span class="math notranslate nohighlight">\(C_{P} = \frac{5}{2} R\)</span> and the heat capacity at
 constant volume is  <span class="math notranslate nohighlight">\(C_{V} = \frac{3}{2} R\)</span>.</p>
 <p>The heat supplied going from A to B is <span class="math notranslate nohighlight">\(Q_{AB} = C_{P} (T_{B} - T_{A}) = \frac{5}{2} P_1 (V_2 - V_1).\)</span> From B to C the heat supplied is
@@ -591,13 +598,14 @@ Solution</label><div class="sd-tab-content docutils">
 <div class="math notranslate nohighlight">
 \[
 Q_{ADC} = \frac{3}{2} P_2 V_1 - \frac{3}{2} P_1 V_1 + \frac{5}{2} P_2 V_2 - \frac{5}{2} P_2 V_1 = \frac{5}{2} P_2 V_2 - \frac{3}{2} P_1 V_1 
-- P_2 - V_1.
+- P_2 V_1.
 \]</div>
 <p>There is no work done from A to D, to the total work done on the gas is <span class="math notranslate nohighlight">\(W_{DC} = - P \Delta V = P_2 (V_1 - V_2).\)</span> The change in internal
 energy is <span class="math notranslate nohighlight">\(\Delta U = Q + W = \frac{3}{2} (P_2 V_2 - P_1 V_1).\)</span></p>
 <p>Note that the change in internal energy is the same in both cases, as it should be because internal energy is a function of state. However,
 the heat supplied and the work done both differ. If we were to combined this as a cycle ADCBA, running the first path in reverse, the net
-work done on the gas would be <span class="math notranslate nohighlight">\((P_2 - P_1)/(V_1 - V_2)\)</span>, i.e. the gas would <em>do</em> net work <span class="math notranslate nohighlight">\((P_2 - P_1)(V_2 - V_1)\)</span> on its surroundings since
+work done on the gas would be <span class="math notranslate nohighlight">\((P_2 - P_1) (V_1 - V_2)\)</span>, i.e. the gas
+would <em>do</em> net work <span class="math notranslate nohighlight">\((P_2 - P_1)(V_2 - V_1)\)</span> on its surroundings since
 <span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>. This is the basis on which <strong>heat engines</strong> work: They convert heat to work by tracing out a closed cycle on the <span class="math notranslate nohighlight">\(PV\)</span> plot.</p>
 <p>Also note that since <span class="math notranslate nohighlight">\(PV = RT\)</span> for one mole of gas, we can write <span class="math notranslate nohighlight">\(\Delta U = \frac{3}{2} R (T_{C} - T_{A}) = C_{V} \Delta T.\)</span>
 This is what we should expect: we saw above that for an isochoric process <span class="math notranslate nohighlight">\(\Delta U = Q = C_{V} \Delta T\)</span>, and as <span class="math notranslate nohighlight">\(U\)</span> and <span class="math notranslate nohighlight">\(T\)</span> are
@@ -639,7 +647,9 @@ P_{f}^{c_{V}} V_{f}^{c_{V}+R} = P_{i}^{c_{V}} V_{i}^{c_{V}+R}.
 \[
 P_{f}^{c_{V}} V_{f}^{c_{P}} = P_{i}^{c_{V}} V_{i}^{c_{P}}.
 \]</div>
-<p>If we define <span class="math notranslate nohighlight">\(\gamma = c_{P}/c_{V}\)</span>, we can take the <span class="math notranslate nohighlight">\(c_{v}\)</span>-th root of this to obtain</p>
+<p>If we define the <strong>adiabatic index</strong> <span class="math notranslate nohighlight">\(\gamma = c_{P}/c_{V}\)</span>, we can take
+the
+<span class="math notranslate nohighlight">\(c_{v}\)</span>-th root of this to obtain</p>
 <div class="math notranslate nohighlight" id="equation-eqn5-4">
 <span class="eqno">(26)<a class="headerlink" href="#equation-eqn5-4" title="Permalink to this equation">#</a></span>\[PV^{\gamma} = {\rm constant}.\]</div>
 <p>using this and <span class="math notranslate nohighlight">\(PV = nRT\)</span>, we also have</p>
@@ -657,7 +667,8 @@ W = - \int_{V_{i}}^{V_{f}} P dV = - K \int_{V_{i}}^{V_{j}} V^{-\gamma} dV = - \f
 [ V^{1-\gamma}]_{V_{i}}^{V_{f}} = 
 \frac{K}{\gamma -1} \left( V_{f}^{1-\gamma} - V_{i}^{1-\gamma} \right).
 \]</div>
-<p>But since <span class="math notranslate nohighlight">\(P V^{\gamma}\)</span> is constant, <span class="math notranslate nohighlight">\(K = P_{f} V_{f}\)</span> we can simplify this to</p>
+<p>But since <span class="math notranslate nohighlight">\(P V^{\gamma}\)</span> is constant, <span class="math notranslate nohighlight">\(K = P_{f} V_{f}^{\gamma}\)</span> we can
+simplify this to</p>
 <div class="math notranslate nohighlight" id="equation-eqn5-7">
 <span class="eqno">(29)<a class="headerlink" href="#equation-eqn5-7" title="Permalink to this equation">#</a></span>\[W = \frac{1}{\gamma -1} (P_f V_f - P_i V_i).\]</div>
 <p>Note that, because <span class="math notranslate nohighlight">\(Q = 0\)</span>, this must be equal to the change in internal energy <span class="math notranslate nohighlight">\(\Delta U = n c_{V} (T_f - T_i).\)</span> This is easily verified
